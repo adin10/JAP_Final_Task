@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace NormativeCalculator.Api.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class IngredientController : ControllerBase

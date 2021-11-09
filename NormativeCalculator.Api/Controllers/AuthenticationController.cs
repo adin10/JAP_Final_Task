@@ -40,8 +40,8 @@ namespace NormativeCalculator.Api.Controllers
         [Route("Login")]
         public async Task<IActionResult> Login([FromBody] LoginModelRequest model)
         {
-            var user = await userManager.FindByNameAsync(model.Username);
 
+            var user = await userManager.FindByNameAsync(model.Username);
             if (user != null && await userManager.CheckPasswordAsync(user, model.Password))
             {
                 var userRoles = await userManager.GetRolesAsync(user);
@@ -52,12 +52,12 @@ namespace NormativeCalculator.Api.Controllers
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()), // id trenutno prijavljenog user-a
                     new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
                 };
+
                 foreach (var userRole in userRoles)
                 {
                     authClaims.Add(new Claim(ClaimTypes.Role, userRole));
                 }
 
-                // SymmetricSecurityKey je niz bytova    da bi niz bytova pretvorili u string koristimo Encoding.UTF8.GetBytes
                 var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_confiuration["JWT:Secret"]));
                 var token = new JwtSecurityToken(
                     issuer: _confiuration["JWT:ValidIssuer"],
@@ -66,13 +66,13 @@ namespace NormativeCalculator.Api.Controllers
                     claims: authClaims,
                     signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)  // algoritam
                     );
+
                 return Ok(new
                 {
                     Token = new JwtSecurityTokenHandler().WriteToken(token),
                     Expiration = token.ValidTo,
                     Username = user.UserName,
                     userInfo = Myuser.FirstOrDefault(),
-
                 });
             }
             return Unauthorized();
