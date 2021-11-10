@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { AuthenticationService } from '../_services/authentication.service';
 
 @Component({
   selector: 'app-nav-menu',
   templateUrl: './nav-menu.component.html',
   styleUrls: ['./nav-menu.component.css']
 })
-export class NavMenuComponent implements OnInit {
+export class NavMenuComponent{
 
-  constructor() { }
+  constructor(public authService:AuthenticationService) { }
 
-  ngOnInit(): void {
+  logout(){
+    this.authService.LogOut();
+    this.authService.isAuthenticated = false;
   }
 
 }

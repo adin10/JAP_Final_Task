@@ -7,7 +7,7 @@
             <!-- <ng-container *ngIf="accountService.currentUser$ | async">  -->
               
                 <li class="nav-item">
-                    <a class="nav-link"  routerLink='/ingredient' routerLinkActive='active'>Ingredient</a>
+                    <a *ngIf="authService.isAuthenticated"  class="nav-link"  routerLink='/ingredient' routerLinkActive='active'>Ingredient</a>
                   </li> 
             <li class="nav-item">
               <a class="nav-link"  routerLink='/recipe' routerLinkActive='active'>Recipe</a>
@@ -15,13 +15,12 @@
             <li class="nav-item">
               <a class="nav-link" routerLink='/ingredientRecipe' routerLinkActive='active'>Ingredient-recipe</a>
             </li>
+             <li class="nav-item">
+              <a  class="nav-link" routerLink='/auth' routerLinkActive='active'>Login</a>
+            </li>
            
+            <button  class="btn btn-warning" (click)="logout()">Logout</button>
           <!-- </ng-container> -->
-
-          <li class="nav-item">
-            <a class="nav-link" routerLink='/errors' routerLinkActive='active'>Errors</a>
-          </li>
-        
         </ul>
 
         <!-- <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>  
@@ -33,11 +32,8 @@
            </div>
         </div> -->
 
-        <!-- <form *ngIf="(accountService.currentUser$ | async)===null" #loginForm="ngForm" class="d-flex" (ngSubmit)="login()" autocomplete="off">
-          <input name="username" [(ngModel)]="model.username" class="form-control me-2" type="text" placeholder="Username">
-          <input name="password" [(ngModel)]="model.password" class="form-control me-2" type="password" placeholder="Password">
-          <button class="btn btn-success" type="submit">Login</button>
-        </form> -->
+    
+        
      
     </div>
   </nav>
