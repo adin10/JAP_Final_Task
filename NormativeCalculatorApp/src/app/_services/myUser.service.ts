@@ -6,11 +6,11 @@ import { MyUser } from "../_shared/myUser.model";
 export class MyUserService{
 constructor(public http:HttpClient){}
 
-// getUsers(userId?:number){
-//     let params=new HttpParams()
-//     .set("UserID",userId != null ? userId.toString() : '')
-//     return this.http.get<MyUser[]>('https://localhost:5001/api/MyUser',{
-//         params:params
-//     });
-// }
+getUsers(userId?:number){
+     let params=new HttpParams()
+     .set("UserID",userId != null ? userId.toString() : '')
+     return this.http.get<MyUser[]>('https://localhost:5001/api/MyUser',{
+         params:params
+     });
+ }
 }

@@ -1,0 +1,20 @@
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <td>Recipe name</td>
+            <td>Description</td>
+            <td>Total cost</td>
+            <td>User</td>
+            <td>Category</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let recipe of recipeList">
+            <td>{{recipe.recipeName}}</td>
+            <td>{{recipe.description}}</td>
+            <td>{{recipe.totalCost}}</td>
+            <td>{{recipe.myUser.firstName}} {{recipe.myUser.lastName}}</td>
+            <td>{{recipe.recipeCategory.categoryName}}</td>
+        </tr>
+    </tbody>
+</table>

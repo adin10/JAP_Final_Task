@@ -55,6 +55,7 @@ namespace NormativeCalculator.Api
             services.AddScoped<IIngredientService, IngredientService>();
             services.AddScoped<IRecipeCategoryService, RecipeCategoryService>();
             services.AddScoped<IMyUserService, MyUserService>();
+            services.AddScoped<IRecipeService, RecipeService>();
 
 
             //IDENTITY

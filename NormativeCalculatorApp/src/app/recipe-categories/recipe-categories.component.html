@@ -1,1 +1,16 @@
-<p>recipe-categories works!</p>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <td>Category name</td>
+            <td>Description</td>
+            <td>Choose</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let category of recipesCategoryList">
+            <td>{{category.categoryName}}</td>
+            <td>{{category.description}}</td>
+            <td routerLink="/"></td>
+        </tr>
+    </tbody>
+</table>

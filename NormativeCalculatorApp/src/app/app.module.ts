@@ -11,7 +11,8 @@ import { AuthComponent } from './auth/auth.component';
 import { TokenInterceptorInterceptor } from './_interceptor/token-interceptor.interceptor';
 import { AuthGuardGuard } from './_guards/auth-guard.guard';
 import { MyUserComponent } from './my-user/my-user.component';
-import{HomeComponent} from './home/home.component'
+import{HomeComponent} from './home/home.component';
+import { RecipeComponent } from './recipe/recipe.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import{HomeComponent} from './home/home.component'
     NavMenuComponent,
     AuthComponent,
     MyUserComponent,
-    HomeComponent
+    HomeComponent,
+    RecipeComponent
   ],
   imports: [
     BrowserModule,

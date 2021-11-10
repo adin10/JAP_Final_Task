@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using NormativeCalculator.Database;
 using NormativeCalculator.Infrastructure.Dto;
+using NormativeCalculator.Infrastructure.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,9 @@ namespace NormativeCalculator.Infrastructure.Mappers
 
             CreateMap<MyUser, MyUserDto>();
             CreateMap<IdentityUser<int>, UserDto>();
+
+            CreateMap<Recipe, RecipeDto>();
+            CreateMap<RecipeInsertRequest, Recipe>().ReverseMap();
 
         }
     }
