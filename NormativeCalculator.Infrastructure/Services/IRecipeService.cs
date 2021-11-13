@@ -11,8 +11,10 @@ namespace NormativeCalculator.Infrastructure.Services
 {
   public interface IRecipeService
     {
-        public Task<List<RecipeDto>> get(RecipeSearchRequest request);
+        public Task<List<RecipeDto>> get(RecipeSearchRequest request,int recipeCategoyId);
         public Task<RecipeDto> getById(int id);
+
+        public Task<List<RecipeDto>> getRecipesByCategoryId(int id);
         public Task<Recipe> Insert(RecipeInsertRequest request);
     }
 }

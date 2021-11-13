@@ -1,0 +1,32 @@
+<form [formGroup]="forma" (ngSubmit)="addRecipe()">
+    <div class="form-group">
+        <label>Recipe name</label>
+        <input type="text" class="form-control" formControlName="recipeName">
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" formControlName="description">
+    </div>
+    <div class="form-group">
+        <label>Total price</label>
+        <input type="text" class="form-control" formControlName="totalCost">
+    </div>
+    <!-- <div class="form-group">
+        <label>Category</label>
+        <select  class="form-control" formControlName="recipeCategoryId">
+            <option [disabled] *ngFor="let category of categories" [value]="category.recipeCategoryId">
+                {{category.categoryName}}
+            </option>
+        </select>
+      </div> -->
+    <div class="form-group">
+        <label>User</label>
+        <select class="form-control" formControlName="myUserId">
+            <option *ngFor="let user of users" [value]="user.myUserId">
+                {{user.firstName}} {{user.lastName}}
+            </option>
+        </select>
+    </div>
+ 
+      <button class="btn btn-success">Add recipe</button>
+</form>

@@ -23,9 +23,14 @@ namespace NormativeCalculator.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<RecipeDto>>> get([FromQuery] RecipeSearchRequest request)
+        public async Task<ActionResult<List<RecipeDto>>> get([FromQuery] RecipeSearchRequest request,int categoryId,int number)
         {
-            return Ok(await _service.get(request));
+            return Ok(await _service.get(request,categoryId));
+        }
+        [HttpGet("getRecipesByCategoryId")]
+        public async Task<ActionResult<List<RecipeDto>>> getRecipesByCategoryId(int categoryId)
+        {
+            return Ok(await _service.getRecipesByCategoryId(categoryId));
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<RecipeDto>>getById(int id){

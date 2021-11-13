@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RecipeService } from '../_services/recipe.service';
 import { Recipe } from '../_shared/recipe.model';
 
@@ -11,16 +12,22 @@ export class RecipeComponent implements OnInit {
 
   recipeList:Recipe[]=[];
   RecipeName:string="";
-  constructor(public service:RecipeService) { }
+  categoryId:number;
+  constructor(public service:RecipeService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.loadRecipes(this.RecipeName);
+    this.categoryId=Number(this.route.snapshot.paramMap.get('id'));
+    this.loadRecipes(this.RecipeName,this.categoryId);
+   
   }
 
-  loadRecipes(RecipeName:string){
-    this.service.getRecipe(RecipeName).subscribe(data=>{
+  loadRecipes(RecipeName:string,categoryId:number){
+    this.service.getRecipe(RecipeName,this.categoryId).subscribe(data=>{
       this.recipeList=data;
     })
+  }
+  Search(){
+    this.loadRecipes(this.RecipeName,this.categoryId);
   }
 
 }

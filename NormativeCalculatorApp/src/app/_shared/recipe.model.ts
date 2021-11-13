@@ -4,7 +4,7 @@ import { RecipeCategory } from "./recipeCategories.model";
 
 export class Recipe{
     constructor(public recipeId:number,public recipeName:string,
-                public description:string,public totalCost:number,public myUserId:number,
+                public description:string,public totalCost:number,public myUserId:number,public createdDate:Date,
                     public recipeCategoryId:number,public ingredientRecipe:IngredientRecipe[],
                 public myUser:MyUser,public recipeCategory:RecipeCategory){}
 }

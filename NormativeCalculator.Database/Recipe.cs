@@ -11,6 +11,7 @@ namespace NormativeCalculator.Database
         public int RecipeId { get; set; }
         public string RecipeName { get; set; }
         public string Description { get; set; }
+        public DateTime CreatedDate { get; set; }
         public float TotalCost { get; set; }
         public int MyUserId { get; set; }
         public MyUser MyUser { get; set; }

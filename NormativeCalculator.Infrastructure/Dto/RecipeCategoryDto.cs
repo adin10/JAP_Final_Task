@@ -10,6 +10,7 @@ namespace NormativeCalculator.Infrastructure.Dto
     {
         public int RecipeCategoryId { get; set; }
         public string CategoryName { get; set; }
+        public DateTime CreatedDate { get; set; }
         public string Description { get; set; }
     }
 }

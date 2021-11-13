@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './home/home.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'auth',component:AuthComponent},
   {path:'ingredient',component:IngredientsComponent},
   {path:'recipeCategory',component:RecipeCategoriesComponent},
-  {path:'recipe',component:RecipeComponent}
+  {path:'recipes/:id',component:RecipeComponent}, // preuzimanje svih recepata za odabraniu kategoriju
+  {path:'addRecipe/:categoryId',component:AddRecipeComponent}
 
 ];
 

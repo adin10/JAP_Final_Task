@@ -23,18 +23,15 @@ namespace NormativeCalculator.Infrastructure.Services
             _mapper = mapper;
         }
 
-        public async Task<List<RecipeDto>> get(RecipeSearchRequest request)
+        public async Task<List<RecipeDto>> get(RecipeSearchRequest request,int categoryId)
         {
-            var query = _context.Recipe.Include(q=>q.MyUser).Include(q=>q.RecipeCategory).AsQueryable();
-            if (request != null)
-            {
-                if (!string.IsNullOrWhiteSpace(request.RecipeName))
-                {
-                    var normalizedEmployeeName = request.RecipeName.ToLower();
-                    query = query.Where(q => q.RecipeName.ToLower().Contains(normalizedEmployeeName));
-                }
-            }
-            var list = await query.ToListAsync();
+            var list = await _context.Recipe.Include(x=>x.MyUser).Include(x=>x.RecipeCategory).Include(x=>x.IngredientRecipe).Where(x => x.RecipeCategoryId == request.categoryId)
+                .OrderBy(x => x.TotalCost).Where(x=>(string.IsNullOrWhiteSpace(request.SearchTerm)) || 
+                x.RecipeName.ToLower().StartsWith(request.SearchTerm.ToLower()) || 
+                x.Description.ToLower().StartsWith(request.SearchTerm.ToLower()) || 
+                x.IngredientRecipe.Any(a=>a.Ingredient.Name.ToLower().Contains(request.SearchTerm)))
+                .ToListAsync();
+
             return _mapper.Map<List<RecipeDto>>(list);
         }
 
@@ -42,6 +39,12 @@ namespace NormativeCalculator.Infrastructure.Services
         {
             var entity = await _context.Recipe.Include(q=>q.MyUser).Include(q=>q.RecipeCategory).FirstOrDefaultAsync(x => x.RecipeId == id);
             return _mapper.Map<RecipeDto>(entity);
+        }
+
+        public async Task<List<RecipeDto>> getRecipesByCategoryId(int id)
+        {
+            var list =await _context.Recipe.Include(x => x.MyUser).Include(x => x.RecipeCategory).Where(q=>q.RecipeCategoryId==id).ToListAsync();
+            return _mapper.Map<List<RecipeDto>>(list);
         }
 
         public async Task<Recipe> Insert(RecipeInsertRequest request)

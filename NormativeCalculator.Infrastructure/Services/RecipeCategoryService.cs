@@ -21,9 +21,9 @@ namespace NormativeCalculator.Infrastructure.Services
             _context = context;
         }
 
-        public async Task<List<RecipeCategoryDto>> get()
+        public async Task<List<RecipeCategoryDto>> get(int number)
         {
-            var list = await _context.RecipeCategory.ToListAsync();
+            var list = await _context.RecipeCategory.Take(number).OrderByDescending(q=>q.CreatedDate).ToListAsync(); // take koristimo da uzmemo koliko podataka zelimo
             return _mapper.Map<List<RecipeCategoryDto>>(list);
         }
 

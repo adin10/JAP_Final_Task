@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NormativeCalculator.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,11 @@ namespace NormativeCalculator.Infrastructure.Dto
         public string RecipeName { get; set; }
         public string Description { get; set; }
         public float TotalCost { get; set; }
+        public DateTime CreatedDate { get; set; }
         public int MyUserId { get; set; }
         public MyUserDto MyUser { get; set; }
         public int RecipeCategoryId { get; set; }
         public RecipeCategoryDto RecipeCategory { get; set; }
-        //public ICollection<IngredientRecipe> IngredientRecipe { get; set; }
+        public ICollection<IngredientRecipe> IngredientRecipe { get; set; }
     }
 }
