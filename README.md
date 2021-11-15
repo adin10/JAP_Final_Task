@@ -12,12 +12,10 @@ Podaci potrebni za logiraje:
 
 Stvari koje je potrebno izmjeniti u aplikaciji su:
 -dodavanje recepata(angular)
-
 -prikaz detalja za recept(angular)
 
 Stvari koje planiram dodati u aplikaciju su:
 -implementacija OAuth2
-
 -validacija podataka
 
 
