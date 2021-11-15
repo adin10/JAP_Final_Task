@@ -1,6 +1,6 @@
 export class RecipeInsertRequest{
     constructor(public RecipeName:string,public Description:string,public TotalCost:number,
-            public MyUserId:number,public RecipeCategoryId:number){}
+            public RecipeCategoryId:number){}
 }
 
 // public string RecipeName { get; set; }

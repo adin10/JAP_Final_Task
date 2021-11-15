@@ -25,14 +25,17 @@ namespace NormativeCalculator.Infrastructure.Services
 
         public async Task<List<RecipeDto>> get(RecipeSearchRequest request,int categoryId)
         {
-            var list = await _context.Recipe.Include(x=>x.MyUser).Include(x=>x.RecipeCategory).Include(x=>x.IngredientRecipe).Where(x => x.RecipeCategoryId == request.categoryId)
-                .OrderBy(x => x.TotalCost).Where(x=>(string.IsNullOrWhiteSpace(request.SearchTerm)) || 
-                x.RecipeName.ToLower().StartsWith(request.SearchTerm.ToLower()) || 
-                x.Description.ToLower().StartsWith(request.SearchTerm.ToLower()) || 
-                x.IngredientRecipe.Any(a=>a.Ingredient.Name.ToLower().Contains(request.SearchTerm)))
-                .ToListAsync();
+            var list = await _context.Recipe.Include(x => x.MyUser).Include(x => x.RecipeCategory)
+                 .Include(x => x.IngredientRecipe)
+                 .Where(x => x.RecipeCategoryId == request.categoryId)
+                 .OrderBy(x => x.TotalCost).Where(x => (string.IsNullOrWhiteSpace(request.SearchTerm)) ||
+                 x.RecipeName.ToLower().StartsWith(request.SearchTerm.ToLower()) ||
+                 x.Description.ToLower().StartsWith(request.SearchTerm.ToLower()) ||
+                 x.IngredientRecipe.Any(a => a.Ingredient.Name.ToLower().Contains(request.SearchTerm)))
+                 .ToListAsync();
 
             return _mapper.Map<List<RecipeDto>>(list);
+
         }
 
         public async Task<RecipeDto> getById(int id)
@@ -40,19 +43,67 @@ namespace NormativeCalculator.Infrastructure.Services
             var entity = await _context.Recipe.Include(q=>q.MyUser).Include(q=>q.RecipeCategory).FirstOrDefaultAsync(x => x.RecipeId == id);
             return _mapper.Map<RecipeDto>(entity);
         }
-
-        public async Task<List<RecipeDto>> getRecipesByCategoryId(int id)
-        {
-            var list =await _context.Recipe.Include(x => x.MyUser).Include(x => x.RecipeCategory).Where(q=>q.RecipeCategoryId==id).ToListAsync();
-            return _mapper.Map<List<RecipeDto>>(list);
-        }
-
         public async Task<Recipe> Insert(RecipeInsertRequest request)
         {
-            var recipe = _mapper.Map<Recipe>(request);
-            await _context.Recipe.AddAsync(recipe);
-            await _context.SaveChangesAsync();
-            return recipe;
+
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                var entity = _mapper.Map<Recipe>(request);
+                await _context.Recipe.AddAsync(entity);
+                await _context.SaveChangesAsync();
+                var ingredientRecipe = _mapper.Map<List<IngredientRecipe>>(request.Ingredients);
+                ingredientRecipe.ForEach(x => x.Recipe = entity);
+                await _context.IngredientRecipe.AddRangeAsync(ingredientRecipe);
+                await _context.SaveChangesAsync();
+                await transaction.CommitAsync();
+                return entity;
+            }
+            catch (Exception)
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+        
+            
+        }
+
+        public async Task<List<RecipeDetailsDto>> RecipeDetails(int id)
+        {
+
+            var recipeDetails = await _context.IngredientRecipe.Where(q=>q.RecipeId==id).Select(q => new RecipeDetailsDto
+            {
+                RecipeId = q.RecipeId,
+                RecipeName = q.Recipe.RecipeName,
+                Description = q.Recipe.Description,
+                IngredientId = q.IngredientId,
+                IngredientName = q.Ingredient.Name,
+                UnitQuantity = q.Ingredient.UnitQuantity,
+                MeasureUnit = q.Ingredient.MeasureUnit,
+                UnitPrice = q.Ingredient.UnitPrice
+            }).ToListAsync();
+
+            float suma = 0;
+
+            foreach(var x in recipeDetails)
+            {
+                var ingredientRecipeQuantity = _context.IngredientRecipe
+                    .Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
+                    FirstOrDefault().Quantity;
+
+                var ingredientUnitPrice = _context.IngredientRecipe
+                    .Include(q => q.Ingredient).Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
+                    FirstOrDefault().Ingredient.UnitPrice;
+
+                var ingredientUnitQuantity = _context.IngredientRecipe.Include(q => q.Ingredient).
+                    Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
+                    FirstOrDefault().Ingredient.UnitQuantity;
+
+                x.IngredientCost = (ingredientRecipeQuantity * ingredientUnitPrice) / ingredientUnitQuantity;
+                suma = suma + x.IngredientCost;
+                x.TotalCost = x.TotalCost + suma;
+            }
+            return recipeDetails;
         }
     }
 }

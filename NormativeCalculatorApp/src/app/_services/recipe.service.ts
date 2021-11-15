@@ -1,5 +1,6 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { IngredientRecipe } from "../_shared/ingredientRecipe.model";
 import { Recipe } from "../_shared/recipe.model";
 import { RecipeInsertRequest } from "../_shared/requests/recipeInsertRequest.model";
 @Injectable({providedIn:'root'})
@@ -19,5 +20,8 @@ export class RecipeService{
     }
     addRecipe(recipe:RecipeInsertRequest){
         return this.http.post('https://localhost:5001/api/Recipe',recipe);
+    }
+    recipeDetails(id){
+        return this.http.get<Recipe[]>('https://localhost:5001/api/Recipe/RecipeDetails/'+id);
     }
 }

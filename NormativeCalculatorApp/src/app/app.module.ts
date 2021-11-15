@@ -13,7 +13,8 @@ import { AuthGuardGuard } from './_guards/auth-guard.guard';
 import { MyUserComponent } from './my-user/my-user.component';
 import{HomeComponent} from './home/home.component';
 import { RecipeComponent } from './recipe/recipe.component';
-import { AddRecipeComponent } from './add-recipe/add-recipe.component'
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
+import { RecipeDetailsComponent } from './recipe-details/recipe-details.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AddRecipeComponent } from './add-recipe/add-recipe.component'
     MyUserComponent,
     HomeComponent,
     RecipeComponent,
-    AddRecipeComponent
+    AddRecipeComponent,
+    RecipeDetailsComponent
   ],
   imports: [
     BrowserModule,

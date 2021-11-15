@@ -16,7 +16,7 @@ namespace NormativeCalculator.Infrastructure.Mappers
         public Mapper()
         {
             CreateMap<Ingredients, IngredientDto>();
-
+         
             CreateMap<RecipeCategory, RecipeCategoryDto>();
 
             CreateMap<MyUser, MyUserDto>();
@@ -24,6 +24,13 @@ namespace NormativeCalculator.Infrastructure.Mappers
 
             CreateMap<Recipe, RecipeDto>();
             CreateMap<RecipeInsertRequest, Recipe>().ReverseMap();
+            CreateMap<RecipeRestUpsertModel, RecipeInsertRequest>();
+
+            CreateMap<RecipeRestUpsertModel, IngredientRecipeInsertRequest>();
+            CreateMap<IngredientRecipeInsertRequest, IngredientRecipeInsertRequest>();
+
+            CreateMap<IngredientRecipe, IngredientRecipeDto>();
+            CreateMap<IngredientRecipeInsertRequest, IngredientRecipe>();
 
         }
     }

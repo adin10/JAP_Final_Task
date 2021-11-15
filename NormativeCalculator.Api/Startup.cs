@@ -94,7 +94,10 @@ namespace NormativeCalculator.Api
                 x.IterationCount = 10000;
             });
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
 
             //SWAGGER
             services.AddSwaggerGen(c =>

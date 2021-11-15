@@ -13,6 +13,8 @@ export class RecipeComponent implements OnInit {
   recipeList:Recipe[]=[];
   RecipeName:string="";
   categoryId:number;
+  number:number=5;
+
   constructor(public service:RecipeService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -29,5 +31,13 @@ export class RecipeComponent implements OnInit {
   Search(){
     this.loadRecipes(this.RecipeName,this.categoryId);
   }
+
+  // loadTenRecipes(){
+  //   this.service.getRecipe("",this.number,null).subscribe(data=>{
+  //     this.recipeList=data;
+  //     this.number+=this.number;
+  //   })
+  // }
+
 
 }

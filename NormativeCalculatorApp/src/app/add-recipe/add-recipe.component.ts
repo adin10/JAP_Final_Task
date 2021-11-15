@@ -47,7 +47,7 @@ export class AddRecipeComponent implements OnInit {
       recipeName:[""],
       description:[""],
       totalCost:[""],
-      myUserId:[""],
+      // myUserId:[""],
       // recipeCategoryId:[""]
     })
   }
@@ -66,7 +66,7 @@ export class AddRecipeComponent implements OnInit {
   addRecipe(){
     let recipe=new RecipeInsertRequest(this.forma.get('recipeName').value,
     this.forma.get('description').value,this.forma.get('totalCost').value,
-    this.forma.get('myUserId').value,this.categoryId);
+    this.categoryId);
     this.service.addRecipe(recipe).subscribe(data=>{
       // this.loadRecipes("");
     });
