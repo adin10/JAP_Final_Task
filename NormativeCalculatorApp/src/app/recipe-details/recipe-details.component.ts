@@ -11,7 +11,7 @@ import { Recipe } from '../_shared/recipe.model';
 })
 export class RecipeDetailsComponent implements OnInit {
 
-  ingredientRecipeList:Recipe[]=[];
+  ingredientRecipeList:IngredientRecipe[]=[];
   constructor(public service:RecipeService,public route:ActivatedRoute) { }
 
   ngOnInit(): void {

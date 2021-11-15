@@ -11,7 +11,7 @@ import { Recipe } from '../_shared/recipe.model';
 export class RecipeComponent implements OnInit {
 
   recipeList:Recipe[]=[];
-  RecipeName:string="";
+  SearchTerm:string="";
   categoryId:number;
   number:number=5;
 
@@ -19,17 +19,17 @@ export class RecipeComponent implements OnInit {
 
   ngOnInit(): void {
     this.categoryId=Number(this.route.snapshot.paramMap.get('id'));
-    this.loadRecipes(this.RecipeName,this.categoryId);
+    this.loadRecipes(this.SearchTerm,this.categoryId);
    
   }
 
-  loadRecipes(RecipeName:string,categoryId:number){
-    this.service.getRecipe(RecipeName,this.categoryId).subscribe(data=>{
+  loadRecipes(SearchTerm:string,categoryId:number){
+    this.service.getRecipe(SearchTerm,this.categoryId).subscribe(data=>{
       this.recipeList=data;
     })
   }
   Search(){
-    this.loadRecipes(this.RecipeName,this.categoryId);
+    this.loadRecipes(this.SearchTerm,this.categoryId);
   }
 
   // loadTenRecipes(){

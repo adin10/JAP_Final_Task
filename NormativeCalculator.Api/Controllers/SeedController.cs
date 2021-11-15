@@ -59,12 +59,12 @@ namespace NormativeCalculator.Api.Controllers
         {
             var user = new IdentityUser<int>
             {
-                Email = "mehmed.smajkic@sarajevo.ba",
+                Email = "user.user@sarajevo.ba",
                 EmailConfirmed = true,
-                UserName = "mehmedsmajkic",
+                UserName = "useruser",
             };
 
-            var userResult = await _userManager.CreateAsync(user, "Test12345*");
+            var userResult = await _userManager.CreateAsync(user, "User12345*");
             var roleResult = await _userrole.CreateAsync(new IdentityRole<int>(Role.User.ToString()));
             var userRoleResult = await _userManager.AddToRoleAsync(user, Role.User.ToString());
            

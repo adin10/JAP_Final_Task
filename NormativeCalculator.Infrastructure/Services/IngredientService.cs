@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using NormativeCalculator.Database;
 using NormativeCalculator.Infrastructure.Context;
 using NormativeCalculator.Infrastructure.Dto;
 using System;
@@ -30,5 +31,6 @@ namespace NormativeCalculator.Infrastructure.Services
             var entity =await _context.Ingredients.FirstOrDefaultAsync(x=>x.IngredientsId==id);
             return _mapper.Map<IngredientDto>(entity);
         }
+
     }
 }

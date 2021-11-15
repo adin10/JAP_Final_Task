@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace NormativeCalculator.Api.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class RecipeController : ControllerBase
@@ -33,8 +33,8 @@ namespace NormativeCalculator.Api.Controllers
         {
             return Ok(await _service.get(request,categoryId));
         }
-        [HttpGet("RecipeDetails")]
-        public async Task<ActionResult<List<RecipeDetailsDto>>> RecipeDetails(int recipeId)
+        [HttpGet("RecipeDetails/{recipeId}")]
+        public async Task<ActionResult<List<RecipeDetailsDto>>> recipeDetails(int recipeId)
         {
             return Ok(await _service.RecipeDetails(recipeId));
         }

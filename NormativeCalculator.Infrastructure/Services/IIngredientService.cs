@@ -1,4 +1,5 @@
-﻿using NormativeCalculator.Infrastructure.Dto;
+﻿using NormativeCalculator.Database;
+using NormativeCalculator.Infrastructure.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,7 @@ namespace NormativeCalculator.Infrastructure.Services
         public Task<List<IngredientDto>> get();
 
         public Task<IngredientDto> getById(int id);
+
+      
     }
 }

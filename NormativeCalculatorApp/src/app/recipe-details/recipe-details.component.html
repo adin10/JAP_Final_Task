@@ -13,14 +13,14 @@
 </thead>
 <tbody>
     <tr *ngFor="let irl of ingredientRecipeList">
-        <td>{{irl.recipeName}}</td>
-        <td>{{irl.description}}</td>
-        <!-- <td>{{irl.ingredientRecipe..}}</td>
+        <td>{{irl.recipe.recipeName}}</td>
+        <td>{{irl.recipe.description}}</td>
+        <td>{{irl.ingredient.name}}</td>
         <td>{{irl.ingredient.measureUnit}}</td>
         <td>{{irl.ingredient.unitPrice}}</td>
         <td>{{irl.ingredient.unitQuantity}}</td>
         <td>{{irl.price}}</td>
-        <td>{{irl.totalCost}}</td> -->
+        <td>{{irl.recipe.totalCost}}</td>
     </tr>
 </tbody>
 </table>

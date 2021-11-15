@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NormativeCalculator.Database;
 using NormativeCalculator.Infrastructure.Dto;
 using NormativeCalculator.Infrastructure.Services;
 using System;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace NormativeCalculator.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class IngredientController : ControllerBase
@@ -29,6 +31,7 @@ namespace NormativeCalculator.Api.Controllers
         {
             return Ok(await _service.getById(id));
         }
+     
 
     }
 }

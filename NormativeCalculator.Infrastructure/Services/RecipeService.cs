@@ -27,7 +27,7 @@ namespace NormativeCalculator.Infrastructure.Services
         {
             var list = await _context.Recipe.Include(x => x.MyUser).Include(x => x.RecipeCategory)
                  .Include(x => x.IngredientRecipe)
-                 .Where(x => x.RecipeCategoryId == request.categoryId)
+                 .Where(x => x.RecipeCategoryId == categoryId)
                  .OrderBy(x => x.TotalCost).Where(x => (string.IsNullOrWhiteSpace(request.SearchTerm)) ||
                  x.RecipeName.ToLower().StartsWith(request.SearchTerm.ToLower()) ||
                  x.Description.ToLower().StartsWith(request.SearchTerm.ToLower()) ||
@@ -40,7 +40,7 @@ namespace NormativeCalculator.Infrastructure.Services
 
         public async Task<RecipeDto> getById(int id)
         {
-            var entity = await _context.Recipe.Include(q=>q.MyUser).Include(q=>q.RecipeCategory).FirstOrDefaultAsync(x => x.RecipeId == id);
+            var entity = await _context.Recipe.Include(q=>q.MyUser).Include(q=>q.RecipeCategory).Include(q=>q.IngredientRecipe).FirstOrDefaultAsync(x => x.RecipeId == id);
             return _mapper.Map<RecipeDto>(entity);
         }
         public async Task<Recipe> Insert(RecipeInsertRequest request)
@@ -71,7 +71,7 @@ namespace NormativeCalculator.Infrastructure.Services
         public async Task<List<RecipeDetailsDto>> RecipeDetails(int id)
         {
 
-            var recipeDetails = await _context.IngredientRecipe.Where(q=>q.RecipeId==id).Select(q => new RecipeDetailsDto
+            var recipeDetails = await _context.IngredientRecipe.Where(q => q.RecipeId == id).Select(q => new RecipeDetailsDto
             {
                 RecipeId = q.RecipeId,
                 RecipeName = q.Recipe.RecipeName,
@@ -85,7 +85,7 @@ namespace NormativeCalculator.Infrastructure.Services
 
             float suma = 0;
 
-            foreach(var x in recipeDetails)
+            foreach (var x in recipeDetails)
             {
                 var ingredientRecipeQuantity = _context.IngredientRecipe
                     .Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
@@ -104,6 +104,42 @@ namespace NormativeCalculator.Infrastructure.Services
                 x.TotalCost = x.TotalCost + suma;
             }
             return recipeDetails;
+
+            //var recipe = await _context.Recipe.Include(x => x.IngredientRecipe).
+            //    ThenInclude(q => q.Ingredient).FirstOrDefaultAsync(q => q.RecipeId == id);
+
+            //var ingredientRecipe = _context.IngredientRecipe.Select(q => new RecipeDetailsDto
+            //{
+            //    RecipeName = q.Recipe.RecipeName,
+            //    Description = q.Recipe.Description,
+            //    IngredientId = q.IngredientId,
+            //    IngredientName = q.Ingredient.Name,
+            //    UnitQuantity = q.Ingredient.UnitQuantity,
+            //    MeasureUnit = q.Ingredient.MeasureUnit,
+            //    UnitPrice = q.Ingredient.UnitPrice
+            //});
+
+            //float suma = 0;
+
+            //foreach (var x in ingredientRecipe)
+            //{
+            //    var ingredientRecipeQuantity = _context.IngredientRecipe
+            //        .Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
+            //        FirstOrDefault().Quantity;
+
+            //    var ingredientUnitPrice = _context.IngredientRecipe
+            //        .Include(q => q.Ingredient).Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
+            //        FirstOrDefault().Ingredient.UnitPrice;
+
+            //    var ingredientUnitQuantity = _context.IngredientRecipe.Include(q => q.Ingredient).
+            //        Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
+            //        FirstOrDefault().Ingredient.UnitQuantity;
+
+            //    recipe.IngredientRecipe=
+            //    x.IngredientCost = (ingredientRecipeQuantity * ingredientUnitPrice) / ingredientUnitQuantity;
+            //    suma = suma + x.IngredientCost;
+            //    x.TotalCost = x.TotalCost + suma;
+            //}
         }
     }
 }

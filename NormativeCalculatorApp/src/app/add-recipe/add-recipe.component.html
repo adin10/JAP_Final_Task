@@ -7,9 +7,21 @@
         <label>Description</label>
         <input type="text" class="form-control" formControlName="description">
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
         <label>Total price</label>
         <input type="text" class="form-control" formControlName="totalCost">
+    </div> -->
+      <div class="form-group">
+        <label>Ingredient</label>
+        <select  class="form-control" formControlName="IngredientId">
+            <option  *ngFor="let ingredient of ingredientsList" [value]="ingredient.ingredientsID">
+                {{ingredient.name}} -> {{ingredient.unitPrice}}KM {{ingredient.unitQuantity}} {{ingredient.measureUnit}} 
+            </option>
+        </select>
+      </div>
+    <div class="form-group">
+        <label>Quantity</label>
+        <input type="text" class="form-control" formControlName="Quantity">
     </div>
     <!-- <div class="form-group">
         <label>Category</label>

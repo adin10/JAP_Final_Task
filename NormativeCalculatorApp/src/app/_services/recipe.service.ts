@@ -21,7 +21,9 @@ export class RecipeService{
     addRecipe(recipe:RecipeInsertRequest){
         return this.http.post('https://localhost:5001/api/Recipe',recipe);
     }
-    recipeDetails(id){
-        return this.http.get<Recipe[]>('https://localhost:5001/api/Recipe/RecipeDetails/'+id);
+    recipeDetails(ingredientRecipeId){
+        return this.http.get<IngredientRecipe[]>('https://localhost:5001/api/Recipe/RecipeDetails/' +ingredientRecipeId);
     }
+
+    
 }

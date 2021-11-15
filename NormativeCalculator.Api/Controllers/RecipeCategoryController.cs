@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NormativeCalculator.Infrastructure.Dto;
 using NormativeCalculator.Infrastructure.Services;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace NormativeCalculator.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class RecipeCategoryController : ControllerBase
