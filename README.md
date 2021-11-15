@@ -2,21 +2,22 @@
 
 NORMATIVE CALCULATOR APP
 
-Za izradu ove aplikacije korišteni su .NET Core za backend dio, Angular za fronted dio i SQL Server za kreiranje baze.
-Prije pokretanja aplikacije neophodno je uraditi restore baze sa svim tabelama i podacima, koji se nalazi unutar ovog repository-a pod nazivom JapTaskI.bak.
-Nakon pokretanja aplikacije, na početnoj stranici kao i na swaggeru potrebno se logirati.
+The application has been implemented in .NET Core for the backend side, angular for the fronted, and sql server for creating the database.
+Before starting the application, it is necessary to restore the database with all the tables and data, which is located within this repository called JapTaskI.bak.
+After launching the application, you need to log in on the home page as well as on the swagger.
 
-Podaci potrebni za logiraje:
--username : useruser
--password : User12345*
+Data required for login: 
+-username: useruser
+-password: User12345 *
 
-Stvari koje je potrebno izmjeniti u aplikaciji su:
--dodavanje recepata(angular)
--prikaz detalja za recept(angular)
+Things I would like to change in the app are: 
+-addition of recipes (angular)
+-display of details for the recipe (angular)
+-pagination for recipe details
 
-Stvari koje planiram dodati u aplikaciju su:
--implementacija OAuth2
--validacija podataka
+things I plan to add to the application are:
+-OAuth2 implementation
+-data validation
 
 
 
