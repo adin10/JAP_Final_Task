@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -20,6 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NormativeCalculator.Common\NormativeCalculator.Common.csproj" />
+    <ProjectReference Include="..\NormativeCalculator.Core\NormativeCalculator.Core.csproj" />
+    <ProjectReference Include="..\NormativeCalculator.Database\NormativeCalculator.Database.csproj" />
     <ProjectReference Include="..\NormativeCalculator.Infrastructure\NormativeCalculator.Infrastructure.csproj" />
   </ItemGroup>
 

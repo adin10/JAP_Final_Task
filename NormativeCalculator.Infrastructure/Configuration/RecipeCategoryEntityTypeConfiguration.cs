@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using NormativeCalculator.Core.Entities;
 using NormativeCalculator.Database;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,8 @@ namespace NormativeCalculator.Infrastructure.Configuration
     {
         public void Configure(EntityTypeBuilder<RecipeCategory> builder)
         {
-            builder.HasKey(x => x.RecipeCategoryId);
-            builder.Property(x => x.CategoryName).IsRequired();
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Name).IsRequired();
         }
     }
 }

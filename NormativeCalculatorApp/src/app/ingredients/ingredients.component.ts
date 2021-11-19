@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IngredientsService } from '../_services/ingredients.service';
-import { Ingredients } from '../_shared/ingredients.model';
+import { Ingredient } from '../_shared/ingredients.model';
 
 @Component({
   selector: 'app-ingredients',
@@ -9,7 +9,7 @@ import { Ingredients } from '../_shared/ingredients.model';
 })
 export class IngredientsComponent implements OnInit {
 
-  ingredientsList:Ingredients[]=[];
+  ingredientsList:Ingredient[]=[];
   constructor(public service:IngredientsService) { }
 
   ngOnInit(): void {

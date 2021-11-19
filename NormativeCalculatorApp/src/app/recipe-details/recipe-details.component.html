@@ -1,26 +1,11 @@
-<table class="table table-dark">
-    <thead>
-    <tr>
-        <td>Recipe name</td>
-        <td>Description</td>
-        <td>Ingredient name</td>
-        <td>Measure unit</td>
-        <td>Unit price</td>
-        <td>Unit quantity</td>
-        <td>Ingredient cost</td>
-        <td>Total cost</td>
-    </tr>
-</thead>
-<tbody>
-    <tr *ngFor="let irl of ingredientRecipeList">
-        <td>{{irl.recipe.recipeName}}</td>
-        <td>{{irl.recipe.description}}</td>
-        <td>{{irl.ingredient.name}}</td>
-        <td>{{irl.ingredient.measureUnit}}</td>
-        <td>{{irl.ingredient.unitPrice}}</td>
-        <td>{{irl.ingredient.unitQuantity}}</td>
-        <td>{{irl.price}}</td>
-        <td>{{irl.recipe.totalCost}}</td>
-    </tr>
-</tbody>
-</table>
+<div>{{recipe.name}}</div>
+<div>{{recipe.description}}</div>
+
+    
+        <td>Ingredient name:</td><br>
+        <td>quantity:</td>
+  <div *ngFor="let ingredients of recipe.ingredientRecipes">
+    <td>{{ingredients.ingredient.name}}</td>
+    <td>{{ingredients.quantity}}</td>
+</div>
+    

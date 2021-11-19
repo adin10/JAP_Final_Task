@@ -9,7 +9,7 @@ namespace NormativeCalculator.Infrastructure.Requests
 {
    public class RecipeInsertRequest
     {
-        public string RecipeName { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
         //public float TotalCost { get; set; }
         public DateTime CreatedDate { get; set; }

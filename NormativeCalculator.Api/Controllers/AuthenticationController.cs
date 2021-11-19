@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using NormativeCalculator.Infrastructure.Interfaces;
 using NormativeCalculator.Infrastructure.Requests;
 using NormativeCalculator.Infrastructure.Services;
 using System;
@@ -21,12 +22,12 @@ namespace NormativeCalculator.Api.Controllers
     {
         private readonly UserManager<IdentityUser<int>> userManager;
         private readonly SignInManager<IdentityUser<int>> signInManager;
-        private readonly IMyUserService _userService;
+        private readonly IUserService _userService;
         private readonly IConfiguration _confiuration;
         public AuthenticationController(
             UserManager<IdentityUser<int>> userManager,
             SignInManager<IdentityUser<int>> signInManager,
-            IMyUserService employeeService,
+            IUserService employeeService,
             IConfiguration confiuration)
         {
 
@@ -45,7 +46,7 @@ namespace NormativeCalculator.Api.Controllers
             if (user != null && await userManager.CheckPasswordAsync(user, model.Password))
             {
                 var userRoles = await userManager.GetRolesAsync(user);
-                var Myuser = await _userService.get(new Infrastructure.Requests.UserSearchRequest { UserID = user.Id });
+                var Myuser = await _userService.Get(new Infrastructure.Requests.UserSearchRequest { UserID = user.Id });
                 var authClaims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name,user.UserName),

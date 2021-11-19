@@ -3,9 +3,9 @@ import { MyUser } from "./myUser.model";
 import { RecipeCategory } from "./recipeCategories.model";
 
 export class Recipe{
-    constructor(public recipeId:number,public recipeName:string,
+    constructor(public id:number,public name:string,
                 public description:string,public totalCost:number,public myUserId:number,public createdDate:Date,
-                    public recipeCategoryId:number,public ingredientRecipe:IngredientRecipe[],
+                    public recipeCategoryId:number,public ingredientRecipes:IngredientRecipe[],
                 public myUser:MyUser,public recipeCategory:RecipeCategory){}
 }
 

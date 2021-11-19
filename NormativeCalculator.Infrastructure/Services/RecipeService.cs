@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using NormativeCalculator.Core.Entities;
 using NormativeCalculator.Database;
-using NormativeCalculator.Infrastructure.Context;
 using NormativeCalculator.Infrastructure.Dto;
+using NormativeCalculator.Infrastructure.Interfaces;
 using NormativeCalculator.Infrastructure.Requests;
 using System;
 using System.Collections.Generic;
@@ -14,33 +15,45 @@ namespace NormativeCalculator.Infrastructure.Services
 {
     public class RecipeService : IRecipeService
     {
-        private readonly MyContext _context;
+        private readonly NCDbContext _context;
         private readonly IMapper _mapper;
 
-        public RecipeService(MyContext context, IMapper mapper)
+        public RecipeService(NCDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
 
-        public async Task<List<RecipeDto>> get(RecipeSearchRequest request,int categoryId)
+        public async Task<List<RecipeDto>> Get(RecipeSearchRequest request)
         {
-            var list = await _context.Recipe.Include(x => x.MyUser).Include(x => x.RecipeCategory)
-                 .Include(x => x.IngredientRecipe)
-                 .Where(x => x.RecipeCategoryId == categoryId)
-                 .OrderBy(x => x.TotalCost).Where(x => (string.IsNullOrWhiteSpace(request.SearchTerm)) ||
-                 x.RecipeName.ToLower().StartsWith(request.SearchTerm.ToLower()) ||
-                 x.Description.ToLower().StartsWith(request.SearchTerm.ToLower()) ||
-                 x.IngredientRecipe.Any(a => a.Ingredient.Name.ToLower().Contains(request.SearchTerm)))
-                 .ToListAsync();
+            //var list = await _context.Recipes.Include(x => x.MyUser).Include(x => x.RecipeCategory)
+            //     .Include(x => x.IngredientRecipes)
+            //     .Where(x => x.RecipeCategoryId == request.categoryId)
+            //     .OrderBy(x => x.TotalCost).Where(x => (string.IsNullOrWhiteSpace(request.SearchTerm)) ||
+            //     x.Name.ToLower().StartsWith(request.SearchTerm.ToLower()) ||
+            //     x.Description.ToLower().StartsWith(request.SearchTerm.ToLower()) ||
+            //     x.IngredientRecipes.Any(a => a.Ingredient.Name.ToLower().Contains(request.SearchTerm)))
+            //     .ToListAsync();
 
+            //return _mapper.Map<List<RecipeDto>>(list);
+
+            var query = _context.Recipes.Include(x=>x.RecipeCategory).Include(x=>x.MyUser).Include(x=>x.IngredientRecipes).AsQueryable();
+            if (request?.categoryId.HasValue ?? false) 
+            {
+                query = query.Where(x => x.RecipeCategoryId == request.categoryId);
+            }
+            if (!string.IsNullOrWhiteSpace(request?.SearchTerm))
+            {
+                var normalizedName = request.SearchTerm.ToLower();
+                query = query.Where(x => x.Name.ToLower().Contains(normalizedName) || x.Description.ToLower().Contains(normalizedName));
+            }
+            var list = await query.ToListAsync();
             return _mapper.Map<List<RecipeDto>>(list);
-
         }
 
-        public async Task<RecipeDto> getById(int id)
+        public async Task<RecipeDto> GetById(int id)
         {
-            var entity = await _context.Recipe.Include(q=>q.MyUser).Include(q=>q.RecipeCategory).Include(q=>q.IngredientRecipe).FirstOrDefaultAsync(x => x.RecipeId == id);
+            var entity = await _context.Recipes.Include(q=>q.MyUser).Include(q=>q.RecipeCategory).Include(q=>q.IngredientRecipes).FirstOrDefaultAsync(x => x.Id == id);
             return _mapper.Map<RecipeDto>(entity);
         }
         public async Task<Recipe> Insert(RecipeInsertRequest request)
@@ -50,11 +63,11 @@ namespace NormativeCalculator.Infrastructure.Services
             try
             {
                 var entity = _mapper.Map<Recipe>(request);
-                await _context.Recipe.AddAsync(entity);
+                await _context.Recipes.AddAsync(entity);
                 await _context.SaveChangesAsync();
                 var ingredientRecipe = _mapper.Map<List<IngredientRecipe>>(request.Ingredients);
                 ingredientRecipe.ForEach(x => x.Recipe = entity);
-                await _context.IngredientRecipe.AddRangeAsync(ingredientRecipe);
+                await _context.IngredientRecipes.AddRangeAsync(ingredientRecipe);
                 await _context.SaveChangesAsync();
                 await transaction.CommitAsync();
                 return entity;
@@ -64,42 +77,28 @@ namespace NormativeCalculator.Infrastructure.Services
                 await transaction.RollbackAsync();
                 throw;
             }
-        
-            
         }
 
-        public async Task<List<RecipeDetailsDto>> RecipeDetails(int id)
+        public async Task<RecipeDetailsDto> RecipeDetails(int id)
         {
-
-            var recipeDetails = await _context.IngredientRecipe.Where(q => q.RecipeId == id).Select(q => new RecipeDetailsDto
+            var recipeDetails = await _context.Recipes.Include(x=>x.IngredientRecipes).ThenInclude(x => x.Ingredient).Select(q => new RecipeDetailsDto
             {
-                RecipeId = q.RecipeId,
-                RecipeName = q.Recipe.RecipeName,
-                Description = q.Recipe.Description,
-                IngredientId = q.IngredientId,
-                IngredientName = q.Ingredient.Name,
-                UnitQuantity = q.Ingredient.UnitQuantity,
-                MeasureUnit = q.Ingredient.MeasureUnit,
-                UnitPrice = q.Ingredient.UnitPrice
-            }).ToListAsync();
+                RecipeId = q.Id,
+                Name = q.Name,
+                Description = q.Description,
+                IngredientRecipes = _mapper.Map<List<IngredientRecipeDto>>(q.IngredientRecipes)
+                //MeasureUnit = q.Ingredient.UnitMeasure,
+            }).FirstOrDefaultAsync(q => q.RecipeId == id);
 
             float suma = 0;
 
-            foreach (var x in recipeDetails)
+            foreach (var x in recipeDetails.IngredientRecipes)
             {
-                var ingredientRecipeQuantity = _context.IngredientRecipe
-                    .Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
-                    FirstOrDefault().Quantity;
+                var ingredientRecipeQuantity = x.Quantity;
+                var ingredientUnitPrice = x.Ingredient.UnitPrice;
+                var ingredientUnitQuantity = x.Ingredient.UnitQuantity;
 
-                var ingredientUnitPrice = _context.IngredientRecipe
-                    .Include(q => q.Ingredient).Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
-                    FirstOrDefault().Ingredient.UnitPrice;
-
-                var ingredientUnitQuantity = _context.IngredientRecipe.Include(q => q.Ingredient).
-                    Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
-                    FirstOrDefault().Ingredient.UnitQuantity;
-
-                x.IngredientCost = (ingredientRecipeQuantity * ingredientUnitPrice) / ingredientUnitQuantity;
+                x.IngredientCost= (ingredientRecipeQuantity * ingredientUnitPrice) / ingredientUnitQuantity;
                 suma = suma + x.IngredientCost;
                 x.TotalCost = x.TotalCost + suma;
             }
@@ -140,6 +139,6 @@ namespace NormativeCalculator.Infrastructure.Services
             //    suma = suma + x.IngredientCost;
             //    x.TotalCost = x.TotalCost + suma;
             //}
+            }
         }
-    }
 }

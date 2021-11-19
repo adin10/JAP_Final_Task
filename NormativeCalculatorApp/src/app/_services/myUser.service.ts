@@ -9,7 +9,7 @@ constructor(public http:HttpClient){}
 getUsers(userId?:number){
      let params=new HttpParams()
      .set("UserID",userId != null ? userId.toString() : '')
-     return this.http.get<MyUser[]>('https://localhost:5001/api/MyUser',{
+     return this.http.get<MyUser[]>('https://localhost:5001/api/Users',{
          params:params
      });
  }

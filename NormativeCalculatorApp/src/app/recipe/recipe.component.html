@@ -19,13 +19,13 @@
     </thead>
     <tbody>
         <tr *ngFor="let recipe of recipeList">
-            <td>{{recipe.recipeName}}</td>
+            <td>{{recipe.name}}</td>
             <td>{{recipe.description}}</td>
             <td>{{recipe.totalCost}}</td>
             <td>{{recipe.createdDate | date}}</td>
             <td>{{recipe.myUser.firstName}} {{recipe.myUser.lastName}}</td>
-            <td>{{recipe.recipeCategory.categoryName}}</td>
-            <td><button class="btn btn-primary" routerLink="/recipes/{{recipe.recipeCategoryId}}/{{recipe.recipeId}}">See details</button></td>
+            <td>{{recipe.recipeCategory.name}}</td>
+            <td><button class="btn btn-primary" routerLink="/recipeDetails/{{recipe.id}}">See details</button></td>
         </tr>
     </tbody>
 </table>

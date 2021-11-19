@@ -12,16 +12,21 @@ import { Recipe } from '../_shared/recipe.model';
 export class RecipeDetailsComponent implements OnInit {
 
   ingredientRecipeList:IngredientRecipe[]=[];
+  recipe:Recipe = {} as Recipe;
+  recipeId:number;
+ 
   constructor(public service:RecipeService,public route:ActivatedRoute) { }
 
-  ngOnInit(): void {
-    this.loadIngredientRecipeList();
+  async ngOnInit(): Promise<void> {
+    this.recipeId=Number(this.route.snapshot.params.id);
+    this.recipe = await this.loadIngredientRecipeList();
+    console.log(this.recipe);
   }
 
-  loadIngredientRecipeList(){
-    this.service.recipeDetails(this.route.snapshot.params.id).subscribe(data=>{
-      this.ingredientRecipeList=data;
-    })
+  async loadIngredientRecipeList():Promise<Recipe>{
+  
+    return await this.service.recipeDetails(this.recipeId).toPromise();
+    
   }
 
 }

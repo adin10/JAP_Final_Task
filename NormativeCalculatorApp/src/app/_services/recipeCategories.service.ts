@@ -8,11 +8,11 @@ export class RecipeCategoriesService{
 
     getRecipeCategories(number:number){
         let params=new HttpParams().set("number",number)
-        return this.http.get<RecipeCategory[]>('https://localhost:5001/api/RecipeCategory',{
+        return this.http.get<RecipeCategory[]>('https://localhost:5001/api/RecipeCategories',{
             params:params
         });
     }
     getRecipeCategorieById(id){
-        return this.http.get<RecipeCategory[]>('https://localhost:5001/api/RecipeCategory/'+id);
+        return this.http.get<RecipeCategory[]>('https://localhost:5001/api/RecipeCategories/'+id);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
+using NormativeCalculator.Core.Entities;
 using NormativeCalculator.Database;
 using NormativeCalculator.Infrastructure.Dto;
 using NormativeCalculator.Infrastructure.Requests;
@@ -15,7 +16,7 @@ namespace NormativeCalculator.Infrastructure.Mappers
     {
         public Mapper()
         {
-            CreateMap<Ingredients, IngredientDto>();
+            CreateMap<Ingredient, IngredientDto>();
          
             CreateMap<RecipeCategory, RecipeCategoryDto>();
 

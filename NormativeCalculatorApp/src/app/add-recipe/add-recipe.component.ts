@@ -7,7 +7,7 @@ import { MyUserService } from '../_services/myUser.service';
 import { RecipeService } from '../_services/recipe.service';
 import { RecipeCategoriesService } from '../_services/recipeCategories.service';
 import { IngredientRecipe } from '../_shared/ingredientRecipe.model';
-import { Ingredients } from '../_shared/ingredients.model';
+import { Ingredient } from '../_shared/ingredients.model';
 import { MyUser } from '../_shared/myUser.model';
 import { Recipe } from '../_shared/recipe.model';
 import { RecipeCategory } from '../_shared/recipeCategories.model';
@@ -25,7 +25,7 @@ export class AddRecipeComponent implements OnInit {
   n:number=10;
   recipeList:Recipe[]=[];
   ingredientRecipeList:IngredientRecipe[]=[];
-  ingredientsList:Ingredients[]=[];
+  ingredientsList:Ingredient[]=[];
   categories:RecipeCategory[]=[];
   users:MyUser[]=[];
   constructor(public router:Router,public service:RecipeService,public fb:FormBuilder,
