@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NormativeCalculator.Core", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NormativeCalculator.Common", "NormativeCalculator.Common\NormativeCalculator.Common.csproj", "{C908753F-F049-431A-9243-07FD64FBEE96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormativeCalculator.Mapper", "NormativeCalculator.Normative\NormativeCalculator.Mapper.csproj", "{71865413-CCD2-41C7-B2B1-1E89722F01E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C908753F-F049-431A-9243-07FD64FBEE96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C908753F-F049-431A-9243-07FD64FBEE96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C908753F-F049-431A-9243-07FD64FBEE96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71865413-CCD2-41C7-B2B1-1E89722F01E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71865413-CCD2-41C7-B2B1-1E89722F01E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71865413-CCD2-41C7-B2B1-1E89722F01E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71865413-CCD2-41C7-B2B1-1E89722F01E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

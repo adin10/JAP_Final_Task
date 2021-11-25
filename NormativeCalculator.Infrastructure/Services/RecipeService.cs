@@ -24,6 +24,7 @@ namespace NormativeCalculator.Infrastructure.Services
             _mapper = mapper;
         }
 
+     
         public async Task<List<RecipeDto>> Get(RecipeSearchRequest request)
         {
             //var list = await _context.Recipes.Include(x => x.MyUser).Include(x => x.RecipeCategory)
@@ -81,7 +82,8 @@ namespace NormativeCalculator.Infrastructure.Services
 
         public async Task<RecipeDetailsDto> RecipeDetails(int id)
         {
-            var recipeDetails = await _context.Recipes.Include(x=>x.IngredientRecipes).ThenInclude(x => x.Ingredient).Select(q => new RecipeDetailsDto
+            var recipeDetails = await _context.Recipes.Include(x=>x.IngredientRecipes).
+                ThenInclude(x => x.Ingredient).Select(q => new RecipeDetailsDto
             {
                 RecipeId = q.Id,
                 Name = q.Name,
@@ -104,41 +106,7 @@ namespace NormativeCalculator.Infrastructure.Services
             }
             return recipeDetails;
 
-            //var recipe = await _context.Recipe.Include(x => x.IngredientRecipe).
-            //    ThenInclude(q => q.Ingredient).FirstOrDefaultAsync(q => q.RecipeId == id);
-
-            //var ingredientRecipe = _context.IngredientRecipe.Select(q => new RecipeDetailsDto
-            //{
-            //    RecipeName = q.Recipe.RecipeName,
-            //    Description = q.Recipe.Description,
-            //    IngredientId = q.IngredientId,
-            //    IngredientName = q.Ingredient.Name,
-            //    UnitQuantity = q.Ingredient.UnitQuantity,
-            //    MeasureUnit = q.Ingredient.MeasureUnit,
-            //    UnitPrice = q.Ingredient.UnitPrice
-            //});
-
-            //float suma = 0;
-
-            //foreach (var x in ingredientRecipe)
-            //{
-            //    var ingredientRecipeQuantity = _context.IngredientRecipe
-            //        .Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
-            //        FirstOrDefault().Quantity;
-
-            //    var ingredientUnitPrice = _context.IngredientRecipe
-            //        .Include(q => q.Ingredient).Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
-            //        FirstOrDefault().Ingredient.UnitPrice;
-
-            //    var ingredientUnitQuantity = _context.IngredientRecipe.Include(q => q.Ingredient).
-            //        Where(q => q.RecipeId == id && q.Ingredient.IngredientsId == x.IngredientId).
-            //        FirstOrDefault().Ingredient.UnitQuantity;
-
-            //    recipe.IngredientRecipe=
-            //    x.IngredientCost = (ingredientRecipeQuantity * ingredientUnitPrice) / ingredientUnitQuantity;
-            //    suma = suma + x.IngredientCost;
-            //    x.TotalCost = x.TotalCost + suma;
-            //}
+         
             }
         }
 }

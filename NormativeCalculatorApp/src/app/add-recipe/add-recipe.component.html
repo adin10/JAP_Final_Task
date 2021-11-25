@@ -19,9 +19,16 @@
             </option>
         </select>
       </div> -->
+      <div *ngFor="let ing of selectedIngredients"> 
+          <div class="row">
+              <div class="col-md-4">{{ing}}</div>
+              <div class="col-md-4"><input type="number"/></div>
+              <div class="col-md-4"><input type="text"/></div>
+          </div>
+      </div>
       <div class="form-group">
         <label>Ingredient</label>
-        <select  class="form-control" formControlName="IngredientId">
+        <select  class="form-control" formControlName="IngredientId" (change)="addIngredients()">
             <option  *ngFor="let ingredient of ingredientsList" [value]="ingredient.id">
                 {{ingredient.name}} -> {{ingredient.unitPrice}}KM {{ingredient.unitQuantity}} {{ingredient.unitMeasure}} 
             </option>
@@ -31,22 +38,7 @@
         <label>Quantity</label>
         <input type="text" class="form-control" formControlName="Quantity">
     </div>
-    <!-- <div class="form-group">
-        <label>Category</label>
-        <select  class="form-control" formControlName="recipeCategoryId">
-            <option [disabled] *ngFor="let category of categories" [value]="category.recipeCategoryId">
-                {{category.categoryName}}
-            </option>
-        </select>
-      </div> -->
-    <!-- <div class="form-group">
-        <label>User</label>
-        <select class="form-control" formControlName="myUserId">
-            <option *ngFor="let user of users" [value]="user.myUserId">
-                {{user.firstName}} {{user.lastName}}
-            </option>
-        </select>
-    </div> -->
+   
  
       <button class="btn btn-success">Add recipe</button>
 </form>

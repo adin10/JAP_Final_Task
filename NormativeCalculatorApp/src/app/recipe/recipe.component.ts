@@ -23,10 +23,8 @@ export class RecipeComponent implements OnInit {
    
   }
 
-  loadRecipes(SearchTerm:string,categoryId:number){
-    this.service.getRecipe(SearchTerm,this.categoryId).subscribe(data=>{
-      this.recipeList=data;
-    })
+  async loadRecipes(SearchTerm:string,categoryId:number){
+    this.recipeList = await this.service.getRecipe(SearchTerm,this.categoryId);
   }
   Search(){
     this.loadRecipes(this.SearchTerm,this.categoryId);

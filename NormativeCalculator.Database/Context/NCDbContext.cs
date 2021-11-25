@@ -16,7 +16,6 @@ namespace NormativeCalculator.Database
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<Recipe> Recipes { get; set; }
         public DbSet<IngredientRecipe> IngredientRecipes { get; set; }
-       
         public DbSet<RecipeCategory> RecipeCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

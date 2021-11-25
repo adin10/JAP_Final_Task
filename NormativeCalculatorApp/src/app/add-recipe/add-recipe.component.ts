@@ -28,6 +28,11 @@ export class AddRecipeComponent implements OnInit {
   ingredientsList:Ingredient[]=[];
   categories:RecipeCategory[]=[];
   users:MyUser[]=[];
+  
+  selectedIngredients:number[]=[];
+  public selectedIngredient:Ingredient[]=[];
+
+
   constructor(public router:Router,public service:RecipeService,public fb:FormBuilder,
     public categoryService:RecipeCategoriesService,public userService:MyUserService, 
     private route : ActivatedRoute,public ingredientRecipeService:IngredientRecipeService,
@@ -39,14 +44,14 @@ export class AddRecipeComponent implements OnInit {
     // this.loadIngredientRecipe();
      this.loadIngredients();
 
-    this.route.params.subscribe(
+   this.route.params.subscribe(
       (params : Params) => {
 
         this.categoryId = +params['categoryId'];
       
 
         if(!Number.isNaN(this.categoryId)  &&  this.categoryId != 0 ){
-          this.service.getRecipe("",this.categoryId).subscribe(
+        this.service.getRecipe("",this.categoryId).then(
             res =>{
               // this. = res.title;
             }
@@ -87,10 +92,8 @@ export class AddRecipeComponent implements OnInit {
     this.router.navigate(["/recipe"]);
   }
 
-  loadRecipes(RecipeName:string){
-    this.service.getRecipe(RecipeName,null).subscribe(data=>{
-      this.recipeList=data;
-    })
+ async loadRecipes(RecipeName:string){
+  this.recipeList = await this.service.getRecipe("",this.categoryId);
   }
 
   loadIngredientRecipe(){
@@ -102,5 +105,8 @@ export class AddRecipeComponent implements OnInit {
       this.ingredientService.getIngredients().subscribe(data=>{
         this.ingredientsList=data;
       })
+  }
+  addIngredients(){
+    this.selectedIngredients.push(this.forma.get('IngredientId').value);
   }
 }

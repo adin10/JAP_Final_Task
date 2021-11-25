@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace NormativeCalculator.Common.Enum
 {
-
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum UnitMeasure
     {

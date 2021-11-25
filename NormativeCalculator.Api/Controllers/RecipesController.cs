@@ -29,16 +29,19 @@ namespace NormativeCalculator.Api.Controllers
             _recipeService = service;
             _mapper = mapper;
         }
+
         [HttpGet]
         public async Task<ActionResult<List<RecipeDto>>> Get([FromQuery] RecipeSearchRequest request)
         {
             return Ok(await _recipeService.Get(request));
         }
+
         [HttpGet("RecipeDetails/{id}")]
         public async Task<ActionResult<RecipeDetailsDto>> RecipeDetails(int id)
         {
             return Ok(await _recipeService.RecipeDetails(id));
         }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<RecipeDto>> GetById(int id){
             return Ok(await _recipeService.GetById(id));

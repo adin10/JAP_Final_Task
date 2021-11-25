@@ -16,5 +16,6 @@ namespace NormativeCalculator.Core.Entities
         public float Quantity { get; set; }
         public float Price { get; set; }
 
+
     }
 }

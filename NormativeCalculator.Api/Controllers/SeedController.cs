@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using NormativeCalculator.Common.Roles;
 using NormativeCalculator.Database;
-using NormativeCalculator.Infrastructure.Roles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
