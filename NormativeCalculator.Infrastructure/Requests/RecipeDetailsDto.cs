@@ -13,13 +13,8 @@ namespace NormativeCalculator.Infrastructure.Requests
         public int RecipeId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        //public int IngredientId { get; set; }
-        //public string IngredientName { get; set; }
-        //public string MeasureUnit { get; set; }
-        //public float UnitPrice { get; set; }
-        //public float UnitQuantity { get; set; }
-        //public float IngredientCost { get; set; }
-        //public float TotalCost { get; set; }
+        public float TotalCost { get; set; }
+    
         public List<IngredientRecipeDto> IngredientRecipes { get; set; }
 
     }

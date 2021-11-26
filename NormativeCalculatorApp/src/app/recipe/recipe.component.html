@@ -5,23 +5,21 @@
     <input class="form-control" type="text" name="SearchTerm" [(ngModel)]="SearchTerm" (change)="Search()" placeholder="Search Recipes">
     <!-- <input class="form-control" type="text" name="LastName" [(ngModel)]="categoryId" (change)="Search()" placeholder="Search category id"> -->
 </nav>
-<table class="table table-dark">
+<table class="table">
     <thead>
         <tr>
-            <td>Recipe name</td>
-            <td>Description</td>
-            <td>Total cost</td>
-            <td>Created date</td>
-            <td>User</td>
-            <td>Category</td>
-            <td>Details</td>
+            <th>Recipe name</th>
+            <th>Description</th>
+            <th>Created date</th>
+            <th>User</th>
+            <th>Category</th>
+            <th>Details</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let recipe of recipeList">
             <td>{{recipe.name}}</td>
             <td>{{recipe.description}}</td>
-            <td>{{recipe.totalCost}}</td>
             <td>{{recipe.createdDate | date}}</td>
             <td>{{recipe.myUser.firstName}} {{recipe.myUser.lastName}}</td>
             <td>{{recipe.recipeCategory.name}}</td>

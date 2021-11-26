@@ -13,19 +13,19 @@ export class RecipeDetailsComponent implements OnInit {
 
   ingredientRecipeList:IngredientRecipe[]=[];
   recipe:Recipe = {} as Recipe;
-  recipeId:number;
+  Recipeid:number;
  
   constructor(public service:RecipeService,public route:ActivatedRoute) { }
 
   async ngOnInit(): Promise<void> {
-    this.recipeId=Number(this.route.snapshot.params.id);
+    this.Recipeid=Number(this.route.snapshot.params.id);
     this.recipe = await this.loadIngredientRecipeList();
     console.log(this.recipe);
   }
 
-  async loadIngredientRecipeList():Promise<Recipe>{
+  async loadIngredientRecipeList(){
   
-    return await this.service.recipeDetails(this.recipeId).toPromise();
+    return await this.service.recipeDetails(this.Recipeid).toPromise();
     
   }
 

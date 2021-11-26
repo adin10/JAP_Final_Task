@@ -5,18 +5,6 @@
   </div>
   <br>
 
-   <!-- <label style="font-size:22px;">List of ingredients for this recipe</label>
-  <div *ngFor="let ingredients of recipe.ingredientRecipes">
-<div>
-    <label>Ingredient name: </label>
-    <p>{{ingredients.ingredient.name}}</p>
-  </div>
-  <div>
-    <label>quantity: </label>
-    <p>{{ingredients.quantity}}</p>
-  </div>
-</div> -->
-
 
 <h6>List of ingredients for this recipe</h6>
 <table class="table">
@@ -24,6 +12,7 @@
     <tr>
       <th>Ingredient name</th>
       <th>Quantity</th>
+      <th>Measure unit</th>
       <th>Ingredient cost</th>
     </tr>
   </thead>
@@ -31,8 +20,12 @@
     <tr *ngFor="let ingredients of recipe.ingredientRecipes">
       <td>{{ingredients.ingredient.name}}</td>
       <td>{{ingredients.quantity}}</td>
-      <!-- <td>{{ingredients.}}</td> -->
+      <td>{{ingredients.ingredient.unitMeasure}}</td>
+      <td>{{ingredients.ingredientCost | number:'1.1'}} KM</td> 
     </tr>
 </tbody>
 </table>
+
+<h4>Total cost: {{recipe.totalCost  | number: '1.1'}} KM</h4>
+<div style="background-color: rgb(85, 60, 60); color: yellow;"> </div>
     

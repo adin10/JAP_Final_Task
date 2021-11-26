@@ -27,18 +27,10 @@ namespace NormativeCalculator.Infrastructure.Services
      
         public async Task<List<RecipeDto>> Get(RecipeSearchRequest request)
         {
-            //var list = await _context.Recipes.Include(x => x.MyUser).Include(x => x.RecipeCategory)
-            //     .Include(x => x.IngredientRecipes)
-            //     .Where(x => x.RecipeCategoryId == request.categoryId)
-            //     .OrderBy(x => x.TotalCost).Where(x => (string.IsNullOrWhiteSpace(request.SearchTerm)) ||
-            //     x.Name.ToLower().StartsWith(request.SearchTerm.ToLower()) ||
-            //     x.Description.ToLower().StartsWith(request.SearchTerm.ToLower()) ||
-            //     x.IngredientRecipes.Any(a => a.Ingredient.Name.ToLower().Contains(request.SearchTerm)))
-            //     .ToListAsync();
 
-            //return _mapper.Map<List<RecipeDto>>(list);
-
-            var query = _context.Recipes.Include(x=>x.RecipeCategory).Include(x=>x.MyUser).Include(x=>x.IngredientRecipes).AsQueryable();
+            var query = _context.Recipes.Include(x=>x.RecipeCategory).
+                Include(x=>x.MyUser)
+                .Include(x=>x.IngredientRecipes).AsQueryable();
             if (request?.categoryId.HasValue ?? false) 
             {
                 query = query.Where(x => x.RecipeCategoryId == request.categoryId);
@@ -54,7 +46,10 @@ namespace NormativeCalculator.Infrastructure.Services
 
         public async Task<RecipeDto> GetById(int id)
         {
-            var entity = await _context.Recipes.Include(q=>q.MyUser).Include(q=>q.RecipeCategory).Include(q=>q.IngredientRecipes).FirstOrDefaultAsync(x => x.Id == id);
+            var entity = await _context.Recipes.Include(q=>q.MyUser).
+                Include(q=>q.RecipeCategory).
+                Include(q=>q.IngredientRecipes).
+                FirstOrDefaultAsync(x => x.Id == id);
             return _mapper.Map<RecipeDto>(entity);
         }
         public async Task<Recipe> Insert(RecipeInsertRequest request)
@@ -65,8 +60,9 @@ namespace NormativeCalculator.Infrastructure.Services
             {
                 var entity = _mapper.Map<Recipe>(request);
                 await _context.Recipes.AddAsync(entity);
-                await _context.SaveChangesAsync();
+                //await _context.SaveChangesAsync();
                 var ingredientRecipe = _mapper.Map<List<IngredientRecipe>>(request.Ingredients);
+                //ingredientRecipe.ForEach(x => x.RecipeId = entity.Id);
                 ingredientRecipe.ForEach(x => x.Recipe = entity);
                 await _context.IngredientRecipes.AddRangeAsync(ingredientRecipe);
                 await _context.SaveChangesAsync();
@@ -102,11 +98,10 @@ namespace NormativeCalculator.Infrastructure.Services
 
                 x.IngredientCost= (ingredientRecipeQuantity * ingredientUnitPrice) / ingredientUnitQuantity;
                 suma = suma + x.IngredientCost;
-                x.TotalCost = x.TotalCost + suma;
+                //x.TotalCost = x.TotalCost + suma;
             }
+            recipeDetails.TotalCost = suma;
             return recipeDetails;
-
-         
             }
         }
 }

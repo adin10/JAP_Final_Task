@@ -1,4 +1,5 @@
-﻿using NormativeCalculator.Core.Entities;
+﻿using NormativeCalculator.Common.Enum;
+using NormativeCalculator.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace NormativeCalculator.Core.Entities
         public Ingredient Ingredient { get; set; }
         public int RecipeId { get; set; }
         public Recipe Recipe { get; set; }
+        public UnitMeasure UnitMeasure { get; set; }
         public float Quantity { get; set; }
         public float Price { get; set; }
 
