@@ -53,8 +53,7 @@ export class AddRecipeComponent implements OnInit {
     }
   ]
 
-  // selectedIngredients: number[] = [];
-  // public selectedIngredient: Ingredient[] = [];
+
 
 
   constructor(public router: Router, public service: RecipeService, public fb: FormBuilder,

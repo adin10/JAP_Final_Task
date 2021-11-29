@@ -30,12 +30,6 @@ export class RecipeComponent implements OnInit {
     this.loadRecipes(this.SearchTerm,this.categoryId);
   }
 
-  // loadTenRecipes(){
-  //   this.service.getRecipe("",this.number,null).subscribe(data=>{
-  //     this.recipeList=data;
-  //     this.number+=this.number;
-  //   })
-  // }
 
 
 }
