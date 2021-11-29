@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NormativeCalculator.Core.Entities;
+using NormativeCalculator.Core.Responses;
 using NormativeCalculator.Database;
 using NormativeCalculator.Infrastructure.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
@@ -54,6 +55,17 @@ namespace NormativeCalculator.Api.Controllers
             insertRequest.MyUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             insertRequest.CreatedDate = DateTime.Now;
             return Ok(await _recipeService.Insert(insertRequest));
+        }
+
+        [HttpGet("procedure/1")]
+        public async Task<ActionResult<IEnumerable<GetAllRecipesResponse>>> GetAllRecipes()
+        {
+            return Ok(await _recipeService.GetAllRecipes());
+        }
+        [HttpGet("procedure/2")]
+        public async Task<ActionResult<IEnumerable<GetRecipesByCategoryNameResponse>>> GetRecipesByCategoryName()
+        {
+            return Ok(await _recipeService.GetRecipesByCategoryName());
         }
     }
 }

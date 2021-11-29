@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NormativeCalculator.Database;
 
 namespace NormativeCalculator.Database.Migrations
 {
     [DbContext(typeof(NCDbContext))]
-    partial class NCDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211129220726_storedProcedures")]
+    partial class storedProcedures
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NormativeCalculator.Common.Enum;
+using NormativeCalculator.Core.Responses;
 using NormativeCalculator.Database;
 using NormativeCalculator.Infrastructure.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
@@ -31,6 +33,11 @@ namespace NormativeCalculator.Api.Controllers
         public async Task<ActionResult<IngredientDto>> GetById(int id)
         {
             return Ok(await _ingredientService.GetById(id));
+        }
+        [HttpGet("procedure/3")]
+        public async Task<ActionResult<IEnumerable<GetTop10UsedIngredientsResponse>>> GetTop10UsedIngredients(UnitMeasure unitMeasure,int min, int max)
+        {
+            return Ok(await _ingredientService.GetTop10UsedIngredients(unitMeasure, min, max));
         }
      
 

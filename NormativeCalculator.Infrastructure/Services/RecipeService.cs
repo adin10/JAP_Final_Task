@@ -1,12 +1,15 @@
 ﻿using AutoMapper;
+using Dapper;
 using Microsoft.EntityFrameworkCore;
 using NormativeCalculator.Core.Entities;
+using NormativeCalculator.Core.Responses;
 using NormativeCalculator.Database;
 using NormativeCalculator.Infrastructure.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
 using NormativeCalculator.Infrastructure.Requests;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +20,14 @@ namespace NormativeCalculator.Infrastructure.Services
     {
         private readonly NCDbContext _context;
         private readonly IMapper _mapper;
+        private readonly DbConnection _dbConnection;
+
 
         public RecipeService(NCDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
+            _dbConnection = context.Database.GetDbConnection();
         }
 
      
@@ -102,6 +108,17 @@ namespace NormativeCalculator.Infrastructure.Services
             }
             recipeDetails.TotalCost = suma;
             return recipeDetails;
-            }
         }
+
+        public Task<IEnumerable<GetAllRecipesResponse>> GetAllRecipes()
+        {
+            return _dbConnection.QueryAsync<GetAllRecipesResponse>("GetAllRecipes", commandType:System.Data.CommandType.StoredProcedure);
+        }
+
+        public Task<IEnumerable<GetRecipesByCategoryNameResponse>> GetRecipesByCategoryName()
+        {
+            return _dbConnection.QueryAsync<GetRecipesByCategoryNameResponse>
+                 ("GetRecipesByCategoryName", commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
 }
