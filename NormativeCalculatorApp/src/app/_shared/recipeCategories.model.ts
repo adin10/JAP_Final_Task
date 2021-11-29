@@ -1,5 +1,5 @@
 export class RecipeCategory{
-    constructor(public recipeCategoryId:number,public categoryName:string,public description:string,public createdDate:Date){}
+    constructor(public id:number,public name:string,public description:string,public createdDate:Date){}
 }
 
 // public int RecipeCategoryId   { get; set; }

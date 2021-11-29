@@ -8,8 +8,8 @@ namespace NormativeCalculator.Infrastructure.Dto
 {
    public class RecipeCategoryDto
     {
-        public int RecipeCategoryId { get; set; }
-        public string CategoryName { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public DateTime CreatedDate { get; set; }
         public string Description { get; set; }
     }

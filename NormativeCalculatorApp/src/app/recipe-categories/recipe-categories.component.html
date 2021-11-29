@@ -1,4 +1,4 @@
-<table class="table table-dark">
+<table class="table">
     <thead>
         <tr>
             <td>Category name</td>
@@ -9,11 +9,11 @@
     </thead>
     <tbody>
         <tr *ngFor="let category of recipesCategoryList">
-            <td>{{category.categoryName}}</td>
+            <td>{{category.name}}</td>
             <td>{{category.description}}</td>
             <td>{{category.createdDate | date}}</td>
             <!-- <td [routerLink]="['/recipes/',category.recipeCategoryId]">See all recipies</td>     -->
-            <td><button routerLink="/recipes/{{category.recipeCategoryId}}">See all recipies for this category</button> </td>
+            <td><button routerLink="/recipes/{{category.id}}">See all recipies for this category</button> </td>
             <!-- odabir kategorije te redirekt na listu recepata za tu -->
         </tr>
     </tbody>

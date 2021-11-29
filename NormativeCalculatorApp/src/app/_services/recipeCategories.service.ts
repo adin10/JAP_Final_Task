@@ -6,13 +6,13 @@ import { RecipeCategory } from "../_shared/recipeCategories.model";
 export class RecipeCategoriesService{
     constructor(public http:HttpClient){}
 
-    getRecipeCategories(number:number){
+    public getRecipeCategories(number:number) :Promise<RecipeCategory[]> {
         let params=new HttpParams().set("number",number)
-        return this.http.get<RecipeCategory[]>('https://localhost:5001/api/RecipeCategory',{
+        return this.http.get<RecipeCategory[]>('https://localhost:5001/api/RecipeCategories',{
             params:params
-        });
+        }).toPromise();
     }
-    getRecipeCategorieById(id){
-        return this.http.get<RecipeCategory[]>('https://localhost:5001/api/RecipeCategory/'+id);
+    public getRecipeCategorieById(id){
+        return this.http.get<RecipeCategory[]>('https://localhost:5001/api/RecipeCategories/'+id);
     }
 }

@@ -6,6 +6,6 @@ export class IngredientRecipeService{
     constructor(public http:HttpClient){}
 
     getIngredientRecipe(){
-        return this.http.get<IngredientRecipe[]>('https://localhost:5001/api/Ingredient/ingredientRecipe')
+        return this.http.get<IngredientRecipe[]>('https://localhost:5001/api/ingredientRecipes')
     }
 }

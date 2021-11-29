@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { AuthComponent } from './auth/auth.component';
@@ -17,7 +17,8 @@ const routes: Routes = [
   {path:'recipeCategory',component:RecipeCategoriesComponent,canActivate:[AuthGuardGuard]},
   {path:'recipes/:id',component:RecipeComponent}, // preuzimanje svih recepata za odabraniu kategoriju
   {path:'addRecipe/:categoryId',component:AddRecipeComponent,canActivate:[AuthGuardGuard]},
-  {path:'recipes/:categoryId/:recipeId',component:RecipeDetailsComponent}
+  // {path:'recipes/:categoryId/:recipeId',component:RecipeDetailsComponent},
+  {path:'recipeDetails/:id',component:RecipeDetailsComponent}
 
 ];
 

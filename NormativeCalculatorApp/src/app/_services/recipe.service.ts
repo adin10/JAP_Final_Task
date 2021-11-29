@@ -6,23 +6,23 @@ import { RecipeInsertRequest } from "../_shared/requests/recipeInsertRequest.mod
 @Injectable({providedIn:'root'})
 export class RecipeService{
     constructor(public http:HttpClient){}
-
-    getRecipe(searchTerm:string,categoryId:number ){
+    
+    getRecipe(searchTerm:string,categoryId:number ):Promise<Recipe[]>{
         let params=new HttpParams()
         .set("SearchTerm",searchTerm)
         .set("categoryId",categoryId);
-        return this.http.get<Recipe[]>('https://localhost:5001/api/Recipe',{
+        return this.http.get<Recipe[]>('https://localhost:5001/api/Recipes',{
             params:params
-        });
+        }).toPromise();
     }
     getById(id){
-        return this.http.get<Recipe>('https://localhost:5001/api/Recipe/'+id);
+        return this.http.get<Recipe>('https://localhost:5001/api/Recipes/'+id);
     }
     addRecipe(recipe:RecipeInsertRequest){
-        return this.http.post('https://localhost:5001/api/Recipe',recipe);
+        return this.http.post('https://localhost:5001/api/Recipes',recipe);
     }
-    recipeDetails(ingredientRecipeId){
-        return this.http.get<IngredientRecipe[]>('https://localhost:5001/api/Recipe/RecipeDetails/' +ingredientRecipeId);
+    recipeDetails(id){
+        return this.http.get<Recipe>('https://localhost:5001/api/Recipes/RecipeDetails/' +id);
     }
 
     

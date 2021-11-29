@@ -8,7 +8,7 @@ namespace NormativeCalculator.Infrastructure.Requests
 {
    public class RecipeRestUpsertModel
     {
-        public string RecipeName { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
         //public float TotalCost { get; set; }
         public int RecipeCategoryId { get; set; }

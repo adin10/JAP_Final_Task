@@ -1,26 +1,31 @@
-<table class="table table-dark">
-    <thead>
+
+    <div style="font-size: 22px;">
+      <div style="font-size:30px;font-weight: bold;">{{recipe.name}}</div>
+  <div>{{recipe.description}}</div>
+  </div>
+  <br>
+
+
+<h6>List of ingredients for this recipe</h6>
+<table class="table">
+  <thead>
     <tr>
-        <td>Recipe name</td>
-        <td>Description</td>
-        <td>Ingredient name</td>
-        <td>Measure unit</td>
-        <td>Unit price</td>
-        <td>Unit quantity</td>
-        <td>Ingredient cost</td>
-        <td>Total cost</td>
+      <th>Ingredient name</th>
+      <th>Quantity</th>
+      <th>Measure unit</th>
+      <th>Ingredient cost</th>
     </tr>
-</thead>
-<tbody>
-    <tr *ngFor="let irl of ingredientRecipeList">
-        <td>{{irl.recipe.recipeName}}</td>
-        <td>{{irl.recipe.description}}</td>
-        <td>{{irl.ingredient.name}}</td>
-        <td>{{irl.ingredient.measureUnit}}</td>
-        <td>{{irl.ingredient.unitPrice}}</td>
-        <td>{{irl.ingredient.unitQuantity}}</td>
-        <td>{{irl.price}}</td>
-        <td>{{irl.recipe.totalCost}}</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ingredients of recipe.ingredientRecipes">
+      <td>{{ingredients.ingredient.name}}</td>
+      <td>{{ingredients.quantity}}</td>
+      <td>{{ingredients.ingredient.unitMeasure}}</td>
+      <td>{{ingredients.ingredientCost | number:'1.1'}} KM</td> 
     </tr>
 </tbody>
 </table>
+
+<h4>Total cost: {{recipe.totalCost  | number: '1.1'}} KM</h4>
+<div style="background-color: rgb(85, 60, 60); color: yellow;"> </div>
+    

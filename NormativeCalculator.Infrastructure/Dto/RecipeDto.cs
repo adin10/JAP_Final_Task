@@ -9,8 +9,8 @@ namespace NormativeCalculator.Infrastructure.Dto
 {
    public class RecipeDto
     {
-        public int RecipeId { get; set; }
-        public string RecipeName { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
         public float TotalCost { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -18,6 +18,6 @@ namespace NormativeCalculator.Infrastructure.Dto
         public MyUserDto MyUser { get; set; }
         public int RecipeCategoryId { get; set; }
         public RecipeCategoryDto RecipeCategory { get; set; }
-        public ICollection<IngredientRecipe> IngredientRecipe { get; set; }
+        //public ICollection<IngredientRecipe> IngredientRecipe { get; set; }
     }
 }

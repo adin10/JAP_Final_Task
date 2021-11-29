@@ -28,14 +28,12 @@ export class AuthComponent implements OnInit {
       password:["",Validators.required]
     })
   }
-
-
   dodaj(){
     if (this.forma.valid) {
       let login = new LoginInsertRequest(this.forma.get('username').value, this.forma.get('password').value);
       this.service.login(login).subscribe(data => {
         localStorage.setItem('token', data.token);
-        this.service.myUserId = data.myUser?.myUserId;
+        this.service.myUserId = data.myUser?.id;
         this.service.isAuthenticated=true;
         this.route.navigate(['/']);
       });

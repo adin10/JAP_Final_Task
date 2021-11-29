@@ -1,8 +1,8 @@
 import { IngredientRecipeInsertRequest } from "./ingredientRecipeInsertRequest.model";
 
 export class RecipeInsertRequest{
-    constructor(public RecipeName:string,public Description:string,public TotalCost:number,
-            public RecipeCategoryId:number,public Ingredientss:IngredientRecipeInsertRequest){}
+    constructor(public Name:string,public Description:string,
+            public RecipeCategoryId:number,public Ingredients:IngredientRecipeInsertRequest[]){}
 }
 
 
