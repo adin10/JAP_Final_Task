@@ -5,9 +5,9 @@ using Moq;
 using NormativeCalculator.Common.Enum;
 using NormativeCalculator.Core.Entities;
 using NormativeCalculator.Database;
-using NormativeCalculator.Infrastructure.Dto;
+using NormativeCalculator.Core.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
-using NormativeCalculator.Infrastructure.Requests;
+using NormativeCalculator.Core.Requests;
 using NormativeCalculator.Infrastructure.Services;
 using NUnit.Framework;
 using System;
@@ -209,58 +209,9 @@ namespace NormativeCalculator.Services.Tests
             Assert.AreEqual(request.CreatedDate, recipeInDatabase.CreatedDate);
             Assert.True(request.Ingredients.Any());
         }
+
         // adding new recipe
         // 2
-        [Test]
-        public void CreatingRecipe_WithMoreIngredient_AddRecipe()
-        {
-            var request = new RecipeInsertRequest
-            {
-                Name = "Recipe2",
-                Description = "bbbbbb",
-                RecipeCategoryId = 2,
-                CreatedDate = DateTime.Now,
-                MyUserId = 1,
-                Ingredients = new List<IngredientRecipeInsertRequest>
-                {
-                    new IngredientRecipeInsertRequest
-                    {
-                        IngredientId=1,
-                        Quantity=10,
-                        UnitMeasure=UnitMeasure.g
-                    },
-                     new IngredientRecipeInsertRequest
-                    {
-                        IngredientId=2,
-                        Quantity=20,
-                        UnitMeasure=UnitMeasure.kg
-                    },
-                      new IngredientRecipeInsertRequest
-                    {
-                        IngredientId=3,
-                        Quantity=30,
-                        UnitMeasure=UnitMeasure.l
-                    }
-                }
-            };
-            var recipe = _recipeService.Insert(request);
-            var recipeInDatabase = _context.Recipes.FirstOrDefault(x => x.Name == request.Name);
-
-            Assert.AreEqual(request.Name, recipeInDatabase.Name);
-            Assert.AreEqual(request.Description, recipeInDatabase.Description);
-            Assert.AreEqual(request.RecipeCategoryId, recipeInDatabase.RecipeCategoryId);
-            Assert.AreEqual(request.MyUserId, recipeInDatabase.MyUserId);
-            Assert.AreEqual(request.CreatedDate, recipeInDatabase.CreatedDate);
-            Assert.AreEqual(request.Ingredients.FirstOrDefault().IngredientId,
-                recipeInDatabase.IngredientRecipes.FirstOrDefault().IngredientId);
-            Assert.AreEqual(request.Ingredients.FirstOrDefault().Quantity,
-                recipeInDatabase.IngredientRecipes.FirstOrDefault().Quantity);
-            Assert.AreEqual(request.Ingredients.FirstOrDefault().UnitMeasure,
-                recipeInDatabase.IngredientRecipes.FirstOrDefault().UnitMeasure);
-        }
-
-        // adding new recipe
-        // 3
         [Test]
         public void CreatingRecipe_WithNoIngredient_AddRecipe()
         {

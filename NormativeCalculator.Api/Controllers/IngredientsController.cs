@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using NormativeCalculator.Common.Enum;
 using NormativeCalculator.Core.Responses;
 using NormativeCalculator.Database;
-using NormativeCalculator.Infrastructure.Dto;
+using NormativeCalculator.Core.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
 using NormativeCalculator.Infrastructure.Services;
 using System;

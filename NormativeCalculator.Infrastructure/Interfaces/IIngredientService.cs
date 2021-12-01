@@ -1,7 +1,7 @@
 ﻿using NormativeCalculator.Common.Enum;
 using NormativeCalculator.Core.Responses;
 using NormativeCalculator.Database;
-using NormativeCalculator.Infrastructure.Dto;
+using NormativeCalculator.Core.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;

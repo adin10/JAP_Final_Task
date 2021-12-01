@@ -1,8 +1,8 @@
 ﻿using NormativeCalculator.Core.Entities;
 using NormativeCalculator.Core.Responses;
 using NormativeCalculator.Database;
-using NormativeCalculator.Infrastructure.Dto;
-using NormativeCalculator.Infrastructure.Requests;
+using NormativeCalculator.Core.Dto;
+using NormativeCalculator.Core.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace NormativeCalculator.Infrastructure.Interfaces
 {
   public interface IRecipeService
     {
-        public Task<List<RecipeDto>> Get(RecipeSearchRequest request,CancellationToken token=default);
+        public Task<List<RecipeDto>> Get(RecipeSearchRequest request);
         public Task<RecipeDto> GetById(int id);
         public Task<RecipeDetailsDto> RecipeDetails(int id);
         public Task<Recipe> Insert(RecipeInsertRequest request);

@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using NormativeCalculator.Core.Entities;
 using NormativeCalculator.Core.Responses;
 using NormativeCalculator.Database;
-using NormativeCalculator.Infrastructure.Dto;
+using NormativeCalculator.Core.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
-using NormativeCalculator.Infrastructure.Requests;
+using NormativeCalculator.Core.Requests;
 using NormativeCalculator.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
@@ -33,9 +33,9 @@ namespace NormativeCalculator.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<RecipeDto>>> Get([FromQuery] RecipeSearchRequest request,CancellationToken Cancelationtoken)
+        public async Task<ActionResult<List<RecipeDto>>> Get([FromQuery] RecipeSearchRequest request)
         {
-            return Ok(await _recipeService.Get(request,Cancelationtoken));
+            return Ok(await _recipeService.Get(request));
         }
 
         [HttpGet("recipeDetails/{id}")]

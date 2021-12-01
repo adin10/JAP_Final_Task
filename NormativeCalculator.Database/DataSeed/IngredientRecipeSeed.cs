@@ -17,8 +17,10 @@ namespace NormativeCalculator.Database.DataSeed
         {
             Random random = new Random();
             List<IngredientRecipe> ingredientRecipes = new();
+
             List<UnitMeasure> unitMeasures = new() { UnitMeasure.g,
                 UnitMeasure.kg, UnitMeasure.kom, UnitMeasure.l, UnitMeasure.ml };
+
             var startDate = new DateTime(2021, 1, 1);
             var endDate = new DateTime(2021, 11, 29);
 
@@ -32,6 +34,7 @@ namespace NormativeCalculator.Database.DataSeed
                     CreatedDate = DateGenerator.GenerateRandomDate(startDate, endDate),
                     Quantity=(float)Math.Round(random.Next(1,50)+random.NextDouble(),2),
                     UnitMeasure=unitMeasures[random.Next(0,5)],
+                    Price= random.Next(1, 100)
                 });
             }
             ingredientRecipes = ingredientRecipes.DistinctBy(x => new { x.RecipeId, x.IngredientId }).ToList();

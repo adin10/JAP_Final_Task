@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using NormativeCalculator.Database;
-using NormativeCalculator.Infrastructure.Dto;
+using NormativeCalculator.Core.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
-using NormativeCalculator.Infrastructure.Requests;
+using NormativeCalculator.Core.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;

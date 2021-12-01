@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using NormativeCalculator.Infrastructure.Interfaces;
-using NormativeCalculator.Infrastructure.Requests;
+using NormativeCalculator.Core.Requests;
 using NormativeCalculator.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
@@ -46,7 +46,7 @@ namespace NormativeCalculator.Api.Controllers
             if (user != null && await userManager.CheckPasswordAsync(user, model.Password))
             {
                 var userRoles = await userManager.GetRolesAsync(user);
-                var Myuser = await _userService.Get(new Infrastructure.Requests.UserSearchRequest { UserID = user.Id });
+                var Myuser = await _userService.Get(new Core.Requests.UserSearchRequest { UserID = user.Id });
                 var authClaims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name,user.UserName),

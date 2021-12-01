@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using NormativeCalculator.Core.Entities;
 using NormativeCalculator.Core.Responses;
 using NormativeCalculator.Database;
-using NormativeCalculator.Infrastructure.Dto;
+using NormativeCalculator.Core.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
-using NormativeCalculator.Infrastructure.Requests;
+using NormativeCalculator.Core.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +26,7 @@ namespace NormativeCalculator.Infrastructure.Services
             _context = context;
             _calculatedService = calculatedService;
         }
-        public async Task<List<RecipeDto>> Get(RecipeSearchRequest request,CancellationToken token=default)
+        public async Task<List<RecipeDto>> Get(RecipeSearchRequest request)
         {
             if (request.number < 0)
             {
@@ -36,7 +36,6 @@ namespace NormativeCalculator.Infrastructure.Services
                 .Include(x => x.RecipeCategory)
                 .Include(x => x.MyUser)
                 .Include(x => x.IngredientRecipes)
-                .Take(request.number)
                 .AsQueryable();
 
             if (request?.categoryId.HasValue ?? false) 
@@ -49,7 +48,7 @@ namespace NormativeCalculator.Infrastructure.Services
                 query = query.Where(x => x.Name.ToLower().Contains(normalizedName)
                 || x.Description.ToLower().Contains(normalizedName));
             }
-            var list = await query.ToListAsync(token);
+            var list = await query.Take(request.number).ToListAsync();
             return _mapper.Map<List<RecipeDto>>(list);
         }
 
@@ -63,6 +62,7 @@ namespace NormativeCalculator.Infrastructure.Services
 
             return _mapper.Map<RecipeDto>(entity);
         }
+
         public async Task<Recipe> Insert(RecipeInsertRequest request)
         {
             if(request.Ingredients.GroupBy(x => x.IngredientId).Any(x => x.Count() > 1))
@@ -73,6 +73,7 @@ namespace NormativeCalculator.Infrastructure.Services
             {
                 throw new ArgumentException("You must add at least one ingredient");
             }
+
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
@@ -80,8 +81,16 @@ namespace NormativeCalculator.Infrastructure.Services
                 await _context.Recipes.AddAsync(entity);
                 await _context.SaveChangesAsync();
                 var ingredientRecipe = _mapper.Map<List<IngredientRecipe>>(request.Ingredients);
+
+                var ingredientIds = request.Ingredients.Select(x => x.IngredientId).ToArray();
+                var ingredients = await _context.Ingredients.Where(x => ingredientIds.Contains(x.Id)).ToListAsync();
+
                 //ingredientRecipe.ForEach(x => x.RecipeId = entity.Id);
-                ingredientRecipe.ForEach(x => x.Recipe = entity);
+                ingredientRecipe.ForEach(x =>
+                {
+                    x.Recipe = entity;
+                    x.Price = _calculatedService.CalculateIngredientRecipe(x, ingredients.FirstOrDefault(y => y.Id == x.IngredientId));
+                });
                 await _context.IngredientRecipes.AddRangeAsync(ingredientRecipe);
                 await _context.SaveChangesAsync();
                 await transaction.CommitAsync();
@@ -93,6 +102,7 @@ namespace NormativeCalculator.Infrastructure.Services
                throw;
             }
         }
+
         public async Task<RecipeDetailsDto> RecipeDetails(int id)
         {
             var recipeDetails = await _context.Recipes.Include(x=>x.IngredientRecipes).
@@ -103,35 +113,12 @@ namespace NormativeCalculator.Infrastructure.Services
                 Description = q.Description,
                 IngredientRecipes = _mapper.Map<List<IngredientRecipeDto>>(q.IngredientRecipes)
                 }).FirstOrDefaultAsync(q => q.RecipeId == id);
-
-            //float sum = 0;
-            //foreach (var x in recipeDetails.IngredientRecipes)
-            //{
-            //    var ingredientRecipeQuantity = x.Quantity;
-            //    var ingredientUnitPrice = x.Ingredient.UnitPrice;
-            //    var ingredientUnitQuantity = x.Ingredient.UnitQuantity;
-
-            //    x.IngredientCost= (ingredientRecipeQuantity * ingredientUnitPrice) / ingredientUnitQuantity;
-            //    sum = sum + x.IngredientCost;
-            //}
           
             recipeDetails.TotalCost = _calculatedService.CalculateRecipe(recipeDetails);
             return recipeDetails;
 
         }
-        //public float RecipeCost(RecipeDetailsDto recipeDetails)
-        //{
-        //    float sum = 0;
-        //    foreach (var x in recipeDetails.IngredientRecipes)
-        //    {
-        //        var ingredientRecipeQuantity = x.Quantity;
-        //        var ingredientUnitPrice = x.Ingredient.UnitPrice;
-        //        var ingredientUnitQuantity = x.Ingredient.UnitQuantity;
-        //        x.IngredientCost = (ingredientRecipeQuantity * ingredientUnitPrice) / ingredientUnitQuantity;
-        //        sum = sum + x.IngredientCost;
-        //    }
-        //    return sum;
-        //}
+      
 
         // procedures
         public Task<IEnumerable<GetAllRecipesResponse>> GetAllRecipes()
@@ -139,6 +126,7 @@ namespace NormativeCalculator.Infrastructure.Services
             var list= _context.Database.GetDbConnection().QueryAsync<GetAllRecipesResponse>("GetAllRecipes", commandType:System.Data.CommandType.StoredProcedure);
             return list;
         }
+
         public Task<IEnumerable<GetRecipesByCategoryNameResponse>> GetRecipesByCategoryName()
         {
             var list = _context.Database.GetDbConnection().QueryAsync<GetRecipesByCategoryNameResponse>

@@ -9,7 +9,7 @@ import { Recipe } from '../_shared/recipe.model';
   styleUrls: ['./recipe.component.css']
 })
 export class RecipeComponent implements OnInit {
-  number:number=10;
+  number:number=100;
 
   recipeList:Recipe[]=[];
   SearchTerm:string="";

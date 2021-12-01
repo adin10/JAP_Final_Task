@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NormativeCalculator.Infrastructure.Dto
+namespace NormativeCalculator.Core.Dto
 {
    public class MyUserDto
     {

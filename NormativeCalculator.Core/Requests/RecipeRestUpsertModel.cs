@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NormativeCalculator.Infrastructure.Dto
+namespace NormativeCalculator.Core.Requests
 {
-   public class RecipeCategoryDto
+   public class RecipeRestUpsertModel
     {
-        public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime CreatedDate { get; set; }
         public string Description { get; set; }
+        public int RecipeCategoryId { get; set; }
+        public List<IngredientRecipeInsertRequest> Ingredients { get; set; }
     }
 }

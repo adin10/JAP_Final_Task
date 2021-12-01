@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NormativeCalculator.Infrastructure.Requests
+namespace NormativeCalculator.Core.Requests
 {
    public class IngredientRecipeInsertRequest
     {

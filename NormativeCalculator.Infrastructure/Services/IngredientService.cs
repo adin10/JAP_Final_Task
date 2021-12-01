@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using NormativeCalculator.Common.Enum;
 using NormativeCalculator.Core.Responses;
 using NormativeCalculator.Database;
-using NormativeCalculator.Infrastructure.Dto;
+using NormativeCalculator.Core.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;

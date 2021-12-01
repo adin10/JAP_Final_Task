@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NormativeCalculator.Infrastructure.Dto
+namespace NormativeCalculator.Core.Requests
 {
-   public class UserDto
+   public class LoginModelRequest
     {
-        public string Email { get; set; }
         public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

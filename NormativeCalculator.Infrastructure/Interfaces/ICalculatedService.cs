@@ -1,4 +1,5 @@
-﻿using NormativeCalculator.Infrastructure.Requests;
+﻿using NormativeCalculator.Core.Entities;
+using NormativeCalculator.Core.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace NormativeCalculator.Infrastructure.Interfaces
 {
    public interface ICalculatedService
     {
+        public float CalculateIngredientRecipe(IngredientRecipe ingredientRecipe, Ingredient ingredient);
         public float CalculateRecipe(RecipeDetailsDto recipe);
     }
 }

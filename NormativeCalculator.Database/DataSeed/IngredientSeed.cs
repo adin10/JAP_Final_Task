@@ -34,9 +34,10 @@ namespace NormativeCalculator.Database.DataSeed
                 {
                     Id = i,
                     Name = ingredientNames[i % 6] + i.ToString(),
-                    UnitPrice = IngredientPrice,
+                    Price = IngredientPrice,
                     UnitQuantity = IngredientQuantity,
                     UnitMeasure = IngredientUnitMeasures,
+                    UnitPrice=IngredientPrice/IngredientQuantity,
                     CreatedDate = DateGenerator.GenerateRandomDate(startDate, endDate)
                 });
             }

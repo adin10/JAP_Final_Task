@@ -1,4 +1,4 @@
-﻿using NormativeCalculator.Infrastructure.Dto;
+﻿using NormativeCalculator.Core.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
