@@ -9,7 +9,6 @@ namespace NormativeCalculator.Common.Helper
    public class DateGenerator
     {
         public static Random random = new Random();
-
         public static DateTime GenerateRandomDate(DateTime startDate,DateTime endDate)
         {
             TimeSpan timeSpan = endDate - startDate;

@@ -21,13 +21,11 @@ namespace NormativeCalculator.Infrastructure.Services
             _mapper = mapper;
             _context = context;
         }
-
         public async Task<List<RecipeCategoryDto>> Get(int number)
         {
             var list = await _context.RecipeCategories.Take(number).OrderByDescending(q=>q.CreatedDate).ToListAsync(); // take koristimo da uzmemo koliko podataka zelimo
             return _mapper.Map<List<RecipeCategoryDto>>(list);
         }
-
         public async Task<RecipeCategoryDto> GetById(int id)
         {
             var entity =await _context.RecipeCategories.FirstOrDefaultAsync(x => x.Id == id);

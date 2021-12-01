@@ -7,10 +7,11 @@ import { RecipeInsertRequest } from "../_shared/requests/recipeInsertRequest.mod
 export class RecipeService{
     constructor(public http:HttpClient){}
     
-    getRecipe(searchTerm:string,categoryId:number ):Promise<Recipe[]>{
+    getRecipe(searchTerm:string,categoryId:number,number:number ):Promise<Recipe[]>{
         let params=new HttpParams()
         .set("SearchTerm",searchTerm)
-        .set("categoryId",categoryId);
+        .set("categoryId",categoryId)
+        .set("number",number);
         return this.http.get<Recipe[]>('https://localhost:5001/api/Recipes',{
             params:params
         }).toPromise();

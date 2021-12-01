@@ -13,7 +13,7 @@ export class RecipeCategoriesComponent implements OnInit {
   constructor(public service:RecipeCategoriesService) { }
 
   recipesCategoryList:RecipeCategory[]=[];
-  number:number=2;
+  number:number=10;
 
   public async ngOnInit(): Promise<void> {
     this.loadRecipeCategories();
@@ -21,7 +21,7 @@ export class RecipeCategoriesComponent implements OnInit {
 
   public async loadRecipeCategories(){
     this.recipesCategoryList = await this.service.getRecipeCategories(this.number);
-    this.number += this.number;
+    this.number += 10;
   }
 }
 

@@ -38,7 +38,7 @@ namespace NormativeCalculator.Api.Controllers
         }
 
         [HttpPost]
-        [Route("Login")]
+        [Route("login")]
         public async Task<IActionResult> Login([FromBody] LoginModelRequest model)
         {
 

@@ -31,7 +31,6 @@ namespace NormativeCalculator.Database
             modelBuilder.SeedIngredients();
             modelBuilder.SeedRecipes();
             modelBuilder.SeedIngredientRecipes();
-
         }
     }
 }

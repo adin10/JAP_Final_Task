@@ -10,9 +10,7 @@ namespace NormativeCalculator.Infrastructure.Requests
     {
         public string SearchTerm { get; set; }
         public int? categoryId { get; set; }
-
-        //public string RecipeName { get; set; }
-        //public string Description { get; set; }
-        //public string IngredientName { get; set; }
+        public int number { get; set; }
+     
     }
 }

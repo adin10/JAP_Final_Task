@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NormativeCalculator.Api.Exceptions;
 using NormativeCalculator.Api.Extensions;
+using NormativeCalculator.Mapper;
 
 namespace NormativeCalculator.Api
 {

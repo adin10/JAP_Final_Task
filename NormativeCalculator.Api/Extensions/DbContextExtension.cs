@@ -19,7 +19,6 @@ namespace NormativeCalculator.Api.Extensions
                 x.UseSqlServer(config.GetConnectionString("DB"));
                 x.LogTo(x => Debug.Print(x));
             });
-
         }
     }
 }

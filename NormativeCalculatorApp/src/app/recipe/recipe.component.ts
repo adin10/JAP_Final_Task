@@ -9,22 +9,23 @@ import { Recipe } from '../_shared/recipe.model';
   styleUrls: ['./recipe.component.css']
 })
 export class RecipeComponent implements OnInit {
+  number:number=10;
 
   recipeList:Recipe[]=[];
   SearchTerm:string="";
   categoryId:number;
-  number:number=5;
+  
 
   constructor(public service:RecipeService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.categoryId=Number(this.route.snapshot.paramMap.get('id'));
     this.loadRecipes(this.SearchTerm,this.categoryId);
-   
   }
 
   async loadRecipes(SearchTerm:string,categoryId:number){
-    this.recipeList = await this.service.getRecipe(SearchTerm,this.categoryId);
+    this.recipeList = await this.service.getRecipe(SearchTerm,this.categoryId,this.number);
+    this.number+=10;
   }
   Search(){
     this.loadRecipes(this.SearchTerm,this.categoryId);

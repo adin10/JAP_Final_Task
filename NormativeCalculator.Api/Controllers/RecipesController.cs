@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace NormativeCalculator.Api.Controllers
@@ -32,19 +33,20 @@ namespace NormativeCalculator.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<RecipeDto>>> Get([FromQuery] RecipeSearchRequest request)
+        public async Task<ActionResult<List<RecipeDto>>> Get([FromQuery] RecipeSearchRequest request,CancellationToken Cancelationtoken)
         {
-            return Ok(await _recipeService.Get(request));
+            return Ok(await _recipeService.Get(request,Cancelationtoken));
         }
 
-        [HttpGet("RecipeDetails/{id}")]
+        [HttpGet("recipeDetails/{id}")]
         public async Task<ActionResult<RecipeDetailsDto>> RecipeDetails(int id)
         {
             return Ok(await _recipeService.RecipeDetails(id));
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<RecipeDto>> GetById(int id){
+        public async Task<ActionResult<RecipeDto>> GetById(int id)
+        {
             return Ok(await _recipeService.GetById(id));
         }
 
@@ -57,12 +59,13 @@ namespace NormativeCalculator.Api.Controllers
             return Ok(await _recipeService.Insert(insertRequest));
         }
 
-        [HttpGet("procedure/1")]
+        [HttpGet("procedure/getAllRecipes")]
         public async Task<ActionResult<IEnumerable<GetAllRecipesResponse>>> GetAllRecipes()
         {
             return Ok(await _recipeService.GetAllRecipes());
         }
-        [HttpGet("procedure/2")]
+
+        [HttpGet("procedure/getRecipesByCategoryName")]
         public async Task<ActionResult<IEnumerable<GetRecipesByCategoryNameResponse>>> GetRecipesByCategoryName()
         {
             return Ok(await _recipeService.GetRecipesByCategoryName());

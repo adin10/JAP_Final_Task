@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace NormativeCalculator.Api.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class IngredientsController : ControllerBase
@@ -24,17 +24,20 @@ namespace NormativeCalculator.Api.Controllers
         {
             _ingredientService = service;
         }
+
         [HttpGet]
         public async Task<ActionResult<List<IngredientDto>>> Get()
         {
             return Ok(await _ingredientService.Get());
         }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<IngredientDto>> GetById(int id)
         {
             return Ok(await _ingredientService.GetById(id));
         }
-        [HttpGet("procedure/3")]
+
+        [HttpGet("procedure/mostUsedIngredients")]
         public async Task<ActionResult<IEnumerable<GetTop10UsedIngredientsResponse>>> GetTop10UsedIngredients(UnitMeasure unitMeasure,int min, int max)
         {
             return Ok(await _ingredientService.GetTop10UsedIngredients(unitMeasure, min, max));

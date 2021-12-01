@@ -15,11 +15,9 @@ namespace NormativeCalculator.Api.Controllers
     public class SeedController : ControllerBase
     {
         private readonly NCDbContext _context;
-
         private readonly UserManager<IdentityUser<int>> _userManager;
         private readonly RoleManager<IdentityRole<int>> _userrole;
 
-     
         public SeedController(NCDbContext context, UserManager<IdentityUser<int>> userManager,
             RoleManager<IdentityRole<int>> userrole)
         {
@@ -27,32 +25,7 @@ namespace NormativeCalculator.Api.Controllers
             _userManager = userManager;
             _userrole = userrole;
         }
-        //[HttpPost("SeedIngredients")]
-        //public async Task<IActionResult> PostIngredients()
-        //{
-        //    var ingredient = new Ingredient
-        //    {
-        //        Name="Sugar",
-        //        UnitQuantity=1,
-        //        MeasureUnit = "kg",
-        //        UnitPrice=1
-        //    };
-        //    await _context.Ingredients.AddAsync(ingredient);
-        //    await _context.SaveChangesAsync();
-        //    return Ok();
-        //}
-        //[HttpPost("SeedRecipeCategory")]
-        //public async Task<IActionResult> PostRecipeCategory()
-        //{
-        //    var recipeCategory = new RecipeCategory
-        //    {
-        //       CategoryName="Pancake",
-        //       Description="Very nice pancake"
-        //    };
-        //    await _context.RecipeCategory.AddAsync(recipeCategory);
-        //    await _context.SaveChangesAsync();
-        //    return Ok();
-        //}
+     
         [HttpPost]
         public async Task<IActionResult> PostAsync()
         {

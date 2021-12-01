@@ -14,7 +14,6 @@ namespace NormativeCalculator.Infrastructure.Requests
         public string Name { get; set; }
         public string Description { get; set; }
         public float TotalCost { get; set; }
-    
         public List<IngredientRecipeDto> IngredientRecipes { get; set; }
 
     }

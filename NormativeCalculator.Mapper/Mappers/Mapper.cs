@@ -26,7 +26,6 @@ namespace NormativeCalculator.Mapper
 
             CreateMap<IngredientRecipe, IngredientRecipeDto>();
             CreateMap<IngredientRecipeInsertRequest, IngredientRecipe>();
-
         }
     }
 }

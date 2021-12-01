@@ -6,8 +6,6 @@ namespace NormativeCalculator.Core.Configuration
 {
     public class IngredientEntityTypeConfiguration: IEntityTypeConfiguration<Ingredient>
     {
-     
-
         public void Configure(EntityTypeBuilder<Ingredient> builder)
         {
             builder.HasKey(x => x.Id);

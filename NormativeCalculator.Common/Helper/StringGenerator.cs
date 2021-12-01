@@ -9,7 +9,6 @@ namespace NormativeCalculator.Common.Helper
    public class StringGenerator
     {
         public static Random random = new Random();
-
         public static string GenerateDescripton()
         {
             var chars = "abcdefghijklmnoprstuvzswADBKDWJSHWASJKWISLAJMASWD";

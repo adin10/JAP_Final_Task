@@ -19,9 +19,6 @@ namespace NormativeCalculator.Api.Extensions
             services.AddIdentity<IdentityUser<int>, IdentityRole<int>>()
              .AddEntityFrameworkStores<NCDbContext>().
              AddDefaultTokenProviders();
-
-
-            //Authentication
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -42,7 +39,6 @@ namespace NormativeCalculator.Api.Extensions
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JWT:Secret"]))
                     };
                 });
-
 
             services.Configure<PasswordHasherOptions>(x =>
             {

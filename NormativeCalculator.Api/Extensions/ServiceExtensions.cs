@@ -22,15 +22,11 @@ namespace NormativeCalculator.Api.Extensions
     {
         public static void ApplicationServices(this  IServiceCollection services, IConfiguration config)
         {
-           
-
-            //Services
             services.AddScoped<IIngredientService, IngredientService>();
             services.AddScoped<IRecipeCategoryService, RecipeCategoryService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IRecipeService, RecipeService>();
-            services.AddScoped<IIngredientRecipeService, IngredientRecipeService>();
-
+            services.AddScoped<ICalculatedService, CalculatedService>();
         }
     }
 }

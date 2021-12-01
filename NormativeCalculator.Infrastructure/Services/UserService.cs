@@ -16,7 +16,6 @@ namespace NormativeCalculator.Infrastructure.Services
     {
         private readonly IMapper _mapper;
         private readonly NCDbContext _context;
-
         public UserService(IMapper mapper, NCDbContext context)
         {
             _mapper = mapper;

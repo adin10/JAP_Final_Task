@@ -6,8 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
 namespace NormativeCalculator.Core.Entities
 {
     public class MyUser:BaseEntity
