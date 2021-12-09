@@ -1,7 +1,7 @@
 ﻿using Moq;
-using NormativeCalculator.Core.Dto;
+using NormativeCalculator.Core.Models.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
-using NormativeCalculator.Core.Requests;
+using NormativeCalculator.Core.Models.Requests;
 using NormativeCalculator.Infrastructure.Services;
 using NUnit.Framework;
 using System;

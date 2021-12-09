@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using NormativeCalculator.Core.Dto;
+using NormativeCalculator.Core.Models.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
 using NormativeCalculator.Infrastructure.Services;
 using System;

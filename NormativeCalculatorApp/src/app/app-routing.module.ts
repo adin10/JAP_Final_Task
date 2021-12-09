@@ -1,13 +1,13 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddRecipeComponent } from './add-recipe/add-recipe.component';
-import { AuthComponent } from './auth/auth.component';
-import { HomeComponent } from './home/home.component';
-import { IngredientsComponent } from './ingredients/ingredients.component';
-import { RecipeCategoriesComponent } from './recipe-categories/recipe-categories.component';
-import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
-import { RecipeComponent } from './recipe/recipe.component';
-import { AuthGuardGuard } from './_guards/auth-guard.guard';
+import { AuthComponent } from './core/auth/auth.component';
+import { AddRecipeComponent } from './features/add-recipe/add-recipe.component';
+import { IngredientsComponent } from './features/ingredients/ingredients.component';
+import { RecipeCategoriesComponent } from './features/recipe-categories/recipe-categories.component';
+import { RecipeDetailsComponent } from './features/recipe-details/recipe-details.component';
+import { RecipeComponent } from './features/recipe/recipe.component';
+import { HomeComponent } from './features/home/home.component';
+import { AuthGuardGuard } from './core/_guards/auth-guard.guard';
 
 const routes: Routes = [
   // canActivate:[AuthGuardGuard]
@@ -19,7 +19,6 @@ const routes: Routes = [
   {path:'addRecipe/:categoryId',component:AddRecipeComponent,canActivate:[AuthGuardGuard]},
   // {path:'recipes/:categoryId/:recipeId',component:RecipeDetailsComponent},
   {path:'recipeDetails/:id',component:RecipeDetailsComponent}
-
 ];
 
 @NgModule({

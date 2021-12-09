@@ -28,7 +28,7 @@ namespace NormativeCalculator.Api
             services.IdentityServices(Configuration);
             services.SwaggerService(Configuration);
      
-            services.AddAutoMapper(typeof(Mapper.Mapper));
+            services.AddAutoMapper(typeof(NormativeCalculatorProfile));
          
         }
 

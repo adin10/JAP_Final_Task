@@ -5,9 +5,9 @@ using Moq;
 using NormativeCalculator.Common.Enum;
 using NormativeCalculator.Core.Entities;
 using NormativeCalculator.Database;
-using NormativeCalculator.Core.Dto;
+using NormativeCalculator.Core.Models.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
-using NormativeCalculator.Core.Requests;
+using NormativeCalculator.Core.Models.Requests;
 using NormativeCalculator.Infrastructure.Services;
 using NUnit.Framework;
 using System;
@@ -28,7 +28,7 @@ namespace NormativeCalculator.Services.Tests
         private ICalculatedService _calculatedService;
 
         [OneTimeSetUp]
-        public void Test()
+        public void SetUp()
         {
             _options = new DbContextOptionsBuilder<NCDbContext>().
                 UseInMemoryDatabase(databaseName: "JapTaskI")
@@ -45,49 +45,12 @@ namespace NormativeCalculator.Services.Tests
                 cfg.CreateMap<RecipeCategory, RecipeCategoryDto>();
             });
             _mapperMock = configuration.CreateMapper();
-
             _recipeService = new RecipeService(_mapperMock, _context, _calculatedService);
 
-
-
-            _context.MyUsers.Add(new MyUser { Id = 1 });
-            _context.RecipeCategories.Add(new RecipeCategory
-            {
-                Id = 1,
-            });
-            _context.Recipes.AddRange(new Recipe
-            {
-                Id = 1,
-                RecipeCategoryId = 1,
-                MyUserId = 1,
-                IngredientRecipes = new List<IngredientRecipe>() { new IngredientRecipe { Id = 1 } }
-            },
-            new Recipe
-            {
-                Id = 2,
-                RecipeCategoryId = 1,
-                MyUserId = 1,
-                IngredientRecipes = new List<IngredientRecipe>() { new IngredientRecipe { Id = 2 } }
-            },
-              new Recipe
-              {
-                  Id = 3,
-                  RecipeCategoryId = 1,
-                  MyUserId = 1,
-                  IngredientRecipes = new List<IngredientRecipe>() { new IngredientRecipe { Id = 3 } }
-              },
-              new Recipe
-              {
-                  Id = 4,
-                  RecipeCategoryId = 1,
-                  MyUserId = 1,
-                  IngredientRecipes = new List<IngredientRecipe>() { new IngredientRecipe { Id = 4 } }
-              });
-            _context.SaveChanges();
+            SetUpDatabase();
         }
 
-        // can't add same ingredients for one recipe 
-        // 1
+ 
         [Test]
         public async Task CreateRecipe_AddingTwoEqualIngredients_CreateRecipeWithOneIngredient()
         {
@@ -114,15 +77,11 @@ namespace NormativeCalculator.Services.Tests
                     }
                 }
             };
-            //await _recipeService.Insert(request);
-            //Recipe recipe = await _context.Recipes.FirstOrDefaultAsync(x => x.Name == request.Name);
+
             Assert.ThrowsAsync<ArgumentException>(async () => await _recipeService.Insert(request));
-            //Assert.That(recipe.IngredientRecipes, Is.Unique);
-            //Assert.That(recipe.IngredientRecipes.Count, Is.EqualTo(1));
-            //Assert.That(recipe.IngredientRecipes.First().IngredientId, Is.EqualTo(request.Ingredients.First().IngredientId));
+           
         }
-        // can't add same ingredients for one recipe 
-        // 2
+       
         [Test]
         public async Task CreateRecipe_AddingMoreEqualIngredients_CreateRecipeWithUniqueIngredient()
         {
@@ -167,17 +126,11 @@ namespace NormativeCalculator.Services.Tests
                     }
                 }
             };
-            //await _recipeService.Insert(request);
-            //Recipe recipe = await _context.Recipes.FirstOrDefaultAsync(x => x.Name == request.Name);
-            //Assert.That(recipe.IngredientRecipes, Is.Unique);
-            //Assert.That(recipe.IngredientRecipes.Count, Is.EqualTo(3));
-            //Assert.That(recipe.IngredientRecipes.First().IngredientId, Is.EqualTo(request.Ingredients.First().IngredientId));
 
             Assert.ThrowsAsync<ArgumentException>(async () => await _recipeService.Insert(request));
 
         }
-        // adding new recipe
-        // 1
+    
         [Test]
         public void CreatingRecipe_WithOneIngredient_AddRecipe()
         {
@@ -210,8 +163,7 @@ namespace NormativeCalculator.Services.Tests
             Assert.True(request.Ingredients.Any());
         }
 
-        // adding new recipe
-        // 2
+      
         [Test]
         public void CreatingRecipe_WithNoIngredient_AddRecipe()
         {
@@ -229,9 +181,6 @@ namespace NormativeCalculator.Services.Tests
             Assert.ThrowsAsync<ArgumentException>(async () => await _recipeService.Insert(request));
         }
 
-
-
-        // load more 1
         [TestCase(0)]
         [TestCase(4)]
         public async Task GetRecipes_InputNumber_LoadMore(int numberOfData)
@@ -242,12 +191,49 @@ namespace NormativeCalculator.Services.Tests
             Assert.That(result.Count, Is.EqualTo(numberOfData));
         }
 
-        //load more 2
        [TestCase]
         public async Task GetRecipes_InputNumber_LoadMoreInvalid()
         {
             var lowRequest = new RecipeSearchRequest { number = -1, categoryId = 1 };
             Assert.ThrowsAsync<ArgumentException>(async () => await _recipeService.Get(lowRequest));
+        }
+
+        public void SetUpDatabase()
+        {
+            _context.MyUsers.Add(new MyUser { Id = 1 });
+            _context.RecipeCategories.Add(new RecipeCategory
+            {
+                Id = 1,
+            });
+            _context.Recipes.AddRange(new Recipe
+            {
+                Id = 1,
+                RecipeCategoryId = 1,
+                MyUserId = 1,
+                IngredientRecipes = new List<IngredientRecipe>() { new IngredientRecipe { Id = 1 } }
+            },
+            new Recipe
+            {
+                Id = 2,
+                RecipeCategoryId = 1,
+                MyUserId = 1,
+                IngredientRecipes = new List<IngredientRecipe>() { new IngredientRecipe { Id = 2 } }
+            },
+              new Recipe
+              {
+                  Id = 3,
+                  RecipeCategoryId = 1,
+                  MyUserId = 1,
+                  IngredientRecipes = new List<IngredientRecipe>() { new IngredientRecipe { Id = 3 } }
+              },
+              new Recipe
+              {
+                  Id = 4,
+                  RecipeCategoryId = 1,
+                  MyUserId = 1,
+                  IngredientRecipes = new List<IngredientRecipe>() { new IngredientRecipe { Id = 4 } }
+              });
+            _context.SaveChanges();
         }
     }
 }

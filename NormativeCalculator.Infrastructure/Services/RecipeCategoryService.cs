@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using NormativeCalculator.Database;
-using NormativeCalculator.Core.Dto;
+using NormativeCalculator.Core.Models.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;

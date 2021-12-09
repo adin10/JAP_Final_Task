@@ -2,15 +2,16 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NormativeCalculator.Common.Enum;
-using NormativeCalculator.Core.Responses;
+using NormativeCalculator.Core.Models.Responses;
 using NormativeCalculator.Database;
-using NormativeCalculator.Core.Dto;
+using NormativeCalculator.Core.Models.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
 using NormativeCalculator.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using NormativeCalculator.Common.Helper;
 
 namespace NormativeCalculator.Api.Controllers
 {
@@ -25,10 +26,15 @@ namespace NormativeCalculator.Api.Controllers
             _ingredientService = service;
         }
 
+        // izmjeniti paginaciju
         [HttpGet]
-        public async Task<ActionResult<List<IngredientDto>>> Get()
+        public async Task<ActionResult<List<IngredientDto>>> Get([FromQuery] PaginationParams paginationParams)
         {
-            return Ok(await _ingredientService.Get());
+            var ingredients = await _ingredientService.Get(paginationParams);
+            Response.AddPaginationHeader(ingredients.CurrentPage,ingredients.PageSize
+                ,ingredients.TotalCount,ingredients.TotalPages);
+            return Ok(ingredients);
+
         }
 
         [HttpGet("{id}")]

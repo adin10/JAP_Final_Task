@@ -1,5 +1,5 @@
-﻿using NormativeCalculator.Core.Dto;
-using NormativeCalculator.Core.Requests;
+﻿using NormativeCalculator.Core.Models.Dto;
+using NormativeCalculator.Core.Models.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;

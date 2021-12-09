@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Unit quantity</th>
+            <th>Measure unit</th>
+            <th>Price</th>
+            <th>Unit price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ingredient of ingredientsList">
+            <td>{{ingredient.name}}</td>
+            <td>{{ingredient.unitQuantity}}</td>
+            <td>{{ingredient.unitMeasure}}</td>
+            <td>{{ingredient.price}}</td>
+            <td>{{ingredient.unitPrice}}</td>
+        </tr>
+    </tbody>
+</table>
+<div class="d-flex justify-content-center" *ngIf="pagination">
+    <pagination [boundaryLinks]="true"
+    [totalItems]="pagination.TotalItems"
+    [itemsPerPage]="pagination.ItemsPerPage"
+    [(ngModel)]="pagination.CurrentPage"
+    (pageChanged)="pageChanged($event)"
+    previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
+</pagination>
+</div>

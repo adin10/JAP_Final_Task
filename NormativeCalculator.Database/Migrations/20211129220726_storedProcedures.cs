@@ -11,8 +11,8 @@ namespace NormativeCalculator.Database.Migrations
                                 As
                                 Begin
                                 select  R.Id, R.Name, R.TotalCost, Count(IR.IngredientId) As ukupno
-                                from Recipes as R inner join IngredientRecipes as IR
-                                on R.Id=IR.RecipeId
+                                from Recipes as R 
+                                inner join IngredientRecipes as IR on R.Id=IR.RecipeId
                                 group by R.Id, R.Name, R.TotalCost
                                 having Count(IR.IngredientId)>=4
                                 order by R.TotalCost desc

@@ -2,9 +2,9 @@
 using Dapper;
 using Microsoft.EntityFrameworkCore;
 using NormativeCalculator.Common.Enum;
-using NormativeCalculator.Core.Responses;
+using NormativeCalculator.Core.Models.Responses;
 using NormativeCalculator.Database;
-using NormativeCalculator.Core.Dto;
+using NormativeCalculator.Core.Models.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -12,6 +12,8 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NormativeCalculator.Common.Helper;
+using AutoMapper.QueryableExtensions;
 
 namespace NormativeCalculator.Infrastructure.Services
 {
@@ -26,10 +28,13 @@ namespace NormativeCalculator.Infrastructure.Services
             _mapper = mapper;
             _dbConection = context.Database.GetDbConnection();
         }
-        public async Task<List<IngredientDto>> Get()
+        public async Task<PagedList<IngredientDto>> Get(PaginationParams paginationParams)
         {
-            var list =await _context.Ingredients.ToListAsync();
-            return _mapper.Map<List<IngredientDto>>(list);
+            //var list =await _context.Ingredients.ToListAsync();
+            //return _mapper.Map<List<IngredientDto>>(list);
+
+            var query = _context.Ingredients.ProjectTo<IngredientDto>(_mapper.ConfigurationProvider).AsNoTracking();
+            return await PagedList<IngredientDto>.CreateAsync(query, paginationParams.pageNumber, paginationParams.PageSize);
         }
 
         public async Task<IngredientDto> GetById(int id)

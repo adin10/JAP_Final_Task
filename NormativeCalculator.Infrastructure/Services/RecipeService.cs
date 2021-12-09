@@ -2,11 +2,11 @@
 using Dapper;
 using Microsoft.EntityFrameworkCore;
 using NormativeCalculator.Core.Entities;
-using NormativeCalculator.Core.Responses;
+using NormativeCalculator.Core.Models.Responses;
 using NormativeCalculator.Database;
-using NormativeCalculator.Core.Dto;
+using NormativeCalculator.Core.Models.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
-using NormativeCalculator.Core.Requests;
+using NormativeCalculator.Core.Models.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,6 +65,11 @@ namespace NormativeCalculator.Infrastructure.Services
 
         public async Task<Recipe> Insert(RecipeInsertRequest request)
         {
+            
+            if (_context.Recipes.Any(x=>x.Name==request.Name))
+            {
+                throw new ArgumentException("Recipe name already exsist in database");
+            }
             if(request.Ingredients.GroupBy(x => x.IngredientId).Any(x => x.Count() > 1))
             {
                 throw new ArgumentException("Ingredients should be unique");

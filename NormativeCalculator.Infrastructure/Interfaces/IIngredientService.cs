@@ -1,18 +1,19 @@
 ﻿using NormativeCalculator.Common.Enum;
-using NormativeCalculator.Core.Responses;
+using NormativeCalculator.Core.Models.Responses;
 using NormativeCalculator.Database;
-using NormativeCalculator.Core.Dto;
+using NormativeCalculator.Core.Models.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NormativeCalculator.Common.Helper;
 
 namespace NormativeCalculator.Infrastructure.Interfaces
 {
    public interface IIngredientService
     {
-        public Task<List<IngredientDto>> Get();
+        public Task<PagedList<IngredientDto>> Get(PaginationParams paginationParams);
 
         public Task<IngredientDto> GetById(int id);
 

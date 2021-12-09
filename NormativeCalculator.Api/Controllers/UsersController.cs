@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using NormativeCalculator.Core.Dto;
+using NormativeCalculator.Core.Models.Dto;
 using NormativeCalculator.Infrastructure.Interfaces;
-using NormativeCalculator.Core.Requests;
+using NormativeCalculator.Core.Models.Requests;
 using NormativeCalculator.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
