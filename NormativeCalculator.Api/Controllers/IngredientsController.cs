@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using NormativeCalculator.Common.Helper;
+using NormativeCalculator.Core.Entities;
+using NormativeCalculator.Core.Models.Requests;
 
 namespace NormativeCalculator.Api.Controllers
 {
@@ -43,12 +45,28 @@ namespace NormativeCalculator.Api.Controllers
             return Ok(await _ingredientService.GetById(id));
         }
 
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Ingredient>> Delete(int id)
+        {
+            return Ok(await _ingredientService.Delete(id));
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Ingredient>> Insert(IngredientRestUpsertRequest request)
+        {
+            return Ok(await _ingredientService.Insert(request));
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Ingredient>> Update(int id, IngredientRestUpsertRequest request)
+        {
+            return Ok(await _ingredientService.Update(id, request));
+        }
+
         [HttpGet("procedure/mostUsedIngredients")]
         public async Task<ActionResult<IEnumerable<GetTop10UsedIngredientsResponse>>> GetTop10UsedIngredients(UnitMeasure unitMeasure,int min, int max)
         {
             return Ok(await _ingredientService.GetTop10UsedIngredients(unitMeasure, min, max));
         }
-     
-
     }
 }

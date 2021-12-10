@@ -11,8 +11,10 @@ namespace NormativeCalculator.Mapper
         public NormativeCalculatorProfile()
         {
             CreateMap<Ingredient, IngredientDto>();
+            CreateMap<IngredientRestUpsertRequest, Ingredient>();
          
             CreateMap<RecipeCategory, RecipeCategoryDto>();
+            CreateMap<RecipeCategoryUpsertRequest, RecipeCategory>();
 
             CreateMap<MyUser, MyUserDto>();
             CreateMap<IdentityUser<int>, UserDto>();

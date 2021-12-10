@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NormativeCalculator.Core.Entities;
+using NormativeCalculator.Core.Models.Requests;
 
 namespace NormativeCalculator.Infrastructure.Services
 {
@@ -30,6 +32,31 @@ namespace NormativeCalculator.Infrastructure.Services
         {
             var entity =await _context.RecipeCategories.FirstOrDefaultAsync(x => x.Id == id);
             return _mapper.Map<RecipeCategoryDto>(entity);
+        }
+
+        public async Task<RecipeCategory> Insert(RecipeCategoryUpsertRequest request)
+        {
+            var entity = _mapper.Map<RecipeCategory>(request);
+            entity.CreatedDate = DateTime.Now;
+            await _context.RecipeCategories.AddAsync(entity);
+            await _context.SaveChangesAsync();
+            return entity;
+        }
+
+        public async Task<RecipeCategory> Delete(int id)
+        {
+            var entity = await _context.RecipeCategories.FindAsync(id);
+            _context.RecipeCategories.Remove(entity);
+            await _context.SaveChangesAsync();
+            return entity;
+        }
+
+        public async Task<RecipeCategory> Update(int id, RecipeCategoryUpsertRequest request)
+        {
+            var entity = await _context.RecipeCategories.FindAsync(id);
+            _mapper.Map(request, entity);
+            await _context.SaveChangesAsync();
+            return entity;
         }
     }
 }
