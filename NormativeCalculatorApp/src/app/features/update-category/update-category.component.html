@@ -1,0 +1,11 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Category name</label>
+        <input type="text" class="form-control" formControlName="Name">
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" formControlName="Description">
+    </div>
+    <button class="btn btn-success">Add category</button>
+</form>

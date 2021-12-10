@@ -16,6 +16,11 @@ import { RecipeComponent } from './features/recipe/recipe.component';
 import { AddRecipeComponent } from './features/add-recipe/add-recipe.component';
 import { RecipeDetailsComponent } from './features/recipe-details/recipe-details.component';
 import{PaginationModule} from 'ngx-bootstrap/pagination';
+import { AddIngredientComponent } from './features/add-ingredient/add-ingredient.component';
+import { UpdateIngredientComponent } from './features/update-ingredient/update-ingredient.component';
+import { AddCategoryComponent } from './features/add-category/add-category.component';
+import { UpdateCategoryComponent } from './features/update-category/update-category.component';
+import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -29,6 +34,10 @@ import{PaginationModule} from 'ngx-bootstrap/pagination';
     RecipeComponent,
     AddRecipeComponent,
     RecipeDetailsComponent,
+    AddIngredientComponent,
+    UpdateIngredientComponent,
+    AddCategoryComponent,
+    UpdateCategoryComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +45,10 @@ import{PaginationModule} from 'ngx-bootstrap/pagination';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    PaginationModule.forRoot()
+    PaginationModule.forRoot(),
+    ToastrModule.forRoot({
+      positionClass:'toast-bottom-right'
+    })
   ],
   providers: [
     AuthGuardGuard,

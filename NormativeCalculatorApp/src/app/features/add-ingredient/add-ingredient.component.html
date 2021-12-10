@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Ingredient name</label>
+        <input type="text" class="form-control" formControlName="Name">
+    </div>
+    <div class="form-group">
+        <label>Quantity</label>
+        <input type="number" class="form-control" formControlName="Quantity">
+    </div>
+    <div class="form-group">
+        <label>Unit measure</label>
+        <select class="form-control" formControlName="UnitMeasure">
+            <option *ngFor="let measure of unitMeasures" [value]="measure.value">
+                    {{measure.name}}
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Price</label>
+        <input type="number" class="form-control" formControlName="Price">
+    </div>
+    <button class="btn btn-success">Add ingredient</button>
+</form>

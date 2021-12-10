@@ -31,4 +31,10 @@ export class IngredientsComponent implements OnInit {
     this.pageNumber=event.page;
     this.loadIngredients();
   }
+
+  deleteIngredient(item){
+    this.service.deleteIngredient(item).subscribe(data=>{
+      this.loadIngredients();
+    })
+  }
 }

@@ -6,6 +6,8 @@
             <th>Measure unit</th>
             <th>Price</th>
             <th>Unit price</th>
+            <th>Delete</th>
+            <th>Update</th>
         </tr>
     </thead>
     <tbody>
@@ -15,6 +17,8 @@
             <td>{{ingredient.unitMeasure}}</td>
             <td>{{ingredient.price}}</td>
             <td>{{ingredient.unitPrice}}</td>
+            <td><i (click)="deleteIngredient(ingredient.id)" class="fa fa-trash" style="font-size: 25px;color: red;"></i></td>
+            <td routerLink="/updateIngredient/{{ingredient.id}}" class="fa fa-edit" style="font-size: 25px; color: orangered;"></td>
         </tr>
     </tbody>
 </table>
@@ -27,3 +31,4 @@
     previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
 </pagination>
 </div>
+<button class="btn btn-primary" routerLink="/addIngredients">Add new ingredient </button>

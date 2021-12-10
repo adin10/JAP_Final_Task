@@ -8,6 +8,10 @@ import { RecipeDetailsComponent } from './features/recipe-details/recipe-details
 import { RecipeComponent } from './features/recipe/recipe.component';
 import { HomeComponent } from './features/home/home.component';
 import { AuthGuardGuard } from './core/_guards/auth-guard.guard';
+import { AddIngredientComponent } from './features/add-ingredient/add-ingredient.component';
+import { UpdateIngredientComponent } from './features/update-ingredient/update-ingredient.component';
+import { AddCategoryComponent } from './features/add-category/add-category.component';
+import { UpdateCategoryComponent } from './features/update-category/update-category.component';
 
 const routes: Routes = [
   // canActivate:[AuthGuardGuard]
@@ -17,8 +21,11 @@ const routes: Routes = [
   {path:'recipeCategory',component:RecipeCategoriesComponent,canActivate:[AuthGuardGuard]},
   {path:'recipes/:id',component:RecipeComponent}, // preuzimanje svih recepata za odabraniu kategoriju
   {path:'addRecipe/:categoryId',component:AddRecipeComponent,canActivate:[AuthGuardGuard]},
-  // {path:'recipes/:categoryId/:recipeId',component:RecipeDetailsComponent},
-  {path:'recipeDetails/:id',component:RecipeDetailsComponent}
+  {path:'recipeDetails/:id',component:RecipeDetailsComponent},
+  {path:"addIngredients",component:AddIngredientComponent},
+  {path:"updateIngredient/:id",component:UpdateIngredientComponent},
+  {path:"addRecipeCategory",component:AddCategoryComponent},
+  {path:"updateCategory/:id",component:UpdateCategoryComponent}
 ];
 
 @NgModule({

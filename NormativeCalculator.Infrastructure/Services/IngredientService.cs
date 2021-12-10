@@ -59,6 +59,7 @@ namespace NormativeCalculator.Infrastructure.Services
         {
             var entity = await _context.Ingredients.FirstOrDefaultAsync(x => x.Id == id);
             _mapper.Map(request, entity);
+            entity.UnitPrice = request.Price / request.UnitQuantity;
             await _context.SaveChangesAsync();
             return entity;
         }

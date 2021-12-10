@@ -2,6 +2,7 @@ import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Ingredient } from "app/shared/entities/ingredients.model";
 import { PaginatedResult } from "app/shared/entities/pagination.model";
+import { IngredientRestUpsertRequest } from "app/shared/requests/ingredientRestUpsertRequests.model";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 
@@ -26,5 +27,20 @@ export class IngredientsService{
             }
             return this.paginatedResult;
         }));
+    }
+
+    getById(id:number){
+        return this.http.get<Ingredient>('https://localhost:5001/api/Ingredients/'+id);
+    }
+    addIngredient(ingredient:IngredientRestUpsertRequest){
+        return this.http.post('https://localhost:5001/api/Ingredients',ingredient);
+    }
+
+    deleteIngredient(id:number){
+        return this.http.delete<Ingredient>('https://localhost:5001/api/Ingredients/'+id);
+    }
+
+    updateIngredient(id,ingredeint:IngredientRestUpsertRequest){
+        return this.http.put('https://localhost:5001/api/Ingredients/'+id,ingredeint);
     }
 }

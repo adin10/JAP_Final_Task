@@ -24,6 +24,12 @@ export class RecipeCategoriesComponent implements OnInit {
     this.recipesCategoryList = await this.service.getRecipeCategories(this.number);
     this.number += 10;
   }
+
+  deleteCategory(item){
+    this.service.deleteCategory(item).subscribe(data=>{
+      this.loadRecipeCategories();
+    })
+  }
 }
 
 

@@ -53,9 +53,6 @@ export class AddRecipeComponent implements OnInit {
     }
   ]
 
-
-
-
   constructor(public router: Router, public service: RecipeService, public fb: FormBuilder,
     public categoryService: RecipeCategoriesService, public userService: MyUserService,
     private route: ActivatedRoute, public ingredientRecipeService: IngredientRecipeService,

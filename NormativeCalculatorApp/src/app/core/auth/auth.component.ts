@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginInsertRequest } from 'app/shared/requests/loginInsertRequest.model';
+import { ToastrService } from 'ngx-toastr';
 import { AuthenticationService } from '../_services/authentication.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { AuthenticationService } from '../_services/authentication.service';
 })
 export class AuthComponent implements OnInit {
 
-  constructor(public service:AuthenticationService,public fb:FormBuilder,public route:Router) { }
+  constructor(public service:AuthenticationService,public fb:FormBuilder,public route:Router,private toastr:ToastrService) { }
   forma:FormGroup;
   data:any;
 
@@ -36,7 +37,8 @@ export class AuthComponent implements OnInit {
         this.service.myUserId = data.myUser?.id;
         this.service.isAuthenticated=true;
         this.route.navigate(['/']);
-      });
+      },
+      );
       this.forma.reset();
     }
   }

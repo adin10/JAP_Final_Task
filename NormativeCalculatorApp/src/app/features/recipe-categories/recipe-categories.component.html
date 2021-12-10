@@ -5,6 +5,8 @@
             <td>Description</td>
             <td>Created date</td>
             <td>Choose</td>
+            <td>Delete</td>
+            <td>Update</td>
         </tr>
     </thead>
     <tbody>
@@ -15,7 +17,11 @@
             <!-- <td [routerLink]="['/recipes/',category.recipeCategoryId]">See all recipies</td>     -->
             <td><button routerLink="/recipes/{{category.id}}">See all recipies for this category</button> </td>
             <!-- odabir kategorije te redirekt na listu recepata za tu -->
+            <td><i (click)="deleteCategory(category.id)" class="fa fa-trash" style="color: red;font-size: 25px;"></i></td>
+            <td class="fa fa-edit" style="font-size: 25px; color: orangered;" routerLink="/updateCategory/{{category.id}}"></td>
         </tr>
     </tbody>
 </table>
-<button (click)="loadRecipeCategories()">Load more data</button>
+<button (click)="loadRecipeCategories()">Load more data</button><br>
+
+<button class="btn btn-primary" routerLink="/addRecipeCategory">Add new category</button>
