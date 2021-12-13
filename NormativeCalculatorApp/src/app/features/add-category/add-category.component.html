@@ -2,10 +2,11 @@
     <div class="form-group">
         <label>Category name</label>
         <input type="text" class="form-control" formControlName="Name">
+        <span style="color: red;" *ngIf="form.get('Name').touched && form.get('Name').hasError('required')">Required field</span>
     </div>
     <div class="form-group">
         <label>Description</label>
         <input type="text" class="form-control" formControlName="Description">
     </div>
-    <button class="btn btn-success">Add category</button>
+    <button [disabled]="!form.valid" class="btn btn-success">Add category</button>
 </form>

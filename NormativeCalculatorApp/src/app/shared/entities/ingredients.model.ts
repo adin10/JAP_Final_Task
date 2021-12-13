@@ -11,3 +11,9 @@ export class Ingredient{
                 public ingredientRecipe:IngredientRecipe[]
         ){}
 }
+
+export interface IngredientSearchRequest {
+    name: string;
+    quantity: number | null;
+    unitMeasure: UnitMeasure | null;
+}

@@ -2,10 +2,12 @@
     <div class="form-group">
         <label>Ingredient name</label>
         <input type="text" class="form-control" formControlName="Name">
+        <span style="color: red;" *ngIf="form.get('Name').touched && form.get('Name').hasError('required')">Required field</span>
     </div>
     <div class="form-group">
         <label>Quantity</label>
         <input type="number" class="form-control" formControlName="Quantity">
+        <span style="color: red;" *ngIf="form.get('Quantity').touched && form.get('Quantity').hasError('required')">Required field</span>
     </div>
     <div class="form-group">
         <label>Unit measure</label>
@@ -14,10 +16,12 @@
                     {{measure.name}}
             </option>
         </select>
+        <span style="color: red;" *ngIf="form.get('UnitMeasure').touched && form.get('UnitMeasure').hasError('required')">Required field</span>
     </div>
     <div class="form-group">
         <label>Price</label>
         <input type="number" class="form-control" formControlName="Price">
+        <span style="color: red;" *ngIf="form.get('Price').touched && form.get('Price').hasError('required')">Required field</span>
     </div>
-    <button class="btn btn-success">Add ingredient</button>
+    <button [disabled]="!form.valid" class="btn btn-success">Add ingredient</button>
 </form>

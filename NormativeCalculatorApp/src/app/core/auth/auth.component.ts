@@ -38,6 +38,9 @@ export class AuthComponent implements OnInit {
         this.service.isAuthenticated=true;
         this.route.navigate(['/']);
       },
+      (error)=>{
+        this.toastr.error("Wrong username or password");
+      }
       );
       this.forma.reset();
     }

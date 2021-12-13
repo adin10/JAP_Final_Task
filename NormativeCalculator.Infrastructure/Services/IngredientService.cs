@@ -30,13 +30,35 @@ namespace NormativeCalculator.Infrastructure.Services
             _mapper = mapper;
             _dbConection = context.Database.GetDbConnection();
         }
-        public async Task<PagedList<IngredientDto>> Get(PaginationParams paginationParams)
+        public async Task<PagedList<IngredientDto>> Get(PaginationParams queryParams, IngredientSearchRequest request)
         {
             //var list =await _context.Ingredients.ToListAsync();
             //return _mapper.Map<List<IngredientDto>>(list);
 
-            var query = _context.Ingredients.ProjectTo<IngredientDto>(_mapper.ConfigurationProvider).AsNoTracking();
-            return await PagedList<IngredientDto>.CreateAsync(query, paginationParams.pageNumber, paginationParams.PageSize);
+            //var query = _context.Ingredients.ProjectTo<IngredientDto>(_mapper.ConfigurationProvider).AsNoTracking();
+            //return await PagedList<IngredientDto>.CreateAsync(query, paginationParams.pageNumber, paginationParams.PageSize);
+
+            var query = _context.Ingredients.AsQueryable();
+            if (request != null)
+            {
+                if (!string.IsNullOrWhiteSpace(request?.Name))
+                {
+                    var normalizedName = request.Name.ToLower();
+                    query = query.Where(x => x.Name.ToLower().Contains(normalizedName));
+                }
+                if (request.Quantity.HasValue)
+                {
+                    query = query.Where(x => x.UnitQuantity == request.Quantity);
+                }
+                if (request.UnitMeasure.HasValue)
+                {
+                    query = query.Where(x => x.UnitMeasure == request.UnitMeasure);
+                }
+            }
+            //query = query.Where(x => x.UnitMeasure == queryParams.UnitMeasure);
+
+            return await PagedList<IngredientDto>.CreateAsync(query.ProjectTo<IngredientDto>
+                (_mapper.ConfigurationProvider).AsNoTracking(), queryParams.pageNumber, queryParams.PageSize);
         }
 
         public async Task<IngredientDto> GetById(int id)

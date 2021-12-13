@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace NormativeCalculator.Api.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class RecipeCategoriesController : ControllerBase
@@ -24,7 +24,8 @@ namespace NormativeCalculator.Api.Controllers
         {
             _recipeCategoryService = service;
         }
-
+        
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<List<RecipeCategoryDto>>> Get(int number)
         {

@@ -17,15 +17,15 @@ const routes: Routes = [
   // canActivate:[AuthGuardGuard]
   { path: '', component: HomeComponent, pathMatch: 'full' },
   {path:'auth',component:AuthComponent},
-  {path:'ingredient',component:IngredientsComponent,canActivate:[AuthGuardGuard]},
-  {path:'recipeCategory',component:RecipeCategoriesComponent,canActivate:[AuthGuardGuard]},
+  {path:'ingredient',component:IngredientsComponent},
+  {path:'recipeCategory',component:RecipeCategoriesComponent},
   {path:'recipes/:id',component:RecipeComponent}, // preuzimanje svih recepata za odabraniu kategoriju
   {path:'addRecipe/:categoryId',component:AddRecipeComponent,canActivate:[AuthGuardGuard]},
   {path:'recipeDetails/:id',component:RecipeDetailsComponent},
   {path:"addIngredients",component:AddIngredientComponent},
-  {path:"updateIngredient/:id",component:UpdateIngredientComponent},
-  {path:"addRecipeCategory",component:AddCategoryComponent},
-  {path:"updateCategory/:id",component:UpdateCategoryComponent}
+  {path:"updateIngredient/:id",component:UpdateIngredientComponent,canActivate:[AuthGuardGuard]},
+  {path:"addRecipeCategory",component:AddCategoryComponent,canActivate:[AuthGuardGuard]},
+  {path:"updateCategory/:id",component:UpdateCategoryComponent,canActivate:[AuthGuardGuard]}
 ];
 
 @NgModule({

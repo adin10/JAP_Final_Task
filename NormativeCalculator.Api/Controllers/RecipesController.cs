@@ -1,19 +1,14 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NormativeCalculator.Core.Entities;
-using NormativeCalculator.Core.Models.Responses;
-using NormativeCalculator.Database;
 using NormativeCalculator.Core.Models.Dto;
-using NormativeCalculator.Infrastructure.Interfaces;
 using NormativeCalculator.Core.Models.Requests;
-using NormativeCalculator.Infrastructure.Services;
+using NormativeCalculator.Core.Models.Responses;
+using NormativeCalculator.Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace NormativeCalculator.Api.Controllers
@@ -31,13 +26,14 @@ namespace NormativeCalculator.Api.Controllers
             _recipeService = service;
             _mapper = mapper;
         }
-
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<List<RecipeDto>>> Get([FromQuery] RecipeSearchRequest request)
         {
             return Ok(await _recipeService.Get(request));
         }
 
+        [AllowAnonymous]
         [HttpGet("recipeDetails/{id}")]
         public async Task<ActionResult<RecipeDetailsDto>> RecipeDetails(int id)
         {
@@ -50,6 +46,12 @@ namespace NormativeCalculator.Api.Controllers
             return Ok(await _recipeService.GetById(id));
         }
 
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Recipe>> Delete(int id)
+        {
+            return Ok(await _recipeService.Delete(id));
+        }
+
         [HttpPost]
         public async Task<ActionResult<Recipe>>Insert(RecipeRestUpsertModel request)
         {
@@ -57,6 +59,15 @@ namespace NormativeCalculator.Api.Controllers
             insertRequest.MyUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             insertRequest.CreatedDate = DateTime.Now;
             return Ok(await _recipeService.Insert(insertRequest));
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Recipe>> Update(int id, RecipeRestUpsertModel request)
+        {
+            var insertRequest = _mapper.Map<RecipeUpdateRequest>(request);
+            insertRequest.MyUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            insertRequest.CreatedDate = DateTime.Now;
+            return Ok(await _recipeService.Update(id, insertRequest));
         }
 
         [HttpGet("procedure/getAllRecipes")]

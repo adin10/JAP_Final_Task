@@ -5,6 +5,7 @@ import { IngredientsService } from 'app/core/_services/ingredients.service';
 import { Ingredient } from 'app/shared/entities/ingredients.model';
 import { IngredientRestUpsertRequest } from 'app/shared/requests/ingredientRestUpsertRequests.model';
 import { UnitMeasure } from 'app/shared/requests/unitMeasure.enum';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-update-ingredient',
@@ -37,7 +38,7 @@ export class UpdateIngredientComponent implements OnInit {
       value: UnitMeasure.ml
     }
   ]
-  constructor(public ingredientService:IngredientsService,
+  constructor(public ingredientService:IngredientsService, private toastr:ToastrService,
    public route:ActivatedRoute, public fb:FormBuilder,public router:Router) {}
 
   ngOnInit(){
@@ -68,6 +69,7 @@ export class UpdateIngredientComponent implements OnInit {
                                               this.form.get('Price').value,
                                               this.form.get('Quantity').value);
         this.ingredientService.updateIngredient(this.route.snapshot.params.id,podaci).subscribe(data=>{
+          this.toastr.success("Data successfully updated")
           this.router.navigate(["/ingredient"]);
         }) 
     }
@@ -75,7 +77,11 @@ export class UpdateIngredientComponent implements OnInit {
     getIngredients(){
       this.ingredientService.getIngredients().subscribe(data=>{
         this.ingredients=data.result;
-      })
+      },
+      (error)=>{
+        this.toastr.error("Something went wrong");
+      }
+      )
     }
 
 }

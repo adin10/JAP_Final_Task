@@ -21,6 +21,7 @@ import { UpdateIngredientComponent } from './features/update-ingredient/update-i
 import { AddCategoryComponent } from './features/add-category/add-category.component';
 import { UpdateCategoryComponent } from './features/update-category/update-category.component';
 import {ToastrModule} from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -45,9 +46,10 @@ import {ToastrModule} from 'ngx-toastr';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     PaginationModule.forRoot(),
     ToastrModule.forRoot({
-      positionClass:'toast-bottom-right'
+      positionClass:'toast-top-right'
     })
   ],
   providers: [

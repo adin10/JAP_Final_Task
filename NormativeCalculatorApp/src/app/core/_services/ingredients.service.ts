@@ -1,8 +1,9 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Ingredient } from "app/shared/entities/ingredients.model";
+import { Ingredient, IngredientSearchRequest } from "app/shared/entities/ingredients.model";
 import { PaginatedResult } from "app/shared/entities/pagination.model";
 import { IngredientRestUpsertRequest } from "app/shared/requests/ingredientRestUpsertRequests.model";
+import { UnitMeasure } from "app/shared/requests/unitMeasure.enum";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 
@@ -13,12 +14,13 @@ export class IngredientsService{
 
     constructor(public http:HttpClient){}
 
-    getIngredients(page?:number, itemsPerPage?:number){
-        let params=new HttpParams();
-        if(page!==null && itemsPerPage!==null){
-            params=params.append('pageNumber',page.toString());
-            params=params.append('pageSize',itemsPerPage.toString());
-        }
+    getIngredients(searchRequest?:IngredientSearchRequest, page?:number, itemsPerPage?:number){
+        let params=new HttpParams()
+        .set('pageNumber',page.toString())
+        .set('pageSize',itemsPerPage.toString())
+        .set("Name",searchRequest.name)
+        .set("Quantity",searchRequest.quantity)
+        .set("UnitMeasure",searchRequest.unitMeasure)
         return this.http.get<Ingredient[]>('https://localhost:5001/api/Ingredients',
         {observe:'response',params}).pipe(map(response=>{
             this.paginatedResult.result=response.body;
@@ -44,3 +46,5 @@ export class IngredientsService{
         return this.http.put('https://localhost:5001/api/Ingredients/'+id,ingredeint);
     }
 }
+
+

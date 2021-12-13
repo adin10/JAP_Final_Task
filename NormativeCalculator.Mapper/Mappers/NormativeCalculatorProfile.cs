@@ -22,6 +22,8 @@ namespace NormativeCalculator.Mapper
             CreateMap<Recipe, RecipeDto>();
             CreateMap<RecipeInsertRequest, Recipe>().ReverseMap();
             CreateMap<RecipeRestUpsertModel, RecipeInsertRequest>();
+            CreateMap<RecipeUpdateRequest, Recipe>().ReverseMap();
+            CreateMap<RecipeRestUpsertModel, RecipeUpdateRequest>();
 
             CreateMap<RecipeRestUpsertModel, IngredientRecipeInsertRequest>();
             CreateMap<IngredientRecipeInsertRequest, IngredientRecipeInsertRequest>();

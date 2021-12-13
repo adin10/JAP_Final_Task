@@ -17,7 +17,7 @@ using NormativeCalculator.Core.Models.Requests;
 
 namespace NormativeCalculator.Api.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class IngredientsController : ControllerBase
@@ -29,12 +29,13 @@ namespace NormativeCalculator.Api.Controllers
         }
 
         // izmjeniti paginaciju
+        [AllowAnonymous]
         [HttpGet]
-        public async Task<ActionResult<List<IngredientDto>>> Get([FromQuery] PaginationParams paginationParams)
+        public async Task<ActionResult<List<IngredientDto>>> Get([FromQuery] PaginationParams paginationParams, [FromQuery] IngredientSearchRequest request)
         {
-            var ingredients = await _ingredientService.Get(paginationParams);
+            var ingredients = await _ingredientService.Get(paginationParams, request);
             Response.AddPaginationHeader(ingredients.CurrentPage,ingredients.PageSize
-                ,ingredients.TotalCount,ingredients.TotalPages);
+               ,ingredients.TotalCount,ingredients.TotalPages);
             return Ok(ingredients);
 
         }

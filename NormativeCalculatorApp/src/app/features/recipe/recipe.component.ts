@@ -11,7 +11,6 @@ import { Recipe } from 'app/shared/entities/recipe.model';
 })
 export class RecipeComponent implements OnInit {
   number:number=100;
-
   recipeList:Recipe[]=[];
   SearchTerm:string="";
   categoryId:number;
@@ -30,6 +29,7 @@ export class RecipeComponent implements OnInit {
   }
   Search(){
     this.loadRecipes(this.SearchTerm,this.categoryId);
+    console.log(this.loadRecipes(this.SearchTerm,this.categoryId));
   }
 
 

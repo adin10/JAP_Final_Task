@@ -5,6 +5,7 @@ import { IngredientsService } from 'app/core/_services/ingredients.service';
 import { Ingredient } from 'app/shared/entities/ingredients.model';
 import { IngredientRestUpsertRequest } from 'app/shared/requests/ingredientRestUpsertRequests.model';
 import { UnitMeasure } from 'app/shared/requests/unitMeasure.enum';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-add-ingredient',
@@ -38,12 +39,12 @@ export class AddIngredientComponent implements OnInit {
       value: UnitMeasure.ml
     }
   ]
-  constructor(public ingredientService:IngredientsService, public fb:FormBuilder,public router:Router) { 
+  constructor(private toastr:ToastrService, public ingredientService:IngredientsService, public fb:FormBuilder,public router:Router) { 
     this.form=this.fb.group({
-      Name:["",Validators.required],
-      Quantity:[""],
-      Price:[""],
-      UnitMeasure:[""]
+      Name:["",[Validators.required]],
+      Quantity:["",[Validators.required]],
+      Price:["",[Validators.required]],
+      UnitMeasure:["",[Validators.required]]
     })
   }
 
@@ -56,6 +57,7 @@ export class AddIngredientComponent implements OnInit {
                                               this.form.get('Price').value,
                                               this.form.get('Quantity').value);
         this.ingredientService.addIngredient(podaci).subscribe(data=>{
+          this.toastr.success("Successfully added");
           this.router.navigate(["/ingredient"]);
         }) 
     }
@@ -63,6 +65,10 @@ export class AddIngredientComponent implements OnInit {
     getIngredients(){
       this.ingredientService.getIngredients().subscribe(data=>{
         this.ingredients=data.result;
-      })
+      },
+      (error)=>{
+        this.toastr.error("Something went wrong");
+      }
+      )
     }
 }

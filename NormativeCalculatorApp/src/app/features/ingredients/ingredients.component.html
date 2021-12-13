@@ -1,3 +1,9 @@
+<!-- <nav class="navbar">
+    <span>Filter</span>
+    <input class="form-control" type="text" name="Name" [(ngModel)]="Name" (change)="Search()" placeholder="Search ingredient name">
+    <input class="form-control" type="text" name="Quantity" [(ngModel)]="Quantity" (change)="Search()" placeholder="Input quantity ">
+    <input class="form-control" type="text" name="UnitMeasure" [(ngModel)]="UnitMeasure" (change)="Search()" placeholder="Search unit measure">
+</nav> -->
 <table class="table">
     <thead>
         <tr>
@@ -6,8 +12,8 @@
             <th>Measure unit</th>
             <th>Price</th>
             <th>Unit price</th>
-            <th>Delete</th>
-            <th>Update</th>
+            <th *ngIf="authService.isAuthenticated">Delete</th>
+            <th *ngIf="authService.isAuthenticated">Update</th>
         </tr>
     </thead>
     <tbody>
@@ -17,8 +23,8 @@
             <td>{{ingredient.unitMeasure}}</td>
             <td>{{ingredient.price}}</td>
             <td>{{ingredient.unitPrice}}</td>
-            <td><i (click)="deleteIngredient(ingredient.id)" class="fa fa-trash" style="font-size: 25px;color: red;"></i></td>
-            <td routerLink="/updateIngredient/{{ingredient.id}}" class="fa fa-edit" style="font-size: 25px; color: orangered;"></td>
+            <td *ngIf="authService.isAuthenticated"><i (click)="deleteIngredient(ingredient.id)" class="fa fa-trash" style="font-size: 25px;color: red;"></i></td>
+            <td *ngIf="authService.isAuthenticated" routerLink="/updateIngredient/{{ingredient.id}}" class="fa fa-edit" style="font-size: 25px; color: orangered;"></td>
         </tr>
     </tbody>
 </table>
@@ -31,4 +37,4 @@
     previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
 </pagination>
 </div>
-<button class="btn btn-primary" routerLink="/addIngredients">Add new ingredient </button>
+<button *ngIf="authService.isAuthenticated" class="btn btn-primary" routerLink="/addIngredients">Add new ingredient </button>

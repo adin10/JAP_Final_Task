@@ -16,7 +16,7 @@ export class AddCategoryComponent implements OnInit {
 
   constructor(public categoryService:RecipeCategoriesService,public fb:FormBuilder,public router:Router, private toastr:ToastrService) {
     this.form=this.fb.group({
-      Name:["",Validators.required],
+      Name:["",[Validators.required]],
       Description:[""],
     })
    }

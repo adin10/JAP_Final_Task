@@ -16,8 +16,11 @@ namespace NormativeCalculator.Infrastructure.Interfaces
     {
         public Task<List<RecipeDto>> Get(RecipeSearchRequest request);
         public Task<RecipeDto> GetById(int id);
+        public Task<Recipe> Delete(int id);
+
         public Task<RecipeDetailsDto> RecipeDetails(int id);
         public Task<Recipe> Insert(RecipeInsertRequest request);
+        public Task<Recipe> Update(int id, RecipeUpdateRequest request);
         
         // procedures
         public Task<IEnumerable<GetAllRecipesResponse>> GetAllRecipes();

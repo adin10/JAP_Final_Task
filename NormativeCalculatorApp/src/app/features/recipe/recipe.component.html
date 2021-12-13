@@ -2,7 +2,7 @@
 
 <nav class="navbar">
     <span>Filter</span>
-    <input class="form-control" type="text" name="SearchTerm" [(ngModel)]="SearchTerm" (change)="Search()" placeholder="Search Recipes">
+    <input class="form-control" type="text" name="SearchTerm" [(ngModel)]="SearchTerm" (input)="Search()" placeholder="Search Recipes">
     <!-- <input class="form-control" type="text" name="LastName" [(ngModel)]="categoryId" (change)="Search()" placeholder="Search category id"> -->
 </nav>
 <table class="table">

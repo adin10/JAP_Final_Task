@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'app/core/_services/authentication.service';
 import { RecipeCategoriesService } from 'app/core/_services/recipeCategories.service';
 import { RecipeCategory } from 'app/shared/entities/recipeCategories.model';
+import { ToastrService } from 'ngx-toastr';
 
 import{first} from 'rxjs/operators';
 
@@ -11,7 +13,7 @@ import{first} from 'rxjs/operators';
 })
 export class RecipeCategoriesComponent implements OnInit {
 
-  constructor(public service:RecipeCategoriesService) { }
+  constructor(public service:RecipeCategoriesService, private toastr:ToastrService, public authService:AuthenticationService) { }
 
   recipesCategoryList:RecipeCategory[]=[];
   number:number=10;
@@ -26,9 +28,12 @@ export class RecipeCategoriesComponent implements OnInit {
   }
 
   deleteCategory(item){
+    if(confirm("Are you sure you want to delele object")){
     this.service.deleteCategory(item).subscribe(data=>{
+      this.toastr.success("Successfully deleted");
       this.loadRecipeCategories();
     })
+  }
   }
 }
 

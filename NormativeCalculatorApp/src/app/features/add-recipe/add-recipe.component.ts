@@ -104,7 +104,7 @@ export class AddRecipeComponent implements OnInit {
   //   this.ingredientsList = await this.ingredientService.getIngredients().toPromise();
   // }
   loadIngredients(){
-    this.ingredientService.getIngredients(1,100).subscribe(data=>{
+    this.ingredientService.getIngredients().subscribe(data=>{
       this.ingredientsList=data.result;
       console.log(this.ingredientsList);
     })
