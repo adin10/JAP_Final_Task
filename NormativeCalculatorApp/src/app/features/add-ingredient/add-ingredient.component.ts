@@ -52,13 +52,16 @@ export class AddIngredientComponent implements OnInit {
   }
 
   onSubmit(){
-    let podaci=new IngredientRestUpsertRequest(this.form.get('Name').value,
+    let dataParams=new IngredientRestUpsertRequest(this.form.get('Name').value,
                                               this.form.get('UnitMeasure').value,
                                               this.form.get('Price').value,
                                               this.form.get('Quantity').value);
-        this.ingredientService.addIngredient(podaci).subscribe(data=>{
+        this.ingredientService.addIngredient(dataParams).subscribe(data=>{
           this.toastr.success("Successfully added");
           this.router.navigate(["/ingredient"]);
+        },
+        (error)=>{
+          this.toastr.error("Something went wrong");
         }) 
     }
 

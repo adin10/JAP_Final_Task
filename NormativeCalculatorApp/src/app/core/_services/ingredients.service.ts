@@ -14,15 +14,25 @@ export class IngredientsService{
 
     constructor(public http:HttpClient){}
 
-    getIngredients(searchRequest?:IngredientSearchRequest, page?:number, itemsPerPage?:number){
+    getIngredients(number?:number,page?:number, itemsPerPage?:number,
+        searchRequest?:IngredientSearchRequest,orderBy?:string){
         let params=new HttpParams()
-        .set('pageNumber',page.toString())
-        .set('pageSize',itemsPerPage.toString())
-        .set("Name",searchRequest.name)
-        .set("Quantity",searchRequest.quantity)
-        .set("UnitMeasure",searchRequest.unitMeasure)
+        .set("Name",searchRequest?.name??'')
+        .set("Quantity",searchRequest?.quantity??'')
+        .set("UnitMeasure",searchRequest?.unitMeasure??'')
+        .set("number",number??'')
+        .set("OrderBy",orderBy??'')
+        // .set('pageNumber',page.toString())
+        // .set('pageSize',itemsPerPage.toString())
+        if(page!==null && itemsPerPage!==null){
+            params=params.append('pageNumber',page.toString()),
+         params=params.append('pageSize',itemsPerPage.toString())
+         }
+    
+
         return this.http.get<Ingredient[]>('https://localhost:5001/api/Ingredients',
-        {observe:'response',params}).pipe(map(response=>{
+        {observe:'response',params})
+        .pipe(map(response=>{
             this.paginatedResult.result=response.body;
             if(response.headers.get('Pagination')!==null){
                 this.paginatedResult.pagiation=JSON.parse(response.headers.get('Pagination'));

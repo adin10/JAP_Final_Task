@@ -1,0 +1,16 @@
+<form [formGroup]="forma" (ngSubmit)="save()">
+    <div class="form-group">
+        <label>Recipe name</label>
+        <input type="text" class="form-control" formControlName="recipeName">
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" formControlName="description">
+    </div>
+    <div class="form-group">
+        <label style="font-weight: bold;margin-top: 5px;">Set recommended price</label>
+        <input class="form-control" type="number" formControlName="recommendedPrice"> 
+    </div>
+
+    <button style="margin-top:5px" class="btn btn-success">Update recipe</button>
+</form>

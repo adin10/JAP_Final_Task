@@ -31,11 +31,11 @@ namespace NormativeCalculator.Api.Controllers
         // izmjeniti paginaciju
         [AllowAnonymous]
         [HttpGet]
-        public async Task<ActionResult<List<IngredientDto>>> Get([FromQuery] PaginationParams paginationParams, [FromQuery] IngredientSearchRequest request)
+        public async Task<ActionResult<List<IngredientDto>>> Get([FromQuery] PaginationParams paginationParams, [FromQuery] IngredientSearchRequest request, int? number)
         {
-            var ingredients = await _ingredientService.Get(paginationParams, request);
+            var ingredients = await _ingredientService.Get(paginationParams, request,number);
             Response.AddPaginationHeader(ingredients.CurrentPage,ingredients.PageSize
-               ,ingredients.TotalCount,ingredients.TotalPages);
+              ,ingredients.TotalCount,ingredients.TotalPages);
             return Ok(ingredients);
 
         }

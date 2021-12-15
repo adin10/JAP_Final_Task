@@ -15,6 +15,7 @@ namespace NormativeCalculator.Core.Models.Requests
         public DateTime CreatedDate { get; set; }
         public int MyUserId { get; set; }
         public int RecipeCategoryId { get; set; }
+        public float RecommendedPrice { get; set; }
         public List<IngredientRecipeInsertRequest> Ingredients { get; set; }
     }
 }

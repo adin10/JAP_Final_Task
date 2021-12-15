@@ -83,6 +83,7 @@ namespace NormativeCalculator.Infrastructure.Services
             try
             {
                 var entity = _mapper.Map<Recipe>(request);
+                entity.CreatedDate = DateTime.Now;
                 await _context.Recipes.AddAsync(entity);
                 await _context.SaveChangesAsync();
                 var ingredientRecipe = _mapper.Map<List<IngredientRecipe>>(request.Ingredients);
@@ -110,34 +111,11 @@ namespace NormativeCalculator.Infrastructure.Services
 
         public async Task<Recipe> Update(int id, RecipeUpdateRequest request)
         {
-            using var transaction = await _context.Database.BeginTransactionAsync();
-            try
-            {
-                var entity =await _context.Recipes.FindAsync(id);
-                _mapper.Map(request, entity);
-                await _context.SaveChangesAsync();
-                var ingredientRecipe = _mapper.Map<List<IngredientRecipe>>(request.Ingredients);
-
-                var ingredientIds = request.Ingredients.Select(x => x.IngredientId).ToArray();
-                var ingredients = await _context.Ingredients.Where(x => ingredientIds.Contains(x.Id)).ToListAsync();
-
-                //ingredientRecipe.ForEach(x => x.RecipeId = entity.Id);
-                ingredientRecipe.ForEach(x =>
-                {
-                    x.Recipe = entity;
-                    x.Price = _calculatedService.CalculateIngredientRecipe(x, ingredients.FirstOrDefault(y => y.Id == x.IngredientId));
-                });
-                _mapper.Map(request.Ingredients, ingredientRecipe);
-                await _context.IngredientRecipes.AddRangeAsync(ingredientRecipe);
-                await _context.SaveChangesAsync();
-                await transaction.CommitAsync();
-                return entity;
-            }
-            catch (Exception)
-            {
-                await transaction.RollbackAsync();
-                throw;
-            }
+            var entity =await _context.Recipes.FindAsync(id);
+            request.CreatedDate = DateTime.Now;
+            _mapper.Map(request, entity);
+            await _context.SaveChangesAsync();
+            return entity;
         }
 
         public async Task<Recipe> Delete(int id)

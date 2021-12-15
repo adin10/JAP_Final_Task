@@ -16,6 +16,7 @@ using NormativeCalculator.Common.Helper;
 using AutoMapper.QueryableExtensions;
 using NormativeCalculator.Core.Entities;
 using NormativeCalculator.Core.Models.Requests;
+using NormativeCalculator.Core.Models.Validators;
 
 namespace NormativeCalculator.Infrastructure.Services
 {
@@ -30,14 +31,8 @@ namespace NormativeCalculator.Infrastructure.Services
             _mapper = mapper;
             _dbConection = context.Database.GetDbConnection();
         }
-        public async Task<PagedList<IngredientDto>> Get(PaginationParams queryParams, IngredientSearchRequest request)
+        public async Task<PagedList<IngredientDto>> Get(PaginationParams queryParams, IngredientSearchRequest request,int? number)
         {
-            //var list =await _context.Ingredients.ToListAsync();
-            //return _mapper.Map<List<IngredientDto>>(list);
-
-            //var query = _context.Ingredients.ProjectTo<IngredientDto>(_mapper.ConfigurationProvider).AsNoTracking();
-            //return await PagedList<IngredientDto>.CreateAsync(query, paginationParams.pageNumber, paginationParams.PageSize);
-
             var query = _context.Ingredients.AsQueryable();
             if (request != null)
             {
@@ -55,10 +50,14 @@ namespace NormativeCalculator.Infrastructure.Services
                     query = query.Where(x => x.UnitMeasure == request.UnitMeasure);
                 }
             }
-            //query = query.Where(x => x.UnitMeasure == queryParams.UnitMeasure);
-
+            query = queryParams.OrderBy switch
+            {
+                "name" => query.OrderByDescending(x => x.Name),
+                "quantity"=>query.OrderByDescending(x=>x.UnitQuantity),
+               _ => query.OrderBy(x => x.Price)
+            };
             return await PagedList<IngredientDto>.CreateAsync(query.ProjectTo<IngredientDto>
-                (_mapper.ConfigurationProvider).AsNoTracking(), queryParams.pageNumber, queryParams.PageSize);
+                (_mapper.ConfigurationProvider).AsNoTracking(), queryParams.pageNumber, queryParams.PageSize=(int)number);
         }
 
         public async Task<IngredientDto> GetById(int id)
@@ -69,6 +68,12 @@ namespace NormativeCalculator.Infrastructure.Services
 
         public async Task<Ingredient> Insert(IngredientRestUpsertRequest request)
         {
+            var validation = new IngredientInsertRequestValidator();
+            var result = validation.Validate(request);
+            if (!result.IsValid)
+            {
+                throw new ArgumentException("Something went wrong");
+            }
             var entity = _mapper.Map<Ingredient>(request);
             entity.CreatedDate = DateTime.Now;
             entity.UnitPrice = request.Price / request.UnitQuantity;

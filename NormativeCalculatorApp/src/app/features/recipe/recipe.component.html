@@ -2,7 +2,7 @@
 
 <nav class="navbar">
     <span>Filter</span>
-    <input class="form-control" type="text" name="SearchTerm" [(ngModel)]="SearchTerm" (input)="Search()" placeholder="Search Recipes">
+    <input class="form-control" type="text" name="SearchTerm" [(ngModel)]="SearchTerm" (change)="Search()" placeholder="Search Recipes">
     <!-- <input class="form-control" type="text" name="LastName" [(ngModel)]="categoryId" (change)="Search()" placeholder="Search category id"> -->
 </nav>
 <table class="table">
@@ -13,7 +13,10 @@
             <th>Created date</th>
             <th>User</th>
             <th>Category</th>
+            <th>Recommended price</th>
             <th>Details</th>
+            <th *ngIf="authService.isAuthenticated">Delete</th>
+            <th  *ngIf="authService.isAuthenticated">Update</th>
         </tr>
     </thead>
     <tbody>
@@ -23,10 +26,13 @@
             <td>{{recipe.createdDate | date}}</td>
             <td>{{recipe.myUser.firstName}} {{recipe.myUser.lastName}}</td>
             <td>{{recipe.recipeCategory.name}}</td>
+            <td>{{recipe.recommendedPrice | number}}</td>
             <td><button class="btn btn-primary" routerLink="/recipeDetails/{{recipe.id}}">See details</button></td>
+            <td *ngIf="authService.isAuthenticated"><i class="fa fa-trash" style="color: red; font-size: 25px;" (click)="deleteRecipe(recipe.id)"></i></td>
+            <td *ngIf="authService.isAuthenticated" routerLink="/updateRecipe/{{recipe.id}}" class="fa fa-edit" style="font-size: 25px; color: orangered;"></td>
         </tr>
     </tbody>
 </table>
 <!-- <button (click)="loadTenRecipes()">Load more data</button> -->
-<button class="btn btn-primary" [routerLink]="['/addRecipe', categoryId]">Add new recipe</button>
+<button *ngIf="authService.isAuthenticated" class="btn btn-primary" [routerLink]="['/addRecipe', categoryId]">Add new recipe</button>
 <br>

@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace NormativeCalculator.Core.Models.Requests
 {
-    //:PaginationParams
    public class IngredientSearchRequest
     {
         public string Name { get; set; }

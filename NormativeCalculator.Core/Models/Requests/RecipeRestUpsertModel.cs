@@ -11,6 +11,7 @@ namespace NormativeCalculator.Core.Models.Requests
         public string Name { get; set; }
         public string Description { get; set; }
         public int RecipeCategoryId { get; set; }
+        public float RecommendedPrice { get; set; }
         public List<IngredientRecipeInsertRequest> Ingredients { get; set; }
     }
 }

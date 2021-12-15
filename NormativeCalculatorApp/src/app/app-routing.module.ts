@@ -12,6 +12,7 @@ import { AddIngredientComponent } from './features/add-ingredient/add-ingredient
 import { UpdateIngredientComponent } from './features/update-ingredient/update-ingredient.component';
 import { AddCategoryComponent } from './features/add-category/add-category.component';
 import { UpdateCategoryComponent } from './features/update-category/update-category.component';
+import { UpdateRecipeComponent } from './features/update-recipe/update-recipe.component';
 
 const routes: Routes = [
   // canActivate:[AuthGuardGuard]
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:"addIngredients",component:AddIngredientComponent},
   {path:"updateIngredient/:id",component:UpdateIngredientComponent,canActivate:[AuthGuardGuard]},
   {path:"addRecipeCategory",component:AddCategoryComponent,canActivate:[AuthGuardGuard]},
-  {path:"updateCategory/:id",component:UpdateCategoryComponent,canActivate:[AuthGuardGuard]}
+  {path:"updateCategory/:id",component:UpdateCategoryComponent,canActivate:[AuthGuardGuard]},
+  {path:"updateRecipe/:id",component:UpdateRecipeComponent,canActivate:[AuthGuardGuard]}
 ];
 
 @NgModule({

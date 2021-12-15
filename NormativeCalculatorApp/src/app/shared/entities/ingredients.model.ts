@@ -9,11 +9,13 @@ export class Ingredient{
                 public unitQuantity:number,
                 public unitPrice:number,
                 public ingredientRecipe:IngredientRecipe[]
-        ){}
+                ){}
 }
 
-export interface IngredientSearchRequest {
-    name: string;
-    quantity: number | null;
-    unitMeasure: UnitMeasure | null;
+export class IngredientSearchRequest {
+    constructor(public name: string,
+                public quantity: number,
+                public unitMeasure: UnitMeasure,
+                ){}
+   
 }

@@ -22,6 +22,9 @@ import { AddCategoryComponent } from './features/add-category/add-category.compo
 import { UpdateCategoryComponent } from './features/update-category/update-category.component';
 import {ToastrModule} from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import{MatSliderModule} from '@angular/material/slider';
+import { NgxBootstrapConfirmModule } from 'ngx-bootstrap-confirm';
+import { UpdateRecipeComponent } from './features/update-recipe/update-recipe.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UpdateIngredientComponent,
     AddCategoryComponent,
     UpdateCategoryComponent,
+    UpdateRecipeComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +51,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatSliderModule,
+    NgxBootstrapConfirmModule,
     PaginationModule.forRoot(),
     ToastrModule.forRoot({
       positionClass:'toast-top-right'

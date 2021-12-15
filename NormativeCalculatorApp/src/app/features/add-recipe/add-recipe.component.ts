@@ -12,6 +12,7 @@ import { Recipe } from 'app/shared/entities/recipe.model';
 import { RecipeCategory } from 'app/shared/entities/recipeCategories.model';
 import { RecipeInsertRequest } from 'app/shared/requests/recipeInsertRequest.model';
 import { UnitMeasure } from 'app/shared/requests/unitMeasure.enum';
+import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 
 
@@ -53,14 +54,16 @@ export class AddRecipeComponent implements OnInit {
     }
   ]
 
-  constructor(public router: Router, public service: RecipeService, public fb: FormBuilder,
+  constructor(private toastr:ToastrService, public router: Router, public service: RecipeService, public fb: FormBuilder,
     public categoryService: RecipeCategoriesService, public userService: MyUserService,
     private route: ActivatedRoute, public ingredientRecipeService: IngredientRecipeService,
     public ingredientService: IngredientsService) { 
       this.forma = this.fb.group({
         recipeName: [""],
         description: [""],
-        ingredients: this.fb.array([])
+        recommendedPrice:[""],
+        ingredients: this.fb.array([]),
+      
       });
     }
 
@@ -100,11 +103,8 @@ export class AddRecipeComponent implements OnInit {
     }));
   }
 
-  // private async loadIngredients() {
-  //   this.ingredientsList = await this.ingredientService.getIngredients().toPromise();
-  // }
   loadIngredients(){
-    this.ingredientService.getIngredients().subscribe(data=>{
+    this.ingredientService.getIngredients(100,1,100).subscribe(data=>{
       this.ingredientsList=data.result;
       console.log(this.ingredientsList);
     })
@@ -119,12 +119,15 @@ export class AddRecipeComponent implements OnInit {
 
   public save(){
     // console.log(this.forma.get('ingredients').value);
-    let podaci=new RecipeInsertRequest(this.forma.get('recipeName').value,
+    let dataParams=new RecipeInsertRequest(this.forma.get('recipeName').value,
     this.forma.get('description').value,
-    this.categoryId,this.forma.get('ingredients').value);
-                                      
-      this.service.addRecipe(podaci).subscribe(data=>{
+    this.categoryId,this.forma.get('recommendedPrice').value,this.forma.get('ingredients').value);        
+      this.service.addRecipe(dataParams).subscribe(data=>{
+        this.toastr.success("Successfully added")
         this.router.navigate(["/recipeCategory"]);
+      },
+      (error)=>{
+        this.toastr.error("Something went wrong");
       })
   }
 }

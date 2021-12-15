@@ -1,16 +1,31 @@
-<!-- <nav class="navbar">
-    <span>Filter</span>
-    <input class="form-control" type="text" name="Name" [(ngModel)]="Name" (change)="Search()" placeholder="Search ingredient name">
-    <input class="form-control" type="text" name="Quantity" [(ngModel)]="Quantity" (change)="Search()" placeholder="Input quantity ">
-    <input class="form-control" type="text" name="UnitMeasure" [(ngModel)]="UnitMeasure" (change)="Search()" placeholder="Search unit measure">
-</nav> -->
+
+<nav class="navbar">
+    <span>Search</span>
+    <input class="form-control" type="text" name="request" [(ngModel)]="request.name" (change)="Search()" placeholder="Search ingredient name">
+    <input class="form-control" type="text" name="request" [(ngModel)]="request.quantity" (change)="Search()" placeholder="Input quantity ">
+    <input class="form-control" type="text" name="request" [(ngModel)]="request.unitMeasure" (change)="Search()" placeholder="Search unit measure">
+</nav>
+
+<!-- <div>
+    <button type="button" class="btn btn-primary"
+     (click)="loadIngredients(this.number,this.pageNumber,this.pageSize,this.request,'price')"
+      btnRadio="price">Order by price</button>
+
+      <button type="button" class="btn btn-primary"
+      (click)="loadIngredients(this.number,this.pageNumber,this.pageSize,this.request,'name')"
+       btnRadio="name">Order by name</button>
+
+       <button type="button" class="btn btn-primary"
+       (click)="loadIngredients(this.number,this.pageNumber,this.pageSize,this.request,'quantity')"
+        btnRadio="quantity">Order by quantity</button>
+</div> -->
 <table class="table">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Unit quantity</th>
+            <th><i  (click)="loadIngredients(this.number,this.pageNumber,this.pageSize,this.request,'name')" class="fa fa-sort"></i>Name</th>
+            <th><i (click)="loadIngredients(this.number,this.pageNumber,this.pageSize,this.request,'quantity')" class="fa fa-sort"></i>Unit quantity</th>
             <th>Measure unit</th>
-            <th>Price</th>
+            <th><i  (click)="loadIngredients(this.number,this.pageNumber,this.pageSize,this.request,'price')" class="fa fa-sort"></i>Price</th>
             <th>Unit price</th>
             <th *ngIf="authService.isAuthenticated">Delete</th>
             <th *ngIf="authService.isAuthenticated">Update</th>
@@ -37,4 +52,11 @@
     previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
 </pagination>
 </div>
-<button *ngIf="authService.isAuthenticated" class="btn btn-primary" routerLink="/addIngredients">Add new ingredient </button>
+
+<div style="position: absolute; right: 130px;"  class="form-group">
+    <button value="10" (click)="loadIngredients(number=10,this.pageNumber,this.pageSize,this.request,'')">Load 10</button><br>
+    <button value="15" (click)="loadIngredients(number=15,this.pageNumber,this.pageSize,this.request,'')">Load 15</button><br>
+    <button value="25" (click)="loadIngredients(number=25,this.pageNumber,this.pageSize,this.request,'')">Load 25</button>
+</div>
+
+<button style="margin-top: 40px;" *ngIf="authService.isAuthenticated" class="btn btn-primary" routerLink="/addIngredients">Add new ingredient </button>

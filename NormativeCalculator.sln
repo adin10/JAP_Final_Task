@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NormativeCalculator.Core", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NormativeCalculator.Common", "NormativeCalculator.Common\NormativeCalculator.Common.csproj", "{C908753F-F049-431A-9243-07FD64FBEE96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormativeCalculator.Mapper", "NormativeCalculator.Mapper\NormativeCalculator.Mapper.csproj", "{F1406E6F-99BB-4D1D-A5AD-116E89B28F4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NormativeCalculator.Mapper", "NormativeCalculator.Mapper\NormativeCalculator.Mapper.csproj", "{F1406E6F-99BB-4D1D-A5AD-116E89B28F4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormativeCalculator.Services.Tests", "NormativeCalculator.Services.Tests\NormativeCalculator.Services.Tests.csproj", "{A5F92357-B1CF-43D9-A8EE-91BA6B90843F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NormativeCalculator.Services.Tests", "NormativeCalculator.Services.Tests\NormativeCalculator.Services.Tests.csproj", "{A5F92357-B1CF-43D9-A8EE-91BA6B90843F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormativeCalculator.Logger", "NormativeCalculator.Logger\NormativeCalculator.Logger.csproj", "{8CCA5A40-4B0B-4A06-871A-9F6DE9EA0188}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{A5F92357-B1CF-43D9-A8EE-91BA6B90843F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5F92357-B1CF-43D9-A8EE-91BA6B90843F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5F92357-B1CF-43D9-A8EE-91BA6B90843F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CCA5A40-4B0B-4A06-871A-9F6DE9EA0188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CCA5A40-4B0B-4A06-871A-9F6DE9EA0188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CCA5A40-4B0B-4A06-871A-9F6DE9EA0188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CCA5A40-4B0B-4A06-871A-9F6DE9EA0188}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

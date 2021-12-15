@@ -15,8 +15,10 @@ namespace NormativeCalculator.Core.Entities
         public int MyUserId { get; set; }
         public MyUser MyUser { get; set; }
         public int RecipeCategoryId { get; set; }
+        public float RecommendedPrice { get; set; }
         public RecipeCategory RecipeCategory { get; set; }
         public ICollection<IngredientRecipe> IngredientRecipes { get; set; }
+        
 
     }
 }

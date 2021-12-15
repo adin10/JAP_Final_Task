@@ -64,11 +64,11 @@ export class UpdateIngredientComponent implements OnInit {
   }
 
   onSubmit(){
-    let podaci=new IngredientRestUpsertRequest(this.form.get('Name').value,
+    let dataParams=new IngredientRestUpsertRequest(this.form.get('Name').value,
                                               this.form.get('UnitMeasure').value,
                                               this.form.get('Price').value,
                                               this.form.get('Quantity').value);
-        this.ingredientService.updateIngredient(this.route.snapshot.params.id,podaci).subscribe(data=>{
+        this.ingredientService.updateIngredient(this.route.snapshot.params.id,dataParams).subscribe(data=>{
           this.toastr.success("Data successfully updated")
           this.router.navigate(["/ingredient"]);
         }) 

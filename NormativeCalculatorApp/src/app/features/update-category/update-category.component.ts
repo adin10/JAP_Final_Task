@@ -33,8 +33,8 @@ export class UpdateCategoryComponent implements OnInit {
     })
   }
   onSubmit(){
-    let podaci=new RecipeCategoryUpsertRequest(this.form.get('Name').value,this.form.get('Description').value);
-    this.service.updateCategory(this.route.snapshot.params.id,podaci).subscribe(data=>{
+    let dataParams=new RecipeCategoryUpsertRequest(this.form.get('Name').value,this.form.get('Description').value);
+    this.service.updateCategory(this.route.snapshot.params.id,dataParams).subscribe(data=>{
       this.toastr.success("Data successfully updated")
       this.router.navigate(["/recipeCategory"]);
     },

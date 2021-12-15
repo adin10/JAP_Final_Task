@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Recipe } from "app/shared/entities/recipe.model";
+import { Recipe, RecipeUpdateRequest } from "app/shared/entities/recipe.model";
 import { RecipeInsertRequest } from "app/shared/requests/recipeInsertRequest.model";
 @Injectable({providedIn:'root'})
 export class RecipeService{
@@ -23,6 +23,12 @@ export class RecipeService{
     }
     recipeDetails(id){
         return this.http.get<Recipe>('https://localhost:5001/api/Recipes/RecipeDetails/' +id);
+    }
+    public deleteRecipe(id){
+        return this.http.delete<Recipe>('https://localhost:5001/api/Recipes/'+id);
+    }
+    updateRecipe(id:number,request:RecipeUpdateRequest){
+        return this.http.put('https://localhost:5001/api/Recipes/'+id,request);
     }
 
     

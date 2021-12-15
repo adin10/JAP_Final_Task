@@ -1,5 +1,8 @@
 import { MyUser } from "./myUser.model";
 
 export class AuthenticationResult{
-    constructor(public token:string,public expiration:Date,public user:string,public myUser:MyUser){}
+    constructor(public token:string,
+                public expiration:Date,
+                public user:string,
+                public myUser:MyUser){}
 }

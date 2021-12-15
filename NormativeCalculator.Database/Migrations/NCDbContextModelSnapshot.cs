@@ -249,1002 +249,1002 @@ namespace NormativeCalculator.Database.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 10, 11, 19, 37, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 7, 24, 20, 5, 0, 0, DateTimeKind.Unspecified),
                             Name = "Ulje1",
-                            Price = 12.89f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.46035716f,
-                            UnitQuantity = 28f
+                            Price = 34.3f,
+                            UnitMeasure = 1,
+                            UnitPrice = 4.9f,
+                            UnitQuantity = 7f
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 11, 20, 18, 30, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 8, 30, 6, 21, 0, 0, DateTimeKind.Unspecified),
                             Name = "Secer2",
-                            Price = 45f,
+                            Price = 27.43f,
                             UnitMeasure = 1,
-                            UnitPrice = 1.1538461f,
-                            UnitQuantity = 39f
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedDate = new DateTime(2021, 3, 27, 10, 54, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja3",
-                            Price = 20.84f,
-                            UnitMeasure = 5,
-                            UnitPrice = 2.605f,
-                            UnitQuantity = 8f
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedDate = new DateTime(2021, 1, 17, 8, 24, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac4",
-                            Price = 8.39f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.36478263f,
-                            UnitQuantity = 23f
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedDate = new DateTime(2021, 10, 28, 21, 4, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cokolada5",
-                            Price = 20.46f,
-                            UnitMeasure = 3,
-                            UnitPrice = 0.49902436f,
-                            UnitQuantity = 41f
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedDate = new DateTime(2021, 7, 20, 11, 7, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Brasno6",
-                            Price = 34.76f,
-                            UnitMeasure = 4,
-                            UnitPrice = 1.2414285f,
-                            UnitQuantity = 28f
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedDate = new DateTime(2021, 9, 7, 0, 57, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Ulje7",
-                            Price = 42.6f,
-                            UnitMeasure = 5,
-                            UnitPrice = 2.6625f,
-                            UnitQuantity = 16f
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedDate = new DateTime(2021, 8, 7, 16, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer8",
-                            Price = 1.28f,
-                            UnitMeasure = 3,
-                            UnitPrice = 0.21333332f,
-                            UnitQuantity = 6f
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreatedDate = new DateTime(2021, 11, 3, 5, 4, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja9",
-                            Price = 8.91f,
-                            UnitMeasure = 2,
-                            UnitPrice = 8.91f,
-                            UnitQuantity = 1f
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreatedDate = new DateTime(2021, 1, 20, 21, 52, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac10",
-                            Price = 33.5f,
-                            UnitMeasure = 5,
-                            UnitPrice = 1.34f,
-                            UnitQuantity = 25f
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CreatedDate = new DateTime(2021, 2, 1, 23, 28, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cokolada11",
-                            Price = 42.72f,
-                            UnitMeasure = 4,
-                            UnitPrice = 0.89000005f,
-                            UnitQuantity = 48f
-                        },
-                        new
-                        {
-                            Id = 12,
-                            CreatedDate = new DateTime(2021, 8, 17, 23, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Brasno12",
-                            Price = 29.59f,
-                            UnitMeasure = 4,
-                            UnitPrice = 1.7405882f,
-                            UnitQuantity = 17f
-                        },
-                        new
-                        {
-                            Id = 13,
-                            CreatedDate = new DateTime(2021, 4, 25, 22, 11, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Ulje13",
-                            Price = 13.9f,
-                            UnitMeasure = 5,
-                            UnitPrice = 0.36578947f,
-                            UnitQuantity = 38f
-                        },
-                        new
-                        {
-                            Id = 14,
-                            CreatedDate = new DateTime(2021, 2, 16, 6, 17, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer14",
-                            Price = 48.89f,
-                            UnitMeasure = 5,
-                            UnitPrice = 1.4815152f,
-                            UnitQuantity = 33f
-                        },
-                        new
-                        {
-                            Id = 15,
-                            CreatedDate = new DateTime(2021, 7, 15, 15, 30, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja15",
-                            Price = 17.81f,
-                            UnitMeasure = 1,
-                            UnitPrice = 1.113125f,
-                            UnitQuantity = 16f
-                        },
-                        new
-                        {
-                            Id = 16,
-                            CreatedDate = new DateTime(2021, 11, 22, 18, 56, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac16",
-                            Price = 35.2f,
-                            UnitMeasure = 2,
-                            UnitPrice = 2.0705884f,
-                            UnitQuantity = 17f
-                        },
-                        new
-                        {
-                            Id = 17,
-                            CreatedDate = new DateTime(2021, 5, 8, 1, 34, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cokolada17",
-                            Price = 36.3f,
-                            UnitMeasure = 1,
-                            UnitPrice = 1.8149999f,
-                            UnitQuantity = 20f
-                        },
-                        new
-                        {
-                            Id = 18,
-                            CreatedDate = new DateTime(2021, 10, 3, 19, 44, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Brasno18",
-                            Price = 19.44f,
-                            UnitMeasure = 3,
-                            UnitPrice = 1.023158f,
-                            UnitQuantity = 19f
-                        },
-                        new
-                        {
-                            Id = 19,
-                            CreatedDate = new DateTime(2021, 1, 8, 13, 12, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Ulje19",
-                            Price = 47.41f,
-                            UnitMeasure = 3,
-                            UnitPrice = 15.803333f,
-                            UnitQuantity = 3f
-                        },
-                        new
-                        {
-                            Id = 20,
-                            CreatedDate = new DateTime(2021, 6, 24, 8, 42, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer20",
-                            Price = 40.9f,
-                            UnitMeasure = 1,
-                            UnitPrice = 4.5444446f,
-                            UnitQuantity = 9f
-                        },
-                        new
-                        {
-                            Id = 21,
-                            CreatedDate = new DateTime(2021, 4, 3, 18, 7, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja21",
-                            Price = 13.59f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.7994118f,
-                            UnitQuantity = 17f
-                        },
-                        new
-                        {
-                            Id = 22,
-                            CreatedDate = new DateTime(2021, 10, 21, 2, 39, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac22",
-                            Price = 25.64f,
-                            UnitMeasure = 1,
-                            UnitPrice = 0.58272725f,
-                            UnitQuantity = 44f
-                        },
-                        new
-                        {
-                            Id = 23,
-                            CreatedDate = new DateTime(2021, 5, 23, 10, 34, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cokolada23",
-                            Price = 13.54f,
-                            UnitMeasure = 3,
-                            UnitPrice = 0.3982353f,
-                            UnitQuantity = 34f
-                        },
-                        new
-                        {
-                            Id = 24,
-                            CreatedDate = new DateTime(2021, 1, 1, 14, 23, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Brasno24",
-                            Price = 9.21f,
-                            UnitMeasure = 4,
-                            UnitPrice = 0.25583333f,
-                            UnitQuantity = 36f
-                        },
-                        new
-                        {
-                            Id = 25,
-                            CreatedDate = new DateTime(2021, 3, 3, 13, 8, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Ulje25",
-                            Price = 19.85f,
-                            UnitMeasure = 1,
-                            UnitPrice = 0.43152174f,
-                            UnitQuantity = 46f
-                        },
-                        new
-                        {
-                            Id = 26,
-                            CreatedDate = new DateTime(2021, 4, 5, 13, 41, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer26",
-                            Price = 10.1f,
-                            UnitMeasure = 3,
-                            UnitPrice = 0.56111115f,
-                            UnitQuantity = 18f
-                        },
-                        new
-                        {
-                            Id = 27,
-                            CreatedDate = new DateTime(2021, 4, 3, 9, 3, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja27",
-                            Price = 26.86f,
-                            UnitMeasure = 5,
-                            UnitPrice = 1.033077f,
-                            UnitQuantity = 26f
-                        },
-                        new
-                        {
-                            Id = 28,
-                            CreatedDate = new DateTime(2021, 11, 7, 16, 55, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac28",
-                            Price = 42.69f,
-                            UnitMeasure = 5,
-                            UnitPrice = 1.2555882f,
-                            UnitQuantity = 34f
-                        },
-                        new
-                        {
-                            Id = 29,
-                            CreatedDate = new DateTime(2021, 6, 30, 13, 1, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cokolada29",
-                            Price = 32.07f,
-                            UnitMeasure = 2,
-                            UnitPrice = 16.035f,
-                            UnitQuantity = 2f
-                        },
-                        new
-                        {
-                            Id = 30,
-                            CreatedDate = new DateTime(2021, 9, 26, 9, 5, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Brasno30",
-                            Price = 43.22f,
-                            UnitMeasure = 2,
-                            UnitPrice = 1.3941935f,
-                            UnitQuantity = 31f
-                        },
-                        new
-                        {
-                            Id = 31,
-                            CreatedDate = new DateTime(2021, 8, 23, 5, 26, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Ulje31",
-                            Price = 21.13f,
-                            UnitMeasure = 3,
-                            UnitPrice = 0.43122447f,
-                            UnitQuantity = 49f
-                        },
-                        new
-                        {
-                            Id = 32,
-                            CreatedDate = new DateTime(2021, 10, 31, 23, 25, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer32",
-                            Price = 37.53f,
-                            UnitMeasure = 4,
-                            UnitPrice = 1.0143243f,
-                            UnitQuantity = 37f
-                        },
-                        new
-                        {
-                            Id = 33,
-                            CreatedDate = new DateTime(2021, 3, 21, 14, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja33",
-                            Price = 34.4f,
-                            UnitMeasure = 3,
-                            UnitPrice = 1.1466668f,
-                            UnitQuantity = 30f
-                        },
-                        new
-                        {
-                            Id = 34,
-                            CreatedDate = new DateTime(2021, 4, 18, 9, 58, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac34",
-                            Price = 48.89f,
-                            UnitMeasure = 2,
-                            UnitPrice = 16.296667f,
-                            UnitQuantity = 3f
-                        },
-                        new
-                        {
-                            Id = 35,
-                            CreatedDate = new DateTime(2021, 3, 14, 1, 22, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cokolada35",
-                            Price = 12.54f,
-                            UnitMeasure = 4,
-                            UnitPrice = 0.418f,
-                            UnitQuantity = 30f
-                        },
-                        new
-                        {
-                            Id = 36,
-                            CreatedDate = new DateTime(2021, 4, 17, 20, 58, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Brasno36",
-                            Price = 6.32f,
-                            UnitMeasure = 5,
-                            UnitPrice = 0.30095237f,
-                            UnitQuantity = 21f
-                        },
-                        new
-                        {
-                            Id = 37,
-                            CreatedDate = new DateTime(2021, 6, 14, 21, 4, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Ulje37",
-                            Price = 43.26f,
-                            UnitMeasure = 2,
-                            UnitPrice = 3.932727f,
-                            UnitQuantity = 11f
-                        },
-                        new
-                        {
-                            Id = 38,
-                            CreatedDate = new DateTime(2021, 1, 23, 12, 46, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer38",
-                            Price = 9.62f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.24666667f,
-                            UnitQuantity = 39f
-                        },
-                        new
-                        {
-                            Id = 39,
-                            CreatedDate = new DateTime(2021, 3, 8, 4, 15, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja39",
-                            Price = 12.85f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.2988372f,
-                            UnitQuantity = 43f
-                        },
-                        new
-                        {
-                            Id = 40,
-                            CreatedDate = new DateTime(2021, 9, 29, 3, 5, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac40",
-                            Price = 6.51f,
-                            UnitMeasure = 3,
-                            UnitPrice = 2.17f,
-                            UnitQuantity = 3f
-                        },
-                        new
-                        {
-                            Id = 41,
-                            CreatedDate = new DateTime(2021, 5, 10, 15, 23, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cokolada41",
-                            Price = 7.78f,
-                            UnitMeasure = 5,
-                            UnitPrice = 0.17681819f,
-                            UnitQuantity = 44f
-                        },
-                        new
-                        {
-                            Id = 42,
-                            CreatedDate = new DateTime(2021, 6, 25, 11, 31, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Brasno42",
-                            Price = 5.72f,
-                            UnitMeasure = 4,
-                            UnitPrice = 0.24869564f,
-                            UnitQuantity = 23f
-                        },
-                        new
-                        {
-                            Id = 43,
-                            CreatedDate = new DateTime(2021, 4, 21, 11, 55, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Ulje43",
-                            Price = 2.88f,
-                            UnitMeasure = 1,
-                            UnitPrice = 0.06697675f,
-                            UnitQuantity = 43f
-                        },
-                        new
-                        {
-                            Id = 44,
-                            CreatedDate = new DateTime(2021, 3, 25, 12, 23, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer44",
-                            Price = 31.97f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.6660417f,
-                            UnitQuantity = 48f
-                        },
-                        new
-                        {
-                            Id = 45,
-                            CreatedDate = new DateTime(2021, 10, 31, 20, 10, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja45",
-                            Price = 36.43f,
-                            UnitMeasure = 5,
-                            UnitPrice = 0.75895834f,
-                            UnitQuantity = 48f
-                        },
-                        new
-                        {
-                            Id = 46,
-                            CreatedDate = new DateTime(2021, 2, 2, 6, 9, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac46",
-                            Price = 16.64f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.57379305f,
-                            UnitQuantity = 29f
-                        },
-                        new
-                        {
-                            Id = 47,
-                            CreatedDate = new DateTime(2021, 7, 1, 23, 46, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cokolada47",
-                            Price = 30.45f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.84583336f,
-                            UnitQuantity = 36f
-                        },
-                        new
-                        {
-                            Id = 48,
-                            CreatedDate = new DateTime(2021, 4, 6, 8, 1, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Brasno48",
-                            Price = 1.98f,
-                            UnitMeasure = 4,
-                            UnitPrice = 0.66f,
-                            UnitQuantity = 3f
-                        },
-                        new
-                        {
-                            Id = 49,
-                            CreatedDate = new DateTime(2021, 2, 8, 4, 50, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Ulje49",
-                            Price = 25.61f,
-                            UnitMeasure = 1,
-                            UnitPrice = 0.985f,
-                            UnitQuantity = 26f
-                        },
-                        new
-                        {
-                            Id = 50,
-                            CreatedDate = new DateTime(2021, 4, 2, 17, 20, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer50",
-                            Price = 22.96f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.99826086f,
-                            UnitQuantity = 23f
-                        },
-                        new
-                        {
-                            Id = 51,
-                            CreatedDate = new DateTime(2021, 9, 27, 0, 58, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja51",
-                            Price = 40.46f,
-                            UnitMeasure = 1,
-                            UnitPrice = 10.115f,
-                            UnitQuantity = 4f
-                        },
-                        new
-                        {
-                            Id = 52,
-                            CreatedDate = new DateTime(2021, 6, 13, 6, 26, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac52",
-                            Price = 37.47f,
-                            UnitMeasure = 1,
-                            UnitPrice = 1.4411539f,
-                            UnitQuantity = 26f
-                        },
-                        new
-                        {
-                            Id = 53,
-                            CreatedDate = new DateTime(2021, 9, 10, 15, 55, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cokolada53",
-                            Price = 44.77f,
-                            UnitMeasure = 4,
-                            UnitPrice = 2.4872222f,
-                            UnitQuantity = 18f
-                        },
-                        new
-                        {
-                            Id = 54,
-                            CreatedDate = new DateTime(2021, 4, 2, 11, 16, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Brasno54",
-                            Price = 27.56f,
-                            UnitMeasure = 5,
-                            UnitPrice = 0.81058824f,
-                            UnitQuantity = 34f
-                        },
-                        new
-                        {
-                            Id = 55,
-                            CreatedDate = new DateTime(2021, 8, 16, 16, 10, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Ulje55",
-                            Price = 11.82f,
-                            UnitMeasure = 4,
-                            UnitPrice = 0.28142858f,
-                            UnitQuantity = 42f
-                        },
-                        new
-                        {
-                            Id = 56,
-                            CreatedDate = new DateTime(2021, 11, 19, 16, 57, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer56",
-                            Price = 1.35f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.036486488f,
-                            UnitQuantity = 37f
-                        },
-                        new
-                        {
-                            Id = 57,
-                            CreatedDate = new DateTime(2021, 7, 1, 7, 56, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja57",
-                            Price = 42.14f,
-                            UnitMeasure = 2,
-                            UnitPrice = 1.0278049f,
-                            UnitQuantity = 41f
-                        },
-                        new
-                        {
-                            Id = 58,
-                            CreatedDate = new DateTime(2021, 3, 26, 20, 31, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac58",
-                            Price = 22.64f,
-                            UnitMeasure = 4,
-                            UnitPrice = 0.6860606f,
-                            UnitQuantity = 33f
-                        },
-                        new
-                        {
-                            Id = 59,
-                            CreatedDate = new DateTime(2021, 10, 14, 19, 16, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cokolada59",
-                            Price = 48.83f,
-                            UnitMeasure = 3,
-                            UnitPrice = 1.4361765f,
-                            UnitQuantity = 34f
-                        },
-                        new
-                        {
-                            Id = 60,
-                            CreatedDate = new DateTime(2021, 7, 26, 7, 22, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Brasno60",
-                            Price = 28.29f,
-                            UnitMeasure = 2,
-                            UnitPrice = 1.768125f,
-                            UnitQuantity = 16f
-                        },
-                        new
-                        {
-                            Id = 61,
-                            CreatedDate = new DateTime(2021, 4, 19, 2, 3, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Ulje61",
-                            Price = 45.45f,
-                            UnitMeasure = 1,
-                            UnitPrice = 3.7875001f,
-                            UnitQuantity = 12f
-                        },
-                        new
-                        {
-                            Id = 62,
-                            CreatedDate = new DateTime(2021, 9, 28, 8, 1, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer62",
-                            Price = 31.36f,
-                            UnitMeasure = 3,
-                            UnitPrice = 3.1360002f,
+                            UnitPrice = 2.743f,
                             UnitQuantity = 10f
                         },
                         new
                         {
-                            Id = 63,
-                            CreatedDate = new DateTime(2021, 2, 8, 2, 58, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja63",
-                            Price = 46.03f,
+                            Id = 3,
+                            CreatedDate = new DateTime(2021, 9, 8, 18, 16, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja3",
+                            Price = 15.44f,
                             UnitMeasure = 4,
-                            UnitPrice = 6.575714f,
-                            UnitQuantity = 7f
+                            UnitPrice = 0.57185185f,
+                            UnitQuantity = 27f
                         },
                         new
                         {
-                            Id = 64,
-                            CreatedDate = new DateTime(2021, 2, 7, 19, 59, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac64",
-                            Price = 7.81f,
-                            UnitMeasure = 5,
-                            UnitPrice = 1.1157143f,
-                            UnitQuantity = 7f
-                        },
-                        new
-                        {
-                            Id = 65,
-                            CreatedDate = new DateTime(2021, 4, 28, 16, 26, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cokolada65",
-                            Price = 36.02f,
-                            UnitMeasure = 4,
-                            UnitPrice = 1.566087f,
-                            UnitQuantity = 23f
-                        },
-                        new
-                        {
-                            Id = 66,
-                            CreatedDate = new DateTime(2021, 3, 2, 0, 3, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Brasno66",
-                            Price = 32.51f,
+                            Id = 4,
+                            CreatedDate = new DateTime(2021, 1, 14, 8, 27, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac4",
+                            Price = 7.82f,
                             UnitMeasure = 1,
-                            UnitPrice = 0.7929268f,
-                            UnitQuantity = 41f
+                            UnitPrice = 0.20051283f,
+                            UnitQuantity = 39f
                         },
                         new
                         {
-                            Id = 67,
-                            CreatedDate = new DateTime(2021, 5, 30, 9, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Ulje67",
-                            Price = 6.6f,
-                            UnitMeasure = 4,
-                            UnitPrice = 0.18857142f,
-                            UnitQuantity = 35f
+                            Id = 5,
+                            CreatedDate = new DateTime(2021, 7, 27, 7, 50, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cokolada5",
+                            Price = 41.87f,
+                            UnitMeasure = 5,
+                            UnitPrice = 1.101842f,
+                            UnitQuantity = 38f
                         },
                         new
                         {
-                            Id = 68,
-                            CreatedDate = new DateTime(2021, 1, 8, 12, 13, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer68",
-                            Price = 43.83f,
-                            UnitMeasure = 3,
-                            UnitPrice = 0.95282614f,
+                            Id = 6,
+                            CreatedDate = new DateTime(2021, 2, 23, 9, 6, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Brasno6",
+                            Price = 22.21f,
+                            UnitMeasure = 5,
+                            UnitPrice = 0.82259256f,
+                            UnitQuantity = 27f
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedDate = new DateTime(2021, 4, 5, 0, 4, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ulje7",
+                            Price = 8.91f,
+                            UnitMeasure = 2,
+                            UnitPrice = 0.30724138f,
+                            UnitQuantity = 29f
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedDate = new DateTime(2021, 3, 18, 3, 40, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer8",
+                            Price = 14.62f,
+                            UnitMeasure = 2,
+                            UnitPrice = 0.3178261f,
                             UnitQuantity = 46f
                         },
                         new
                         {
-                            Id = 69,
-                            CreatedDate = new DateTime(2021, 11, 3, 4, 55, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja69",
-                            Price = 25.7f,
-                            UnitMeasure = 5,
-                            UnitPrice = 0.7138889f,
-                            UnitQuantity = 36f
+                            Id = 9,
+                            CreatedDate = new DateTime(2021, 10, 3, 8, 31, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja9",
+                            Price = 20.37f,
+                            UnitMeasure = 4,
+                            UnitPrice = 0.46295455f,
+                            UnitQuantity = 44f
                         },
                         new
                         {
-                            Id = 70,
-                            CreatedDate = new DateTime(2021, 3, 30, 18, 31, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac70",
-                            Price = 6.49f,
+                            Id = 10,
+                            CreatedDate = new DateTime(2021, 11, 21, 17, 2, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac10",
+                            Price = 22.64f,
                             UnitMeasure = 5,
-                            UnitPrice = 0.3090476f,
+                            UnitPrice = 1.3317647f,
+                            UnitQuantity = 17f
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CreatedDate = new DateTime(2021, 1, 23, 5, 48, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cokolada11",
+                            Price = 6.52f,
+                            UnitMeasure = 2,
+                            UnitPrice = 0.54333335f,
+                            UnitQuantity = 12f
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CreatedDate = new DateTime(2021, 9, 23, 10, 22, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Brasno12",
+                            Price = 32.28f,
+                            UnitMeasure = 5,
+                            UnitPrice = 0.9222857f,
+                            UnitQuantity = 35f
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CreatedDate = new DateTime(2021, 10, 18, 11, 30, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ulje13",
+                            Price = 31.5f,
+                            UnitMeasure = 5,
+                            UnitPrice = 1.05f,
+                            UnitQuantity = 30f
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CreatedDate = new DateTime(2021, 7, 9, 0, 18, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer14",
+                            Price = 17.03f,
+                            UnitMeasure = 5,
+                            UnitPrice = 1.3100001f,
+                            UnitQuantity = 13f
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CreatedDate = new DateTime(2021, 8, 13, 20, 39, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja15",
+                            Price = 38.71f,
+                            UnitMeasure = 4,
+                            UnitPrice = 4.301111f,
+                            UnitQuantity = 9f
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CreatedDate = new DateTime(2021, 8, 31, 20, 57, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac16",
+                            Price = 42.19f,
+                            UnitMeasure = 4,
+                            UnitPrice = 0.93755555f,
+                            UnitQuantity = 45f
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CreatedDate = new DateTime(2021, 7, 25, 23, 3, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cokolada17",
+                            Price = 26.47f,
+                            UnitMeasure = 4,
+                            UnitPrice = 2.2058332f,
+                            UnitQuantity = 12f
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CreatedDate = new DateTime(2021, 10, 5, 12, 11, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Brasno18",
+                            Price = 46.06f,
+                            UnitMeasure = 2,
+                            UnitPrice = 1.0966667f,
+                            UnitQuantity = 42f
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CreatedDate = new DateTime(2021, 6, 15, 11, 36, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ulje19",
+                            Price = 27.16f,
+                            UnitMeasure = 3,
+                            UnitPrice = 1.4294736f,
+                            UnitQuantity = 19f
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CreatedDate = new DateTime(2021, 3, 6, 6, 21, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer20",
+                            Price = 49.54f,
+                            UnitMeasure = 3,
+                            UnitPrice = 1.2702564f,
+                            UnitQuantity = 39f
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CreatedDate = new DateTime(2021, 9, 18, 7, 12, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja21",
+                            Price = 11f,
+                            UnitMeasure = 4,
+                            UnitPrice = 0.57894737f,
+                            UnitQuantity = 19f
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CreatedDate = new DateTime(2021, 7, 10, 1, 17, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac22",
+                            Price = 1.49f,
+                            UnitMeasure = 1,
+                            UnitPrice = 0.04027027f,
+                            UnitQuantity = 37f
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CreatedDate = new DateTime(2021, 5, 8, 5, 48, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cokolada23",
+                            Price = 6.42f,
+                            UnitMeasure = 4,
+                            UnitPrice = 0.13375f,
+                            UnitQuantity = 48f
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CreatedDate = new DateTime(2021, 10, 11, 8, 51, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Brasno24",
+                            Price = 23.71f,
+                            UnitMeasure = 3,
+                            UnitPrice = 0.6408108f,
+                            UnitQuantity = 37f
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CreatedDate = new DateTime(2021, 10, 28, 11, 18, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ulje25",
+                            Price = 30.56f,
+                            UnitMeasure = 2,
+                            UnitPrice = 1.2733333f,
+                            UnitQuantity = 24f
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CreatedDate = new DateTime(2021, 4, 23, 14, 5, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer26",
+                            Price = 3.94f,
+                            UnitMeasure = 5,
+                            UnitPrice = 0.123125f,
+                            UnitQuantity = 32f
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CreatedDate = new DateTime(2021, 11, 25, 22, 59, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja27",
+                            Price = 33.42f,
+                            UnitMeasure = 2,
+                            UnitPrice = 0.7426666f,
+                            UnitQuantity = 45f
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CreatedDate = new DateTime(2021, 2, 17, 16, 19, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac28",
+                            Price = 33.35f,
+                            UnitMeasure = 1,
+                            UnitPrice = 1.3895832f,
+                            UnitQuantity = 24f
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CreatedDate = new DateTime(2021, 6, 22, 10, 58, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cokolada29",
+                            Price = 46.31f,
+                            UnitMeasure = 3,
+                            UnitPrice = 2.205238f,
                             UnitQuantity = 21f
                         },
                         new
                         {
-                            Id = 71,
-                            CreatedDate = new DateTime(2021, 6, 10, 21, 52, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cokolada71",
-                            Price = 47.9f,
+                            Id = 30,
+                            CreatedDate = new DateTime(2021, 5, 26, 8, 5, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Brasno30",
+                            Price = 40.13f,
+                            UnitMeasure = 2,
+                            UnitPrice = 1.2160606f,
+                            UnitQuantity = 33f
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CreatedDate = new DateTime(2021, 11, 2, 20, 41, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ulje31",
+                            Price = 37.85f,
                             UnitMeasure = 5,
-                            UnitPrice = 9.58f,
+                            UnitPrice = 1.1828125f,
+                            UnitQuantity = 32f
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CreatedDate = new DateTime(2021, 3, 15, 15, 10, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer32",
+                            Price = 4.1f,
+                            UnitMeasure = 3,
+                            UnitPrice = 0.11388889f,
+                            UnitQuantity = 36f
+                        },
+                        new
+                        {
+                            Id = 33,
+                            CreatedDate = new DateTime(2021, 5, 8, 18, 31, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja33",
+                            Price = 21.44f,
+                            UnitMeasure = 5,
+                            UnitPrice = 1.4293333f,
+                            UnitQuantity = 15f
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CreatedDate = new DateTime(2021, 1, 6, 22, 1, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac34",
+                            Price = 3.6f,
+                            UnitMeasure = 1,
+                            UnitPrice = 0.087804876f,
+                            UnitQuantity = 41f
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CreatedDate = new DateTime(2021, 2, 4, 13, 34, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cokolada35",
+                            Price = 18.81f,
+                            UnitMeasure = 5,
+                            UnitPrice = 2.6871428f,
+                            UnitQuantity = 7f
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CreatedDate = new DateTime(2021, 10, 18, 6, 7, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Brasno36",
+                            Price = 29.57f,
+                            UnitMeasure = 4,
+                            UnitPrice = 0.8213889f,
+                            UnitQuantity = 36f
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CreatedDate = new DateTime(2021, 2, 18, 22, 52, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ulje37",
+                            Price = 47.76f,
+                            UnitMeasure = 2,
+                            UnitPrice = 1.194f,
+                            UnitQuantity = 40f
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CreatedDate = new DateTime(2021, 11, 7, 15, 48, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer38",
+                            Price = 15.89f,
+                            UnitMeasure = 5,
+                            UnitPrice = 2.6483333f,
+                            UnitQuantity = 6f
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CreatedDate = new DateTime(2021, 5, 25, 23, 19, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja39",
+                            Price = 45.46f,
+                            UnitMeasure = 1,
+                            UnitPrice = 2.0663636f,
+                            UnitQuantity = 22f
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CreatedDate = new DateTime(2021, 4, 27, 19, 52, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac40",
+                            Price = 15.13f,
+                            UnitMeasure = 5,
+                            UnitPrice = 0.6052f,
+                            UnitQuantity = 25f
+                        },
+                        new
+                        {
+                            Id = 41,
+                            CreatedDate = new DateTime(2021, 1, 30, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cokolada41",
+                            Price = 35.08f,
+                            UnitMeasure = 1,
+                            UnitPrice = 0.94810814f,
+                            UnitQuantity = 37f
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CreatedDate = new DateTime(2021, 7, 25, 20, 42, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Brasno42",
+                            Price = 3.06f,
+                            UnitMeasure = 1,
+                            UnitPrice = 0.34f,
+                            UnitQuantity = 9f
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CreatedDate = new DateTime(2021, 8, 5, 22, 19, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ulje43",
+                            Price = 24.14f,
+                            UnitMeasure = 3,
+                            UnitPrice = 0.96559995f,
+                            UnitQuantity = 25f
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CreatedDate = new DateTime(2021, 7, 30, 18, 38, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer44",
+                            Price = 49.07f,
+                            UnitMeasure = 2,
+                            UnitPrice = 2.2304544f,
+                            UnitQuantity = 22f
+                        },
+                        new
+                        {
+                            Id = 45,
+                            CreatedDate = new DateTime(2021, 7, 20, 3, 18, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja45",
+                            Price = 7.9f,
+                            UnitMeasure = 1,
+                            UnitPrice = 0.28214285f,
+                            UnitQuantity = 28f
+                        },
+                        new
+                        {
+                            Id = 46,
+                            CreatedDate = new DateTime(2021, 10, 2, 17, 40, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac46",
+                            Price = 15.57f,
+                            UnitMeasure = 5,
+                            UnitPrice = 0.57666665f,
+                            UnitQuantity = 27f
+                        },
+                        new
+                        {
+                            Id = 47,
+                            CreatedDate = new DateTime(2021, 5, 12, 5, 3, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cokolada47",
+                            Price = 16.83f,
+                            UnitMeasure = 5,
+                            UnitPrice = 0.6473077f,
+                            UnitQuantity = 26f
+                        },
+                        new
+                        {
+                            Id = 48,
+                            CreatedDate = new DateTime(2021, 8, 16, 8, 52, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Brasno48",
+                            Price = 8.62f,
+                            UnitMeasure = 1,
+                            UnitPrice = 0.17591837f,
+                            UnitQuantity = 49f
+                        },
+                        new
+                        {
+                            Id = 49,
+                            CreatedDate = new DateTime(2021, 4, 7, 21, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ulje49",
+                            Price = 16.58f,
+                            UnitMeasure = 5,
+                            UnitPrice = 0.37681818f,
+                            UnitQuantity = 44f
+                        },
+                        new
+                        {
+                            Id = 50,
+                            CreatedDate = new DateTime(2021, 6, 28, 7, 32, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer50",
+                            Price = 40.51f,
+                            UnitMeasure = 3,
+                            UnitPrice = 1.1574285f,
+                            UnitQuantity = 35f
+                        },
+                        new
+                        {
+                            Id = 51,
+                            CreatedDate = new DateTime(2021, 7, 8, 8, 54, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja51",
+                            Price = 30.48f,
+                            UnitMeasure = 2,
+                            UnitPrice = 0.9236364f,
+                            UnitQuantity = 33f
+                        },
+                        new
+                        {
+                            Id = 52,
+                            CreatedDate = new DateTime(2021, 10, 2, 21, 27, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac52",
+                            Price = 20.12f,
+                            UnitMeasure = 3,
+                            UnitPrice = 0.83833337f,
+                            UnitQuantity = 24f
+                        },
+                        new
+                        {
+                            Id = 53,
+                            CreatedDate = new DateTime(2021, 6, 16, 13, 56, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cokolada53",
+                            Price = 2.27f,
+                            UnitMeasure = 1,
+                            UnitPrice = 0.5675f,
+                            UnitQuantity = 4f
+                        },
+                        new
+                        {
+                            Id = 54,
+                            CreatedDate = new DateTime(2021, 7, 27, 19, 25, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Brasno54",
+                            Price = 28.17f,
+                            UnitMeasure = 2,
+                            UnitPrice = 2.166923f,
+                            UnitQuantity = 13f
+                        },
+                        new
+                        {
+                            Id = 55,
+                            CreatedDate = new DateTime(2021, 2, 28, 20, 42, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ulje55",
+                            Price = 27.22f,
+                            UnitMeasure = 1,
+                            UnitPrice = 0.61863637f,
+                            UnitQuantity = 44f
+                        },
+                        new
+                        {
+                            Id = 56,
+                            CreatedDate = new DateTime(2021, 1, 15, 18, 48, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer56",
+                            Price = 27.57f,
+                            UnitMeasure = 3,
+                            UnitPrice = 3.0633333f,
+                            UnitQuantity = 9f
+                        },
+                        new
+                        {
+                            Id = 57,
+                            CreatedDate = new DateTime(2021, 4, 25, 0, 32, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja57",
+                            Price = 8.25f,
+                            UnitMeasure = 5,
+                            UnitPrice = 0.24264705f,
+                            UnitQuantity = 34f
+                        },
+                        new
+                        {
+                            Id = 58,
+                            CreatedDate = new DateTime(2021, 10, 27, 9, 25, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac58",
+                            Price = 9.92f,
+                            UnitMeasure = 4,
+                            UnitPrice = 0.5511111f,
+                            UnitQuantity = 18f
+                        },
+                        new
+                        {
+                            Id = 59,
+                            CreatedDate = new DateTime(2021, 2, 14, 21, 8, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cokolada59",
+                            Price = 10.68f,
+                            UnitMeasure = 3,
+                            UnitPrice = 0.29666668f,
+                            UnitQuantity = 36f
+                        },
+                        new
+                        {
+                            Id = 60,
+                            CreatedDate = new DateTime(2021, 4, 5, 17, 44, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Brasno60",
+                            Price = 44.38f,
+                            UnitMeasure = 2,
+                            UnitPrice = 6.34f,
+                            UnitQuantity = 7f
+                        },
+                        new
+                        {
+                            Id = 61,
+                            CreatedDate = new DateTime(2021, 2, 26, 10, 7, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ulje61",
+                            Price = 17.69f,
+                            UnitMeasure = 3,
+                            UnitPrice = 0.63178575f,
+                            UnitQuantity = 28f
+                        },
+                        new
+                        {
+                            Id = 62,
+                            CreatedDate = new DateTime(2021, 2, 16, 7, 45, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer62",
+                            Price = 27.59f,
+                            UnitMeasure = 2,
+                            UnitPrice = 0.81147057f,
+                            UnitQuantity = 34f
+                        },
+                        new
+                        {
+                            Id = 63,
+                            CreatedDate = new DateTime(2021, 8, 24, 16, 42, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja63",
+                            Price = 16.75f,
+                            UnitMeasure = 5,
+                            UnitPrice = 0.34895834f,
+                            UnitQuantity = 48f
+                        },
+                        new
+                        {
+                            Id = 64,
+                            CreatedDate = new DateTime(2021, 5, 11, 0, 26, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac64",
+                            Price = 31.49f,
+                            UnitMeasure = 2,
+                            UnitPrice = 1.7494445f,
+                            UnitQuantity = 18f
+                        },
+                        new
+                        {
+                            Id = 65,
+                            CreatedDate = new DateTime(2021, 1, 19, 20, 21, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cokolada65",
+                            Price = 16.8f,
+                            UnitMeasure = 2,
+                            UnitPrice = 0.34285712f,
+                            UnitQuantity = 49f
+                        },
+                        new
+                        {
+                            Id = 66,
+                            CreatedDate = new DateTime(2021, 10, 8, 14, 38, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Brasno66",
+                            Price = 22.06f,
+                            UnitMeasure = 2,
+                            UnitPrice = 0.6684848f,
+                            UnitQuantity = 33f
+                        },
+                        new
+                        {
+                            Id = 67,
+                            CreatedDate = new DateTime(2021, 5, 18, 15, 50, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ulje67",
+                            Price = 45.47f,
+                            UnitMeasure = 3,
+                            UnitPrice = 4.1336365f,
+                            UnitQuantity = 11f
+                        },
+                        new
+                        {
+                            Id = 68,
+                            CreatedDate = new DateTime(2021, 10, 12, 13, 29, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer68",
+                            Price = 23.43f,
+                            UnitMeasure = 2,
+                            UnitPrice = 1.9525f,
+                            UnitQuantity = 12f
+                        },
+                        new
+                        {
+                            Id = 69,
+                            CreatedDate = new DateTime(2021, 6, 4, 10, 44, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja69",
+                            Price = 5.69f,
+                            UnitMeasure = 3,
+                            UnitPrice = 0.13232559f,
+                            UnitQuantity = 43f
+                        },
+                        new
+                        {
+                            Id = 70,
+                            CreatedDate = new DateTime(2021, 9, 24, 14, 31, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac70",
+                            Price = 1.28f,
+                            UnitMeasure = 5,
+                            UnitPrice = 0.075294115f,
+                            UnitQuantity = 17f
+                        },
+                        new
+                        {
+                            Id = 71,
+                            CreatedDate = new DateTime(2021, 7, 13, 22, 5, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cokolada71",
+                            Price = 28.53f,
+                            UnitMeasure = 5,
+                            UnitPrice = 5.7060003f,
                             UnitQuantity = 5f
                         },
                         new
                         {
                             Id = 72,
-                            CreatedDate = new DateTime(2021, 4, 15, 12, 47, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 8, 16, 7, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "Brasno72",
-                            Price = 26.04f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.84000003f,
-                            UnitQuantity = 31f
+                            Price = 47.77f,
+                            UnitMeasure = 4,
+                            UnitPrice = 0.974898f,
+                            UnitQuantity = 49f
                         },
                         new
                         {
                             Id = 73,
-                            CreatedDate = new DateTime(2021, 7, 29, 15, 29, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 5, 13, 12, 51, 0, 0, DateTimeKind.Unspecified),
                             Name = "Ulje73",
-                            Price = 34.23f,
-                            UnitMeasure = 5,
-                            UnitPrice = 5.705f,
-                            UnitQuantity = 6f
-                        },
-                        new
-                        {
-                            Id = 74,
-                            CreatedDate = new DateTime(2021, 3, 10, 10, 7, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer74",
-                            Price = 41.71f,
-                            UnitMeasure = 5,
-                            UnitPrice = 1.6683999f,
+                            Price = 17.69f,
+                            UnitMeasure = 2,
+                            UnitPrice = 0.7076f,
                             UnitQuantity = 25f
                         },
                         new
                         {
+                            Id = 74,
+                            CreatedDate = new DateTime(2021, 2, 18, 15, 43, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer74",
+                            Price = 20.99f,
+                            UnitMeasure = 1,
+                            UnitPrice = 0.5523684f,
+                            UnitQuantity = 38f
+                        },
+                        new
+                        {
                             Id = 75,
-                            CreatedDate = new DateTime(2021, 2, 14, 17, 19, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 2, 4, 11, 21, 0, 0, DateTimeKind.Unspecified),
                             Name = "Jaja75",
-                            Price = 32f,
+                            Price = 2.46f,
                             UnitMeasure = 2,
-                            UnitPrice = 4.571429f,
-                            UnitQuantity = 7f
+                            UnitPrice = 0.05125f,
+                            UnitQuantity = 48f
                         },
                         new
                         {
                             Id = 76,
-                            CreatedDate = new DateTime(2021, 9, 7, 6, 36, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 2, 24, 10, 29, 0, 0, DateTimeKind.Unspecified),
                             Name = "Maslac76",
-                            Price = 33.48f,
-                            UnitMeasure = 2,
-                            UnitPrice = 11.16f,
-                            UnitQuantity = 3f
+                            Price = 19.81f,
+                            UnitMeasure = 3,
+                            UnitPrice = 0.582647f,
+                            UnitQuantity = 34f
                         },
                         new
                         {
                             Id = 77,
-                            CreatedDate = new DateTime(2021, 7, 2, 14, 44, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 11, 2, 2, 57, 0, 0, DateTimeKind.Unspecified),
                             Name = "Cokolada77",
-                            Price = 6.2f,
-                            UnitMeasure = 5,
-                            UnitPrice = 1.0333333f,
-                            UnitQuantity = 6f
+                            Price = 25.8f,
+                            UnitMeasure = 3,
+                            UnitPrice = 1.032f,
+                            UnitQuantity = 25f
                         },
                         new
                         {
                             Id = 78,
-                            CreatedDate = new DateTime(2021, 2, 28, 22, 11, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 9, 6, 11, 9, 0, 0, DateTimeKind.Unspecified),
                             Name = "Brasno78",
-                            Price = 4.59f,
-                            UnitMeasure = 1,
-                            UnitPrice = 0.27f,
-                            UnitQuantity = 17f
-                        },
-                        new
-                        {
-                            Id = 79,
-                            CreatedDate = new DateTime(2021, 1, 29, 18, 12, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Ulje79",
-                            Price = 30.97f,
-                            UnitMeasure = 4,
-                            UnitPrice = 0.93848485f,
-                            UnitQuantity = 33f
-                        },
-                        new
-                        {
-                            Id = 80,
-                            CreatedDate = new DateTime(2021, 1, 30, 6, 59, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Secer80",
-                            Price = 21.41f,
+                            Price = 31.5f,
                             UnitMeasure = 2,
-                            UnitPrice = 0.5947222f,
-                            UnitQuantity = 36f
-                        },
-                        new
-                        {
-                            Id = 81,
-                            CreatedDate = new DateTime(2021, 9, 2, 13, 54, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Jaja81",
-                            Price = 48.53f,
-                            UnitMeasure = 4,
-                            UnitPrice = 48.53f,
+                            UnitPrice = 31.5f,
                             UnitQuantity = 1f
                         },
                         new
                         {
-                            Id = 82,
-                            CreatedDate = new DateTime(2021, 11, 26, 1, 2, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Maslac82",
-                            Price = 35.37f,
+                            Id = 79,
+                            CreatedDate = new DateTime(2021, 3, 25, 5, 33, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ulje79",
+                            Price = 23.42f,
+                            UnitMeasure = 3,
+                            UnitPrice = 0.8075862f,
+                            UnitQuantity = 29f
+                        },
+                        new
+                        {
+                            Id = 80,
+                            CreatedDate = new DateTime(2021, 1, 26, 17, 37, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secer80",
+                            Price = 48.23f,
+                            UnitMeasure = 2,
+                            UnitPrice = 6.02875f,
+                            UnitQuantity = 8f
+                        },
+                        new
+                        {
+                            Id = 81,
+                            CreatedDate = new DateTime(2021, 11, 10, 9, 1, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jaja81",
+                            Price = 24.5f,
                             UnitMeasure = 4,
-                            UnitPrice = 7.074f,
-                            UnitQuantity = 5f
+                            UnitPrice = 0.9074074f,
+                            UnitQuantity = 27f
+                        },
+                        new
+                        {
+                            Id = 82,
+                            CreatedDate = new DateTime(2021, 4, 12, 14, 6, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Maslac82",
+                            Price = 46.15f,
+                            UnitMeasure = 2,
+                            UnitPrice = 1.2144737f,
+                            UnitQuantity = 38f
                         },
                         new
                         {
                             Id = 83,
-                            CreatedDate = new DateTime(2021, 9, 30, 12, 5, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 10, 10, 19, 18, 0, 0, DateTimeKind.Unspecified),
                             Name = "Cokolada83",
-                            Price = 10.33f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.22955555f,
-                            UnitQuantity = 45f
-                        },
-                        new
-                        {
-                            Id = 84,
-                            CreatedDate = new DateTime(2021, 3, 30, 19, 40, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Brasno84",
-                            Price = 18.4f,
+                            Price = 46.59f,
                             UnitMeasure = 5,
-                            UnitPrice = 0.44878048f,
+                            UnitPrice = 1.1363415f,
                             UnitQuantity = 41f
                         },
                         new
                         {
+                            Id = 84,
+                            CreatedDate = new DateTime(2021, 11, 23, 3, 25, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Brasno84",
+                            Price = 16.26f,
+                            UnitMeasure = 4,
+                            UnitPrice = 1.626f,
+                            UnitQuantity = 10f
+                        },
+                        new
+                        {
                             Id = 85,
-                            CreatedDate = new DateTime(2021, 11, 28, 8, 6, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 10, 16, 23, 11, 0, 0, DateTimeKind.Unspecified),
                             Name = "Ulje85",
-                            Price = 43f,
-                            UnitMeasure = 1,
-                            UnitPrice = 2.8666666f,
-                            UnitQuantity = 15f
+                            Price = 42.2f,
+                            UnitMeasure = 2,
+                            UnitPrice = 0.9173913f,
+                            UnitQuantity = 46f
                         },
                         new
                         {
                             Id = 86,
-                            CreatedDate = new DateTime(2021, 3, 12, 22, 59, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 1, 31, 23, 13, 0, 0, DateTimeKind.Unspecified),
                             Name = "Secer86",
-                            Price = 46.21f,
-                            UnitMeasure = 2,
-                            UnitPrice = 9.242f,
+                            Price = 13.06f,
+                            UnitMeasure = 3,
+                            UnitPrice = 2.612f,
                             UnitQuantity = 5f
                         },
                         new
                         {
                             Id = 87,
-                            CreatedDate = new DateTime(2021, 2, 21, 7, 30, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 8, 28, 1, 13, 0, 0, DateTimeKind.Unspecified),
                             Name = "Jaja87",
-                            Price = 44.89f,
+                            Price = 34.48f,
                             UnitMeasure = 3,
-                            UnitPrice = 0.9551064f,
-                            UnitQuantity = 47f
+                            UnitPrice = 1.1122581f,
+                            UnitQuantity = 31f
                         },
                         new
                         {
                             Id = 88,
-                            CreatedDate = new DateTime(2021, 11, 17, 2, 43, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 9, 9, 23, 6, 0, 0, DateTimeKind.Unspecified),
                             Name = "Maslac88",
-                            Price = 3.77f,
-                            UnitMeasure = 1,
-                            UnitPrice = 0.078541666f,
-                            UnitQuantity = 48f
+                            Price = 21.85f,
+                            UnitMeasure = 4,
+                            UnitPrice = 1.365625f,
+                            UnitQuantity = 16f
                         },
                         new
                         {
                             Id = 89,
-                            CreatedDate = new DateTime(2021, 7, 31, 17, 47, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 10, 7, 1, 18, 0, 0, DateTimeKind.Unspecified),
                             Name = "Cokolada89",
-                            Price = 14.07f,
-                            UnitMeasure = 2,
-                            UnitPrice = 3.5175f,
-                            UnitQuantity = 4f
+                            Price = 15.82f,
+                            UnitMeasure = 3,
+                            UnitPrice = 0.5273333f,
+                            UnitQuantity = 30f
                         },
                         new
                         {
                             Id = 90,
-                            CreatedDate = new DateTime(2021, 3, 23, 8, 24, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 1, 20, 18, 46, 0, 0, DateTimeKind.Unspecified),
                             Name = "Brasno90",
-                            Price = 23.41f,
-                            UnitMeasure = 4,
-                            UnitPrice = 1.2321053f,
-                            UnitQuantity = 19f
+                            Price = 14.93f,
+                            UnitMeasure = 1,
+                            UnitPrice = 0.31104168f,
+                            UnitQuantity = 48f
                         },
                         new
                         {
                             Id = 91,
-                            CreatedDate = new DateTime(2021, 9, 15, 13, 1, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 6, 26, 5, 35, 0, 0, DateTimeKind.Unspecified),
                             Name = "Ulje91",
-                            Price = 6.33f,
-                            UnitMeasure = 4,
-                            UnitPrice = 0.5275f,
-                            UnitQuantity = 12f
+                            Price = 2.41f,
+                            UnitMeasure = 2,
+                            UnitPrice = 0.049183674f,
+                            UnitQuantity = 49f
                         },
                         new
                         {
                             Id = 92,
-                            CreatedDate = new DateTime(2021, 3, 22, 0, 32, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 3, 23, 13, 27, 0, 0, DateTimeKind.Unspecified),
                             Name = "Secer92",
-                            Price = 33.22f,
-                            UnitMeasure = 2,
-                            UnitPrice = 0.77255815f,
-                            UnitQuantity = 43f
+                            Price = 34.47f,
+                            UnitMeasure = 1,
+                            UnitPrice = 0.95750004f,
+                            UnitQuantity = 36f
                         },
                         new
                         {
                             Id = 93,
-                            CreatedDate = new DateTime(2021, 3, 9, 17, 29, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 9, 23, 18, 39, 0, 0, DateTimeKind.Unspecified),
                             Name = "Jaja93",
-                            Price = 8.18f,
-                            UnitMeasure = 5,
-                            UnitPrice = 0.18590909f,
-                            UnitQuantity = 44f
+                            Price = 12.81f,
+                            UnitMeasure = 4,
+                            UnitPrice = 3.2025f,
+                            UnitQuantity = 4f
                         },
                         new
                         {
                             Id = 94,
-                            CreatedDate = new DateTime(2021, 7, 11, 20, 52, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 2, 20, 5, 34, 0, 0, DateTimeKind.Unspecified),
                             Name = "Maslac94",
-                            Price = 6.42f,
-                            UnitMeasure = 4,
-                            UnitPrice = 0.91714287f,
-                            UnitQuantity = 7f
+                            Price = 16f,
+                            UnitMeasure = 5,
+                            UnitPrice = 0.36363637f,
+                            UnitQuantity = 44f
                         },
                         new
                         {
                             Id = 95,
-                            CreatedDate = new DateTime(2021, 6, 13, 1, 1, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 3, 2, 9, 45, 0, 0, DateTimeKind.Unspecified),
                             Name = "Cokolada95",
-                            Price = 22.92f,
-                            UnitMeasure = 3,
-                            UnitPrice = 0.61945945f,
-                            UnitQuantity = 37f
+                            Price = 21.71f,
+                            UnitMeasure = 5,
+                            UnitPrice = 4.342f,
+                            UnitQuantity = 5f
                         },
                         new
                         {
                             Id = 96,
-                            CreatedDate = new DateTime(2021, 7, 11, 7, 21, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 11, 12, 11, 14, 0, 0, DateTimeKind.Unspecified),
                             Name = "Brasno96",
-                            Price = 21.22f,
-                            UnitMeasure = 5,
-                            UnitPrice = 0.5735135f,
-                            UnitQuantity = 37f
+                            Price = 26.79f,
+                            UnitMeasure = 2,
+                            UnitPrice = 0.8118182f,
+                            UnitQuantity = 33f
                         },
                         new
                         {
                             Id = 97,
-                            CreatedDate = new DateTime(2021, 5, 18, 8, 32, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 10, 30, 3, 59, 0, 0, DateTimeKind.Unspecified),
                             Name = "Ulje97",
-                            Price = 18.69f,
-                            UnitMeasure = 1,
-                            UnitPrice = 0.44500002f,
-                            UnitQuantity = 42f
+                            Price = 14.03f,
+                            UnitMeasure = 5,
+                            UnitPrice = 1.0792308f,
+                            UnitQuantity = 13f
                         },
                         new
                         {
                             Id = 98,
-                            CreatedDate = new DateTime(2021, 3, 14, 15, 56, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 3, 28, 21, 53, 0, 0, DateTimeKind.Unspecified),
                             Name = "Secer98",
-                            Price = 17.69f,
-                            UnitMeasure = 5,
-                            UnitPrice = 17.69f,
-                            UnitQuantity = 1f
+                            Price = 33.3f,
+                            UnitMeasure = 3,
+                            UnitPrice = 1.332f,
+                            UnitQuantity = 25f
                         },
                         new
                         {
                             Id = 99,
-                            CreatedDate = new DateTime(2021, 10, 25, 19, 56, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 7, 11, 22, 17, 0, 0, DateTimeKind.Unspecified),
                             Name = "Jaja99",
-                            Price = 31.56f,
-                            UnitMeasure = 5,
-                            UnitPrice = 3.156f,
-                            UnitQuantity = 10f
+                            Price = 12.57f,
+                            UnitMeasure = 3,
+                            UnitPrice = 2.095f,
+                            UnitQuantity = 6f
                         },
                         new
                         {
                             Id = 100,
-                            CreatedDate = new DateTime(2021, 9, 1, 20, 7, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 9, 9, 12, 39, 0, 0, DateTimeKind.Unspecified),
                             Name = "Maslac100",
-                            Price = 48.35f,
-                            UnitMeasure = 4,
-                            UnitPrice = 2.1977272f,
-                            UnitQuantity = 22f
+                            Price = 4.07f,
+                            UnitMeasure = 1,
+                            UnitPrice = 0.50875f,
+                            UnitQuantity = 8f
                         });
                 });
 
@@ -1285,1001 +1285,1001 @@ namespace NormativeCalculator.Database.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 16, 19, 45, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 30,
-                            Price = 53f,
-                            Quantity = 43.03f,
-                            RecipeId = 60,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedDate = new DateTime(2021, 3, 26, 17, 58, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 91,
-                            Price = 43f,
-                            Quantity = 11.45f,
-                            RecipeId = 47,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedDate = new DateTime(2021, 2, 1, 2, 44, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 89,
-                            Price = 91f,
-                            Quantity = 13.1f,
-                            RecipeId = 22,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedDate = new DateTime(2021, 1, 7, 12, 18, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 15,
-                            Price = 46f,
-                            Quantity = 30.3f,
-                            RecipeId = 39,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedDate = new DateTime(2021, 5, 29, 20, 56, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 58,
-                            Price = 25f,
-                            Quantity = 8.5f,
+                            CreatedDate = new DateTime(2021, 6, 19, 15, 41, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 93,
+                            Price = 27f,
+                            Quantity = 29.88f,
                             RecipeId = 19,
                             UnitMeasure = 2
                         },
                         new
                         {
+                            Id = 2,
+                            CreatedDate = new DateTime(2021, 5, 25, 22, 37, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 38,
+                            Price = 99f,
+                            Quantity = 25.04f,
+                            RecipeId = 1,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(2021, 4, 27, 3, 25, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 88,
+                            Price = 2f,
+                            Quantity = 27.88f,
+                            RecipeId = 74,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedDate = new DateTime(2021, 10, 18, 5, 36, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 28,
+                            Price = 43f,
+                            Quantity = 28.4f,
+                            RecipeId = 82,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedDate = new DateTime(2021, 6, 29, 9, 41, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 4,
+                            Price = 98f,
+                            Quantity = 30.33f,
+                            RecipeId = 79,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
                             Id = 6,
-                            CreatedDate = new DateTime(2021, 7, 6, 17, 15, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 31,
-                            Price = 34f,
-                            Quantity = 6.81f,
-                            RecipeId = 30,
-                            UnitMeasure = 2
+                            CreatedDate = new DateTime(2021, 9, 2, 23, 10, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 61,
+                            Price = 93f,
+                            Quantity = 3.85f,
+                            RecipeId = 65,
+                            UnitMeasure = 5
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2021, 3, 6, 18, 9, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 19,
-                            Price = 65f,
-                            Quantity = 14.98f,
-                            RecipeId = 64,
-                            UnitMeasure = 1
+                            CreatedDate = new DateTime(2021, 6, 10, 19, 22, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 35,
+                            Price = 10f,
+                            Quantity = 16.4f,
+                            RecipeId = 9,
+                            UnitMeasure = 5
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2021, 6, 12, 12, 4, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 82,
-                            Price = 87f,
-                            Quantity = 34.41f,
-                            RecipeId = 41,
-                            UnitMeasure = 4
+                            CreatedDate = new DateTime(2021, 3, 10, 16, 56, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 83,
+                            Price = 67f,
+                            Quantity = 35.71f,
+                            RecipeId = 1,
+                            UnitMeasure = 3
                         },
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2021, 11, 18, 17, 7, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 41,
-                            Price = 37f,
-                            Quantity = 42.83f,
-                            RecipeId = 33,
-                            UnitMeasure = 5
+                            CreatedDate = new DateTime(2021, 4, 15, 18, 40, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 76,
+                            Price = 70f,
+                            Quantity = 32.37f,
+                            RecipeId = 94,
+                            UnitMeasure = 1
                         },
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2021, 4, 4, 12, 43, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 30,
-                            Price = 87f,
-                            Quantity = 45.41f,
-                            RecipeId = 98,
-                            UnitMeasure = 3
+                            CreatedDate = new DateTime(2021, 10, 17, 12, 52, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 79,
+                            Price = 6f,
+                            Quantity = 24.16f,
+                            RecipeId = 55,
+                            UnitMeasure = 2
                         },
                         new
                         {
                             Id = 11,
-                            CreatedDate = new DateTime(2021, 6, 15, 17, 21, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 97,
-                            Price = 53f,
-                            Quantity = 44.97f,
-                            RecipeId = 39,
-                            UnitMeasure = 2
+                            CreatedDate = new DateTime(2021, 4, 23, 7, 23, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 66,
+                            Price = 92f,
+                            Quantity = 21.52f,
+                            RecipeId = 68,
+                            UnitMeasure = 1
                         },
                         new
                         {
                             Id = 12,
-                            CreatedDate = new DateTime(2021, 6, 2, 6, 54, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 41,
-                            Price = 18f,
-                            Quantity = 43.91f,
-                            RecipeId = 31,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 13,
-                            CreatedDate = new DateTime(2021, 10, 4, 16, 16, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 41,
-                            Price = 57f,
-                            Quantity = 40.95f,
-                            RecipeId = 63,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 14,
-                            CreatedDate = new DateTime(2021, 4, 1, 2, 36, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 77,
-                            Price = 61f,
-                            Quantity = 42.27f,
-                            RecipeId = 77,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 15,
-                            CreatedDate = new DateTime(2021, 5, 5, 23, 1, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 46,
-                            Price = 73f,
-                            Quantity = 40.75f,
-                            RecipeId = 40,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 16,
-                            CreatedDate = new DateTime(2021, 8, 22, 2, 48, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 23,
-                            Price = 36f,
-                            Quantity = 18.41f,
-                            RecipeId = 44,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 17,
-                            CreatedDate = new DateTime(2021, 5, 29, 5, 8, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 44,
-                            Price = 33f,
-                            Quantity = 33.15f,
-                            RecipeId = 77,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 18,
-                            CreatedDate = new DateTime(2021, 4, 4, 11, 35, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 42,
-                            Price = 10f,
-                            Quantity = 47.67f,
-                            RecipeId = 99,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 19,
-                            CreatedDate = new DateTime(2021, 7, 21, 9, 28, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 4,
-                            Price = 7f,
-                            Quantity = 20.33f,
-                            RecipeId = 55,
+                            CreatedDate = new DateTime(2021, 4, 21, 6, 18, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 89,
+                            Price = 14f,
+                            Quantity = 20.6f,
+                            RecipeId = 93,
                             UnitMeasure = 4
                         },
                         new
                         {
-                            Id = 20,
-                            CreatedDate = new DateTime(2021, 10, 2, 14, 42, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 11,
-                            Price = 69f,
-                            Quantity = 40.28f,
-                            RecipeId = 3,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 21,
-                            CreatedDate = new DateTime(2021, 10, 14, 8, 39, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 56,
-                            Price = 23f,
-                            Quantity = 29.14f,
-                            RecipeId = 73,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 22,
-                            CreatedDate = new DateTime(2021, 7, 7, 7, 47, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 23,
-                            Price = 45f,
-                            Quantity = 41.45f,
-                            RecipeId = 83,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 23,
-                            CreatedDate = new DateTime(2021, 2, 27, 9, 44, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 62,
-                            Price = 75f,
-                            Quantity = 34.52f,
-                            RecipeId = 90,
+                            Id = 13,
+                            CreatedDate = new DateTime(2021, 4, 24, 17, 8, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 43,
+                            Price = 62f,
+                            Quantity = 42.47f,
+                            RecipeId = 70,
                             UnitMeasure = 1
                         },
                         new
                         {
-                            Id = 24,
-                            CreatedDate = new DateTime(2021, 1, 19, 7, 30, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 73,
-                            Price = 79f,
-                            Quantity = 13.7f,
-                            RecipeId = 66,
+                            Id = 14,
+                            CreatedDate = new DateTime(2021, 10, 20, 4, 48, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 9,
+                            Price = 21f,
+                            Quantity = 6.92f,
+                            RecipeId = 72,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CreatedDate = new DateTime(2021, 10, 17, 1, 45, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 28,
+                            Price = 69f,
+                            Quantity = 19.36f,
+                            RecipeId = 34,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CreatedDate = new DateTime(2021, 10, 12, 15, 36, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 93,
+                            Price = 77f,
+                            Quantity = 14.26f,
+                            RecipeId = 46,
+                            UnitMeasure = 4
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CreatedDate = new DateTime(2021, 9, 4, 14, 51, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 48,
+                            Price = 3f,
+                            Quantity = 23.79f,
+                            RecipeId = 69,
+                            UnitMeasure = 4
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CreatedDate = new DateTime(2021, 9, 4, 23, 59, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 34,
+                            Price = 81f,
+                            Quantity = 48.51f,
+                            RecipeId = 27,
+                            UnitMeasure = 4
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CreatedDate = new DateTime(2021, 10, 19, 6, 40, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 9,
+                            Price = 99f,
+                            Quantity = 20.86f,
+                            RecipeId = 85,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CreatedDate = new DateTime(2021, 8, 17, 11, 54, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 75,
+                            Price = 11f,
+                            Quantity = 14.21f,
+                            RecipeId = 94,
                             UnitMeasure = 2
                         },
                         new
                         {
+                            Id = 21,
+                            CreatedDate = new DateTime(2021, 7, 3, 2, 21, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 58,
+                            Price = 86f,
+                            Quantity = 30.71f,
+                            RecipeId = 55,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CreatedDate = new DateTime(2021, 10, 16, 12, 48, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 44,
+                            Price = 91f,
+                            Quantity = 35.08f,
+                            RecipeId = 87,
+                            UnitMeasure = 4
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CreatedDate = new DateTime(2021, 4, 9, 17, 19, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 93,
+                            Price = 6f,
+                            Quantity = 16.08f,
+                            RecipeId = 18,
+                            UnitMeasure = 4
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CreatedDate = new DateTime(2021, 6, 11, 5, 2, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 83,
+                            Price = 21f,
+                            Quantity = 30.56f,
+                            RecipeId = 24,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
                             Id = 25,
-                            CreatedDate = new DateTime(2021, 7, 20, 5, 52, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 11,
-                            Price = 48f,
-                            Quantity = 29.29f,
-                            RecipeId = 33,
+                            CreatedDate = new DateTime(2021, 1, 18, 1, 10, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 60,
+                            Price = 96f,
+                            Quantity = 25.27f,
+                            RecipeId = 30,
                             UnitMeasure = 1
                         },
                         new
                         {
                             Id = 26,
-                            CreatedDate = new DateTime(2021, 9, 13, 11, 43, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 49,
-                            Price = 54f,
-                            Quantity = 43.98f,
-                            RecipeId = 55,
-                            UnitMeasure = 5
+                            CreatedDate = new DateTime(2021, 6, 17, 18, 15, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 48,
+                            Price = 19f,
+                            Quantity = 15.35f,
+                            RecipeId = 50,
+                            UnitMeasure = 1
                         },
                         new
                         {
                             Id = 27,
-                            CreatedDate = new DateTime(2021, 5, 14, 21, 12, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 85,
-                            Price = 97f,
-                            Quantity = 47.72f,
-                            RecipeId = 74,
-                            UnitMeasure = 3
+                            CreatedDate = new DateTime(2021, 9, 16, 8, 21, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 56,
+                            Price = 23f,
+                            Quantity = 10.11f,
+                            RecipeId = 42,
+                            UnitMeasure = 4
                         },
                         new
                         {
                             Id = 28,
-                            CreatedDate = new DateTime(2021, 5, 28, 5, 1, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 10,
-                            Price = 3f,
-                            Quantity = 42.95f,
-                            RecipeId = 28,
-                            UnitMeasure = 5
+                            CreatedDate = new DateTime(2021, 4, 5, 2, 10, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 78,
+                            Price = 50f,
+                            Quantity = 16.48f,
+                            RecipeId = 11,
+                            UnitMeasure = 4
                         },
                         new
                         {
                             Id = 29,
-                            CreatedDate = new DateTime(2021, 6, 14, 12, 57, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 50,
-                            Price = 83f,
-                            Quantity = 41.06f,
-                            RecipeId = 38,
-                            UnitMeasure = 4
+                            CreatedDate = new DateTime(2021, 6, 30, 19, 13, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 86,
+                            Price = 36f,
+                            Quantity = 5.22f,
+                            RecipeId = 67,
+                            UnitMeasure = 3
                         },
                         new
                         {
                             Id = 30,
-                            CreatedDate = new DateTime(2021, 3, 21, 21, 41, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 4,
-                            Price = 37f,
-                            Quantity = 18.79f,
-                            RecipeId = 43,
-                            UnitMeasure = 3
+                            CreatedDate = new DateTime(2021, 9, 28, 17, 8, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 99,
+                            Price = 55f,
+                            Quantity = 5.4f,
+                            RecipeId = 50,
+                            UnitMeasure = 5
                         },
                         new
                         {
                             Id = 31,
-                            CreatedDate = new DateTime(2021, 8, 10, 9, 48, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 54,
-                            Price = 68f,
-                            Quantity = 42.34f,
-                            RecipeId = 64,
-                            UnitMeasure = 3
+                            CreatedDate = new DateTime(2021, 9, 18, 23, 34, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 60,
+                            Price = 30f,
+                            Quantity = 7.74f,
+                            RecipeId = 37,
+                            UnitMeasure = 5
                         },
                         new
                         {
                             Id = 32,
-                            CreatedDate = new DateTime(2021, 5, 20, 20, 45, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 91,
-                            Price = 43f,
-                            Quantity = 10.14f,
-                            RecipeId = 58,
-                            UnitMeasure = 4
-                        },
-                        new
-                        {
-                            Id = 33,
-                            CreatedDate = new DateTime(2021, 7, 11, 13, 30, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 93,
+                            CreatedDate = new DateTime(2021, 7, 2, 18, 39, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 82,
                             Price = 10f,
-                            Quantity = 44.28f,
-                            RecipeId = 80,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 34,
-                            CreatedDate = new DateTime(2021, 2, 10, 11, 32, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 37,
-                            Price = 88f,
-                            Quantity = 33.56f,
-                            RecipeId = 93,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 35,
-                            CreatedDate = new DateTime(2021, 9, 12, 6, 27, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 49,
-                            Price = 39f,
-                            Quantity = 44.04f,
-                            RecipeId = 65,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 36,
-                            CreatedDate = new DateTime(2021, 11, 1, 5, 8, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 95,
-                            Price = 30f,
-                            Quantity = 2.58f,
-                            RecipeId = 17,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 37,
-                            CreatedDate = new DateTime(2021, 7, 15, 11, 20, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 94,
-                            Price = 51f,
-                            Quantity = 10.17f,
-                            RecipeId = 14,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 38,
-                            CreatedDate = new DateTime(2021, 4, 24, 2, 53, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 24,
-                            Price = 68f,
-                            Quantity = 36.41f,
-                            RecipeId = 83,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 39,
-                            CreatedDate = new DateTime(2021, 2, 6, 12, 9, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 14,
-                            Price = 45f,
-                            Quantity = 31.27f,
-                            RecipeId = 94,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 40,
-                            CreatedDate = new DateTime(2021, 5, 18, 5, 16, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 9,
-                            Price = 42f,
-                            Quantity = 32.96f,
-                            RecipeId = 69,
-                            UnitMeasure = 4
-                        },
-                        new
-                        {
-                            Id = 41,
-                            CreatedDate = new DateTime(2021, 7, 11, 2, 38, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 54,
-                            Price = 82f,
-                            Quantity = 18.81f,
-                            RecipeId = 80,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 42,
-                            CreatedDate = new DateTime(2021, 9, 3, 6, 40, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 23,
-                            Price = 48f,
-                            Quantity = 43.6f,
-                            RecipeId = 39,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 43,
-                            CreatedDate = new DateTime(2021, 7, 4, 6, 36, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 76,
-                            Price = 66f,
-                            Quantity = 49.16f,
-                            RecipeId = 90,
-                            UnitMeasure = 4
-                        },
-                        new
-                        {
-                            Id = 44,
-                            CreatedDate = new DateTime(2021, 5, 1, 5, 46, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 24,
-                            Price = 42f,
-                            Quantity = 12.2f,
-                            RecipeId = 15,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 45,
-                            CreatedDate = new DateTime(2021, 9, 17, 1, 36, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 90,
-                            Price = 99f,
-                            Quantity = 5.59f,
-                            RecipeId = 77,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 46,
-                            CreatedDate = new DateTime(2021, 7, 23, 2, 18, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 18,
-                            Price = 83f,
-                            Quantity = 13.78f,
-                            RecipeId = 65,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 47,
-                            CreatedDate = new DateTime(2021, 2, 4, 23, 4, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 2,
-                            Price = 4f,
-                            Quantity = 13.91f,
-                            RecipeId = 16,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 48,
-                            CreatedDate = new DateTime(2021, 4, 25, 18, 20, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 35,
-                            Price = 9f,
-                            Quantity = 49.14f,
-                            RecipeId = 81,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 49,
-                            CreatedDate = new DateTime(2021, 7, 3, 3, 2, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 53,
-                            Price = 45f,
-                            Quantity = 18.98f,
-                            RecipeId = 45,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 50,
-                            CreatedDate = new DateTime(2021, 5, 19, 0, 12, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 60,
-                            Price = 8f,
-                            Quantity = 23.94f,
-                            RecipeId = 19,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 51,
-                            CreatedDate = new DateTime(2021, 2, 3, 6, 33, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 80,
-                            Price = 96f,
-                            Quantity = 17.87f,
-                            RecipeId = 72,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 52,
-                            CreatedDate = new DateTime(2021, 6, 8, 17, 26, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 13,
-                            Price = 71f,
-                            Quantity = 20.16f,
-                            RecipeId = 23,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 53,
-                            CreatedDate = new DateTime(2021, 7, 30, 15, 17, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 25,
-                            Price = 75f,
-                            Quantity = 11.2f,
-                            RecipeId = 40,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 54,
-                            CreatedDate = new DateTime(2021, 4, 3, 5, 59, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 63,
-                            Price = 35f,
-                            Quantity = 27.01f,
-                            RecipeId = 42,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 55,
-                            CreatedDate = new DateTime(2021, 10, 16, 18, 6, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 68,
-                            Price = 76f,
-                            Quantity = 19.8f,
-                            RecipeId = 64,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 56,
-                            CreatedDate = new DateTime(2021, 9, 8, 11, 58, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 21,
-                            Price = 22f,
-                            Quantity = 48.19f,
-                            RecipeId = 39,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 57,
-                            CreatedDate = new DateTime(2021, 1, 28, 8, 13, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 94,
-                            Price = 25f,
-                            Quantity = 20.03f,
-                            RecipeId = 69,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 58,
-                            CreatedDate = new DateTime(2021, 1, 13, 19, 14, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 30,
-                            Price = 57f,
-                            Quantity = 26.64f,
-                            RecipeId = 68,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 59,
-                            CreatedDate = new DateTime(2021, 5, 19, 6, 26, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 98,
-                            Price = 41f,
-                            Quantity = 11.7f,
-                            RecipeId = 23,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 60,
-                            CreatedDate = new DateTime(2021, 8, 14, 9, 12, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 70,
-                            Price = 27f,
-                            Quantity = 33.99f,
-                            RecipeId = 54,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 61,
-                            CreatedDate = new DateTime(2021, 2, 22, 20, 2, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 43,
-                            Price = 80f,
-                            Quantity = 26.64f,
-                            RecipeId = 60,
-                            UnitMeasure = 4
-                        },
-                        new
-                        {
-                            Id = 62,
-                            CreatedDate = new DateTime(2021, 9, 7, 13, 8, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 21,
-                            Price = 44f,
-                            Quantity = 3.01f,
-                            RecipeId = 74,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 63,
-                            CreatedDate = new DateTime(2021, 11, 26, 23, 7, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 40,
-                            Price = 84f,
-                            Quantity = 36.29f,
-                            RecipeId = 35,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 64,
-                            CreatedDate = new DateTime(2021, 8, 30, 19, 25, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 1,
-                            Price = 61f,
-                            Quantity = 5.8f,
-                            RecipeId = 82,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 65,
-                            CreatedDate = new DateTime(2021, 7, 24, 2, 55, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 68,
-                            Price = 48f,
-                            Quantity = 34.57f,
-                            RecipeId = 54,
-                            UnitMeasure = 4
-                        },
-                        new
-                        {
-                            Id = 66,
-                            CreatedDate = new DateTime(2021, 1, 26, 20, 35, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 71,
-                            Price = 48f,
-                            Quantity = 36.14f,
-                            RecipeId = 55,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 67,
-                            CreatedDate = new DateTime(2021, 10, 20, 17, 23, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 5,
-                            Price = 37f,
-                            Quantity = 26.73f,
-                            RecipeId = 72,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 68,
-                            CreatedDate = new DateTime(2021, 8, 25, 4, 43, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 22,
-                            Price = 13f,
-                            Quantity = 24.78f,
-                            RecipeId = 51,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 69,
-                            CreatedDate = new DateTime(2021, 6, 17, 20, 8, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 25,
-                            Price = 23f,
-                            Quantity = 19.83f,
-                            RecipeId = 67,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 70,
-                            CreatedDate = new DateTime(2021, 6, 2, 17, 52, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 79,
-                            Price = 10f,
-                            Quantity = 43.91f,
-                            RecipeId = 17,
-                            UnitMeasure = 2
-                        },
-                        new
-                        {
-                            Id = 71,
-                            CreatedDate = new DateTime(2021, 2, 7, 15, 28, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 17,
-                            Price = 79f,
-                            Quantity = 28.57f,
-                            RecipeId = 11,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 72,
-                            CreatedDate = new DateTime(2021, 2, 5, 2, 15, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 21,
-                            Price = 29f,
-                            Quantity = 48.25f,
-                            RecipeId = 71,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 73,
-                            CreatedDate = new DateTime(2021, 2, 26, 23, 25, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 10,
-                            Price = 35f,
-                            Quantity = 6.73f,
-                            RecipeId = 33,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 74,
-                            CreatedDate = new DateTime(2021, 3, 6, 4, 11, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 76,
-                            Price = 41f,
-                            Quantity = 17.57f,
-                            RecipeId = 13,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 75,
-                            CreatedDate = new DateTime(2021, 3, 25, 12, 3, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 72,
-                            Price = 63f,
-                            Quantity = 27.5f,
-                            RecipeId = 11,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 76,
-                            CreatedDate = new DateTime(2021, 2, 11, 1, 58, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 80,
-                            Price = 73f,
-                            Quantity = 47.43f,
+                            Quantity = 35.13f,
                             RecipeId = 62,
                             UnitMeasure = 4
                         },
                         new
                         {
-                            Id = 77,
-                            CreatedDate = new DateTime(2021, 1, 4, 1, 11, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 94,
-                            Price = 15f,
-                            Quantity = 38.7f,
-                            RecipeId = 82,
-                            UnitMeasure = 2
+                            Id = 33,
+                            CreatedDate = new DateTime(2021, 2, 10, 9, 41, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 13,
+                            Price = 71f,
+                            Quantity = 10.38f,
+                            RecipeId = 85,
+                            UnitMeasure = 5
                         },
                         new
                         {
-                            Id = 78,
-                            CreatedDate = new DateTime(2021, 9, 27, 3, 57, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 42,
-                            Price = 7f,
-                            Quantity = 34.09f,
+                            Id = 34,
+                            CreatedDate = new DateTime(2021, 1, 2, 20, 53, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 81,
+                            Price = 45f,
+                            Quantity = 45.99f,
+                            RecipeId = 89,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CreatedDate = new DateTime(2021, 10, 2, 1, 3, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 28,
+                            Price = 24f,
+                            Quantity = 26.94f,
+                            RecipeId = 87,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CreatedDate = new DateTime(2021, 4, 13, 0, 25, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 3,
+                            Price = 4f,
+                            Quantity = 8.65f,
+                            RecipeId = 11,
+                            UnitMeasure = 4
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CreatedDate = new DateTime(2021, 9, 20, 18, 1, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 37,
+                            Price = 86f,
+                            Quantity = 10.02f,
+                            RecipeId = 10,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CreatedDate = new DateTime(2021, 7, 7, 4, 49, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 54,
+                            Price = 84f,
+                            Quantity = 11f,
+                            RecipeId = 80,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CreatedDate = new DateTime(2021, 2, 5, 6, 32, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 12,
+                            Price = 60f,
+                            Quantity = 27.37f,
                             RecipeId = 16,
                             UnitMeasure = 5
                         },
                         new
                         {
-                            Id = 79,
-                            CreatedDate = new DateTime(2021, 4, 2, 5, 53, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 44,
-                            Price = 34f,
-                            Quantity = 25.5f,
-                            RecipeId = 12,
-                            UnitMeasure = 4
-                        },
-                        new
-                        {
-                            Id = 80,
-                            CreatedDate = new DateTime(2021, 11, 26, 3, 33, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 54,
-                            Price = 74f,
-                            Quantity = 14.14f,
-                            RecipeId = 76,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 81,
-                            CreatedDate = new DateTime(2021, 8, 9, 12, 38, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 22,
-                            Price = 76f,
-                            Quantity = 12.34f,
-                            RecipeId = 25,
-                            UnitMeasure = 4
-                        },
-                        new
-                        {
-                            Id = 82,
-                            CreatedDate = new DateTime(2021, 1, 20, 2, 52, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 89,
-                            Price = 35f,
-                            Quantity = 24.37f,
-                            RecipeId = 34,
+                            Id = 40,
+                            CreatedDate = new DateTime(2021, 9, 8, 2, 8, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 38,
+                            Price = 31f,
+                            Quantity = 49.69f,
+                            RecipeId = 64,
                             UnitMeasure = 3
                         },
                         new
                         {
+                            Id = 41,
+                            CreatedDate = new DateTime(2021, 7, 14, 20, 26, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 67,
+                            Price = 63f,
+                            Quantity = 48.46f,
+                            RecipeId = 78,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CreatedDate = new DateTime(2021, 8, 24, 15, 28, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 21,
+                            Price = 9f,
+                            Quantity = 20.16f,
+                            RecipeId = 94,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CreatedDate = new DateTime(2021, 3, 21, 17, 2, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 87,
+                            Price = 7f,
+                            Quantity = 47.05f,
+                            RecipeId = 51,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CreatedDate = new DateTime(2021, 11, 25, 4, 45, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 87,
+                            Price = 73f,
+                            Quantity = 45.67f,
+                            RecipeId = 24,
+                            UnitMeasure = 4
+                        },
+                        new
+                        {
+                            Id = 45,
+                            CreatedDate = new DateTime(2021, 7, 8, 23, 16, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 74,
+                            Price = 36f,
+                            Quantity = 25.55f,
+                            RecipeId = 69,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 46,
+                            CreatedDate = new DateTime(2021, 7, 3, 7, 45, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 41,
+                            Price = 19f,
+                            Quantity = 25.9f,
+                            RecipeId = 5,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 47,
+                            CreatedDate = new DateTime(2021, 11, 5, 16, 38, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 35,
+                            Price = 16f,
+                            Quantity = 25.57f,
+                            RecipeId = 88,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 48,
+                            CreatedDate = new DateTime(2021, 3, 30, 10, 27, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 1,
+                            Price = 64f,
+                            Quantity = 41.46f,
+                            RecipeId = 45,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 49,
+                            CreatedDate = new DateTime(2021, 6, 30, 15, 23, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 59,
+                            Price = 99f,
+                            Quantity = 10.94f,
+                            RecipeId = 65,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 50,
+                            CreatedDate = new DateTime(2021, 2, 13, 16, 52, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 12,
+                            Price = 29f,
+                            Quantity = 44.24f,
+                            RecipeId = 40,
+                            UnitMeasure = 4
+                        },
+                        new
+                        {
+                            Id = 51,
+                            CreatedDate = new DateTime(2021, 9, 3, 22, 29, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 40,
+                            Price = 87f,
+                            Quantity = 10.03f,
+                            RecipeId = 13,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 52,
+                            CreatedDate = new DateTime(2021, 3, 18, 10, 48, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 61,
+                            Price = 84f,
+                            Quantity = 32.76f,
+                            RecipeId = 58,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 53,
+                            CreatedDate = new DateTime(2021, 11, 26, 0, 22, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 66,
+                            Price = 78f,
+                            Quantity = 41.74f,
+                            RecipeId = 55,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 54,
+                            CreatedDate = new DateTime(2021, 5, 6, 23, 29, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 24,
+                            Price = 41f,
+                            Quantity = 44.87f,
+                            RecipeId = 90,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 55,
+                            CreatedDate = new DateTime(2021, 10, 31, 13, 47, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 11,
+                            Price = 12f,
+                            Quantity = 48.51f,
+                            RecipeId = 18,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 56,
+                            CreatedDate = new DateTime(2021, 8, 2, 2, 53, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 64,
+                            Price = 65f,
+                            Quantity = 29.22f,
+                            RecipeId = 30,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 57,
+                            CreatedDate = new DateTime(2021, 2, 16, 5, 18, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 42,
+                            Price = 25f,
+                            Quantity = 44.96f,
+                            RecipeId = 96,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 58,
+                            CreatedDate = new DateTime(2021, 10, 14, 22, 22, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 88,
+                            Price = 78f,
+                            Quantity = 22.34f,
+                            RecipeId = 1,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 59,
+                            CreatedDate = new DateTime(2021, 10, 1, 4, 25, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 65,
+                            Price = 53f,
+                            Quantity = 45.11f,
+                            RecipeId = 18,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 60,
+                            CreatedDate = new DateTime(2021, 1, 12, 15, 25, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 26,
+                            Price = 1f,
+                            Quantity = 25.79f,
+                            RecipeId = 41,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 61,
+                            CreatedDate = new DateTime(2021, 11, 15, 14, 48, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 8,
+                            Price = 51f,
+                            Quantity = 6.52f,
+                            RecipeId = 91,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 62,
+                            CreatedDate = new DateTime(2021, 3, 8, 17, 11, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 33,
+                            Price = 79f,
+                            Quantity = 11.16f,
+                            RecipeId = 27,
+                            UnitMeasure = 4
+                        },
+                        new
+                        {
+                            Id = 63,
+                            CreatedDate = new DateTime(2021, 8, 8, 21, 42, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 94,
+                            Price = 2f,
+                            Quantity = 18.64f,
+                            RecipeId = 89,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 64,
+                            CreatedDate = new DateTime(2021, 6, 16, 1, 31, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 82,
+                            Price = 84f,
+                            Quantity = 36.18f,
+                            RecipeId = 97,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 65,
+                            CreatedDate = new DateTime(2021, 1, 29, 13, 18, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 19,
+                            Price = 20f,
+                            Quantity = 15.05f,
+                            RecipeId = 22,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 66,
+                            CreatedDate = new DateTime(2021, 9, 19, 12, 44, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 18,
+                            Price = 80f,
+                            Quantity = 28.88f,
+                            RecipeId = 16,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 67,
+                            CreatedDate = new DateTime(2021, 3, 11, 20, 37, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 48,
+                            Price = 6f,
+                            Quantity = 21.92f,
+                            RecipeId = 13,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 68,
+                            CreatedDate = new DateTime(2021, 4, 22, 20, 15, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 2,
+                            Price = 40f,
+                            Quantity = 43.1f,
+                            RecipeId = 57,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 69,
+                            CreatedDate = new DateTime(2021, 1, 19, 3, 45, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 77,
+                            Price = 4f,
+                            Quantity = 19.48f,
+                            RecipeId = 18,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 70,
+                            CreatedDate = new DateTime(2021, 7, 7, 1, 20, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 74,
+                            Price = 29f,
+                            Quantity = 37.27f,
+                            RecipeId = 29,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 71,
+                            CreatedDate = new DateTime(2021, 1, 22, 21, 34, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 21,
+                            Price = 61f,
+                            Quantity = 26.02f,
+                            RecipeId = 21,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 72,
+                            CreatedDate = new DateTime(2021, 3, 1, 10, 1, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 2,
+                            Price = 39f,
+                            Quantity = 45.55f,
+                            RecipeId = 24,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 73,
+                            CreatedDate = new DateTime(2021, 7, 31, 17, 27, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 6,
+                            Price = 31f,
+                            Quantity = 37.67f,
+                            RecipeId = 61,
+                            UnitMeasure = 4
+                        },
+                        new
+                        {
+                            Id = 74,
+                            CreatedDate = new DateTime(2021, 2, 11, 4, 32, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 12,
+                            Price = 4f,
+                            Quantity = 48.91f,
+                            RecipeId = 97,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 75,
+                            CreatedDate = new DateTime(2021, 2, 3, 15, 28, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 68,
+                            Price = 30f,
+                            Quantity = 18.53f,
+                            RecipeId = 81,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 76,
+                            CreatedDate = new DateTime(2021, 10, 7, 10, 52, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 86,
+                            Price = 87f,
+                            Quantity = 9.13f,
+                            RecipeId = 6,
+                            UnitMeasure = 4
+                        },
+                        new
+                        {
+                            Id = 77,
+                            CreatedDate = new DateTime(2021, 7, 28, 19, 45, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 55,
+                            Price = 21f,
+                            Quantity = 1.26f,
+                            RecipeId = 53,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 78,
+                            CreatedDate = new DateTime(2021, 4, 13, 12, 33, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 62,
+                            Price = 75f,
+                            Quantity = 14.99f,
+                            RecipeId = 50,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 79,
+                            CreatedDate = new DateTime(2021, 11, 1, 5, 46, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 62,
+                            Price = 20f,
+                            Quantity = 7.44f,
+                            RecipeId = 29,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 80,
+                            CreatedDate = new DateTime(2021, 6, 15, 17, 25, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 30,
+                            Price = 32f,
+                            Quantity = 17.49f,
+                            RecipeId = 32,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 81,
+                            CreatedDate = new DateTime(2021, 7, 11, 1, 36, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 70,
+                            Price = 64f,
+                            Quantity = 21.6f,
+                            RecipeId = 25,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 82,
+                            CreatedDate = new DateTime(2021, 6, 19, 21, 54, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 48,
+                            Price = 7f,
+                            Quantity = 17.87f,
+                            RecipeId = 22,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
                             Id = 83,
-                            CreatedDate = new DateTime(2021, 10, 24, 1, 58, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 43,
-                            Price = 47f,
-                            Quantity = 34.18f,
-                            RecipeId = 59,
+                            CreatedDate = new DateTime(2021, 9, 3, 10, 47, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 71,
+                            Price = 26f,
+                            Quantity = 12.76f,
+                            RecipeId = 30,
                             UnitMeasure = 5
                         },
                         new
                         {
                             Id = 84,
-                            CreatedDate = new DateTime(2021, 1, 27, 12, 45, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 2,
-                            Price = 53f,
-                            Quantity = 11.48f,
-                            RecipeId = 72,
+                            CreatedDate = new DateTime(2021, 5, 18, 2, 21, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 81,
+                            Price = 96f,
+                            Quantity = 40.6f,
+                            RecipeId = 77,
                             UnitMeasure = 1
                         },
                         new
                         {
                             Id = 85,
-                            CreatedDate = new DateTime(2021, 2, 16, 15, 7, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 12,
-                            Price = 9f,
-                            Quantity = 1.61f,
-                            RecipeId = 13,
-                            UnitMeasure = 4
+                            CreatedDate = new DateTime(2021, 1, 25, 18, 38, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 62,
+                            Price = 41f,
+                            Quantity = 28.98f,
+                            RecipeId = 18,
+                            UnitMeasure = 3
                         },
                         new
                         {
                             Id = 86,
-                            CreatedDate = new DateTime(2021, 3, 4, 16, 22, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 67,
-                            Price = 85f,
-                            Quantity = 24.02f,
-                            RecipeId = 46,
-                            UnitMeasure = 5
+                            CreatedDate = new DateTime(2021, 7, 4, 12, 45, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 5,
+                            Price = 17f,
+                            Quantity = 17.69f,
+                            RecipeId = 54,
+                            UnitMeasure = 2
                         },
                         new
                         {
                             Id = 87,
-                            CreatedDate = new DateTime(2021, 9, 19, 5, 27, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 81,
-                            Price = 60f,
-                            Quantity = 39.92f,
-                            RecipeId = 90,
+                            CreatedDate = new DateTime(2021, 7, 5, 18, 16, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 89,
+                            Price = 39f,
+                            Quantity = 6.62f,
+                            RecipeId = 78,
                             UnitMeasure = 4
                         },
                         new
                         {
                             Id = 88,
-                            CreatedDate = new DateTime(2021, 4, 10, 7, 31, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 75,
-                            Price = 37f,
-                            Quantity = 26.15f,
-                            RecipeId = 58,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 89,
-                            CreatedDate = new DateTime(2021, 3, 25, 17, 25, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 58,
-                            Price = 45f,
-                            Quantity = 6.8f,
-                            RecipeId = 64,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 90,
-                            CreatedDate = new DateTime(2021, 1, 4, 18, 29, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 76,
-                            Price = 52f,
-                            Quantity = 41.71f,
-                            RecipeId = 52,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 91,
-                            CreatedDate = new DateTime(2021, 10, 4, 20, 54, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 73,
-                            Price = 24f,
-                            Quantity = 12.4f,
-                            RecipeId = 75,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 92,
-                            CreatedDate = new DateTime(2021, 7, 2, 16, 6, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 57,
-                            Price = 60f,
-                            Quantity = 48.84f,
-                            RecipeId = 87,
-                            UnitMeasure = 1
-                        },
-                        new
-                        {
-                            Id = 93,
-                            CreatedDate = new DateTime(2021, 11, 3, 20, 26, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 81,
-                            Price = 63f,
-                            Quantity = 13.61f,
-                            RecipeId = 68,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 94,
-                            CreatedDate = new DateTime(2021, 5, 24, 2, 56, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 97,
-                            Price = 8f,
-                            Quantity = 10.65f,
-                            RecipeId = 2,
-                            UnitMeasure = 3
-                        },
-                        new
-                        {
-                            Id = 95,
-                            CreatedDate = new DateTime(2021, 3, 26, 9, 14, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 66,
-                            Price = 69f,
-                            Quantity = 13.02f,
-                            RecipeId = 96,
-                            UnitMeasure = 5
-                        },
-                        new
-                        {
-                            Id = 96,
-                            CreatedDate = new DateTime(2021, 10, 1, 13, 30, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 20,
-                            Price = 3f,
-                            Quantity = 30.27f,
-                            RecipeId = 3,
+                            CreatedDate = new DateTime(2021, 9, 4, 10, 12, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 41,
+                            Price = 58f,
+                            Quantity = 24.07f,
+                            RecipeId = 42,
                             UnitMeasure = 2
                         },
                         new
                         {
+                            Id = 89,
+                            CreatedDate = new DateTime(2021, 1, 31, 7, 5, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 56,
+                            Price = 40f,
+                            Quantity = 44.07f,
+                            RecipeId = 95,
+                            UnitMeasure = 4
+                        },
+                        new
+                        {
+                            Id = 90,
+                            CreatedDate = new DateTime(2021, 3, 2, 22, 10, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 65,
+                            Price = 88f,
+                            Quantity = 23.46f,
+                            RecipeId = 51,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
+                            Id = 91,
+                            CreatedDate = new DateTime(2021, 2, 25, 19, 7, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 24,
+                            Price = 10f,
+                            Quantity = 34.93f,
+                            RecipeId = 8,
+                            UnitMeasure = 1
+                        },
+                        new
+                        {
+                            Id = 92,
+                            CreatedDate = new DateTime(2021, 11, 4, 19, 39, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 61,
+                            Price = 51f,
+                            Quantity = 35.07f,
+                            RecipeId = 73,
+                            UnitMeasure = 3
+                        },
+                        new
+                        {
+                            Id = 93,
+                            CreatedDate = new DateTime(2021, 9, 4, 0, 24, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 15,
+                            Price = 83f,
+                            Quantity = 2.42f,
+                            RecipeId = 15,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 94,
+                            CreatedDate = new DateTime(2021, 1, 24, 15, 6, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 11,
+                            Price = 25f,
+                            Quantity = 24.99f,
+                            RecipeId = 48,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 95,
+                            CreatedDate = new DateTime(2021, 9, 21, 11, 19, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 46,
+                            Price = 36f,
+                            Quantity = 16.93f,
+                            RecipeId = 52,
+                            UnitMeasure = 2
+                        },
+                        new
+                        {
+                            Id = 96,
+                            CreatedDate = new DateTime(2021, 5, 9, 3, 14, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 32,
+                            Price = 53f,
+                            Quantity = 24.23f,
+                            RecipeId = 71,
+                            UnitMeasure = 5
+                        },
+                        new
+                        {
                             Id = 97,
-                            CreatedDate = new DateTime(2021, 9, 5, 7, 33, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 19,
-                            Price = 34f,
-                            Quantity = 41.29f,
-                            RecipeId = 37,
+                            CreatedDate = new DateTime(2021, 1, 16, 17, 46, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 49,
+                            Price = 53f,
+                            Quantity = 4.39f,
+                            RecipeId = 71,
                             UnitMeasure = 1
                         },
                         new
                         {
                             Id = 98,
-                            CreatedDate = new DateTime(2021, 10, 2, 11, 10, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 81,
-                            Price = 61f,
-                            Quantity = 15.52f,
-                            RecipeId = 40,
-                            UnitMeasure = 2
+                            CreatedDate = new DateTime(2021, 9, 3, 15, 30, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 88,
+                            Price = 57f,
+                            Quantity = 29.38f,
+                            RecipeId = 87,
+                            UnitMeasure = 3
                         },
                         new
                         {
                             Id = 99,
-                            CreatedDate = new DateTime(2021, 9, 6, 2, 51, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 90,
-                            Price = 24f,
-                            Quantity = 43.2f,
-                            RecipeId = 20,
-                            UnitMeasure = 4
+                            CreatedDate = new DateTime(2021, 10, 27, 15, 27, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 9,
+                            Price = 33f,
+                            Quantity = 23.62f,
+                            RecipeId = 36,
+                            UnitMeasure = 3
                         },
                         new
                         {
                             Id = 100,
-                            CreatedDate = new DateTime(2021, 8, 22, 5, 0, 0, 0, DateTimeKind.Unspecified),
-                            IngredientId = 11,
-                            Price = 25f,
-                            Quantity = 38.16f,
-                            RecipeId = 32,
+                            CreatedDate = new DateTime(2021, 9, 17, 10, 32, 0, 0, DateTimeKind.Unspecified),
+                            IngredientId = 9,
+                            Price = 87f,
+                            Quantity = 11.42f,
+                            RecipeId = 40,
                             UnitMeasure = 5
                         });
                 });
@@ -2350,6 +2350,9 @@ namespace NormativeCalculator.Database.Migrations
                     b.Property<int>("RecipeCategoryId")
                         .HasColumnType("int");
 
+                    b.Property<float>("RecommendedPrice")
+                        .HasColumnType("real");
+
                     b.Property<float>("TotalCost")
                         .HasColumnType("real");
 
@@ -2365,1002 +2368,1102 @@ namespace NormativeCalculator.Database.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 8, 3, 21, 9, 0, 0, DateTimeKind.Unspecified),
-                            Description = "rLdJWJKi",
+                            CreatedDate = new DateTime(2021, 5, 18, 1, 50, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AaSKSAJK",
                             MyUserId = 1,
                             Name = "Rafaelo1",
-                            RecipeCategoryId = 17,
-                            TotalCost = 86.64206f
+                            RecipeCategoryId = 3,
+                            RecommendedPrice = 0f,
+                            TotalCost = 34.28001f
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 6, 24, 11, 33, 0, 0, DateTimeKind.Unspecified),
-                            Description = "lriDbmAA",
+                            CreatedDate = new DateTime(2021, 6, 28, 15, 34, 0, 0, DateTimeKind.Unspecified),
+                            Description = "eSWJfDfD",
                             MyUserId = 1,
                             Name = "Snickers2",
-                            RecipeCategoryId = 2,
-                            TotalCost = 44.742138f
+                            RecipeCategoryId = 38,
+                            RecommendedPrice = 0f,
+                            TotalCost = 14.631049f
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2021, 5, 2, 3, 6, 0, 0, DateTimeKind.Unspecified),
-                            Description = "geSeAgjh",
+                            CreatedDate = new DateTime(2021, 3, 14, 22, 8, 0, 0, DateTimeKind.Unspecified),
+                            Description = "zAsaDvJA",
                             MyUserId = 1,
                             Name = "Baklava3",
-                            RecipeCategoryId = 2,
-                            TotalCost = 23.898802f
+                            RecipeCategoryId = 13,
+                            RecommendedPrice = 0f,
+                            TotalCost = 55.87328f
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2021, 10, 9, 10, 18, 0, 0, DateTimeKind.Unspecified),
-                            Description = "kkvaKrBp",
+                            CreatedDate = new DateTime(2021, 6, 12, 6, 29, 0, 0, DateTimeKind.Unspecified),
+                            Description = "DjWSWDwr",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom4",
-                            RecipeCategoryId = 47,
-                            TotalCost = 40.128407f
+                            RecipeCategoryId = 26,
+                            RecommendedPrice = 0f,
+                            TotalCost = 97.88825f
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2021, 9, 20, 19, 28, 0, 0, DateTimeKind.Unspecified),
-                            Description = "DLengiSA",
+                            CreatedDate = new DateTime(2021, 11, 13, 9, 27, 0, 0, DateTimeKind.Unspecified),
+                            Description = "SlJbWiuA",
                             MyUserId = 1,
                             Name = "Saher torta5",
-                            RecipeCategoryId = 12,
-                            TotalCost = 63.43112f
+                            RecipeCategoryId = 3,
+                            RecommendedPrice = 0f,
+                            TotalCost = 21.171207f
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2021, 6, 14, 12, 11, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WcKmrSnJ",
+                            CreatedDate = new DateTime(2021, 10, 21, 1, 38, 0, 0, DateTimeKind.Unspecified),
+                            Description = "frAirLHd",
                             MyUserId = 1,
                             Name = "Cokoladni kolac6",
-                            RecipeCategoryId = 33,
-                            TotalCost = 68.491394f
+                            RecipeCategoryId = 24,
+                            RecommendedPrice = 0f,
+                            TotalCost = 90.34336f
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2021, 10, 13, 14, 57, 0, 0, DateTimeKind.Unspecified),
-                            Description = "nASfSBDj",
+                            CreatedDate = new DateTime(2021, 5, 23, 8, 35, 0, 0, DateTimeKind.Unspecified),
+                            Description = "uSWwdosn",
                             MyUserId = 1,
                             Name = "Ferrero7",
-                            RecipeCategoryId = 11,
-                            TotalCost = 94.74876f
+                            RecipeCategoryId = 19,
+                            RecommendedPrice = 0f,
+                            TotalCost = 72.937325f
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2021, 7, 4, 5, 47, 0, 0, DateTimeKind.Unspecified),
-                            Description = "HADJkJvJ",
+                            CreatedDate = new DateTime(2021, 4, 28, 22, 12, 0, 0, DateTimeKind.Unspecified),
+                            Description = "nAlJjWhf",
                             MyUserId = 1,
                             Name = "Pizza sa sirom 8",
-                            RecipeCategoryId = 1,
-                            TotalCost = 78.0764f
+                            RecipeCategoryId = 49,
+                            RecommendedPrice = 0f,
+                            TotalCost = 74.03674f
                         },
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2021, 2, 16, 17, 57, 0, 0, DateTimeKind.Unspecified),
-                            Description = "ILAjizIW",
+                            CreatedDate = new DateTime(2021, 6, 23, 8, 4, 0, 0, DateTimeKind.Unspecified),
+                            Description = "sSAAeeun",
                             MyUserId = 1,
                             Name = "Rafaelo9",
-                            RecipeCategoryId = 18,
-                            TotalCost = 83.62943f
+                            RecipeCategoryId = 32,
+                            RecommendedPrice = 0f,
+                            TotalCost = 37.32992f
                         },
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2021, 11, 7, 9, 34, 0, 0, DateTimeKind.Unspecified),
-                            Description = "hAoStSIu",
+                            CreatedDate = new DateTime(2021, 1, 5, 10, 12, 0, 0, DateTimeKind.Unspecified),
+                            Description = "oWJjAKBW",
                             MyUserId = 1,
                             Name = "Snickers10",
-                            RecipeCategoryId = 4,
-                            TotalCost = 2.893791f
+                            RecipeCategoryId = 31,
+                            RecommendedPrice = 0f,
+                            TotalCost = 3.2919066f
                         },
                         new
                         {
                             Id = 11,
-                            CreatedDate = new DateTime(2021, 5, 21, 2, 13, 0, 0, DateTimeKind.Unspecified),
-                            Description = "SDSJuvwc",
+                            CreatedDate = new DateTime(2021, 2, 11, 15, 50, 0, 0, DateTimeKind.Unspecified),
+                            Description = "BWKJoanD",
                             MyUserId = 1,
                             Name = "Baklava11",
-                            RecipeCategoryId = 29,
-                            TotalCost = 25.786161f
+                            RecipeCategoryId = 41,
+                            RecommendedPrice = 0f,
+                            TotalCost = 32.43898f
                         },
                         new
                         {
                             Id = 12,
-                            CreatedDate = new DateTime(2021, 5, 3, 9, 45, 0, 0, DateTimeKind.Unspecified),
-                            Description = "nJJjSjHc",
+                            CreatedDate = new DateTime(2021, 7, 17, 13, 23, 0, 0, DateTimeKind.Unspecified),
+                            Description = "KWKSASHp",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom12",
-                            RecipeCategoryId = 22,
-                            TotalCost = 38.98796f
+                            RecipeCategoryId = 39,
+                            RecommendedPrice = 0f,
+                            TotalCost = 82.30059f
                         },
                         new
                         {
                             Id = 13,
-                            CreatedDate = new DateTime(2021, 2, 26, 2, 19, 0, 0, DateTimeKind.Unspecified),
-                            Description = "SAzwJeSL",
+                            CreatedDate = new DateTime(2021, 8, 5, 3, 51, 0, 0, DateTimeKind.Unspecified),
+                            Description = "iWAWMWDp",
                             MyUserId = 1,
                             Name = "Saher torta13",
-                            RecipeCategoryId = 39,
-                            TotalCost = 56.262688f
+                            RecipeCategoryId = 35,
+                            RecommendedPrice = 0f,
+                            TotalCost = 87.16112f
                         },
                         new
                         {
                             Id = 14,
-                            CreatedDate = new DateTime(2021, 9, 15, 12, 17, 0, 0, DateTimeKind.Unspecified),
-                            Description = "dDWWlASA",
+                            CreatedDate = new DateTime(2021, 1, 20, 3, 30, 0, 0, DateTimeKind.Unspecified),
+                            Description = "rviwunDA",
                             MyUserId = 1,
                             Name = "Cokoladni kolac14",
-                            RecipeCategoryId = 10,
-                            TotalCost = 15.232336f
+                            RecipeCategoryId = 9,
+                            RecommendedPrice = 0f,
+                            TotalCost = 91.944214f
                         },
                         new
                         {
                             Id = 15,
-                            CreatedDate = new DateTime(2021, 10, 21, 17, 27, 0, 0, DateTimeKind.Unspecified),
-                            Description = "ggIAaDAu",
+                            CreatedDate = new DateTime(2021, 4, 24, 8, 42, 0, 0, DateTimeKind.Unspecified),
+                            Description = "rKkWlnIz",
                             MyUserId = 1,
                             Name = "Ferrero15",
-                            RecipeCategoryId = 19,
-                            TotalCost = 67.265976f
+                            RecipeCategoryId = 49,
+                            RecommendedPrice = 0f,
+                            TotalCost = 16.542473f
                         },
                         new
                         {
                             Id = 16,
-                            CreatedDate = new DateTime(2021, 4, 22, 1, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "tJAoIWrS",
+                            CreatedDate = new DateTime(2021, 10, 14, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "tufwpHrS",
                             MyUserId = 1,
                             Name = "Pizza sa sirom 16",
-                            RecipeCategoryId = 34,
-                            TotalCost = 91.07982f
+                            RecipeCategoryId = 10,
+                            RecommendedPrice = 0f,
+                            TotalCost = 84.52273f
                         },
                         new
                         {
                             Id = 17,
-                            CreatedDate = new DateTime(2021, 11, 26, 19, 56, 0, 0, DateTimeKind.Unspecified),
-                            Description = "kmDAApDL",
+                            CreatedDate = new DateTime(2021, 4, 6, 12, 26, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AKaeLLKJ",
                             MyUserId = 1,
                             Name = "Rafaelo17",
-                            RecipeCategoryId = 8,
-                            TotalCost = 33.268383f
+                            RecipeCategoryId = 26,
+                            RecommendedPrice = 0f,
+                            TotalCost = 43.71905f
                         },
                         new
                         {
                             Id = 18,
-                            CreatedDate = new DateTime(2021, 10, 9, 7, 17, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WJSvzDSr",
+                            CreatedDate = new DateTime(2021, 8, 30, 13, 17, 0, 0, DateTimeKind.Unspecified),
+                            Description = "JlKJLWgw",
                             MyUserId = 1,
                             Name = "Snickers18",
-                            RecipeCategoryId = 38,
-                            TotalCost = 4.2644815f
+                            RecipeCategoryId = 32,
+                            RecommendedPrice = 0f,
+                            TotalCost = 9.113773f
                         },
                         new
                         {
                             Id = 19,
-                            CreatedDate = new DateTime(2021, 2, 8, 11, 53, 0, 0, DateTimeKind.Unspecified),
-                            Description = "cMdAtWcg",
+                            CreatedDate = new DateTime(2021, 6, 23, 1, 14, 0, 0, DateTimeKind.Unspecified),
+                            Description = "bcutzdeJ",
                             MyUserId = 1,
                             Name = "Baklava19",
-                            RecipeCategoryId = 37,
-                            TotalCost = 59.587498f
+                            RecipeCategoryId = 46,
+                            RecommendedPrice = 0f,
+                            TotalCost = 4.867719f
                         },
                         new
                         {
                             Id = 20,
-                            CreatedDate = new DateTime(2021, 2, 16, 17, 26, 0, 0, DateTimeKind.Unspecified),
-                            Description = "tcfaizbs",
+                            CreatedDate = new DateTime(2021, 11, 16, 21, 7, 0, 0, DateTimeKind.Unspecified),
+                            Description = "ImpDWADH",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom20",
-                            RecipeCategoryId = 45,
-                            TotalCost = 30.52692f
+                            RecipeCategoryId = 23,
+                            RecommendedPrice = 0f,
+                            TotalCost = 25.337883f
                         },
                         new
                         {
                             Id = 21,
-                            CreatedDate = new DateTime(2021, 1, 9, 16, 33, 0, 0, DateTimeKind.Unspecified),
-                            Description = "SaKDSrkI",
+                            CreatedDate = new DateTime(2021, 2, 11, 13, 24, 0, 0, DateTimeKind.Unspecified),
+                            Description = "dDBSmwAw",
                             MyUserId = 1,
                             Name = "Saher torta21",
-                            RecipeCategoryId = 47,
-                            TotalCost = 81.03663f
+                            RecipeCategoryId = 21,
+                            RecommendedPrice = 0f,
+                            TotalCost = 78.08768f
                         },
                         new
                         {
                             Id = 22,
-                            CreatedDate = new DateTime(2021, 6, 11, 6, 16, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WSMgAdSL",
+                            CreatedDate = new DateTime(2021, 8, 6, 16, 44, 0, 0, DateTimeKind.Unspecified),
+                            Description = "WsDDSMWD",
                             MyUserId = 1,
                             Name = "Cokoladni kolac22",
-                            RecipeCategoryId = 26,
-                            TotalCost = 44.37171f
+                            RecipeCategoryId = 29,
+                            RecommendedPrice = 0f,
+                            TotalCost = 45.27701f
                         },
                         new
                         {
                             Id = 23,
-                            CreatedDate = new DateTime(2021, 5, 8, 18, 25, 0, 0, DateTimeKind.Unspecified),
-                            Description = "dDlMBSDl",
+                            CreatedDate = new DateTime(2021, 1, 6, 12, 10, 0, 0, DateTimeKind.Unspecified),
+                            Description = "nJsnmSkA",
                             MyUserId = 1,
                             Name = "Ferrero23",
-                            RecipeCategoryId = 30,
-                            TotalCost = 97.72798f
+                            RecipeCategoryId = 21,
+                            RecommendedPrice = 0f,
+                            TotalCost = 19.805904f
                         },
                         new
                         {
                             Id = 24,
-                            CreatedDate = new DateTime(2021, 8, 13, 20, 30, 0, 0, DateTimeKind.Unspecified),
-                            Description = "jAgzjDWs",
+                            CreatedDate = new DateTime(2021, 5, 15, 15, 58, 0, 0, DateTimeKind.Unspecified),
+                            Description = "wgoDDmdf",
                             MyUserId = 1,
                             Name = "Pizza sa sirom 24",
-                            RecipeCategoryId = 37,
-                            TotalCost = 81.15267f
+                            RecipeCategoryId = 24,
+                            RecommendedPrice = 0f,
+                            TotalCost = 26.93434f
                         },
                         new
                         {
                             Id = 25,
-                            CreatedDate = new DateTime(2021, 6, 13, 5, 29, 0, 0, DateTimeKind.Unspecified),
-                            Description = "LsKzJStS",
+                            CreatedDate = new DateTime(2021, 4, 1, 8, 56, 0, 0, DateTimeKind.Unspecified),
+                            Description = "mJSrmokB",
                             MyUserId = 1,
                             Name = "Rafaelo25",
-                            RecipeCategoryId = 9,
-                            TotalCost = 54.045193f
+                            RecipeCategoryId = 40,
+                            RecommendedPrice = 0f,
+                            TotalCost = 93.580536f
                         },
                         new
                         {
                             Id = 26,
-                            CreatedDate = new DateTime(2021, 3, 22, 21, 19, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WmMvcMvo",
+                            CreatedDate = new DateTime(2021, 4, 23, 8, 38, 0, 0, DateTimeKind.Unspecified),
+                            Description = "jMWWeehM",
                             MyUserId = 1,
                             Name = "Snickers26",
                             RecipeCategoryId = 6,
-                            TotalCost = 87.1641f
+                            RecommendedPrice = 0f,
+                            TotalCost = 16.511848f
                         },
                         new
                         {
                             Id = 27,
-                            CreatedDate = new DateTime(2021, 2, 6, 19, 17, 0, 0, DateTimeKind.Unspecified),
-                            Description = "fmADjgAS",
+                            CreatedDate = new DateTime(2021, 10, 21, 12, 35, 0, 0, DateTimeKind.Unspecified),
+                            Description = "HJlccSug",
                             MyUserId = 1,
                             Name = "Baklava27",
-                            RecipeCategoryId = 15,
-                            TotalCost = 5.8974338f
+                            RecipeCategoryId = 38,
+                            RecommendedPrice = 0f,
+                            TotalCost = 14.671596f
                         },
                         new
                         {
                             Id = 28,
-                            CreatedDate = new DateTime(2021, 1, 18, 18, 36, 0, 0, DateTimeKind.Unspecified),
-                            Description = "zDWdjWJe",
+                            CreatedDate = new DateTime(2021, 3, 24, 7, 17, 0, 0, DateTimeKind.Unspecified),
+                            Description = "pWsgjnWB",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom28",
-                            RecipeCategoryId = 28,
-                            TotalCost = 81.75772f
+                            RecipeCategoryId = 3,
+                            RecommendedPrice = 0f,
+                            TotalCost = 79.674965f
                         },
                         new
                         {
                             Id = 29,
-                            CreatedDate = new DateTime(2021, 8, 26, 9, 6, 0, 0, DateTimeKind.Unspecified),
-                            Description = "nBorpAfl",
+                            CreatedDate = new DateTime(2021, 11, 17, 5, 58, 0, 0, DateTimeKind.Unspecified),
+                            Description = "uAJLenrW",
                             MyUserId = 1,
                             Name = "Saher torta29",
-                            RecipeCategoryId = 8,
-                            TotalCost = 43.12394f
+                            RecipeCategoryId = 41,
+                            RecommendedPrice = 0f,
+                            TotalCost = 99.60569f
                         },
                         new
                         {
                             Id = 30,
-                            CreatedDate = new DateTime(2021, 7, 5, 9, 57, 0, 0, DateTimeKind.Unspecified),
-                            Description = "kAknMhio",
+                            CreatedDate = new DateTime(2021, 2, 21, 0, 6, 0, 0, DateTimeKind.Unspecified),
+                            Description = "vMdrslKt",
                             MyUserId = 1,
                             Name = "Cokoladni kolac30",
-                            RecipeCategoryId = 44,
-                            TotalCost = 64.72171f
+                            RecipeCategoryId = 37,
+                            RecommendedPrice = 0f,
+                            TotalCost = 40.932228f
                         },
                         new
                         {
                             Id = 31,
-                            CreatedDate = new DateTime(2021, 4, 22, 22, 3, 0, 0, DateTimeKind.Unspecified),
-                            Description = "zLpADfhA",
+                            CreatedDate = new DateTime(2021, 3, 26, 6, 30, 0, 0, DateTimeKind.Unspecified),
+                            Description = "DuMKabdB",
                             MyUserId = 1,
                             Name = "Ferrero31",
-                            RecipeCategoryId = 47,
-                            TotalCost = 5.515864f
+                            RecipeCategoryId = 8,
+                            RecommendedPrice = 0f,
+                            TotalCost = 99.717026f
                         },
                         new
                         {
                             Id = 32,
-                            CreatedDate = new DateTime(2021, 4, 20, 22, 48, 0, 0, DateTimeKind.Unspecified),
-                            Description = "zAakbpDM",
+                            CreatedDate = new DateTime(2021, 8, 7, 5, 3, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AWaKSesA",
                             MyUserId = 1,
                             Name = "Pizza sa sirom 32",
-                            RecipeCategoryId = 15,
-                            TotalCost = 85.47021f
+                            RecipeCategoryId = 14,
+                            RecommendedPrice = 0f,
+                            TotalCost = 66.54676f
                         },
                         new
                         {
                             Id = 33,
-                            CreatedDate = new DateTime(2021, 4, 4, 2, 14, 0, 0, DateTimeKind.Unspecified),
-                            Description = "SShDJeWJ",
+                            CreatedDate = new DateTime(2021, 2, 26, 12, 52, 0, 0, DateTimeKind.Unspecified),
+                            Description = "ScDlspIu",
                             MyUserId = 1,
                             Name = "Rafaelo33",
-                            RecipeCategoryId = 22,
-                            TotalCost = 92.2469f
+                            RecipeCategoryId = 5,
+                            RecommendedPrice = 0f,
+                            TotalCost = 87.35076f
                         },
                         new
                         {
                             Id = 34,
-                            CreatedDate = new DateTime(2021, 4, 27, 22, 4, 0, 0, DateTimeKind.Unspecified),
-                            Description = "hAtWMHMn",
+                            CreatedDate = new DateTime(2021, 6, 13, 16, 53, 0, 0, DateTimeKind.Unspecified),
+                            Description = "vmShScKe",
                             MyUserId = 1,
                             Name = "Snickers34",
-                            RecipeCategoryId = 13,
-                            TotalCost = 41.727196f
+                            RecipeCategoryId = 33,
+                            RecommendedPrice = 0f,
+                            TotalCost = 97.4415f
                         },
                         new
                         {
                             Id = 35,
-                            CreatedDate = new DateTime(2021, 5, 27, 9, 49, 0, 0, DateTimeKind.Unspecified),
-                            Description = "rASssWAh",
+                            CreatedDate = new DateTime(2021, 8, 9, 15, 47, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AWhIsjDt",
                             MyUserId = 1,
                             Name = "Baklava35",
-                            RecipeCategoryId = 32,
-                            TotalCost = 28.143661f
+                            RecipeCategoryId = 14,
+                            RecommendedPrice = 0f,
+                            TotalCost = 47.365948f
                         },
                         new
                         {
                             Id = 36,
-                            CreatedDate = new DateTime(2021, 3, 12, 2, 21, 0, 0, DateTimeKind.Unspecified),
-                            Description = "uDMtAJkJ",
+                            CreatedDate = new DateTime(2021, 5, 15, 17, 27, 0, 0, DateTimeKind.Unspecified),
+                            Description = "IjsumKbp",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom36",
-                            RecipeCategoryId = 27,
-                            TotalCost = 76.66419f
+                            RecipeCategoryId = 38,
+                            RecommendedPrice = 0f,
+                            TotalCost = 15.677319f
                         },
                         new
                         {
                             Id = 37,
-                            CreatedDate = new DateTime(2021, 7, 27, 21, 56, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WoJeaHHs",
+                            CreatedDate = new DateTime(2021, 1, 29, 15, 57, 0, 0, DateTimeKind.Unspecified),
+                            Description = "BhuoSBbH",
                             MyUserId = 1,
                             Name = "Saher torta37",
-                            RecipeCategoryId = 11,
-                            TotalCost = 65.267746f
+                            RecipeCategoryId = 26,
+                            RecommendedPrice = 0f,
+                            TotalCost = 7.6386456f
                         },
                         new
                         {
                             Id = 38,
-                            CreatedDate = new DateTime(2021, 11, 20, 1, 46, 0, 0, DateTimeKind.Unspecified),
-                            Description = "AAWJJwWK",
+                            CreatedDate = new DateTime(2021, 5, 1, 12, 48, 0, 0, DateTimeKind.Unspecified),
+                            Description = "DDsJuAJz",
                             MyUserId = 1,
                             Name = "Cokoladni kolac38",
-                            RecipeCategoryId = 34,
-                            TotalCost = 28.784206f
+                            RecipeCategoryId = 33,
+                            RecommendedPrice = 0f,
+                            TotalCost = 51.23541f
                         },
                         new
                         {
                             Id = 39,
-                            CreatedDate = new DateTime(2021, 6, 8, 0, 12, 0, 0, DateTimeKind.Unspecified),
-                            Description = "aJABHisW",
+                            CreatedDate = new DateTime(2021, 1, 10, 17, 57, 0, 0, DateTimeKind.Unspecified),
+                            Description = "MASWSBKJ",
                             MyUserId = 1,
                             Name = "Ferrero39",
-                            RecipeCategoryId = 41,
-                            TotalCost = 34.15601f
+                            RecipeCategoryId = 49,
+                            RecommendedPrice = 0f,
+                            TotalCost = 51.20896f
                         },
                         new
                         {
                             Id = 40,
-                            CreatedDate = new DateTime(2021, 6, 16, 19, 54, 0, 0, DateTimeKind.Unspecified),
-                            Description = "pDfcjWfn",
+                            CreatedDate = new DateTime(2021, 11, 24, 21, 32, 0, 0, DateTimeKind.Unspecified),
+                            Description = "BkvhWvhS",
                             MyUserId = 1,
                             Name = "Pizza sa sirom 40",
-                            RecipeCategoryId = 18,
-                            TotalCost = 37.45485f
+                            RecipeCategoryId = 22,
+                            RecommendedPrice = 0f,
+                            TotalCost = 6.3342824f
                         },
                         new
                         {
                             Id = 41,
-                            CreatedDate = new DateTime(2021, 4, 28, 8, 2, 0, 0, DateTimeKind.Unspecified),
-                            Description = "AwAJbSmW",
+                            CreatedDate = new DateTime(2021, 8, 9, 14, 38, 0, 0, DateTimeKind.Unspecified),
+                            Description = "lpWAHwzt",
                             MyUserId = 1,
                             Name = "Rafaelo41",
                             RecipeCategoryId = 29,
-                            TotalCost = 97.172874f
+                            RecommendedPrice = 0f,
+                            TotalCost = 2.035721f
                         },
                         new
                         {
                             Id = 42,
-                            CreatedDate = new DateTime(2021, 7, 19, 1, 42, 0, 0, DateTimeKind.Unspecified),
-                            Description = "LoAJMJvA",
+                            CreatedDate = new DateTime(2021, 5, 2, 3, 1, 0, 0, DateTimeKind.Unspecified),
+                            Description = "SwlSLKDA",
                             MyUserId = 1,
                             Name = "Snickers42",
-                            RecipeCategoryId = 28,
-                            TotalCost = 40.827515f
+                            RecipeCategoryId = 22,
+                            RecommendedPrice = 0f,
+                            TotalCost = 14.075176f
                         },
                         new
                         {
                             Id = 43,
-                            CreatedDate = new DateTime(2021, 10, 1, 8, 45, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WgsKaHkI",
+                            CreatedDate = new DateTime(2021, 3, 20, 15, 1, 0, 0, DateTimeKind.Unspecified),
+                            Description = "pMwpgcta",
                             MyUserId = 1,
                             Name = "Baklava43",
-                            RecipeCategoryId = 35,
-                            TotalCost = 4.2211614f
+                            RecipeCategoryId = 28,
+                            RecommendedPrice = 0f,
+                            TotalCost = 34.148865f
                         },
                         new
                         {
                             Id = 44,
-                            CreatedDate = new DateTime(2021, 8, 22, 8, 12, 0, 0, DateTimeKind.Unspecified),
-                            Description = "LHWaBJhn",
+                            CreatedDate = new DateTime(2021, 10, 2, 15, 5, 0, 0, DateTimeKind.Unspecified),
+                            Description = "DSKvfAAh",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom44",
-                            RecipeCategoryId = 25,
-                            TotalCost = 25.16691f
+                            RecipeCategoryId = 2,
+                            RecommendedPrice = 0f,
+                            TotalCost = 49.292343f
                         },
                         new
                         {
                             Id = 45,
-                            CreatedDate = new DateTime(2021, 10, 1, 6, 11, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WAtmKiJj",
+                            CreatedDate = new DateTime(2021, 11, 7, 2, 55, 0, 0, DateTimeKind.Unspecified),
+                            Description = "tADdruKz",
                             MyUserId = 1,
                             Name = "Saher torta45",
-                            RecipeCategoryId = 19,
-                            TotalCost = 73.578766f
+                            RecipeCategoryId = 16,
+                            RecommendedPrice = 0f,
+                            TotalCost = 9.936611f
                         },
                         new
                         {
                             Id = 46,
-                            CreatedDate = new DateTime(2021, 5, 16, 3, 16, 0, 0, DateTimeKind.Unspecified),
-                            Description = "wjWtWAcW",
+                            CreatedDate = new DateTime(2021, 11, 7, 16, 11, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AmbspSMK",
                             MyUserId = 1,
                             Name = "Cokoladni kolac46",
-                            RecipeCategoryId = 29,
-                            TotalCost = 15.23656f
+                            RecipeCategoryId = 1,
+                            RecommendedPrice = 0f,
+                            TotalCost = 7.004333f
                         },
                         new
                         {
                             Id = 47,
-                            CreatedDate = new DateTime(2021, 1, 24, 22, 12, 0, 0, DateTimeKind.Unspecified),
-                            Description = "KjmclsmS",
+                            CreatedDate = new DateTime(2021, 7, 17, 9, 35, 0, 0, DateTimeKind.Unspecified),
+                            Description = "lKLcASDj",
                             MyUserId = 1,
                             Name = "Ferrero47",
-                            RecipeCategoryId = 7,
-                            TotalCost = 71.53264f
+                            RecipeCategoryId = 32,
+                            RecommendedPrice = 0f,
+                            TotalCost = 94.53695f
                         },
                         new
                         {
                             Id = 48,
-                            CreatedDate = new DateTime(2021, 5, 23, 5, 12, 0, 0, DateTimeKind.Unspecified),
-                            Description = "mMKsbmgk",
+                            CreatedDate = new DateTime(2021, 9, 4, 15, 8, 0, 0, DateTimeKind.Unspecified),
+                            Description = "ADMaSame",
                             MyUserId = 1,
                             Name = "Pizza sa sirom 48",
-                            RecipeCategoryId = 13,
-                            TotalCost = 66.730225f
+                            RecipeCategoryId = 38,
+                            RecommendedPrice = 0f,
+                            TotalCost = 33.82736f
                         },
                         new
                         {
                             Id = 49,
-                            CreatedDate = new DateTime(2021, 8, 19, 3, 24, 0, 0, DateTimeKind.Unspecified),
-                            Description = "glhulhhJ",
+                            CreatedDate = new DateTime(2021, 9, 26, 20, 51, 0, 0, DateTimeKind.Unspecified),
+                            Description = "WdsgmMBA",
                             MyUserId = 1,
                             Name = "Rafaelo49",
-                            RecipeCategoryId = 41,
-                            TotalCost = 70.90285f
+                            RecipeCategoryId = 7,
+                            RecommendedPrice = 0f,
+                            TotalCost = 27.856323f
                         },
                         new
                         {
                             Id = 50,
-                            CreatedDate = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "tioIWLfg",
+                            CreatedDate = new DateTime(2021, 4, 16, 13, 44, 0, 0, DateTimeKind.Unspecified),
+                            Description = "hcSAaMWL",
                             MyUserId = 1,
                             Name = "Snickers50",
-                            RecipeCategoryId = 29,
-                            TotalCost = 4.2199564f
+                            RecipeCategoryId = 6,
+                            RecommendedPrice = 0f,
+                            TotalCost = 50.18937f
                         },
                         new
                         {
                             Id = 51,
-                            CreatedDate = new DateTime(2021, 7, 13, 11, 25, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Jesstfbl",
+                            CreatedDate = new DateTime(2021, 8, 8, 22, 47, 0, 0, DateTimeKind.Unspecified),
+                            Description = "JDjKaSlB",
                             MyUserId = 1,
                             Name = "Baklava51",
-                            RecipeCategoryId = 41,
-                            TotalCost = 54.622932f
+                            RecipeCategoryId = 49,
+                            RecommendedPrice = 0f,
+                            TotalCost = 80.93f
                         },
                         new
                         {
                             Id = 52,
-                            CreatedDate = new DateTime(2021, 7, 8, 1, 14, 0, 0, DateTimeKind.Unspecified),
-                            Description = "mKaLuuil",
+                            CreatedDate = new DateTime(2021, 3, 2, 14, 42, 0, 0, DateTimeKind.Unspecified),
+                            Description = "jrhJwJSw",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom52",
-                            RecipeCategoryId = 3,
-                            TotalCost = 19.041882f
+                            RecipeCategoryId = 18,
+                            RecommendedPrice = 0f,
+                            TotalCost = 95.37005f
                         },
                         new
                         {
                             Id = 53,
-                            CreatedDate = new DateTime(2021, 2, 4, 4, 2, 0, 0, DateTimeKind.Unspecified),
-                            Description = "dwmsKHzu",
+                            CreatedDate = new DateTime(2021, 9, 3, 20, 38, 0, 0, DateTimeKind.Unspecified),
+                            Description = "aSWmnKAr",
                             MyUserId = 1,
                             Name = "Saher torta53",
-                            RecipeCategoryId = 9,
-                            TotalCost = 96.680374f
+                            RecipeCategoryId = 11,
+                            RecommendedPrice = 0f,
+                            TotalCost = 20.80132f
                         },
                         new
                         {
                             Id = 54,
-                            CreatedDate = new DateTime(2021, 9, 9, 2, 30, 0, 0, DateTimeKind.Unspecified),
-                            Description = "cJWcdzLv",
+                            CreatedDate = new DateTime(2021, 7, 24, 1, 9, 0, 0, DateTimeKind.Unspecified),
+                            Description = "aAMJaSia",
                             MyUserId = 1,
                             Name = "Cokoladni kolac54",
-                            RecipeCategoryId = 39,
-                            TotalCost = 80.86046f
+                            RecipeCategoryId = 7,
+                            RecommendedPrice = 0f,
+                            TotalCost = 12.083485f
                         },
                         new
                         {
                             Id = 55,
-                            CreatedDate = new DateTime(2021, 8, 24, 3, 34, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WSJAWWLb",
+                            CreatedDate = new DateTime(2021, 7, 29, 23, 15, 0, 0, DateTimeKind.Unspecified),
+                            Description = "MdnSSWdg",
                             MyUserId = 1,
                             Name = "Ferrero55",
-                            RecipeCategoryId = 37,
-                            TotalCost = 2.4951057f
+                            RecipeCategoryId = 1,
+                            RecommendedPrice = 0f,
+                            TotalCost = 45.53082f
                         },
                         new
                         {
                             Id = 56,
-                            CreatedDate = new DateTime(2021, 2, 23, 14, 52, 0, 0, DateTimeKind.Unspecified),
-                            Description = "jMgWhokD",
+                            CreatedDate = new DateTime(2021, 9, 9, 9, 6, 0, 0, DateTimeKind.Unspecified),
+                            Description = "SMSAKIsu",
                             MyUserId = 1,
                             Name = "Pizza sa sirom 56",
-                            RecipeCategoryId = 43,
-                            TotalCost = 91.474686f
+                            RecipeCategoryId = 30,
+                            RecommendedPrice = 0f,
+                            TotalCost = 91.06939f
                         },
                         new
                         {
                             Id = 57,
-                            CreatedDate = new DateTime(2021, 2, 16, 17, 7, 0, 0, DateTimeKind.Unspecified),
-                            Description = "adSADHKS",
+                            CreatedDate = new DateTime(2021, 6, 23, 3, 23, 0, 0, DateTimeKind.Unspecified),
+                            Description = "prAdlvDW",
                             MyUserId = 1,
                             Name = "Rafaelo57",
-                            RecipeCategoryId = 16,
-                            TotalCost = 93.77735f
+                            RecipeCategoryId = 26,
+                            RecommendedPrice = 0f,
+                            TotalCost = 93.143f
                         },
                         new
                         {
                             Id = 58,
-                            CreatedDate = new DateTime(2021, 8, 17, 6, 35, 0, 0, DateTimeKind.Unspecified),
-                            Description = "HcoJvDiI",
+                            CreatedDate = new DateTime(2021, 9, 28, 6, 10, 0, 0, DateTimeKind.Unspecified),
+                            Description = "wAKeJrDB",
                             MyUserId = 1,
                             Name = "Snickers58",
-                            RecipeCategoryId = 17,
-                            TotalCost = 59.60504f
+                            RecipeCategoryId = 32,
+                            RecommendedPrice = 0f,
+                            TotalCost = 53.90234f
                         },
                         new
                         {
                             Id = 59,
-                            CreatedDate = new DateTime(2021, 4, 29, 4, 49, 0, 0, DateTimeKind.Unspecified),
-                            Description = "SWdKSlzo",
+                            CreatedDate = new DateTime(2021, 3, 13, 21, 33, 0, 0, DateTimeKind.Unspecified),
+                            Description = "hgSuwDHp",
                             MyUserId = 1,
                             Name = "Baklava59",
-                            RecipeCategoryId = 25,
-                            TotalCost = 76.82633f
+                            RecipeCategoryId = 44,
+                            RecommendedPrice = 0f,
+                            TotalCost = 56.234447f
                         },
                         new
                         {
                             Id = 60,
-                            CreatedDate = new DateTime(2021, 7, 1, 22, 8, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JlnSDKmJ",
+                            CreatedDate = new DateTime(2021, 7, 24, 0, 48, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AKvsSDDk",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom60",
-                            RecipeCategoryId = 26,
-                            TotalCost = 59.098656f
+                            RecipeCategoryId = 7,
+                            RecommendedPrice = 0f,
+                            TotalCost = 69.21973f
                         },
                         new
                         {
                             Id = 61,
-                            CreatedDate = new DateTime(2021, 5, 8, 16, 54, 0, 0, DateTimeKind.Unspecified),
-                            Description = "vWcaArSf",
+                            CreatedDate = new DateTime(2021, 11, 28, 13, 3, 0, 0, DateTimeKind.Unspecified),
+                            Description = "wAKWWeWw",
                             MyUserId = 1,
                             Name = "Saher torta61",
-                            RecipeCategoryId = 33,
-                            TotalCost = 95.74702f
+                            RecipeCategoryId = 29,
+                            RecommendedPrice = 0f,
+                            TotalCost = 3.9343092f
                         },
                         new
                         {
                             Id = 62,
-                            CreatedDate = new DateTime(2021, 9, 25, 20, 20, 0, 0, DateTimeKind.Unspecified),
-                            Description = "dWnJwfWk",
+                            CreatedDate = new DateTime(2021, 3, 2, 1, 17, 0, 0, DateTimeKind.Unspecified),
+                            Description = "womWgDtA",
                             MyUserId = 1,
                             Name = "Cokoladni kolac62",
-                            RecipeCategoryId = 49,
-                            TotalCost = 11.492152f
+                            RecipeCategoryId = 26,
+                            RecommendedPrice = 0f,
+                            TotalCost = 47.088184f
                         },
                         new
                         {
                             Id = 63,
-                            CreatedDate = new DateTime(2021, 10, 6, 20, 41, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JrWKlsrK",
+                            CreatedDate = new DateTime(2021, 5, 10, 16, 13, 0, 0, DateTimeKind.Unspecified),
+                            Description = "uuKJWcMr",
                             MyUserId = 1,
                             Name = "Ferrero63",
-                            RecipeCategoryId = 42,
-                            TotalCost = 48.835846f
+                            RecipeCategoryId = 9,
+                            RecommendedPrice = 0f,
+                            TotalCost = 33.75334f
                         },
                         new
                         {
                             Id = 64,
-                            CreatedDate = new DateTime(2021, 7, 13, 8, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JzJruAzJ",
+                            CreatedDate = new DateTime(2021, 5, 3, 7, 58, 0, 0, DateTimeKind.Unspecified),
+                            Description = "WBkWalhM",
                             MyUserId = 1,
                             Name = "Pizza sa sirom 64",
-                            RecipeCategoryId = 27,
-                            TotalCost = 37.942123f
+                            RecipeCategoryId = 48,
+                            RecommendedPrice = 0f,
+                            TotalCost = 69.77173f
                         },
                         new
                         {
                             Id = 65,
-                            CreatedDate = new DateTime(2021, 7, 18, 11, 30, 0, 0, DateTimeKind.Unspecified),
-                            Description = "IKrJAiet",
+                            CreatedDate = new DateTime(2021, 9, 10, 3, 42, 0, 0, DateTimeKind.Unspecified),
+                            Description = "nsJlKLKd",
                             MyUserId = 1,
                             Name = "Rafaelo65",
-                            RecipeCategoryId = 4,
-                            TotalCost = 59.34261f
+                            RecipeCategoryId = 36,
+                            RecommendedPrice = 0f,
+                            TotalCost = 70.806854f
                         },
                         new
                         {
                             Id = 66,
-                            CreatedDate = new DateTime(2021, 1, 31, 3, 24, 0, 0, DateTimeKind.Unspecified),
-                            Description = "KSAASWSA",
+                            CreatedDate = new DateTime(2021, 6, 5, 10, 46, 0, 0, DateTimeKind.Unspecified),
+                            Description = "rrAiJAjJ",
                             MyUserId = 1,
                             Name = "Snickers66",
-                            RecipeCategoryId = 20,
-                            TotalCost = 25.234814f
+                            RecipeCategoryId = 40,
+                            RecommendedPrice = 0f,
+                            TotalCost = 60.875965f
                         },
                         new
                         {
                             Id = 67,
-                            CreatedDate = new DateTime(2021, 1, 30, 7, 31, 0, 0, DateTimeKind.Unspecified),
-                            Description = "SdJjIWAS",
+                            CreatedDate = new DateTime(2021, 5, 22, 0, 30, 0, 0, DateTimeKind.Unspecified),
+                            Description = "iAWvISlv",
                             MyUserId = 1,
                             Name = "Baklava67",
-                            RecipeCategoryId = 18,
-                            TotalCost = 33.117516f
+                            RecipeCategoryId = 15,
+                            RecommendedPrice = 0f,
+                            TotalCost = 99.46047f
                         },
                         new
                         {
                             Id = 68,
-                            CreatedDate = new DateTime(2021, 9, 29, 4, 14, 0, 0, DateTimeKind.Unspecified),
-                            Description = "sntnzASg",
+                            CreatedDate = new DateTime(2021, 2, 22, 10, 57, 0, 0, DateTimeKind.Unspecified),
+                            Description = "WlamJfwm",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom68",
-                            RecipeCategoryId = 48,
-                            TotalCost = 81.900536f
+                            RecipeCategoryId = 44,
+                            RecommendedPrice = 0f,
+                            TotalCost = 86.39259f
                         },
                         new
                         {
                             Id = 69,
-                            CreatedDate = new DateTime(2021, 4, 22, 2, 27, 0, 0, DateTimeKind.Unspecified),
-                            Description = "suSMWAnD",
+                            CreatedDate = new DateTime(2021, 5, 11, 11, 43, 0, 0, DateTimeKind.Unspecified),
+                            Description = "hsWWtgSB",
                             MyUserId = 1,
                             Name = "Saher torta69",
-                            RecipeCategoryId = 45,
-                            TotalCost = 54.18482f
+                            RecipeCategoryId = 12,
+                            RecommendedPrice = 0f,
+                            TotalCost = 84.91534f
                         },
                         new
                         {
                             Id = 70,
-                            CreatedDate = new DateTime(2021, 8, 12, 15, 6, 0, 0, DateTimeKind.Unspecified),
-                            Description = "lDInJwSS",
+                            CreatedDate = new DateTime(2021, 11, 7, 15, 15, 0, 0, DateTimeKind.Unspecified),
+                            Description = "SAoJgJWW",
                             MyUserId = 1,
                             Name = "Cokoladni kolac70",
-                            RecipeCategoryId = 9,
-                            TotalCost = 18.05375f
+                            RecipeCategoryId = 49,
+                            RecommendedPrice = 0f,
+                            TotalCost = 50.7018f
                         },
                         new
                         {
                             Id = 71,
-                            CreatedDate = new DateTime(2021, 8, 24, 3, 4, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WuArbldf",
+                            CreatedDate = new DateTime(2021, 9, 16, 4, 3, 0, 0, DateTimeKind.Unspecified),
+                            Description = "spAemJer",
                             MyUserId = 1,
                             Name = "Ferrero71",
-                            RecipeCategoryId = 22,
-                            TotalCost = 75.958336f
+                            RecipeCategoryId = 42,
+                            RecommendedPrice = 0f,
+                            TotalCost = 12.587258f
                         },
                         new
                         {
                             Id = 72,
-                            CreatedDate = new DateTime(2021, 1, 7, 18, 10, 0, 0, DateTimeKind.Unspecified),
-                            Description = "dttSWSAm",
+                            CreatedDate = new DateTime(2021, 11, 3, 23, 37, 0, 0, DateTimeKind.Unspecified),
+                            Description = "gjSBLAil",
                             MyUserId = 1,
                             Name = "Pizza sa sirom 72",
-                            RecipeCategoryId = 38,
-                            TotalCost = 4.8176146f
+                            RecipeCategoryId = 39,
+                            RecommendedPrice = 0f,
+                            TotalCost = 25.83601f
                         },
                         new
                         {
                             Id = 73,
-                            CreatedDate = new DateTime(2021, 5, 4, 7, 5, 0, 0, DateTimeKind.Unspecified),
-                            Description = "lKAKJASW",
+                            CreatedDate = new DateTime(2021, 8, 20, 19, 19, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AHbtbvAb",
                             MyUserId = 1,
                             Name = "Rafaelo73",
-                            RecipeCategoryId = 41,
-                            TotalCost = 91.986855f
+                            RecipeCategoryId = 39,
+                            RecommendedPrice = 0f,
+                            TotalCost = 17.48901f
                         },
                         new
                         {
                             Id = 74,
-                            CreatedDate = new DateTime(2021, 7, 23, 15, 58, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WpSkJljJ",
+                            CreatedDate = new DateTime(2021, 6, 27, 3, 42, 0, 0, DateTimeKind.Unspecified),
+                            Description = "jzWfHWoL",
                             MyUserId = 1,
                             Name = "Snickers74",
-                            RecipeCategoryId = 12,
-                            TotalCost = 97.55053f
+                            RecipeCategoryId = 44,
+                            RecommendedPrice = 0f,
+                            TotalCost = 79.8778f
                         },
                         new
                         {
                             Id = 75,
-                            CreatedDate = new DateTime(2021, 9, 19, 9, 23, 0, 0, DateTimeKind.Unspecified),
-                            Description = "szWcItfg",
+                            CreatedDate = new DateTime(2021, 4, 10, 6, 29, 0, 0, DateTimeKind.Unspecified),
+                            Description = "SbMKWuDv",
                             MyUserId = 1,
                             Name = "Baklava75",
-                            RecipeCategoryId = 36,
-                            TotalCost = 18.940086f
+                            RecipeCategoryId = 8,
+                            RecommendedPrice = 0f,
+                            TotalCost = 25.27099f
                         },
                         new
                         {
                             Id = 76,
-                            CreatedDate = new DateTime(2021, 5, 22, 14, 50, 0, 0, DateTimeKind.Unspecified),
-                            Description = "pLLvwSWv",
+                            CreatedDate = new DateTime(2021, 9, 10, 10, 22, 0, 0, DateTimeKind.Unspecified),
+                            Description = "msSiwjWg",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom76",
-                            RecipeCategoryId = 49,
-                            TotalCost = 47.04238f
+                            RecipeCategoryId = 1,
+                            RecommendedPrice = 0f,
+                            TotalCost = 53.14427f
                         },
                         new
                         {
                             Id = 77,
-                            CreatedDate = new DateTime(2021, 8, 8, 21, 31, 0, 0, DateTimeKind.Unspecified),
-                            Description = "HBbjWmkW",
+                            CreatedDate = new DateTime(2021, 5, 20, 1, 42, 0, 0, DateTimeKind.Unspecified),
+                            Description = "DcKsSkSA",
                             MyUserId = 1,
                             Name = "Saher torta77",
-                            RecipeCategoryId = 29,
-                            TotalCost = 68.65635f
+                            RecipeCategoryId = 47,
+                            RecommendedPrice = 0f,
+                            TotalCost = 43.42471f
                         },
                         new
                         {
                             Id = 78,
-                            CreatedDate = new DateTime(2021, 8, 15, 10, 12, 0, 0, DateTimeKind.Unspecified),
-                            Description = "HMBSnLkS",
+                            CreatedDate = new DateTime(2021, 3, 4, 21, 4, 0, 0, DateTimeKind.Unspecified),
+                            Description = "SsJSWDWD",
                             MyUserId = 1,
                             Name = "Cokoladni kolac78",
-                            RecipeCategoryId = 9,
-                            TotalCost = 3.7450392f
+                            RecipeCategoryId = 39,
+                            RecommendedPrice = 0f,
+                            TotalCost = 20.081478f
                         },
                         new
                         {
                             Id = 79,
-                            CreatedDate = new DateTime(2021, 10, 11, 14, 19, 0, 0, DateTimeKind.Unspecified),
-                            Description = "iAisgAsL",
+                            CreatedDate = new DateTime(2021, 6, 6, 13, 2, 0, 0, DateTimeKind.Unspecified),
+                            Description = "JIMSWJSw",
                             MyUserId = 1,
                             Name = "Ferrero79",
-                            RecipeCategoryId = 27,
-                            TotalCost = 14.673566f
+                            RecipeCategoryId = 1,
+                            RecommendedPrice = 0f,
+                            TotalCost = 77.57864f
                         },
                         new
                         {
                             Id = 80,
-                            CreatedDate = new DateTime(2021, 1, 29, 2, 12, 0, 0, DateTimeKind.Unspecified),
-                            Description = "stlMepph",
+                            CreatedDate = new DateTime(2021, 4, 22, 16, 44, 0, 0, DateTimeKind.Unspecified),
+                            Description = "HJgWKpKD",
                             MyUserId = 1,
                             Name = "Pizza sa sirom 80",
-                            RecipeCategoryId = 15,
-                            TotalCost = 37.812687f
+                            RecipeCategoryId = 1,
+                            RecommendedPrice = 0f,
+                            TotalCost = 57.91352f
                         },
                         new
                         {
                             Id = 81,
-                            CreatedDate = new DateTime(2021, 2, 26, 23, 7, 0, 0, DateTimeKind.Unspecified),
-                            Description = "DBKsjaMk",
+                            CreatedDate = new DateTime(2021, 9, 4, 23, 3, 0, 0, DateTimeKind.Unspecified),
+                            Description = "JSDWLLgv",
                             MyUserId = 1,
                             Name = "Rafaelo81",
-                            RecipeCategoryId = 25,
-                            TotalCost = 97.20065f
+                            RecipeCategoryId = 8,
+                            RecommendedPrice = 0f,
+                            TotalCost = 26.771921f
                         },
                         new
                         {
                             Id = 82,
-                            CreatedDate = new DateTime(2021, 8, 15, 14, 5, 0, 0, DateTimeKind.Unspecified),
-                            Description = "lauJStLs",
+                            CreatedDate = new DateTime(2021, 2, 16, 21, 26, 0, 0, DateTimeKind.Unspecified),
+                            Description = "dWJgAhsn",
                             MyUserId = 1,
                             Name = "Snickers82",
-                            RecipeCategoryId = 41,
-                            TotalCost = 96.9062f
+                            RecipeCategoryId = 19,
+                            RecommendedPrice = 0f,
+                            TotalCost = 96.44061f
                         },
                         new
                         {
                             Id = 83,
-                            CreatedDate = new DateTime(2021, 4, 30, 15, 11, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JalWsznW",
+                            CreatedDate = new DateTime(2021, 5, 26, 10, 26, 0, 0, DateTimeKind.Unspecified),
+                            Description = "HgoWoADM",
                             MyUserId = 1,
                             Name = "Baklava83",
-                            RecipeCategoryId = 49,
-                            TotalCost = 76.19395f
+                            RecipeCategoryId = 48,
+                            RecommendedPrice = 0f,
+                            TotalCost = 93.42278f
                         },
                         new
                         {
                             Id = 84,
-                            CreatedDate = new DateTime(2021, 7, 5, 9, 5, 0, 0, DateTimeKind.Unspecified),
-                            Description = "djJDapDs",
+                            CreatedDate = new DateTime(2021, 8, 3, 16, 13, 0, 0, DateTimeKind.Unspecified),
+                            Description = "voWfeniA",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom84",
                             RecipeCategoryId = 12,
-                            TotalCost = 40.218124f
+                            RecommendedPrice = 0f,
+                            TotalCost = 17.027834f
                         },
                         new
                         {
                             Id = 85,
-                            CreatedDate = new DateTime(2021, 11, 20, 22, 31, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WujJoASh",
+                            CreatedDate = new DateTime(2021, 6, 13, 1, 18, 0, 0, DateTimeKind.Unspecified),
+                            Description = "MMepudWc",
                             MyUserId = 1,
                             Name = "Saher torta85",
-                            RecipeCategoryId = 36,
-                            TotalCost = 93.28846f
+                            RecipeCategoryId = 48,
+                            RecommendedPrice = 0f,
+                            TotalCost = 27.362118f
                         },
                         new
                         {
                             Id = 86,
-                            CreatedDate = new DateTime(2021, 9, 13, 20, 48, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WWggwDad",
+                            CreatedDate = new DateTime(2021, 1, 24, 15, 48, 0, 0, DateTimeKind.Unspecified),
+                            Description = "HwJSJAWD",
                             MyUserId = 1,
                             Name = "Cokoladni kolac86",
-                            RecipeCategoryId = 19,
-                            TotalCost = 82.9638f
+                            RecipeCategoryId = 41,
+                            RecommendedPrice = 0f,
+                            TotalCost = 70.42018f
                         },
                         new
                         {
                             Id = 87,
-                            CreatedDate = new DateTime(2021, 3, 17, 18, 45, 0, 0, DateTimeKind.Unspecified),
-                            Description = "BWnddrAd",
+                            CreatedDate = new DateTime(2021, 11, 1, 8, 25, 0, 0, DateTimeKind.Unspecified),
+                            Description = "hLaSbAAJ",
                             MyUserId = 1,
                             Name = "Ferrero87",
-                            RecipeCategoryId = 9,
-                            TotalCost = 11.405597f
+                            RecipeCategoryId = 5,
+                            RecommendedPrice = 0f,
+                            TotalCost = 26.42904f
                         },
                         new
                         {
                             Id = 88,
-                            CreatedDate = new DateTime(2021, 6, 23, 23, 43, 0, 0, DateTimeKind.Unspecified),
-                            Description = "mKnampjM",
+                            CreatedDate = new DateTime(2021, 7, 4, 11, 42, 0, 0, DateTimeKind.Unspecified),
+                            Description = "fWiBcbrI",
                             MyUserId = 1,
                             Name = "Pizza sa sirom 88",
-                            RecipeCategoryId = 15,
-                            TotalCost = 90.1356f
+                            RecipeCategoryId = 11,
+                            RecommendedPrice = 0f,
+                            TotalCost = 19.961584f
                         },
                         new
                         {
                             Id = 89,
-                            CreatedDate = new DateTime(2021, 8, 2, 18, 30, 0, 0, DateTimeKind.Unspecified),
-                            Description = "vbozieiJ",
+                            CreatedDate = new DateTime(2021, 10, 13, 17, 38, 0, 0, DateTimeKind.Unspecified),
+                            Description = "IllWdgJD",
                             MyUserId = 1,
                             Name = "Rafaelo89",
-                            RecipeCategoryId = 18,
-                            TotalCost = 61.145824f
+                            RecipeCategoryId = 17,
+                            RecommendedPrice = 0f,
+                            TotalCost = 22.377424f
                         },
                         new
                         {
                             Id = 90,
-                            CreatedDate = new DateTime(2021, 4, 3, 18, 57, 0, 0, DateTimeKind.Unspecified),
-                            Description = "tdtwogpA",
+                            CreatedDate = new DateTime(2021, 10, 29, 6, 40, 0, 0, DateTimeKind.Unspecified),
+                            Description = "zlaSfJaA",
                             MyUserId = 1,
                             Name = "Snickers90",
-                            RecipeCategoryId = 14,
-                            TotalCost = 97.20086f
+                            RecipeCategoryId = 37,
+                            RecommendedPrice = 0f,
+                            TotalCost = 43.94064f
                         },
                         new
                         {
                             Id = 91,
-                            CreatedDate = new DateTime(2021, 1, 24, 9, 13, 0, 0, DateTimeKind.Unspecified),
-                            Description = "iWclbAom",
+                            CreatedDate = new DateTime(2021, 10, 21, 14, 4, 0, 0, DateTimeKind.Unspecified),
+                            Description = "pnSlnBsb",
                             MyUserId = 1,
                             Name = "Baklava91",
-                            RecipeCategoryId = 39,
-                            TotalCost = 72.00748f
+                            RecipeCategoryId = 49,
+                            RecommendedPrice = 0f,
+                            TotalCost = 98.16664f
                         },
                         new
                         {
                             Id = 92,
-                            CreatedDate = new DateTime(2021, 11, 8, 15, 20, 0, 0, DateTimeKind.Unspecified),
-                            Description = "AgwDWSMn",
+                            CreatedDate = new DateTime(2021, 4, 1, 9, 47, 0, 0, DateTimeKind.Unspecified),
+                            Description = "jjjAMgaS",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom92",
-                            RecipeCategoryId = 41,
-                            TotalCost = 75.64413f
+                            RecipeCategoryId = 38,
+                            RecommendedPrice = 0f,
+                            TotalCost = 34.00072f
                         },
                         new
                         {
                             Id = 93,
-                            CreatedDate = new DateTime(2021, 7, 24, 20, 57, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WkSsoDJz",
+                            CreatedDate = new DateTime(2021, 2, 18, 15, 15, 0, 0, DateTimeKind.Unspecified),
+                            Description = "gSSSntzb",
                             MyUserId = 1,
                             Name = "Saher torta93",
-                            RecipeCategoryId = 46,
-                            TotalCost = 69.93323f
+                            RecipeCategoryId = 37,
+                            RecommendedPrice = 0f,
+                            TotalCost = 26.717514f
                         },
                         new
                         {
                             Id = 94,
-                            CreatedDate = new DateTime(2021, 11, 5, 2, 4, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WBADWkKg",
+                            CreatedDate = new DateTime(2021, 5, 18, 17, 8, 0, 0, DateTimeKind.Unspecified),
+                            Description = "WvjWAJKk",
                             MyUserId = 1,
                             Name = "Cokoladni kolac94",
-                            RecipeCategoryId = 4,
-                            TotalCost = 74.94989f
+                            RecipeCategoryId = 11,
+                            RecommendedPrice = 0f,
+                            TotalCost = 57.2293f
                         },
                         new
                         {
                             Id = 95,
-                            CreatedDate = new DateTime(2021, 2, 9, 3, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "sWSDnSJM",
+                            CreatedDate = new DateTime(2021, 11, 25, 8, 29, 0, 0, DateTimeKind.Unspecified),
+                            Description = "HmlKeeDm",
                             MyUserId = 1,
                             Name = "Ferrero95",
-                            RecipeCategoryId = 1,
-                            TotalCost = 40.892582f
+                            RecipeCategoryId = 42,
+                            RecommendedPrice = 0f,
+                            TotalCost = 18.625134f
                         },
                         new
                         {
                             Id = 96,
-                            CreatedDate = new DateTime(2021, 7, 1, 11, 42, 0, 0, DateTimeKind.Unspecified),
-                            Description = "SbScJShS",
+                            CreatedDate = new DateTime(2021, 6, 10, 13, 20, 0, 0, DateTimeKind.Unspecified),
+                            Description = "WjuAAiWp",
                             MyUserId = 1,
                             Name = "Pizza sa sirom 96",
-                            RecipeCategoryId = 28,
-                            TotalCost = 80.63323f
+                            RecipeCategoryId = 27,
+                            RecommendedPrice = 0f,
+                            TotalCost = 33.225937f
                         },
                         new
                         {
                             Id = 97,
-                            CreatedDate = new DateTime(2021, 9, 10, 5, 1, 0, 0, DateTimeKind.Unspecified),
-                            Description = "ifAevAjW",
+                            CreatedDate = new DateTime(2021, 11, 20, 10, 48, 0, 0, DateTimeKind.Unspecified),
+                            Description = "ltWhctHA",
                             MyUserId = 1,
                             Name = "Rafaelo97",
-                            RecipeCategoryId = 31,
-                            TotalCost = 84.62899f
+                            RecipeCategoryId = 48,
+                            RecommendedPrice = 0f,
+                            TotalCost = 84.41164f
                         },
                         new
                         {
                             Id = 98,
-                            CreatedDate = new DateTime(2021, 3, 22, 0, 45, 0, 0, DateTimeKind.Unspecified),
-                            Description = "IWJAIpoA",
+                            CreatedDate = new DateTime(2021, 10, 16, 7, 3, 0, 0, DateTimeKind.Unspecified),
+                            Description = "LMnArWip",
                             MyUserId = 1,
                             Name = "Snickers98",
-                            RecipeCategoryId = 13,
-                            TotalCost = 21.711735f
+                            RecipeCategoryId = 39,
+                            RecommendedPrice = 0f,
+                            TotalCost = 28.56823f
                         },
                         new
                         {
                             Id = 99,
-                            CreatedDate = new DateTime(2021, 2, 4, 20, 41, 0, 0, DateTimeKind.Unspecified),
-                            Description = "ssdIIpaS",
+                            CreatedDate = new DateTime(2021, 1, 23, 11, 23, 0, 0, DateTimeKind.Unspecified),
+                            Description = "vWbHJlBb",
                             MyUserId = 1,
                             Name = "Baklava99",
-                            RecipeCategoryId = 36,
-                            TotalCost = 67.2933f
+                            RecipeCategoryId = 17,
+                            RecommendedPrice = 0f,
+                            TotalCost = 39.353336f
                         },
                         new
                         {
                             Id = 100,
-                            CreatedDate = new DateTime(2021, 9, 1, 2, 46, 0, 0, DateTimeKind.Unspecified),
-                            Description = "pSSnLSSW",
+                            CreatedDate = new DateTime(2021, 6, 4, 16, 9, 0, 0, DateTimeKind.Unspecified),
+                            Description = "vDAeDDeW",
                             MyUserId = 1,
                             Name = "Palacinke sa nutelom100",
-                            RecipeCategoryId = 40,
-                            TotalCost = 54.963352f
+                            RecipeCategoryId = 27,
+                            RecommendedPrice = 0f,
+                            TotalCost = 58.81929f
                         });
                 });
 
@@ -3388,701 +3491,701 @@ namespace NormativeCalculator.Database.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 8, 28, 17, 10, 0, 0, DateTimeKind.Unspecified),
-                            Description = "eAKJWJAA",
+                            CreatedDate = new DateTime(2021, 6, 23, 9, 22, 0, 0, DateTimeKind.Unspecified),
+                            Description = "LSJpnkjv",
                             Name = "Palacinke1"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 3, 20, 16, 2, 0, 0, DateTimeKind.Unspecified),
-                            Description = "KzSwJdHp",
+                            CreatedDate = new DateTime(2021, 7, 17, 6, 11, 0, 0, DateTimeKind.Unspecified),
+                            Description = "eBJBrDAk",
                             Name = "Kolac2"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2021, 4, 28, 22, 40, 0, 0, DateTimeKind.Unspecified),
-                            Description = "aSAWADuA",
+                            CreatedDate = new DateTime(2021, 5, 23, 2, 53, 0, 0, DateTimeKind.Unspecified),
+                            Description = "JJMSeiwg",
                             Name = "Hamburger3"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2021, 4, 2, 15, 33, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JanHiAlW",
+                            CreatedDate = new DateTime(2021, 8, 15, 23, 52, 0, 0, DateTimeKind.Unspecified),
+                            Description = "BAfDzfsW",
                             Name = "Sendvic4"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2021, 10, 26, 13, 49, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JmtmJMJH",
+                            CreatedDate = new DateTime(2021, 7, 19, 21, 29, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AJApklJt",
                             Name = "Pitta5"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2021, 9, 10, 7, 51, 0, 0, DateTimeKind.Unspecified),
-                            Description = "kSAcwLib",
+                            CreatedDate = new DateTime(2021, 9, 28, 19, 31, 0, 0, DateTimeKind.Unspecified),
+                            Description = "vWSwDmjz",
                             Name = "Waffle6"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2021, 7, 31, 22, 39, 0, 0, DateTimeKind.Unspecified),
-                            Description = "DpsASsSK",
+                            CreatedDate = new DateTime(2021, 2, 17, 23, 23, 0, 0, DateTimeKind.Unspecified),
+                            Description = "mtnDSSKW",
                             Name = "Salata7"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2021, 2, 12, 7, 7, 0, 0, DateTimeKind.Unspecified),
-                            Description = "wJLKJkrd",
+                            CreatedDate = new DateTime(2021, 3, 5, 16, 58, 0, 0, DateTimeKind.Unspecified),
+                            Description = "wJKKekDD",
                             Name = "Pizza8"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2021, 2, 27, 4, 6, 0, 0, DateTimeKind.Unspecified),
-                            Description = "kDSsWvvf",
+                            CreatedDate = new DateTime(2021, 11, 5, 14, 52, 0, 0, DateTimeKind.Unspecified),
+                            Description = "eSWsfKDD",
                             Name = "Palacinke9"
                         },
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2021, 3, 7, 7, 37, 0, 0, DateTimeKind.Unspecified),
-                            Description = "rmuKaruc",
+                            CreatedDate = new DateTime(2021, 4, 22, 6, 33, 0, 0, DateTimeKind.Unspecified),
+                            Description = "nBpvzDWo",
                             Name = "Kolac10"
                         },
                         new
                         {
                             Id = 11,
-                            CreatedDate = new DateTime(2021, 2, 7, 18, 30, 0, 0, DateTimeKind.Unspecified),
-                            Description = "LleAlBlu",
+                            CreatedDate = new DateTime(2021, 6, 16, 3, 8, 0, 0, DateTimeKind.Unspecified),
+                            Description = "pWSdSJWn",
                             Name = "Hamburger11"
                         },
                         new
                         {
                             Id = 12,
-                            CreatedDate = new DateTime(2021, 4, 16, 5, 24, 0, 0, DateTimeKind.Unspecified),
-                            Description = "oIWacLca",
+                            CreatedDate = new DateTime(2021, 11, 26, 15, 35, 0, 0, DateTimeKind.Unspecified),
+                            Description = "fiLWsAoj",
                             Name = "Sendvic12"
                         },
                         new
                         {
                             Id = 13,
-                            CreatedDate = new DateTime(2021, 2, 16, 12, 35, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JzLAfIri",
+                            CreatedDate = new DateTime(2021, 2, 27, 4, 34, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AJuDSSpA",
                             Name = "Pitta13"
                         },
                         new
                         {
                             Id = 14,
-                            CreatedDate = new DateTime(2021, 9, 30, 9, 45, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JsswSiKh",
+                            CreatedDate = new DateTime(2021, 6, 10, 1, 36, 0, 0, DateTimeKind.Unspecified),
+                            Description = "tKoirsmw",
                             Name = "Waffle14"
                         },
                         new
                         {
                             Id = 15,
-                            CreatedDate = new DateTime(2021, 6, 12, 8, 26, 0, 0, DateTimeKind.Unspecified),
-                            Description = "wWAtfsSW",
+                            CreatedDate = new DateTime(2021, 2, 24, 2, 4, 0, 0, DateTimeKind.Unspecified),
+                            Description = "awzvwMhk",
                             Name = "Salata15"
                         },
                         new
                         {
                             Id = 16,
-                            CreatedDate = new DateTime(2021, 8, 24, 4, 5, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JrcASvcw",
+                            CreatedDate = new DateTime(2021, 9, 1, 12, 38, 0, 0, DateTimeKind.Unspecified),
+                            Description = "WpsSStcv",
                             Name = "Pizza16"
                         },
                         new
                         {
                             Id = 17,
-                            CreatedDate = new DateTime(2021, 4, 24, 16, 56, 0, 0, DateTimeKind.Unspecified),
-                            Description = "juhKwMAb",
+                            CreatedDate = new DateTime(2021, 9, 20, 3, 19, 0, 0, DateTimeKind.Unspecified),
+                            Description = "mfSAWaSW",
                             Name = "Palacinke17"
                         },
                         new
                         {
                             Id = 18,
-                            CreatedDate = new DateTime(2021, 3, 18, 16, 35, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JAWJiJzf",
+                            CreatedDate = new DateTime(2021, 4, 30, 12, 47, 0, 0, DateTimeKind.Unspecified),
+                            Description = "sbWdDWSJ",
                             Name = "Kolac18"
                         },
                         new
                         {
                             Id = 19,
-                            CreatedDate = new DateTime(2021, 9, 21, 16, 31, 0, 0, DateTimeKind.Unspecified),
-                            Description = "mJDnAHJh",
+                            CreatedDate = new DateTime(2021, 8, 18, 10, 6, 0, 0, DateTimeKind.Unspecified),
+                            Description = "MtWDvASW",
                             Name = "Hamburger19"
                         },
                         new
                         {
                             Id = 20,
-                            CreatedDate = new DateTime(2021, 8, 19, 12, 57, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JiJWKsBw",
+                            CreatedDate = new DateTime(2021, 5, 16, 23, 20, 0, 0, DateTimeKind.Unspecified),
+                            Description = "DjWpttDa",
                             Name = "Sendvic20"
                         },
                         new
                         {
                             Id = 21,
-                            CreatedDate = new DateTime(2021, 4, 6, 6, 52, 0, 0, DateTimeKind.Unspecified),
-                            Description = "oJnKbDHK",
+                            CreatedDate = new DateTime(2021, 2, 18, 11, 17, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AJAlSKJa",
                             Name = "Pitta21"
                         },
                         new
                         {
                             Id = 22,
-                            CreatedDate = new DateTime(2021, 11, 4, 13, 7, 0, 0, DateTimeKind.Unspecified),
-                            Description = "AJwjAAAD",
+                            CreatedDate = new DateTime(2021, 3, 19, 10, 51, 0, 0, DateTimeKind.Unspecified),
+                            Description = "SLcskdJj",
                             Name = "Waffle22"
                         },
                         new
                         {
                             Id = 23,
-                            CreatedDate = new DateTime(2021, 6, 18, 7, 2, 0, 0, DateTimeKind.Unspecified),
-                            Description = "MAJaMWKB",
+                            CreatedDate = new DateTime(2021, 7, 15, 23, 31, 0, 0, DateTimeKind.Unspecified),
+                            Description = "tWbrWdat",
                             Name = "Salata23"
                         },
                         new
                         {
                             Id = 24,
-                            CreatedDate = new DateTime(2021, 8, 28, 4, 13, 0, 0, DateTimeKind.Unspecified),
-                            Description = "AaSpignv",
+                            CreatedDate = new DateTime(2021, 7, 10, 13, 27, 0, 0, DateTimeKind.Unspecified),
+                            Description = "tAfuupkD",
                             Name = "Pizza24"
                         },
                         new
                         {
                             Id = 25,
-                            CreatedDate = new DateTime(2021, 1, 22, 12, 16, 0, 0, DateTimeKind.Unspecified),
-                            Description = "uwWowAen",
+                            CreatedDate = new DateTime(2021, 5, 11, 13, 54, 0, 0, DateTimeKind.Unspecified),
+                            Description = "bWtWLAfs",
                             Name = "Palacinke25"
                         },
                         new
                         {
                             Id = 26,
-                            CreatedDate = new DateTime(2021, 1, 5, 6, 49, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WSubiASW",
+                            CreatedDate = new DateTime(2021, 4, 18, 12, 20, 0, 0, DateTimeKind.Unspecified),
+                            Description = "wWiDSnKD",
                             Name = "Kolac26"
                         },
                         new
                         {
                             Id = 27,
-                            CreatedDate = new DateTime(2021, 1, 9, 4, 56, 0, 0, DateTimeKind.Unspecified),
-                            Description = "HJJSLBDD",
+                            CreatedDate = new DateTime(2021, 3, 2, 5, 24, 0, 0, DateTimeKind.Unspecified),
+                            Description = "KvSWrSkS",
                             Name = "Hamburger27"
                         },
                         new
                         {
                             Id = 28,
-                            CreatedDate = new DateTime(2021, 2, 15, 23, 54, 0, 0, DateTimeKind.Unspecified),
-                            Description = "pJcbbruS",
+                            CreatedDate = new DateTime(2021, 7, 2, 0, 4, 0, 0, DateTimeKind.Unspecified),
+                            Description = "JKLAswWA",
                             Name = "Sendvic28"
                         },
                         new
                         {
                             Id = 29,
-                            CreatedDate = new DateTime(2021, 3, 5, 10, 3, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WdIarkDb",
+                            CreatedDate = new DateTime(2021, 4, 8, 21, 37, 0, 0, DateTimeKind.Unspecified),
+                            Description = "JdvBAAsW",
                             Name = "Pitta29"
                         },
                         new
                         {
                             Id = 30,
-                            CreatedDate = new DateTime(2021, 8, 31, 0, 41, 0, 0, DateTimeKind.Unspecified),
-                            Description = "LsbStDsI",
+                            CreatedDate = new DateTime(2021, 11, 1, 22, 16, 0, 0, DateTimeKind.Unspecified),
+                            Description = "wHLjMvBf",
                             Name = "Waffle30"
                         },
                         new
                         {
                             Id = 31,
-                            CreatedDate = new DateTime(2021, 6, 26, 6, 33, 0, 0, DateTimeKind.Unspecified),
-                            Description = "snHvmsDL",
+                            CreatedDate = new DateTime(2021, 9, 13, 5, 7, 0, 0, DateTimeKind.Unspecified),
+                            Description = "sDLDtzSu",
                             Name = "Salata31"
                         },
                         new
                         {
                             Id = 32,
-                            CreatedDate = new DateTime(2021, 8, 3, 20, 51, 0, 0, DateTimeKind.Unspecified),
-                            Description = "MdWSSdlJ",
+                            CreatedDate = new DateTime(2021, 10, 15, 19, 32, 0, 0, DateTimeKind.Unspecified),
+                            Description = "sJInLuMa",
                             Name = "Pizza32"
                         },
                         new
                         {
                             Id = 33,
-                            CreatedDate = new DateTime(2021, 3, 1, 9, 43, 0, 0, DateTimeKind.Unspecified),
-                            Description = "BWzfMSrz",
+                            CreatedDate = new DateTime(2021, 11, 8, 7, 26, 0, 0, DateTimeKind.Unspecified),
+                            Description = "DHSJLbSJ",
                             Name = "Palacinke33"
                         },
                         new
                         {
                             Id = 34,
-                            CreatedDate = new DateTime(2021, 5, 13, 15, 45, 0, 0, DateTimeKind.Unspecified),
-                            Description = "kLDAAJgW",
+                            CreatedDate = new DateTime(2021, 2, 28, 11, 4, 0, 0, DateTimeKind.Unspecified),
+                            Description = "cmoWWbJs",
                             Name = "Kolac34"
                         },
                         new
                         {
                             Id = 35,
-                            CreatedDate = new DateTime(2021, 9, 25, 23, 42, 0, 0, DateTimeKind.Unspecified),
-                            Description = "umWKHWwh",
+                            CreatedDate = new DateTime(2021, 11, 15, 7, 37, 0, 0, DateTimeKind.Unspecified),
+                            Description = "aJrASWfj",
                             Name = "Hamburger35"
                         },
                         new
                         {
                             Id = 36,
-                            CreatedDate = new DateTime(2021, 6, 21, 14, 8, 0, 0, DateTimeKind.Unspecified),
-                            Description = "wSfmmIkW",
+                            CreatedDate = new DateTime(2021, 7, 29, 10, 43, 0, 0, DateTimeKind.Unspecified),
+                            Description = "zadWgdSe",
                             Name = "Sendvic36"
                         },
                         new
                         {
                             Id = 37,
-                            CreatedDate = new DateTime(2021, 6, 25, 16, 25, 0, 0, DateTimeKind.Unspecified),
-                            Description = "guvAelMS",
+                            CreatedDate = new DateTime(2021, 2, 11, 5, 59, 0, 0, DateTimeKind.Unspecified),
+                            Description = "KLjlwImr",
                             Name = "Pitta37"
                         },
                         new
                         {
                             Id = 38,
-                            CreatedDate = new DateTime(2021, 7, 31, 17, 34, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Aljuwdsn",
+                            CreatedDate = new DateTime(2021, 6, 30, 19, 9, 0, 0, DateTimeKind.Unspecified),
+                            Description = "KkAfgSJz",
                             Name = "Waffle38"
                         },
                         new
                         {
                             Id = 39,
-                            CreatedDate = new DateTime(2021, 7, 16, 3, 19, 0, 0, DateTimeKind.Unspecified),
-                            Description = "SirDtsSK",
+                            CreatedDate = new DateTime(2021, 3, 24, 2, 48, 0, 0, DateTimeKind.Unspecified),
+                            Description = "asmfdbtu",
                             Name = "Salata39"
                         },
                         new
                         {
                             Id = 40,
-                            CreatedDate = new DateTime(2021, 11, 26, 15, 12, 0, 0, DateTimeKind.Unspecified),
-                            Description = "knJWDdjv",
+                            CreatedDate = new DateTime(2021, 10, 27, 18, 37, 0, 0, DateTimeKind.Unspecified),
+                            Description = "BJoLSAAW",
                             Name = "Pizza40"
                         },
                         new
                         {
                             Id = 41,
-                            CreatedDate = new DateTime(2021, 8, 19, 1, 19, 0, 0, DateTimeKind.Unspecified),
-                            Description = "SjtekvAh",
+                            CreatedDate = new DateTime(2021, 9, 18, 7, 17, 0, 0, DateTimeKind.Unspecified),
+                            Description = "zkMSLADk",
                             Name = "Palacinke41"
                         },
                         new
                         {
                             Id = 42,
-                            CreatedDate = new DateTime(2021, 3, 27, 23, 14, 0, 0, DateTimeKind.Unspecified),
-                            Description = "rSLzKdHv",
+                            CreatedDate = new DateTime(2021, 7, 6, 4, 58, 0, 0, DateTimeKind.Unspecified),
+                            Description = "wafvWDcw",
                             Name = "Kolac42"
                         },
                         new
                         {
                             Id = 43,
-                            CreatedDate = new DateTime(2021, 3, 17, 8, 33, 0, 0, DateTimeKind.Unspecified),
-                            Description = "DLpdwSuH",
+                            CreatedDate = new DateTime(2021, 1, 4, 18, 8, 0, 0, DateTimeKind.Unspecified),
+                            Description = "uSSKSSbS",
                             Name = "Hamburger43"
                         },
                         new
                         {
                             Id = 44,
-                            CreatedDate = new DateTime(2021, 6, 4, 21, 2, 0, 0, DateTimeKind.Unspecified),
-                            Description = "sLAIWSjL",
+                            CreatedDate = new DateTime(2021, 5, 9, 3, 12, 0, 0, DateTimeKind.Unspecified),
+                            Description = "sIWSAvtM",
                             Name = "Sendvic44"
                         },
                         new
                         {
                             Id = 45,
-                            CreatedDate = new DateTime(2021, 5, 24, 7, 57, 0, 0, DateTimeKind.Unspecified),
-                            Description = "bWJnAncB",
+                            CreatedDate = new DateTime(2021, 7, 17, 11, 31, 0, 0, DateTimeKind.Unspecified),
+                            Description = "ASWAcWWA",
                             Name = "Pitta45"
                         },
                         new
                         {
                             Id = 46,
-                            CreatedDate = new DateTime(2021, 11, 26, 15, 17, 0, 0, DateTimeKind.Unspecified),
-                            Description = "wilvWAWg",
+                            CreatedDate = new DateTime(2021, 8, 12, 4, 14, 0, 0, DateTimeKind.Unspecified),
+                            Description = "tcJdASAK",
                             Name = "Waffle46"
                         },
                         new
                         {
                             Id = 47,
-                            CreatedDate = new DateTime(2021, 8, 26, 15, 20, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JktWKgSa",
+                            CreatedDate = new DateTime(2021, 8, 28, 23, 51, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AIzpMJhS",
                             Name = "Salata47"
                         },
                         new
                         {
                             Id = 48,
-                            CreatedDate = new DateTime(2021, 3, 31, 20, 57, 0, 0, DateTimeKind.Unspecified),
-                            Description = "IAStAJKu",
+                            CreatedDate = new DateTime(2021, 4, 3, 12, 15, 0, 0, DateTimeKind.Unspecified),
+                            Description = "jjwbImAd",
                             Name = "Pizza48"
                         },
                         new
                         {
                             Id = 49,
-                            CreatedDate = new DateTime(2021, 1, 8, 2, 42, 0, 0, DateTimeKind.Unspecified),
-                            Description = "KDvDpuAo",
+                            CreatedDate = new DateTime(2021, 7, 9, 23, 48, 0, 0, DateTimeKind.Unspecified),
+                            Description = "JjSSpgzS",
                             Name = "Palacinke49"
                         },
                         new
                         {
                             Id = 50,
-                            CreatedDate = new DateTime(2021, 1, 29, 8, 44, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WWWouWcS",
+                            CreatedDate = new DateTime(2021, 3, 19, 14, 28, 0, 0, DateTimeKind.Unspecified),
+                            Description = "csuWeSWD",
                             Name = "Kolac50"
                         },
                         new
                         {
                             Id = 51,
-                            CreatedDate = new DateTime(2021, 4, 13, 10, 29, 0, 0, DateTimeKind.Unspecified),
-                            Description = "csjtKDeM",
+                            CreatedDate = new DateTime(2021, 5, 15, 17, 16, 0, 0, DateTimeKind.Unspecified),
+                            Description = "egbAWdDW",
                             Name = "Hamburger51"
                         },
                         new
                         {
                             Id = 52,
-                            CreatedDate = new DateTime(2021, 5, 10, 14, 13, 0, 0, DateTimeKind.Unspecified),
-                            Description = "LJwDSWWD",
+                            CreatedDate = new DateTime(2021, 5, 12, 10, 3, 0, 0, DateTimeKind.Unspecified),
+                            Description = "ISJLkKWf",
                             Name = "Sendvic52"
                         },
                         new
                         {
                             Id = 53,
-                            CreatedDate = new DateTime(2021, 6, 2, 17, 19, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JSHJeIIk",
+                            CreatedDate = new DateTime(2021, 1, 6, 19, 9, 0, 0, DateTimeKind.Unspecified),
+                            Description = "rKzSlDlK",
                             Name = "Pitta53"
                         },
                         new
                         {
                             Id = 54,
-                            CreatedDate = new DateTime(2021, 11, 3, 16, 43, 0, 0, DateTimeKind.Unspecified),
-                            Description = "DdMDDSWL",
+                            CreatedDate = new DateTime(2021, 6, 1, 0, 35, 0, 0, DateTimeKind.Unspecified),
+                            Description = "sSnzrsJl",
                             Name = "Waffle54"
                         },
                         new
                         {
                             Id = 55,
-                            CreatedDate = new DateTime(2021, 1, 30, 5, 29, 0, 0, DateTimeKind.Unspecified),
-                            Description = "SWrKWiSl",
+                            CreatedDate = new DateTime(2021, 7, 6, 23, 22, 0, 0, DateTimeKind.Unspecified),
+                            Description = "uSSWlaeK",
                             Name = "Salata55"
                         },
                         new
                         {
                             Id = 56,
-                            CreatedDate = new DateTime(2021, 9, 22, 4, 2, 0, 0, DateTimeKind.Unspecified),
-                            Description = "MAhDAAHe",
+                            CreatedDate = new DateTime(2021, 4, 6, 22, 31, 0, 0, DateTimeKind.Unspecified),
+                            Description = "jJAstDAA",
                             Name = "Pizza56"
                         },
                         new
                         {
                             Id = 57,
-                            CreatedDate = new DateTime(2021, 8, 31, 8, 59, 0, 0, DateTimeKind.Unspecified),
-                            Description = "iaWKozLl",
+                            CreatedDate = new DateTime(2021, 1, 2, 6, 40, 0, 0, DateTimeKind.Unspecified),
+                            Description = "KnzBDdnf",
                             Name = "Palacinke57"
                         },
                         new
                         {
                             Id = 58,
-                            CreatedDate = new DateTime(2021, 7, 30, 18, 27, 0, 0, DateTimeKind.Unspecified),
-                            Description = "KWAAJetk",
+                            CreatedDate = new DateTime(2021, 10, 11, 13, 26, 0, 0, DateTimeKind.Unspecified),
+                            Description = "JsrmIKJz",
                             Name = "Kolac58"
                         },
                         new
                         {
                             Id = 59,
-                            CreatedDate = new DateTime(2021, 3, 12, 3, 16, 0, 0, DateTimeKind.Unspecified),
-                            Description = "hJsSscJs",
+                            CreatedDate = new DateTime(2021, 4, 7, 9, 58, 0, 0, DateTimeKind.Unspecified),
+                            Description = "rDsmWaJr",
                             Name = "Hamburger59"
                         },
                         new
                         {
                             Id = 60,
-                            CreatedDate = new DateTime(2021, 10, 22, 6, 59, 0, 0, DateTimeKind.Unspecified),
-                            Description = "avSDHloI",
+                            CreatedDate = new DateTime(2021, 4, 3, 9, 8, 0, 0, DateTimeKind.Unspecified),
+                            Description = "wJBAdJjK",
                             Name = "Sendvic60"
                         },
                         new
                         {
                             Id = 61,
-                            CreatedDate = new DateTime(2021, 9, 2, 2, 55, 0, 0, DateTimeKind.Unspecified),
-                            Description = "uISDSbBk",
+                            CreatedDate = new DateTime(2021, 7, 30, 14, 6, 0, 0, DateTimeKind.Unspecified),
+                            Description = "kWWdAeAr",
                             Name = "Pitta61"
                         },
                         new
                         {
                             Id = 62,
-                            CreatedDate = new DateTime(2021, 6, 15, 22, 45, 0, 0, DateTimeKind.Unspecified),
-                            Description = "LeDSorJI",
+                            CreatedDate = new DateTime(2021, 7, 17, 23, 19, 0, 0, DateTimeKind.Unspecified),
+                            Description = "WSWKHSKS",
                             Name = "Waffle62"
                         },
                         new
                         {
                             Id = 63,
-                            CreatedDate = new DateTime(2021, 11, 7, 21, 3, 0, 0, DateTimeKind.Unspecified),
-                            Description = "gAzosSJf",
+                            CreatedDate = new DateTime(2021, 10, 25, 19, 20, 0, 0, DateTimeKind.Unspecified),
+                            Description = "fwbAgmJK",
                             Name = "Salata63"
                         },
                         new
                         {
                             Id = 64,
-                            CreatedDate = new DateTime(2021, 5, 28, 3, 25, 0, 0, DateTimeKind.Unspecified),
-                            Description = "flKJSnDp",
+                            CreatedDate = new DateTime(2021, 1, 4, 16, 35, 0, 0, DateTimeKind.Unspecified),
+                            Description = "ufdJDWca",
                             Name = "Pizza64"
                         },
                         new
                         {
                             Id = 65,
-                            CreatedDate = new DateTime(2021, 8, 10, 1, 3, 0, 0, DateTimeKind.Unspecified),
-                            Description = "HdeInAmf",
+                            CreatedDate = new DateTime(2021, 7, 8, 1, 25, 0, 0, DateTimeKind.Unspecified),
+                            Description = "mKbaAKDl",
                             Name = "Palacinke65"
                         },
                         new
                         {
                             Id = 66,
-                            CreatedDate = new DateTime(2021, 6, 4, 21, 39, 0, 0, DateTimeKind.Unspecified),
-                            Description = "ehfmcihH",
+                            CreatedDate = new DateTime(2021, 7, 30, 7, 35, 0, 0, DateTimeKind.Unspecified),
+                            Description = "IgKKlfWS",
                             Name = "Kolac66"
                         },
                         new
                         {
                             Id = 67,
-                            CreatedDate = new DateTime(2021, 2, 15, 19, 40, 0, 0, DateTimeKind.Unspecified),
-                            Description = "IAsSIazW",
+                            CreatedDate = new DateTime(2021, 1, 19, 8, 8, 0, 0, DateTimeKind.Unspecified),
+                            Description = "gJtDLrSS",
                             Name = "Hamburger67"
                         },
                         new
                         {
                             Id = 68,
-                            CreatedDate = new DateTime(2021, 9, 3, 20, 49, 0, 0, DateTimeKind.Unspecified),
-                            Description = "dAuSsHAD",
+                            CreatedDate = new DateTime(2021, 11, 27, 17, 30, 0, 0, DateTimeKind.Unspecified),
+                            Description = "JAWIbeIJ",
                             Name = "Sendvic68"
                         },
                         new
                         {
                             Id = 69,
-                            CreatedDate = new DateTime(2021, 1, 5, 10, 2, 0, 0, DateTimeKind.Unspecified),
-                            Description = "DWclmSDn",
+                            CreatedDate = new DateTime(2021, 6, 23, 17, 58, 0, 0, DateTimeKind.Unspecified),
+                            Description = "WKAeIJWB",
                             Name = "Pitta69"
                         },
                         new
                         {
                             Id = 70,
-                            CreatedDate = new DateTime(2021, 11, 19, 18, 17, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WpjkWwcS",
+                            CreatedDate = new DateTime(2021, 6, 26, 15, 21, 0, 0, DateTimeKind.Unspecified),
+                            Description = "WIcDWfDn",
                             Name = "Waffle70"
                         },
                         new
                         {
                             Id = 71,
-                            CreatedDate = new DateTime(2021, 3, 1, 11, 39, 0, 0, DateTimeKind.Unspecified),
-                            Description = "eMdWILDH",
+                            CreatedDate = new DateTime(2021, 7, 22, 6, 38, 0, 0, DateTimeKind.Unspecified),
+                            Description = "zvASusiA",
                             Name = "Salata71"
                         },
                         new
                         {
                             Id = 72,
-                            CreatedDate = new DateTime(2021, 8, 22, 23, 21, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JuJDsDSz",
+                            CreatedDate = new DateTime(2021, 3, 23, 8, 10, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AegSJAkS",
                             Name = "Pizza72"
                         },
                         new
                         {
                             Id = 73,
-                            CreatedDate = new DateTime(2021, 8, 1, 13, 16, 0, 0, DateTimeKind.Unspecified),
-                            Description = "HBJtgMuW",
+                            CreatedDate = new DateTime(2021, 2, 7, 9, 58, 0, 0, DateTimeKind.Unspecified),
+                            Description = "rWDsWDLu",
                             Name = "Palacinke73"
                         },
                         new
                         {
                             Id = 74,
-                            CreatedDate = new DateTime(2021, 9, 24, 1, 18, 0, 0, DateTimeKind.Unspecified),
-                            Description = "vibwSleW",
+                            CreatedDate = new DateTime(2021, 9, 19, 15, 28, 0, 0, DateTimeKind.Unspecified),
+                            Description = "fLJcnHmW",
                             Name = "Kolac74"
                         },
                         new
                         {
                             Id = 75,
-                            CreatedDate = new DateTime(2021, 1, 1, 11, 38, 0, 0, DateTimeKind.Unspecified),
-                            Description = "SzSKDAKW",
+                            CreatedDate = new DateTime(2021, 7, 27, 16, 3, 0, 0, DateTimeKind.Unspecified),
+                            Description = "uutWDhAr",
                             Name = "Hamburger75"
                         },
                         new
                         {
                             Id = 76,
-                            CreatedDate = new DateTime(2021, 1, 10, 7, 37, 0, 0, DateTimeKind.Unspecified),
-                            Description = "htWAdAIh",
+                            CreatedDate = new DateTime(2021, 7, 14, 6, 19, 0, 0, DateTimeKind.Unspecified),
+                            Description = "WDiAJSSn",
                             Name = "Sendvic76"
                         },
                         new
                         {
                             Id = 77,
-                            CreatedDate = new DateTime(2021, 8, 21, 4, 33, 0, 0, DateTimeKind.Unspecified),
-                            Description = "HKKdSWSi",
+                            CreatedDate = new DateTime(2021, 3, 15, 16, 42, 0, 0, DateTimeKind.Unspecified),
+                            Description = "DrHagdHL",
                             Name = "Pitta77"
                         },
                         new
                         {
                             Id = 78,
-                            CreatedDate = new DateTime(2021, 1, 14, 9, 59, 0, 0, DateTimeKind.Unspecified),
-                            Description = "AetJIbLu",
+                            CreatedDate = new DateTime(2021, 3, 9, 20, 18, 0, 0, DateTimeKind.Unspecified),
+                            Description = "DeBKLgHn",
                             Name = "Waffle78"
                         },
                         new
                         {
                             Id = 79,
-                            CreatedDate = new DateTime(2021, 4, 6, 20, 16, 0, 0, DateTimeKind.Unspecified),
-                            Description = "phSaJeAS",
+                            CreatedDate = new DateTime(2021, 11, 22, 1, 56, 0, 0, DateTimeKind.Unspecified),
+                            Description = "SrBApWgi",
                             Name = "Salata79"
                         },
                         new
                         {
                             Id = 80,
-                            CreatedDate = new DateTime(2021, 1, 24, 20, 59, 0, 0, DateTimeKind.Unspecified),
-                            Description = "KdlJpBMw",
+                            CreatedDate = new DateTime(2021, 8, 28, 9, 39, 0, 0, DateTimeKind.Unspecified),
+                            Description = "iSAbvgWn",
                             Name = "Pizza80"
                         },
                         new
                         {
                             Id = 81,
-                            CreatedDate = new DateTime(2021, 4, 9, 15, 29, 0, 0, DateTimeKind.Unspecified),
-                            Description = "tJScHaAW",
+                            CreatedDate = new DateTime(2021, 7, 19, 12, 29, 0, 0, DateTimeKind.Unspecified),
+                            Description = "jssSDmHr",
                             Name = "Palacinke81"
                         },
                         new
                         {
                             Id = 82,
-                            CreatedDate = new DateTime(2021, 9, 8, 7, 58, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JscwpgAf",
+                            CreatedDate = new DateTime(2021, 10, 27, 17, 9, 0, 0, DateTimeKind.Unspecified),
+                            Description = "SBaAWAww",
                             Name = "Kolac82"
                         },
                         new
                         {
                             Id = 83,
-                            CreatedDate = new DateTime(2021, 2, 8, 21, 11, 0, 0, DateTimeKind.Unspecified),
-                            Description = "BkBADWnK",
+                            CreatedDate = new DateTime(2021, 11, 21, 0, 15, 0, 0, DateTimeKind.Unspecified),
+                            Description = "MMJnnhSW",
                             Name = "Hamburger83"
                         },
                         new
                         {
                             Id = 84,
-                            CreatedDate = new DateTime(2021, 2, 5, 1, 19, 0, 0, DateTimeKind.Unspecified),
-                            Description = "MWoHsdAS",
+                            CreatedDate = new DateTime(2021, 1, 21, 7, 9, 0, 0, DateTimeKind.Unspecified),
+                            Description = "jwSwjSzs",
                             Name = "Sendvic84"
                         },
                         new
                         {
                             Id = 85,
-                            CreatedDate = new DateTime(2021, 5, 20, 14, 12, 0, 0, DateTimeKind.Unspecified),
-                            Description = "jMmAkWJo",
+                            CreatedDate = new DateTime(2021, 6, 20, 4, 59, 0, 0, DateTimeKind.Unspecified),
+                            Description = "pntAHSnK",
                             Name = "Pitta85"
                         },
                         new
                         {
                             Id = 86,
-                            CreatedDate = new DateTime(2021, 2, 16, 16, 20, 0, 0, DateTimeKind.Unspecified),
-                            Description = "nDtvctSS",
+                            CreatedDate = new DateTime(2021, 5, 4, 19, 4, 0, 0, DateTimeKind.Unspecified),
+                            Description = "HkKWWSDm",
                             Name = "Waffle86"
                         },
                         new
                         {
                             Id = 87,
-                            CreatedDate = new DateTime(2021, 3, 4, 3, 31, 0, 0, DateTimeKind.Unspecified),
-                            Description = "jfkfDWAD",
+                            CreatedDate = new DateTime(2021, 10, 10, 0, 23, 0, 0, DateTimeKind.Unspecified),
+                            Description = "iufDlADb",
                             Name = "Salata87"
                         },
                         new
                         {
                             Id = 88,
-                            CreatedDate = new DateTime(2021, 3, 26, 17, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WmhcAjAK",
+                            CreatedDate = new DateTime(2021, 6, 10, 6, 51, 0, 0, DateTimeKind.Unspecified),
+                            Description = "uwJDvjge",
                             Name = "Pizza88"
                         },
                         new
                         {
                             Id = 89,
-                            CreatedDate = new DateTime(2021, 4, 14, 10, 15, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WenvASJJ",
+                            CreatedDate = new DateTime(2021, 7, 23, 11, 41, 0, 0, DateTimeKind.Unspecified),
+                            Description = "eKirBDIj",
                             Name = "Palacinke89"
                         },
                         new
                         {
                             Id = 90,
-                            CreatedDate = new DateTime(2021, 1, 4, 19, 39, 0, 0, DateTimeKind.Unspecified),
-                            Description = "smSauLDD",
+                            CreatedDate = new DateTime(2021, 8, 11, 9, 6, 0, 0, DateTimeKind.Unspecified),
+                            Description = "JrWduitK",
                             Name = "Kolac90"
                         },
                         new
                         {
                             Id = 91,
-                            CreatedDate = new DateTime(2021, 9, 19, 5, 9, 0, 0, DateTimeKind.Unspecified),
-                            Description = "WSsrAKSl",
+                            CreatedDate = new DateTime(2021, 7, 28, 4, 2, 0, 0, DateTimeKind.Unspecified),
+                            Description = "MDpIDAlI",
                             Name = "Hamburger91"
                         },
                         new
                         {
                             Id = 92,
-                            CreatedDate = new DateTime(2021, 10, 24, 21, 58, 0, 0, DateTimeKind.Unspecified),
-                            Description = "uHpWJWDe",
+                            CreatedDate = new DateTime(2021, 3, 31, 16, 33, 0, 0, DateTimeKind.Unspecified),
+                            Description = "nsejDJhw",
                             Name = "Sendvic92"
                         },
                         new
                         {
                             Id = 93,
-                            CreatedDate = new DateTime(2021, 5, 22, 14, 18, 0, 0, DateTimeKind.Unspecified),
-                            Description = "wSSSfkKm",
+                            CreatedDate = new DateTime(2021, 3, 26, 9, 11, 0, 0, DateTimeKind.Unspecified),
+                            Description = "eHWcslAj",
                             Name = "Pitta93"
                         },
                         new
                         {
                             Id = 94,
-                            CreatedDate = new DateTime(2021, 8, 22, 20, 20, 0, 0, DateTimeKind.Unspecified),
-                            Description = "ksSJpAjK",
+                            CreatedDate = new DateTime(2021, 11, 18, 17, 39, 0, 0, DateTimeKind.Unspecified),
+                            Description = "WAJMJAJl",
                             Name = "Waffle94"
                         },
                         new
                         {
                             Id = 95,
-                            CreatedDate = new DateTime(2021, 3, 27, 12, 17, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JSedJiWS",
+                            CreatedDate = new DateTime(2021, 3, 31, 4, 30, 0, 0, DateTimeKind.Unspecified),
+                            Description = "eiJLJpDi",
                             Name = "Salata95"
                         },
                         new
                         {
                             Id = 96,
-                            CreatedDate = new DateTime(2021, 3, 6, 2, 33, 0, 0, DateTimeKind.Unspecified),
-                            Description = "hbakJAfW",
+                            CreatedDate = new DateTime(2021, 3, 4, 7, 57, 0, 0, DateTimeKind.Unspecified),
+                            Description = "pscjJWkA",
                             Name = "Pizza96"
                         },
                         new
                         {
                             Id = 97,
-                            CreatedDate = new DateTime(2021, 4, 18, 2, 10, 0, 0, DateTimeKind.Unspecified),
-                            Description = "HKDKaKuJ",
+                            CreatedDate = new DateTime(2021, 8, 9, 9, 38, 0, 0, DateTimeKind.Unspecified),
+                            Description = "igWJwreH",
                             Name = "Palacinke97"
                         },
                         new
                         {
                             Id = 98,
-                            CreatedDate = new DateTime(2021, 9, 18, 5, 8, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JkgvgkMM",
+                            CreatedDate = new DateTime(2021, 1, 1, 1, 32, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AgkWcpAs",
                             Name = "Kolac98"
                         },
                         new
                         {
                             Id = 99,
-                            CreatedDate = new DateTime(2021, 9, 23, 19, 59, 0, 0, DateTimeKind.Unspecified),
-                            Description = "wBlDDDrp",
+                            CreatedDate = new DateTime(2021, 9, 30, 1, 46, 0, 0, DateTimeKind.Unspecified),
+                            Description = "SAeIgpWK",
                             Name = "Hamburger99"
                         },
                         new
                         {
                             Id = 100,
-                            CreatedDate = new DateTime(2021, 11, 17, 10, 18, 0, 0, DateTimeKind.Unspecified),
-                            Description = "hDIdkKJn",
+                            CreatedDate = new DateTime(2021, 11, 16, 3, 55, 0, 0, DateTimeKind.Unspecified),
+                            Description = "dDSfiDoD",
                             Name = "Sendvic100"
                         });
                 });

@@ -3,7 +3,7 @@ import { AuthenticationService } from 'app/core/_services/authentication.service
 import { RecipeCategoriesService } from 'app/core/_services/recipeCategories.service';
 import { RecipeCategory } from 'app/shared/entities/recipeCategories.model';
 import { ToastrService } from 'ngx-toastr';
-
+import { NgxBootstrapConfirmService } from 'ngx-bootstrap-confirm';
 import{first} from 'rxjs/operators';
 
 @Component({
@@ -13,7 +13,8 @@ import{first} from 'rxjs/operators';
 })
 export class RecipeCategoriesComponent implements OnInit {
 
-  constructor(public service:RecipeCategoriesService, private toastr:ToastrService, public authService:AuthenticationService) { }
+  constructor(public service:RecipeCategoriesService, private toastr:ToastrService, 
+    private ngxBootstrapConfirmService: NgxBootstrapConfirmService,public authService:AuthenticationService) { }
 
   recipesCategoryList:RecipeCategory[]=[];
   number:number=10;
@@ -28,13 +29,23 @@ export class RecipeCategoriesComponent implements OnInit {
   }
 
   deleteCategory(item){
-    if(confirm("Are you sure you want to delele object")){
-    this.service.deleteCategory(item).subscribe(data=>{
-      this.toastr.success("Successfully deleted");
-      this.loadRecipeCategories();
-    })
-  }
+    let options ={
+      title: 'Do you want to delete a category from the list??',
+      confirmLabel: 'Yes',
+      declineLabel: 'No'
+    }
+    this.ngxBootstrapConfirmService.confirm(options).then((res: boolean) => {
+      if (res) {
+        this.service.deleteCategory(item).subscribe(data=>{
+          this.toastr.success("Successfully deleted");
+          this.loadRecipeCategories();
+        })
+      }
+    });
   }
 }
 
+
+// if(confirm("Do yoz want to delete a category from the list?")){
+// }
 

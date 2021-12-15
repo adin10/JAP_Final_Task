@@ -25,8 +25,8 @@ export class AddCategoryComponent implements OnInit {
   }
 
   onSubmit(){
-    let podaci=new RecipeCategoryUpsertRequest(this.form.get('Name').value,this.form.get('Description').value);
-    this.categoryService.addCategory(podaci).subscribe(data=>{
+    let dataParams=new RecipeCategoryUpsertRequest(this.form.get('Name').value,this.form.get('Description').value);
+    this.categoryService.addCategory(dataParams).subscribe(data=>{
       this.toastr.success("Successfully added")
       this.router.navigate(["/recipeCategory"]);
     },

@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using NormativeCalculator.Core.Models.Validators;
 using NormativeCalculator.Database;
 using System;
 using System.Collections.Generic;
@@ -47,10 +49,15 @@ namespace NormativeCalculator.Api.Extensions
                 x.IterationCount = 10000;
             });
 
-            services.AddControllers().AddNewtonsoftJson(options =>
+            services.AddControllers().
+                AddNewtonsoftJson(options =>
             {
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-            });
+            })
+                 .AddFluentValidation(options =>
+                 {
+                     options.RegisterValidatorsFromAssemblyContaining<RecipeInsertRequestValidator>();
+                 }); 
         }
     }
 }
