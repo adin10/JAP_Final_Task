@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from 'app/core/_services/authentication.service';
-import { RecipeCategoriesService } from 'app/core/_services/recipeCategories.service';
-import { RecipeCategory } from 'app/shared/entities/recipeCategories.model';
+import { AuthenticationService } from 'app/core/services/authentication.service';
+import { RecipeCategoriesService } from 'app/core/services/recipeCategories.service';
+import { RecipeCategory } from 'app/shared/models/recipeCategories.model';
 import { ToastrService } from 'ngx-toastr';
 import { NgxBootstrapConfirmService } from 'ngx-bootstrap-confirm';
 import{first} from 'rxjs/operators';

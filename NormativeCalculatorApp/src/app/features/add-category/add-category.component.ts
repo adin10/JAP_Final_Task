@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { RecipeCategoriesService } from 'app/core/_services/recipeCategories.service';
-import { RecipeCategory } from 'app/shared/entities/recipeCategories.model';
+import { RecipeCategoriesService } from 'app/core/services/recipeCategories.service';
+import { RecipeCategory } from 'app/shared/models/recipeCategories.model';
 import { RecipeCategoryUpsertRequest } from 'app/shared/requests/categoryUpsertRequest.model';
 import { ToastrService } from 'ngx-toastr';
 

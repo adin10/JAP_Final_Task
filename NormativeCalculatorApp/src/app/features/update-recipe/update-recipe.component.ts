@@ -1,17 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { IngredientRecipeService } from 'app/core/_services/ingredientRecipe.service';
-import { IngredientsService } from 'app/core/_services/ingredients.service';
-import { MyUserService } from 'app/core/_services/myUser.service';
-import { RecipeService } from 'app/core/_services/recipe.service';
-import { RecipeCategoriesService } from 'app/core/_services/recipeCategories.service';
-import { IngredientSearchRequest } from 'app/shared/entities/ingredients.model';
-import { MyUser } from 'app/shared/entities/myUser.model';
-import { Recipe, RecipeUpdateRequest } from 'app/shared/entities/recipe.model';
-import { RecipeCategory } from 'app/shared/entities/recipeCategories.model';
+import { IngredientRecipeService } from 'app/core/services/ingredientRecipe.service';
+import { IngredientsService } from 'app/core/services/ingredients.service';
+import { MyUserService } from 'app/core/services/myUser.service';
+import { RecipeService } from 'app/core/services/recipe.service';
+import { RecipeCategoriesService } from 'app/core/services/recipeCategories.service';
+import { Ingredient, IngredientSearchRequest } from 'app/shared/models/ingredients.model';
+import { MyUser } from 'app/shared/models/myUser.model';
+import { Recipe, RecipeUpdateRequest } from 'app/shared/models/recipe.model';
+import { RecipeCategory } from 'app/shared/models/recipeCategories.model';
 import { UnitMeasure } from 'app/shared/requests/unitMeasure.enum';
-import { Ingredient } from 'app/shared/_shared/ingredients.model';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthenticationService } from 'app/core/_services/authentication.service';
-import { RecipeService } from 'app/core/_services/recipe.service';
-import { Recipe } from 'app/shared/entities/recipe.model';
+import { AuthenticationService } from 'app/core/services/authentication.service';
+import { RecipeService } from 'app/core/services/recipe.service';
+import { Recipe } from 'app/shared/models/recipe.model';
 import { ToastrService } from 'ngx-toastr';
 
 

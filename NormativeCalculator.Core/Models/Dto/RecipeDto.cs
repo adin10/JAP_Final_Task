@@ -14,6 +14,7 @@ namespace NormativeCalculator.Core.Models.Dto
         public float TotalCost { get; set; }
         public DateTime CreatedDate { get; set; }
         public int MyUserId { get; set; }
+        public float RecommendedPrice { get; set; }
         public MyUserDto MyUser { get; set; }
         public int RecipeCategoryId { get; set; }
         public RecipeCategoryDto RecipeCategory { get; set; }

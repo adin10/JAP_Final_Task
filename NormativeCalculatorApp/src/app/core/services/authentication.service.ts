@@ -1,13 +1,15 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
-import { AuthenticationResult } from "app/shared/entities/authenticationResult.model";
+import { AuthenticationResult } from "app/shared/models/authenticationResult.model";
 import { LoginInsertRequest } from "app/shared/requests/loginInsertRequest.model";
+import { environment } from "environments/environment";
 
 
 @Injectable({providedIn:'root'})
-export class AuthenticationService{
 
+export class AuthenticationService{
+    endpoint: string = 'Authentication'
     public isAuthenticated = false;
     public myUserId = null;
 constructor(public http:HttpClient,public router:Router){
@@ -16,7 +18,7 @@ constructor(public http:HttpClient,public router:Router){
 };
 
     login(request:LoginInsertRequest){
-        return this.http.post<AuthenticationResult>('https://localhost:5001/api/Authentication/Login',request);
+        return this.http.post<AuthenticationResult>(`${environment.apiUrl}${this.endpoint+'/login'}`,request);
     }
 
     LogOut(){

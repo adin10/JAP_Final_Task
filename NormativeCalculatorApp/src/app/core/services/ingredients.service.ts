@@ -1,15 +1,15 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Ingredient, IngredientSearchRequest } from "app/shared/entities/ingredients.model";
-import { PaginatedResult } from "app/shared/entities/pagination.model";
+import { Ingredient, IngredientSearchRequest } from "app/shared/models/ingredients.model";
+import { PaginatedResult } from "app/shared/models/pagination.model";
 import { IngredientRestUpsertRequest } from "app/shared/requests/ingredientRestUpsertRequests.model";
-import { UnitMeasure } from "app/shared/requests/unitMeasure.enum";
-import { Observable } from "rxjs";
+import { environment } from "environments/environment";
 import { map } from "rxjs/operators";
 
 @Injectable({providedIn:'root'})
 
 export class IngredientsService{
+    endpoint: string = 'Ingredients'
     paginatedResult:PaginatedResult<Ingredient[]> = new PaginatedResult<Ingredient[]>();
 
     constructor(public http:HttpClient){}
@@ -30,7 +30,7 @@ export class IngredientsService{
          }
     
 
-        return this.http.get<Ingredient[]>('https://localhost:5001/api/Ingredients',
+        return this.http.get<Ingredient[]>(`${environment.apiUrl}${this.endpoint}`,
         {observe:'response',params})
         .pipe(map(response=>{
             this.paginatedResult.result=response.body;
@@ -42,18 +42,18 @@ export class IngredientsService{
     }
 
     getById(id:number){
-        return this.http.get<Ingredient>('https://localhost:5001/api/Ingredients/'+id);
+        return this.http.get<Ingredient>(`${environment.apiUrl}${this.endpoint}/${id}`);
     }
     addIngredient(ingredient:IngredientRestUpsertRequest){
-        return this.http.post('https://localhost:5001/api/Ingredients',ingredient);
+        return this.http.post(`${environment.apiUrl}${this.endpoint}`,ingredient);
     }
 
     deleteIngredient(id:number){
-        return this.http.delete<Ingredient>('https://localhost:5001/api/Ingredients/'+id);
+        return this.http.delete<Ingredient>(`${environment.apiUrl}${this.endpoint}/${id}`);
     }
 
     updateIngredient(id,ingredeint:IngredientRestUpsertRequest){
-        return this.http.put('https://localhost:5001/api/Ingredients/'+id,ingredeint);
+        return this.http.put(`${environment.apiUrl}${this.endpoint}/${id}`,ingredeint);
     }
 }
 

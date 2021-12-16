@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from 'app/core/_services/authentication.service';
-import { IngredientsService } from 'app/core/_services/ingredients.service';
-import { Ingredient, IngredientSearchRequest } from 'app/shared/entities/ingredients.model';
-import { Pagination } from 'app/shared/entities/pagination.model';
+import { AuthenticationService } from 'app/core/services/authentication.service';
+import { IngredientsService } from 'app/core/services/ingredients.service';
+import { Ingredient, IngredientSearchRequest } from 'app/shared/models/ingredients.model';
+import { Pagination } from 'app/shared/models/pagination.model';
 import { UnitMeasure } from 'app/shared/requests/unitMeasure.enum';
 import { ToastrService } from 'ngx-toastr';
 

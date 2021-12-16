@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IngredientsService } from 'app/core/_services/ingredients.service';
-import { Ingredient } from 'app/shared/entities/ingredients.model';
+import { IngredientsService } from 'app/core/services/ingredients.service';
+import { Ingredient } from 'app/shared/models/ingredients.model';
 import { IngredientRestUpsertRequest } from 'app/shared/requests/ingredientRestUpsertRequests.model';
 import { UnitMeasure } from 'app/shared/requests/unitMeasure.enum';
 import { ToastrService } from 'ngx-toastr';
@@ -58,7 +58,7 @@ export class UpdateIngredientComponent implements OnInit {
         Name:new FormControl(data['name']),
         Quantity:new FormControl(data['unitQuantity']),
         Price:new FormControl(data['price']),
-        UnitMeasure:new FormControl(data['unitMeasure'])
+        UnitMeasure:new FormControl(UnitMeasure[data['unitMeasure']])
       })
     })
   }

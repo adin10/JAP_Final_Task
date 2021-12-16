@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { IngredientsService } from 'app/core/_services/ingredients.service';
-import { Ingredient } from 'app/shared/entities/ingredients.model';
+import { IngredientsService } from 'app/core/services/ingredients.service';
+import { Ingredient } from 'app/shared/models/ingredients.model';
 import { IngredientRestUpsertRequest } from 'app/shared/requests/ingredientRestUpsertRequests.model';
 import { UnitMeasure } from 'app/shared/requests/unitMeasure.enum';
 import { ToastrService } from 'ngx-toastr';

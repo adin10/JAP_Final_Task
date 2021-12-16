@@ -7,9 +7,7 @@ import { AppComponent } from './app.component';
 import { RecipeCategoriesComponent } from './features/recipe-categories/recipe-categories.component';
 import { IngredientsComponent } from './features/ingredients/ingredients.component';
 import { NavMenuComponent } from './shared/nav-menu/nav-menu.component';
-import { AuthComponent } from './core/auth/auth.component';
-import { TokenInterceptorInterceptor } from './core/_interceptor/token-interceptor.interceptor';
-import { AuthGuardGuard } from './core/_guards/auth-guard.guard';
+import { TokenInterceptorInterceptor } from './core/interceptor/token-interceptor.interceptor';
 import { MyUserComponent } from './features/my-user/my-user.component';
 import{HomeComponent} from './features/home/home.component';
 import { RecipeComponent } from './features/recipe/recipe.component';
@@ -25,30 +23,37 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{MatSliderModule} from '@angular/material/slider';
 import { NgxBootstrapConfirmModule } from 'ngx-bootstrap-confirm';
 import { UpdateRecipeComponent } from './features/update-recipe/update-recipe.component';
+import { AuthGuardGuard } from './core/guards/auth-guard.guard';
+import { FeaturesModule } from './features/features.module';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecipeCategoriesComponent,
-    IngredientsComponent,
-    NavMenuComponent,
-    AuthComponent,
-    MyUserComponent,
-    HomeComponent,
-    RecipeComponent,
-    AddRecipeComponent,
-    RecipeDetailsComponent,
-    AddIngredientComponent,
-    UpdateIngredientComponent,
-    AddCategoryComponent,
-    UpdateCategoryComponent,
-    UpdateRecipeComponent,
+    // RecipeCategoriesComponent,
+    // IngredientsComponent,
+    //  NavMenuComponent,
+    // AuthComponent,
+    // MyUserComponent,
+    // HomeComponent,
+    // RecipeComponent,
+    // AddRecipeComponent,
+    // RecipeDetailsComponent,
+    // AddIngredientComponent,
+    // UpdateIngredientComponent,
+    // AddCategoryComponent,
+    // UpdateCategoryComponent,
+    // UpdateRecipeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
+    // FormsModule,
+    FeaturesModule,
+    CoreModule,
+    SharedModule,
+    // ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatSliderModule,
@@ -58,14 +63,14 @@ import { UpdateRecipeComponent } from './features/update-recipe/update-recipe.co
       positionClass:'toast-top-right'
     })
   ],
-  providers: [
-    AuthGuardGuard,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: TokenInterceptorInterceptor,
-      multi: true
-    }
-  ],
+  // providers: [
+  //   AuthGuardGuard,
+  //   {
+  //     provide: HTTP_INTERCEPTORS,
+  //     useClass: TokenInterceptorInterceptor,
+  //     multi: true
+  //   }
+  // ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
