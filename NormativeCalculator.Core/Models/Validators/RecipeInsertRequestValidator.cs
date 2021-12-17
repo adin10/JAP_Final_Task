@@ -13,7 +13,6 @@ namespace NormativeCalculator.Core.Models.Validators
         public RecipeInsertRequestValidator()
         {
             RuleFor(x => x.Name).NotNull().NotEmpty().WithMessage("Required field");
-            
         }
     }
 }

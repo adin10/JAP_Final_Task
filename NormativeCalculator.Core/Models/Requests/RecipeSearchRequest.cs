@@ -11,6 +11,5 @@ namespace NormativeCalculator.Core.Models.Requests
         public string SearchTerm { get; set; }
         public int? categoryId { get; set; }
         public int number { get; set; }
-     
     }
 }

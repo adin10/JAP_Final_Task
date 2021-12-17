@@ -28,13 +28,11 @@ namespace NormativeCalculator.Infrastructure.Services
         public float CalculateIngredientRecipe(IngredientRecipe ingredientRecipe, Ingredient ingredient)
         {
             var ratio = conversion.FirstOrDefault(x => x.Item1 == ingredientRecipe.UnitMeasure && x.Item2 == ingredient.UnitMeasure);
-              // kolicina IG sto ja unosim  * rez konverzije  * unitPrice od tog ingredienta
             return ingredientRecipe.Quantity * ratio.Item3 * ingredient.UnitPrice;
         }
 
         public float CalculateRecipe(RecipeDetailsDto recipe)
         {
-            // za taj ingredientRecept sumiramo sve ingrediente
             return recipe.IngredientRecipes.Sum(x => x.IngredientCost);
         }
     }

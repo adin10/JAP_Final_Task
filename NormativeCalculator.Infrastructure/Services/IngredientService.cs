@@ -65,7 +65,6 @@ namespace NormativeCalculator.Infrastructure.Services
             var entity =await _context.Ingredients.FirstOrDefaultAsync(x=>x.Id==id);
             return _mapper.Map<IngredientDto>(entity);
         }
-
         public async Task<Ingredient> Insert(IngredientRestUpsertRequest request)
         {
             var validation = new IngredientInsertRequestValidator();
@@ -90,7 +89,6 @@ namespace NormativeCalculator.Infrastructure.Services
             await _context.SaveChangesAsync();
             return entity;
         }
-
         public async Task<Ingredient> Delete(int id)
         {
             var entity = await _context.Ingredients.FindAsync(id);

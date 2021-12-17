@@ -16,6 +16,5 @@ namespace NormativeCalculator.Core.Entities
         public float Price { get; set; }    
         public float UnitQuantity { get; set; }  
         public ICollection<IngredientRecipe> IngredientRecipes { get; set; }
-
     }
 }

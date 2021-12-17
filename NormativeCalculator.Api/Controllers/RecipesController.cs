@@ -55,10 +55,7 @@ namespace NormativeCalculator.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<Recipe>>Insert(RecipeRestUpsertModel request)
         {
-            var insertRequest = _mapper.Map<RecipeInsertRequest>(request);
-            insertRequest.MyUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            //insertRequest.CreatedDate = DateTime.Now;
-            return Ok(await _recipeService.Insert(insertRequest));
+            return Ok(await _recipeService.Insert(request));
         }
 
         [HttpPut("{id}")]
@@ -66,7 +63,6 @@ namespace NormativeCalculator.Api.Controllers
         {
             var updateRequest = _mapper.Map<RecipeUpdateRequest>(request);
             updateRequest.MyUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            //updateRequest.CreatedDate = DateTime.Now;
             return Ok(await _recipeService.Update(id, updateRequest));
         }
 

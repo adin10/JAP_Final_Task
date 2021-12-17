@@ -14,6 +14,5 @@ namespace NormativeCalculator.Core.Entities
         public string LastName { get; set; }
         public int UserId { get; set; }
         public IdentityUser<int> User { get; set; }
-
     }
 }

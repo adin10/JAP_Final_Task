@@ -1,4 +1,5 @@
-﻿using NormativeCalculator.Core.Models.Dto;
+﻿using Microsoft.AspNetCore.Identity;
+using NormativeCalculator.Core.Models.Dto;
 using NormativeCalculator.Core.Models.Requests;
 using System;
 using System.Collections.Generic;
@@ -11,5 +12,6 @@ namespace NormativeCalculator.Infrastructure.Interfaces
    public interface IUserService
     {
         public Task<List<MyUserDto>> Get(UserSearchRequest request);
+        public Task<IdentityUser> LoggedUser();
     }
 }

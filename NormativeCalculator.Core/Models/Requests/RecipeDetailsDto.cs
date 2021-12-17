@@ -14,6 +14,5 @@ namespace NormativeCalculator.Core.Models.Requests
         public string Description { get; set; }
         public float TotalCost { get; set; }
         public List<IngredientRecipeDto> IngredientRecipes { get; set; }
-
     }
 }

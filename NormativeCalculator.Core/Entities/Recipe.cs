@@ -18,7 +18,5 @@ namespace NormativeCalculator.Core.Entities
         public float RecommendedPrice { get; set; }
         public RecipeCategory RecipeCategory { get; set; }
         public ICollection<IngredientRecipe> IngredientRecipes { get; set; }
-        
-
     }
 }

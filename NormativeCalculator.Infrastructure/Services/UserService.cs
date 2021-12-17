@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
 
 namespace NormativeCalculator.Infrastructure.Services
 {
@@ -16,6 +18,8 @@ namespace NormativeCalculator.Infrastructure.Services
     {
         private readonly IMapper _mapper;
         private readonly NCDbContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly UserManager<IdentityUser> _userManager;
         public UserService(IMapper mapper, NCDbContext context)
         {
             _mapper = mapper;
@@ -34,6 +38,14 @@ namespace NormativeCalculator.Infrastructure.Services
             }
             var list = await query.ToListAsync();
             return _mapper.Map<List<MyUserDto>>(list);
+        }
+
+        public async Task<IdentityUser> LoggedUser()
+        {
+            var getUser = _httpContextAccessor.HttpContext.User.Identity;
+            var user = await _userManager.FindByNameAsync(getUser.Name);
+
+            return user;
         }
     }
 }

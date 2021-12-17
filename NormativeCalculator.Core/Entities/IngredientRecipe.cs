@@ -17,7 +17,5 @@ namespace NormativeCalculator.Core.Entities
         public UnitMeasure UnitMeasure { get; set; }
         public float Quantity { get; set; }
         public float Price { get; set; }
-
-
     }
 }
