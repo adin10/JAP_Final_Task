@@ -31,29 +31,14 @@ import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    // RecipeCategoriesComponent,
-    // IngredientsComponent,
-    //  NavMenuComponent,
-    // AuthComponent,
-    // MyUserComponent,
-    // HomeComponent,
-    // RecipeComponent,
-    // AddRecipeComponent,
-    // RecipeDetailsComponent,
-    // AddIngredientComponent,
-    // UpdateIngredientComponent,
-    // AddCategoryComponent,
-    // UpdateCategoryComponent,
-    // UpdateRecipeComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // FormsModule,
     FeaturesModule,
     CoreModule,
     SharedModule,
-    // ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatSliderModule,
@@ -63,14 +48,6 @@ import { SharedModule } from './shared/shared.module';
       positionClass:'toast-top-right'
     })
   ],
-  // providers: [
-  //   AuthGuardGuard,
-  //   {
-  //     provide: HTTP_INTERCEPTORS,
-  //     useClass: TokenInterceptorInterceptor,
-  //     multi: true
-  //   }
-  // ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

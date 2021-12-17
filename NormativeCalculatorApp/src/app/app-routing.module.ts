@@ -15,19 +15,6 @@ import { UpdateRecipeComponent } from './features/update-recipe/update-recipe.co
 import { AuthComponent } from './features/auth/auth.component';
 
 const routes: Routes = [
-  // canActivate:[AuthGuardGuard]
-  // { path: '', component: HomeComponent, pathMatch: 'full' },
-  // {path:'auth',component:AuthComponent},
-  // {path:'ingredient',component:IngredientsComponent},
-  // {path:'recipeCategory',component:RecipeCategoriesComponent},
-  // {path:'recipes/:id',component:RecipeComponent}, // preuzimanje svih recepata za odabraniu kategoriju
-  // {path:'addRecipe/:categoryId',component:AddRecipeComponent,canActivate:[AuthGuardGuard]},
-  // {path:'recipeDetails/:id',component:RecipeDetailsComponent},
-  // {path:"addIngredients",component:AddIngredientComponent},
-  // {path:"updateIngredient/:id",component:UpdateIngredientComponent,canActivate:[AuthGuardGuard]},
-  // {path:"addRecipeCategory",component:AddCategoryComponent,canActivate:[AuthGuardGuard]},
-  // {path:"updateCategory/:id",component:UpdateCategoryComponent,canActivate:[AuthGuardGuard]},
-  // {path:"updateRecipe/:id",component:UpdateRecipeComponent,canActivate:[AuthGuardGuard]},
 
   { path: '', component: HomeComponent, pathMatch: 'full' },
   {path:'auth',component:AuthComponent},
@@ -35,7 +22,6 @@ const routes: Routes = [
   {path:'recipeCategory',component:RecipeCategoriesComponent},
   {path:'recipes/:id',component:RecipeComponent}, 
   {path:'recipeDetails/:id',component:RecipeDetailsComponent},
-  
   {
     path: '',
     runGuardsAndResolvers:'always',
@@ -48,7 +34,6 @@ const routes: Routes = [
       {path:'addRecipe/:categoryId',component:AddRecipeComponent,canActivate:[AuthGuardGuard]},
       {path:"addIngredients",component:AddIngredientComponent,canActivate:[AuthGuardGuard]},
     ]}, 
-
 ];
 
 @NgModule({
