@@ -12,6 +12,8 @@ namespace NormativeCalculator.Core.Models.Requests
     {
         public string Name { get; set; }
         public int? Quantity { get; set; }
+        //public int? MinQuantity { get; set; }
+        //public int? MaxQuantity { get; set; }
         public UnitMeasure? UnitMeasure { get; set; }
     }
 }

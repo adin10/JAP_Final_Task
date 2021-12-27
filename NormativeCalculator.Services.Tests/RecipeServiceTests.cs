@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace NormativeCalculator.Services.Tests
 {
@@ -26,6 +27,7 @@ namespace NormativeCalculator.Services.Tests
         private RecipeService _recipeService;
         private IMapper _mapperMock;
         private ICalculatedService _calculatedService;
+        private IHttpContextAccessor _httpContextAccessor;
 
         [OneTimeSetUp]
         public void SetUp()
@@ -45,7 +47,7 @@ namespace NormativeCalculator.Services.Tests
                 cfg.CreateMap<RecipeCategory, RecipeCategoryDto>();
             });
             _mapperMock = configuration.CreateMapper();
-            _recipeService = new RecipeService(_mapperMock, _context, _calculatedService);
+            _recipeService = new RecipeService(_mapperMock, _context, _calculatedService, _httpContextAccessor);
 
             SetUpDatabase();
         }
@@ -54,13 +56,13 @@ namespace NormativeCalculator.Services.Tests
         [Test]
         public async Task CreateRecipe_AddingTwoEqualIngredients_CreateRecipeWithOneIngredient()
         {
-            var request = new RecipeInsertRequest
+            var request = new RecipeRestUpsertModel
             {
                 Name = "RecipeWithEqualIngredients",
                 Description = "aaaaaaa",
                 RecipeCategoryId = 2,
-                CreatedDate = DateTime.Now,
-                MyUserId = 1,
+                //CreatedDate = DateTime.Now,
+                //MyUserId = 1,
                 Ingredients = new List<IngredientRecipeInsertRequest>
                 {
                     new IngredientRecipeInsertRequest
@@ -85,13 +87,13 @@ namespace NormativeCalculator.Services.Tests
         [Test]
         public async Task CreateRecipe_AddingMoreEqualIngredients_CreateRecipeWithUniqueIngredient()
         {
-            var request = new RecipeInsertRequest
+            var request = new RecipeRestUpsertModel
             {
                 Name = "RecipeWithEqualIngredients2",
                 Description = "bbbbbbb",
                 RecipeCategoryId = 2,
-                CreatedDate = DateTime.Now,
-                MyUserId = 1,
+                //CreatedDate = DateTime.Now,
+                //MyUserId = 1,
                 Ingredients = new List<IngredientRecipeInsertRequest>
                 {
                     new IngredientRecipeInsertRequest
@@ -135,7 +137,7 @@ namespace NormativeCalculator.Services.Tests
         public void CreatingRecipe_WithOneIngredient_AddRecipe()
         {
 
-            var request = new RecipeInsertRequest
+            var request = new RecipeRestUpsertModel
             {
                 Name = "Recipe1",
                 Description = "aaaaaaa",
@@ -158,8 +160,8 @@ namespace NormativeCalculator.Services.Tests
             Assert.AreEqual(request.Name, recipeInDatabase.Name);
             Assert.AreEqual(request.Description, recipeInDatabase.Description);
             Assert.AreEqual(request.RecipeCategoryId, recipeInDatabase.RecipeCategoryId);
-            Assert.AreEqual(request.MyUserId, recipeInDatabase.MyUserId);
-            Assert.AreEqual(request.CreatedDate, recipeInDatabase.CreatedDate);
+            //Assert.AreEqual(request.MyUserId, recipeInDatabase.MyUserId);
+            //Assert.AreEqual(request.CreatedDate, recipeInDatabase.CreatedDate);
             Assert.True(request.Ingredients.Any());
         }
 
@@ -167,7 +169,7 @@ namespace NormativeCalculator.Services.Tests
         [Test]
         public void CreatingRecipe_WithNoIngredient_AddRecipe()
         {
-            var request = new RecipeInsertRequest
+            var request = new RecipeRestUpsertModel
             {
                 Name = "Recipe2",
                 Description = "bbbbbb",

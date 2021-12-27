@@ -19,7 +19,7 @@ namespace NormativeCalculator.Infrastructure.Interfaces
         public Task<Recipe> Delete(int id);
         public Task<RecipeDetailsDto> RecipeDetails(int id);
         public Task<Recipe> Insert(RecipeRestUpsertModel request);
-        public Task<Recipe> Update(int id, RecipeUpdateRequest request);
+        public Task<Recipe> Update(int id, RecipeUpdateModel request);
 
         // procedures
         public Task<IEnumerable<GetAllRecipesResponse>> GetAllRecipes();

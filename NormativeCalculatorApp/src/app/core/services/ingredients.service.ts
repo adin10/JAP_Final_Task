@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Ingredient, IngredientSearchRequest } from "app/shared/models/ingredients.model";
 import { PaginatedResult } from "app/shared/models/pagination.model";
 import { IngredientRestUpsertRequest } from "app/shared/requests/ingredientRestUpsertRequests.model";
+import { PagedIngredientRequest } from "app/shared/requests/pagedIngredientRequest.model";
 import { environment } from "environments/environment";
 import { map } from "rxjs/operators";
 
@@ -29,7 +30,6 @@ export class IngredientsService{
          params=params.append('pageSize',itemsPerPage.toString())
          }
     
-
         return this.http.get<Ingredient[]>(`${environment.apiUrl}${this.endpoint}`,
         {observe:'response',params})
         .pipe(map(response=>{
@@ -40,6 +40,18 @@ export class IngredientsService{
             return this.paginatedResult;
         }));
     }
+    getPaginateIngredients(request:PagedIngredientRequest){
+        let params=new HttpParams()
+        .set("Page",request.Page)
+        .set("PageSize",request.PageSize)
+        .set("Name",request.Search.name)
+        .set("Quantity",request.Search.quantity)
+        .set("UnitMeasure",request.Search.unitMeasure)
+        return this.http.get<Ingredient[]>(`${environment.apiUrl}${this.endpoint}`,{
+            params:params
+        });
+    }
+
 
     getById(id:number){
         return this.http.get<Ingredient>(`${environment.apiUrl}${this.endpoint}/${id}`);

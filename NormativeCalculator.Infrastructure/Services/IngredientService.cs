@@ -31,7 +31,8 @@ namespace NormativeCalculator.Infrastructure.Services
             _mapper = mapper;
             _dbConection = context.Database.GetDbConnection();
         }
-        public async Task<PagedList<IngredientDto>> Get(PaginationParams queryParams, IngredientSearchRequest request,int? number)
+
+        public async Task<PagedList<IngredientDto>> Get(PaginationParams queryParams, IngredientSearchRequest request, int? number)
         {
             var query = _context.Ingredients.AsQueryable();
             if (request != null)
@@ -53,11 +54,98 @@ namespace NormativeCalculator.Infrastructure.Services
             query = queryParams.OrderBy switch
             {
                 "name" => query.OrderByDescending(x => x.Name),
-                "quantity"=>query.OrderByDescending(x=>x.UnitQuantity),
-               _ => query.OrderBy(x => x.Price)
+                "quantity" => query.OrderByDescending(x => x.UnitQuantity),
+                _ => query.OrderBy(x => x.Price)
             };
             return await PagedList<IngredientDto>.CreateAsync(query.ProjectTo<IngredientDto>
-                (_mapper.ConfigurationProvider).AsNoTracking(), queryParams.pageNumber, queryParams.PageSize=(int)number);
+                (_mapper.ConfigurationProvider).AsNoTracking(), queryParams.pageNumber, queryParams.PageSize = (int)number);
+        }
+
+        public async Task<PagedResponse<IEnumerable<IngredientDto>>> GetPagedIntredients(PagedIngredientRequest request)
+        {
+            var response = new PagedResponse<IEnumerable<IngredientDto>>();
+            List<Ingredient> ingredients;
+            var query = _context.Ingredients.OrderBy(x => x.Id).AsQueryable();
+            if (request.Search != null)
+            {
+                if (!string.IsNullOrWhiteSpace(request.Search?.Name))
+                {
+                    var normalizedName = request.Search.Name.ToLower();
+                    query = query.Where(x => x.Name.ToLower().Contains(normalizedName));
+                }
+                if (request.Search.Quantity.HasValue)
+                {
+                    query = query.Where(x => x.UnitQuantity == request.Search.Quantity);
+                }
+                if (request.Search.UnitMeasure.HasValue)
+                {
+                    query = query.Where(x => x.UnitMeasure == request.Search.UnitMeasure);
+                }
+            }
+
+            query = query.Skip((request.Page - 1) * request.PageSize)
+                         .Take(request.PageSize);
+
+            SortOrderIngredient(request, ref query);
+
+            ingredients = await query.ToListAsync();
+            response.Data = _mapper.Map<List<IngredientDto>>(ingredients);
+            response.Count = response.Data.Count();
+            response.NextPage = request.Page + 1;
+            return response;
+        }
+
+        public static void SortOrderIngredient(PagedIngredientRequest request, ref IQueryable<Ingredient> query)
+        {
+            if (!string.IsNullOrEmpty(request.SortBy))
+            {
+                if (request.SortOrder == SortOrder.DESC)
+                {
+                    if (request.SortBy == "name")
+                    {
+                        query = query.OrderByDescending(x => x.Name);
+                    }
+                    else if (request.SortBy == "price")
+                    {
+                        query = query.OrderByDescending(x => x.Price);
+                    }
+                    else if (request.SortBy == "quantity")
+                    {
+                        query = query.OrderByDescending(x => x.UnitQuantity);
+                    }
+                    else if (request.SortBy == "unitPrice")
+                    {
+                        query = query.OrderByDescending(x => x.UnitPrice);
+                    }
+                    else if (request.SortBy == "unitMeasure")
+                    {
+                        query = query.OrderByDescending(x => x.UnitMeasure);
+                    }
+                }
+                else
+                {
+                    if (request.SortBy == "name")
+                    {
+                        query = query.OrderBy(x => x.Name);
+                    }
+                    else if (request.SortBy == "price")
+                    {
+                        query = query.OrderBy(x => x.Price);
+                    }
+                    else if (request.SortBy == "quantity")
+                    {
+                        query = query.OrderBy(x => x.UnitQuantity);
+                    }
+                    else if (request.SortBy == "unitPrice")
+                    {
+                        query = query.OrderBy(x => x.UnitPrice);
+                    }
+                    else if (request.SortBy == "unitMeasure")
+                    {
+                        query = query.OrderBy(x => x.UnitMeasure);
+                    }
+                }
+            }
         }
 
         public async Task<IngredientDto> GetById(int id)

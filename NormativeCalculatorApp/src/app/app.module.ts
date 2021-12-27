@@ -27,10 +27,13 @@ import { AuthGuardGuard } from './core/guards/auth-guard.guard';
 import { FeaturesModule } from './features/features.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { MatTableModule } from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    
     
   ],
   imports: [
@@ -42,6 +45,7 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    MatTableModule,
     NgxBootstrapConfirmModule,
     PaginationModule.forRoot(),
     ToastrModule.forRoot({

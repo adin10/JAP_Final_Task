@@ -20,7 +20,7 @@ export class Recipe{
 export class RecipeUpdateRequest{
     constructor(public Name:string,
                 public Description:string,
-                public RecipeCategoryId:number,
+                // public RecipeCategoryId:number,
                 public RecommendedPrice:number
                  ){}
 }

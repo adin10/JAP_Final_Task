@@ -16,6 +16,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from 'app/app-routing.module';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { AuthComponent } from './auth/auth.component';
+import {MatTableModule} from '@angular/material/table';
+import { PagedIngredientsComponent } from './paged-ingredients/paged-ingredients.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import{MatInputModule} from "@angular/material/input";
+import{MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+ 
+
 
 @NgModule({
   declarations: [
@@ -31,12 +39,18 @@ import { AuthComponent } from './auth/auth.component';
     UpdateRecipeComponent,
     RecipeCategoriesComponent,
     IngredientsComponent,
-    AuthComponent
+    AuthComponent,
+    PagedIngredientsComponent
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
     FormsModule,
+    MatTableModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
     ReactiveFormsModule,
     PaginationModule.forRoot(),
   ]

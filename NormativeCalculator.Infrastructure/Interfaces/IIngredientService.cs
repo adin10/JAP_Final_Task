@@ -16,6 +16,7 @@ namespace NormativeCalculator.Infrastructure.Interfaces
    public interface IIngredientService
     {
         public Task<PagedList<IngredientDto>> Get(PaginationParams paginationParams, IngredientSearchRequest request,int? number);
+        public Task<PagedResponse<IEnumerable<IngredientDto>>> GetPagedIntredients(PagedIngredientRequest request);
         public Task<IngredientDto> GetById(int id);
         public Task<Ingredient> Insert(IngredientRestUpsertRequest request);
         public Task<Ingredient> Update(int id, IngredientRestUpsertRequest request);

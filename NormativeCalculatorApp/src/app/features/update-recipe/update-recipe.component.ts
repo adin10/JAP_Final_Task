@@ -68,6 +68,7 @@ export class UpdateRecipeComponent implements OnInit {
         this.categoryId = +params['categoryId'];
       }
     );
+  
     this.loadIngredients();
   }
   loadIngredients(){
@@ -91,7 +92,7 @@ export class UpdateRecipeComponent implements OnInit {
     // console.log(this.forma.get('ingredients').value);
     let dataParams=new RecipeUpdateRequest(this.forma.get('recipeName').value,
     this.forma.get('description').value,
-    this.categoryId,this.forma.get('recommendedPrice').value);        
+    this.forma.get('recommendedPrice').value);        
       this.service.updateRecipe(this.route.snapshot.params.id,dataParams).subscribe(data=>{
         this.toastr.success("Successfully updated")
         this.router.navigate(["/recipeCategory"]);

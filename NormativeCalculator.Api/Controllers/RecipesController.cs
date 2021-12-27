@@ -61,9 +61,7 @@ namespace NormativeCalculator.Api.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<Recipe>> Update(int id, RecipeUpdateModel request)
         {
-            var updateRequest = _mapper.Map<RecipeUpdateRequest>(request);
-            updateRequest.MyUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            return Ok(await _recipeService.Update(id, updateRequest));
+            return Ok(await _recipeService.Update(id, request));
         }
 
         [HttpGet("procedure/getAllRecipes")]

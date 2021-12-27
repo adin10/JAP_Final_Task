@@ -50,7 +50,7 @@ namespace NormativeCalculator.Infrastructure.Services
             {
                 var normalizedName = request.SearchTerm.ToLower();
                 query = query.Where(x => x.Name.ToLower().Contains(normalizedName)
-                || x.Description.ToLower().Contains(normalizedName));
+                || x.Description.ToLower().Contains(normalizedName) || x.IngredientRecipes.Any(x=>x.Ingredient.Name.ToLower().Contains(normalizedName)));
             }
             var list = await query.Take(request.number).ToListAsync();
             return _mapper.Map<List<RecipeDto>>(list);
@@ -88,9 +88,8 @@ namespace NormativeCalculator.Infrastructure.Services
                 {
                     var entity = _mapper.Map<Recipe>(request);
                     entity.CreatedDate = DateTime.Now;
-                    var p = _httpContextAccessor.HttpContext.User;
-                    var user = p;
-                    var userId = p.FindFirstValue(ClaimTypes.NameIdentifier);
+                    var user = _httpContextAccessor.HttpContext.User;
+                    var userId = user.FindFirstValue(ClaimTypes.NameIdentifier);
                     entity.MyUserId = int.Parse(userId);
                     await _context.Recipes.AddAsync(entity);
                     await _context.SaveChangesAsync();
@@ -118,10 +117,13 @@ namespace NormativeCalculator.Infrastructure.Services
             }
         
 
-        public async Task<Recipe> Update(int id, RecipeUpdateRequest request)
+        public async Task<Recipe> Update(int id, RecipeUpdateModel request)
         {
             var entity = await _context.Recipes.FindAsync(id);
-            request.CreatedDate = DateTime.Now;
+            entity.CreatedDate = DateTime.Now;
+            var user = _httpContextAccessor.HttpContext.User;
+            var userId = user.FindFirstValue(ClaimTypes.NameIdentifier);
+            entity.MyUserId = int.Parse(userId);
             _mapper.Map(request, entity);
             await _context.SaveChangesAsync();
             return entity;

@@ -13,6 +13,7 @@ import { AddCategoryComponent } from './features/add-category/add-category.compo
 import { UpdateCategoryComponent } from './features/update-category/update-category.component';
 import { UpdateRecipeComponent } from './features/update-recipe/update-recipe.component';
 import { AuthComponent } from './features/auth/auth.component';
+import { PagedIngredientsComponent } from './features/paged-ingredients/paged-ingredients.component';
 
 const routes: Routes = [
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'recipeCategory',component:RecipeCategoriesComponent},
   {path:'recipes/:id',component:RecipeComponent}, 
   {path:'recipeDetails/:id',component:RecipeDetailsComponent},
+  {path:'pagedIngredient',component:PagedIngredientsComponent},
   {
     path: '',
     runGuardsAndResolvers:'always',

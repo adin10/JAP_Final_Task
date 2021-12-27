@@ -28,16 +28,22 @@ namespace NormativeCalculator.Api.Controllers
             _ingredientService = service;
         }
 
-        // izmjeniti paginaciju
-        [AllowAnonymous]
+        //izmjeniti paginaciju
+       [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<List<IngredientDto>>> Get([FromQuery] PaginationParams paginationParams, [FromQuery] IngredientSearchRequest request, int? number)
         {
-            var ingredients = await _ingredientService.Get(paginationParams, request,number);
-            Response.AddPaginationHeader(ingredients.CurrentPage,ingredients.PageSize
-              ,ingredients.TotalCount,ingredients.TotalPages);
+            var ingredients = await _ingredientService.Get(paginationParams, request, number);
+            Response.AddPaginationHeader(ingredients.CurrentPage, ingredients.PageSize
+              , ingredients.TotalCount, ingredients.TotalPages);
             return Ok(ingredients);
+        }
 
+        [AllowAnonymous]
+        [HttpGet("getPagedIngredients")]
+        public async Task<ActionResult> Get([FromQuery] PagedIngredientRequest request)
+        {
+            return Ok(await _ingredientService.GetPagedIntredients(request));
         }
 
         [HttpGet("{id}")]
