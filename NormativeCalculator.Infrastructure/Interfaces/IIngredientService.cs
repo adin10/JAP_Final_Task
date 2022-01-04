@@ -23,6 +23,9 @@ namespace NormativeCalculator.Infrastructure.Interfaces
         public Task<Ingredient> Delete(int id);
         public Task<IEnumerable<GetTop10UsedIngredientsResponse>> GetTop10UsedIngredients(UnitMeasure MeasureUnit, int MinQuantity, int MaxQuantity);
 
+
+        public Task<List<IngredientDto>> GetAngularMaterialPagination(IngredientSearchRequest search);
+
       
     }
 }

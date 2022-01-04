@@ -14,6 +14,7 @@ import { UpdateCategoryComponent } from './features/update-category/update-categ
 import { UpdateRecipeComponent } from './features/update-recipe/update-recipe.component';
 import { AuthComponent } from './features/auth/auth.component';
 import { PagedIngredientsComponent } from './features/paged-ingredients/paged-ingredients.component';
+import { AngularMaterialPaginationComponent } from './angular-material-pagination/angular-material-pagination.component';
 
 const routes: Routes = [
 
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'recipes/:id',component:RecipeComponent}, 
   {path:'recipeDetails/:id',component:RecipeDetailsComponent},
   {path:'pagedIngredient',component:PagedIngredientsComponent},
+  {path:'angularMaterialPagination',component:AngularMaterialPaginationComponent},
   {
     path: '',
     runGuardsAndResolvers:'always',

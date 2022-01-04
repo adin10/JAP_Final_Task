@@ -195,5 +195,28 @@ namespace NormativeCalculator.Infrastructure.Services
             return _dbConection.QueryAsync<GetTop10UsedIngredientsResponse>
                 ("GetTop10UsedIngredients", parameters, commandType: System.Data.CommandType.StoredProcedure);
         }
+
+        public async Task<List<IngredientDto>> GetAngularMaterialPagination(IngredientSearchRequest search)
+        {
+            var query = _context.Ingredients.AsQueryable();
+            if (search != null)
+            {
+                if (!string.IsNullOrWhiteSpace(search.Name))
+                {
+                    var normalizedName = search.Name.ToLower();
+                    query = query.Where(x => x.Name.ToLower().Contains(normalizedName));
+                }
+                if (search.Quantity.HasValue)
+                {
+                    query = query.Where(x => x.UnitQuantity == search.Quantity);
+                }
+                if (search.UnitMeasure.HasValue)
+                {
+                    query = query.Where(x => x.UnitMeasure == search.UnitMeasure);
+                }
+            }
+            var list = await query.ToListAsync();
+            return _mapper.Map<List<IngredientDto>>(list);
+        }
     }
 }

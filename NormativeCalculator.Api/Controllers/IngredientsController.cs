@@ -41,9 +41,16 @@ namespace NormativeCalculator.Api.Controllers
 
         [AllowAnonymous]
         [HttpGet("getPagedIngredients")]
-        public async Task<ActionResult> Get([FromQuery] PagedIngredientRequest request)
+        public async Task<ActionResult<List<IngredientDto>>> Get([FromQuery] PagedIngredientRequest request)
         {
             return Ok(await _ingredientService.GetPagedIntredients(request));
+        }
+
+        [AllowAnonymous]
+        [HttpGet("getAngularMaterialPagination")]
+        public async Task<ActionResult<List<IngredientDto>>> GetAngulatMaterialPagination([FromQuery]IngredientSearchRequest search)
+        {
+            return Ok(await _ingredientService.GetAngularMaterialPagination(search));
         }
 
         [HttpGet("{id}")]
@@ -53,9 +60,9 @@ namespace NormativeCalculator.Api.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Ingredient>> Delete(int id)
+        public async Task<ActionResult<Ingredient>> Delete(int? id)
         {
-            return Ok(await _ingredientService.Delete(id));
+            return Ok(await _ingredientService.Delete(id.GetValueOrDefault()));
         }
 
         [HttpPost]

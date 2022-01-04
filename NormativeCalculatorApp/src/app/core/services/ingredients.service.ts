@@ -40,18 +40,30 @@ export class IngredientsService{
             return this.paginatedResult;
         }));
     }
+
+ 
     getPaginateIngredients(request:PagedIngredientRequest){
-        let params=new HttpParams()
+         let params=new HttpParams()
         .set("Page",request.Page)
         .set("PageSize",request.PageSize)
         .set("Name",request.Search.name)
-        .set("Quantity",request.Search.quantity)
-        .set("UnitMeasure",request.Search.unitMeasure)
-        return this.http.get<Ingredient[]>(`${environment.apiUrl}${this.endpoint}`,{
+        .set("Quantity",request.Search.quantity??'')
+        .set("UnitMeasure",request.Search.unitMeasure??'')
+        return this.http.get<Ingredient[]>(`${environment.apiUrl}${this.endpoint+ '/getPagedIngredients'}`,{
             params:params
         });
     }
 
+
+    getAngularMaterialPagination(searchRequest:IngredientSearchRequest){
+        let params=new HttpParams()
+        .set("Name",searchRequest.name)
+        .set("Quantity",searchRequest.quantity??'')
+        .set("UnitMeasure",searchRequest.unitMeasure??'')
+        return this.http.get<Ingredient[]>(`${environment.apiUrl}${this.endpoint+ '/getAngularMaterialPagination'}`,{
+            params:params
+        });
+    }
 
     getById(id:number){
         return this.http.get<Ingredient>(`${environment.apiUrl}${this.endpoint}/${id}`);
@@ -68,5 +80,3 @@ export class IngredientsService{
         return this.http.put(`${environment.apiUrl}${this.endpoint}/${id}`,ingredeint);
     }
 }
-
-

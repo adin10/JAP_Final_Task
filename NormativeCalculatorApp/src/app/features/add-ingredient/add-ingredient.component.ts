@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { IngredientsService } from 'app/core/services/ingredients.service';
 import { Ingredient } from 'app/shared/models/ingredients.model';
 import { IngredientRestUpsertRequest } from 'app/shared/requests/ingredientRestUpsertRequests.model';
@@ -39,7 +40,8 @@ export class AddIngredientComponent implements OnInit {
       value: UnitMeasure.ml
     }
   ]
-  constructor(private toastr:ToastrService, public ingredientService:IngredientsService, public fb:FormBuilder,public router:Router) { 
+  constructor(private toastr:ToastrService, public ingredientService:IngredientsService, public fb:FormBuilder,public router:Router,
+    public activeModal: NgbActiveModal) { 
     this.form=this.fb.group({
       Name:["",[Validators.required]],
       Quantity:["",[Validators.required]],
@@ -50,6 +52,9 @@ export class AddIngredientComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  closeModal(sendData) {
+    this.activeModal.close(sendData);
+  }
 
   onSubmit(){
     let dataParams=new IngredientRestUpsertRequest(this.form.get('Name').value,
@@ -58,7 +63,8 @@ export class AddIngredientComponent implements OnInit {
                                               this.form.get('Quantity').value);
         this.ingredientService.addIngredient(dataParams).subscribe(data=>{
           this.toastr.success("Successfully added");
-          this.router.navigate(["/ingredient"]);
+          this.closeModal(data);
+          // this.router.navigate(["/ingredient"]);
         },
         (error)=>{
           this.toastr.error("Something went wrong");

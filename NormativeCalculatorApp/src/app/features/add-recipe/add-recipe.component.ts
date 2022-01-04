@@ -60,7 +60,7 @@ export class AddRecipeComponent implements OnInit {
     public ingredientService: IngredientsService) { 
       this.forma = this.fb.group({
         recipeName: [""],
-        description: [""],
+        description:new FormControl('',Validators.required),
         recommendedPrice:[""],
         ingredients: this.fb.array([]),
       

@@ -28,11 +28,15 @@ import { FeaturesModule } from './features/features.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { MatTableModule } from '@angular/material/table';
+import { AngularMaterialPaginationComponent } from './angular-material-pagination/angular-material-pagination.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    AngularMaterialPaginationComponent,
     
     
   ],
@@ -43,6 +47,8 @@ import { MatTableModule } from '@angular/material/table';
     CoreModule,
     SharedModule,
     HttpClientModule,
+    FormsModule,
+    NgbModule,
     BrowserAnimationsModule,
     MatSliderModule,
     MatTableModule,
@@ -50,7 +56,8 @@ import { MatTableModule } from '@angular/material/table';
     PaginationModule.forRoot(),
     ToastrModule.forRoot({
       positionClass:'toast-top-right'
-    })
+    }),
+    NgbModule
   ],
   bootstrap: [AppComponent]
 })

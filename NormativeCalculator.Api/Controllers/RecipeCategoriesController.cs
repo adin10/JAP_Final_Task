@@ -51,9 +51,9 @@ namespace NormativeCalculator.Api.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<RecipeCategory>> Delete(int id)
+        public async Task<ActionResult<RecipeCategory>> Delete(int? id)
         {
-            return Ok(await _recipeCategoryService.Delete(id));
+            return Ok(await _recipeCategoryService.Delete(id.GetValueOrDefault()));
         }
     }
 }

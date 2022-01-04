@@ -1,0 +1,41 @@
+
+  <nav class="navbar">
+    <span>Search</span>
+    <input class="form-control" type="text" name="request" [(ngModel)]="searchRequest.name" (change)="Search()" placeholder="Search ingredient name">
+    <input class="form-control" type="text" name="request" [(ngModel)]="searchRequest.quantity" (change)="Search()" placeholder="Input quantity ">
+    <input class="form-control" type="text" name="request" [(ngModel)]="searchRequest.unitMeasure" (change)="Search()" placeholder="Search unit measure">
+</nav>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="unitMeasure">
+      <th mat-header-cell *matHeaderCellDef> unit Measure. </th>
+      <td mat-cell *matCellDef="let element"> {{element.unitMeasure}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> price </th>
+      <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="unitQuantity">
+      <th mat-header-cell *matHeaderCellDef> unitQuantity </th>
+      <td mat-cell *matCellDef="let element"> {{element.unitQuantity}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="unitPrice">
+        <th mat-header-cell *matHeaderCellDef> Unit price </th>
+        <td mat-cell *matCellDef="let element"> {{element.unitPrice}} </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <button class="btn btn-primary" (click)="open()">Add ingredient</button>
