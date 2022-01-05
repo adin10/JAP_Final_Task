@@ -8,6 +8,7 @@ using Serilog.Exceptions.Core;
 using System;
 using System.Reflection;
 using Serilog.Sinks.Elasticsearch;
+using Serilog.Exceptions.EntityFrameworkCore.Destructurers;
 
 namespace NormativeCalculator.Api
 {
@@ -69,9 +70,9 @@ namespace NormativeCalculator.Api
 
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
-                //.Enrich.WithExceptionDetails(new DestructuringOptionsBuilder()
-                //.WithDefaultDestructurers()
-                //.WithDestructurers(new[] { new DbUpdateExceptionDestructurer() }))
+                .Enrich.WithExceptionDetails(new DestructuringOptionsBuilder()
+                .WithDefaultDestructurers()
+                .WithDestructurers(new[] { new DbUpdateExceptionDestructurer() }))
                 .Enrich.WithMachineName()
                 .WriteTo.Debug()
                 .WriteTo.Console()
