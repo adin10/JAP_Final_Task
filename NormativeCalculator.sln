@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31605.320
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NormativeCalculator.Api", "NormativeCalculator.Api\NormativeCalculator.Api.csproj", "{5917E088-C38E-4B48-A09D-DDC3E2EBA81A}"
 EndProject
@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NormativeCalculator.Mapper"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NormativeCalculator.Services.Tests", "NormativeCalculator.Services.Tests\NormativeCalculator.Services.Tests.csproj", "{A5F92357-B1CF-43D9-A8EE-91BA6B90843F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormativeCalculator.Logger", "NormativeCalculator.Logger\NormativeCalculator.Logger.csproj", "{8CCA5A40-4B0B-4A06-871A-9F6DE9EA0188}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NormativeCalculator.Logger", "NormativeCalculator.Logger\NormativeCalculator.Logger.csproj", "{8CCA5A40-4B0B-4A06-871A-9F6DE9EA0188}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FC3A3CB5-0F53-43B3-8A4F-D60F64B92130}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{8CCA5A40-4B0B-4A06-871A-9F6DE9EA0188}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CCA5A40-4B0B-4A06-871A-9F6DE9EA0188}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CCA5A40-4B0B-4A06-871A-9F6DE9EA0188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC3A3CB5-0F53-43B3-8A4F-D60F64B92130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC3A3CB5-0F53-43B3-8A4F-D60F64B92130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC3A3CB5-0F53-43B3-8A4F-D60F64B92130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC3A3CB5-0F53-43B3-8A4F-D60F64B92130}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

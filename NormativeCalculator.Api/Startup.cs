@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NormativeCalculator.Api.Exceptions;
 using NormativeCalculator.Api.Extensions;
+using NormativeCalculator.Database;
 using NormativeCalculator.Mapper;
 
 namespace NormativeCalculator.Api
@@ -34,6 +36,11 @@ namespace NormativeCalculator.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<NCDbContext>();
+                context.Database.Migrate();
+            }
 
             if (env.IsDevelopment())
             {
